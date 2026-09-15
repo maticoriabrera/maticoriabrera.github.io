@@ -1,0 +1,228 @@
+/* ===============================
+   COURSES STATS - TOP SKILLS
+================================ */
+
+/* 🔥 Necesario para animar variables CSS */
+@property --progress {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+.courses-stats {
+  width: 100%;
+  margin: 40px 0 35px;
+  padding: 28px 24px;
+  background: #ffffff;
+  border: 1px solid #dce8f4;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(12, 25, 40, 0.08);
+}
+
+.courses-stats-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.courses-stats-title {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #0c1928;
+  text-transform: uppercase;
+}
+
+.courses-stats-subtitle {
+  margin: 8px 0 0;
+  font-size: 0.95rem;
+  color: #64748b;
+}
+
+/* ===============================
+   GRID
+================================ */
+
+.skills-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px 24px;
+  justify-items: center;
+}
+
+/* ===============================
+   CARD
+================================ */
+
+.skill-stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ===============================
+   RING (ANIMADO)
+================================ */
+
+.skill-stat-ring {
+  --percent: 0;
+  --progress: 0;
+
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+
+  background: conic-gradient(
+    #1f8cef calc(var(--progress) * 1%),
+    #dce8f4 0
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  animation: fillSkillRing 1.2s ease-out forwards;
+}
+
+/* círculo interior */
+.skill-stat-ring::before {
+  content: "";
+  position: absolute;
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+/* ===============================
+   ANIMACIÓN
+================================ */
+
+@keyframes fillSkillRing {
+  from {
+    --progress: 0;
+  }
+  to {
+    --progress: var(--percent);
+  }
+}
+
+/* ===============================
+   INNER TEXT
+================================ */
+
+.skill-stat-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.15;
+}
+
+.skill-stat-percent {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0c1928;
+}
+
+.skill-stat-hours {
+  margin-top: 4px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #64748b;
+}
+
+/* ===============================
+   SKILL NAME
+================================ */
+
+.skill-stat-name {
+  margin: 14px 0 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0c1928;
+  line-height: 1.25;
+  max-width: 110px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1100px) {
+  .skills-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .courses-stats {
+    padding: 24px 16px;
+  }
+
+  .skills-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skill-stat-ring {
+    width: 96px;
+    height: 96px;
+  }
+
+  .skill-stat-ring::before {
+    width: 68px;
+    height: 68px;
+  }
+}
+
+@media (max-width: 430px) {
+  .courses-stats {
+    padding: 20px 10px;
+  }
+
+  .skills-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px 10px;
+  }
+
+  .skill-stat-ring {
+    width: 82px;
+    height: 82px;
+  }
+
+  .skill-stat-ring::before {
+    width: 58px;
+    height: 58px;
+  }
+
+  .skill-stat-percent {
+    font-size: .85rem;
+  }
+
+  .skill-stat-hours {
+    font-size: .68rem;
+  }
+
+  .skill-stat-name {
+    font-size: .78rem;
+    max-width: 90px;
+  }
+}
+/* ===============================
+   TOTAL HOURS (DESTACADO)
+================================ */
+
+.courses-stats-total {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1f8cef; /* naranja principal */
+}
+
+.courses-stats-label {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-left: 4px;
+}

@@ -1551,3 +1551,204 @@ RESPONSIVE 921px - 1050px
     line-height: 1.45;
   }
 }
+
+
+/* =========================================================
+   SIDEBAR FX - efecto decorativo bajo el botón "Download CV"
+   Líneas onduladas + puntos de luz + resplandor azul.
+   Solo se muestra en pantallas grandes (>= 921px), es decir,
+   cuando la sidebar es una columna lateral. En tablet vertical
+   y móvil no existe (se prioriza el contenido del CV).
+   Archivo de las líneas: assets/img/side-fx-waves.svg
+========================================================= */
+
+/* Por defecto (móvil/tablet) el efecto no se muestra */
+.side-fx{
+  display: none;
+}
+
+@media (min-width: 921px){
+
+  /* La sidebar pasa a ser una columna flex para que .side-fx
+     ocupe SOLO el espacio libre que queda debajo del botón
+     (si no hay espacio, mide 0 y nunca tapa el contenido). */
+  .side{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .side-fx{
+    display: block;
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: hidden;
+    pointer-events: none;
+    user-select: none;
+
+    /* desvanecido superior del contenedor: no hay corte seco bajo el botón */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 110px);
+            mask-image: linear-gradient(to bottom, transparent 0, #000 110px);
+  }
+
+  /* Lienzo del efecto: siempre pegado al borde inferior de la sidebar,
+     con la misma proporción que el dibujo (428 x 1264). */
+  .side-fx__art{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    aspect-ratio: 428 / 1264;
+
+    /* desvanecido superior del propio efecto (nace suave desde el fondo oscuro) */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,.55) 9%, #000 22%);
+            mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,.55) 9%, #000 22%);
+  }
+
+  /* --- Capa 1: resplandores azules de fondo --- */
+  .fx-glow{
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background:
+      /* luz que entra por el borde derecho: núcleo + halo amplio */
+      radial-gradient(ellipse 34% 8% at 100% 16.5%,
+        rgba(190,215,245,.40) 0%, rgba(190,215,245,.22) 35%, rgba(190,215,245,.07) 70%, rgba(190,215,245,0) 100%),
+      radial-gradient(ellipse 68% 23% at 100% 20%,
+        rgba(45,120,220,.34) 0%, rgba(45,120,220,.21) 35%, rgba(45,120,220,.09) 68%, rgba(45,120,220,0) 100%),
+      radial-gradient(ellipse 95% 32% at 100% 24%,
+        rgba(45,120,220,.16) 0%, rgba(45,120,220,.07) 55%, rgba(45,120,220,0) 100%),
+      /* mancha azul central-izquierda */
+      radial-gradient(ellipse 68% 23% at 24% 66%,
+        rgba(31,140,239,.48) 0%, rgba(31,140,239,.33) 28%, rgba(31,140,239,.16) 58%, rgba(31,140,239,.05) 82%, rgba(31,140,239,0) 100%),
+      /* luz azul en la esquina inferior izquierda */
+      radial-gradient(ellipse 60% 15% at 8% 94%,
+        rgba(31,120,220,.13) 0%, rgba(31,120,220,.05) 60%, rgba(31,120,220,0) 100%),
+      /* tinte azul general (se apaga hacia el borde inferior) */
+      linear-gradient(to bottom,
+        rgba(31,110,200,.09) 0%, rgba(31,110,200,.11) 45%, rgba(31,110,200,.06) 80%, rgba(31,110,200,0) 100%);
+    transform-origin: 50% 70%;
+    animation: fx-breathe 12s ease-in-out infinite;
+  }
+
+  /* --- Capa 2: líneas onduladas --- */
+  .side-fx__art::before,
+  .side-fx__art::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../img/side-fx-waves.svg") center bottom / 100% 100% no-repeat;
+  }
+
+  .side-fx__art::before{
+    z-index: 1;
+    animation: fx-lines-breathe 11s ease-in-out infinite;
+  }
+
+  /* --- Capa 3: destello suave que recorre las líneas de vez en cuando --- */
+  .side-fx__art::after{
+    z-index: 2;
+    filter: brightness(2.6) saturate(.9);
+    -webkit-mask-image: linear-gradient(115deg, transparent 40%, #000 50%, transparent 60%);
+            mask-image: linear-gradient(115deg, transparent 40%, #000 50%, transparent 60%);
+    -webkit-mask-size: 260% 260%;
+            mask-size: 260% 260%;
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+    -webkit-mask-position: 100% 100%;
+            mask-position: 100% 100%;
+    animation: fx-sweep 18s ease-in-out infinite;
+  }
+
+  /* --- Capa 4: puntos de luz --- */
+  .fx-dot{
+    --x: 50%;
+    --y: 50%;
+    --d: 44px;      /* diámetro total (núcleo + halo) */
+    --o: 1;         /* opacidad máxima */
+    --dx: 4px;      /* deriva horizontal */
+    --dy: -7px;     /* deriva vertical */
+    --t: 8s;        /* duración del ciclo */
+    --w: 0s;        /* desfase (negativo = arranca "a mitad" de ciclo) */
+
+    position: absolute;
+    z-index: 3;
+    left: var(--x);
+    top: var(--y);
+    width: var(--d);
+    height: var(--d);
+    margin: calc(var(--d) / -2) 0 0 calc(var(--d) / -2);
+    border-radius: 50%;
+    opacity: var(--o);
+    background: radial-gradient(closest-side,
+      #fff 0 9%,
+      rgba(200,230,255,.95) 14%,
+      rgba(70,165,255,.72) 26%,
+      rgba(31,140,239,.34) 46%,
+      rgba(31,140,239,.10) 72%,
+      rgba(31,140,239,0) 100%);
+    animation: fx-dot var(--t) ease-in-out var(--w) infinite;
+  }
+
+  /* puntos "apagados" (azul, sin núcleo blanco) */
+  .fx-dot:nth-child(n+5){
+    background: radial-gradient(closest-side,
+      rgba(110,185,255,.95) 0 20%,
+      rgba(31,140,239,.45) 42%,
+      rgba(31,140,239,.12) 70%,
+      rgba(31,140,239,0) 100%);
+  }
+
+  /* posición y carácter de cada punto (coordenadas relativas al lienzo) */
+  .fx-dot:nth-child(2){ --x: 51.6%; --y: 32.9%; --d: 44px; --o: .95; --t: 7s;  --w: -2s; --dx:  5px; --dy: -7px; }
+  .fx-dot:nth-child(3){ --x: 72.4%; --y: 54.7%; --d: 44px; --o: .95; --t: 9s;  --w: -5s; --dx: -4px; --dy:  6px; }
+  .fx-dot:nth-child(4){ --x: 29.4%; --y: 62.6%; --d: 56px; --o: 1;   --t: 8s;  --w: -1s; --dx:  4px; --dy: -6px; }
+  .fx-dot:nth-child(5){ --x: 25.5%; --y: 80.6%; --d: 32px; --o: .80; --t: 10s; --w: -6s; --dx: -3px; --dy: -5px; }
+  .fx-dot:nth-child(6){ --x: 69.4%; --y: 42.3%; --d: 28px; --o: .55; --t: 11s; --w: -3s; --dx:  4px; --dy:  5px; }
+  .fx-dot:nth-child(7){ --x: 44.6%; --y: 87.4%; --d: 26px; --o: .45; --t: 12s; --w: -8s; --dx:  3px; --dy: -4px; }
+}
+
+/* ---- Animaciones (todas muy lentas y sutiles) ---- */
+@keyframes fx-breathe{
+  0%, 100%{ opacity: .80; transform: scale(1); }
+  50%     { opacity: 1;   transform: scale(1.04); }
+}
+
+@keyframes fx-lines-breathe{
+  0%, 100%{ opacity: .78; }
+  50%     { opacity: 1; }
+}
+
+@keyframes fx-sweep{
+  0%, 12%{
+    -webkit-mask-position: 100% 100%;
+            mask-position: 100% 100%;
+  }
+  62%, 100%{
+    -webkit-mask-position: 0% 0%;
+            mask-position: 0% 0%;
+  }
+}
+
+@keyframes fx-dot{
+  0%, 100%{ opacity: var(--o); transform: translate(0, 0) scale(1); }
+  50%     { opacity: calc(var(--o) * .45); transform: translate(var(--dx), var(--dy)) scale(.8); }
+}
+
+/* Accesibilidad: si el sistema pide menos movimiento, el efecto queda estático */
+@media (prefers-reduced-motion: reduce){
+  .fx-glow,
+  .fx-dot,
+  .side-fx__art::before,
+  .side-fx__art::after{
+    animation: none;
+  }
+  .side-fx__art::after{
+    display: none;
+  }
+}
+
+/* No imprimir el efecto */
+@media print{
+  .side-fx{ display: none !important; }
+}

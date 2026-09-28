@@ -567,8 +567,16 @@
 
                 <div class="hobby-grid">
                   <div class="hobby">
-                      <span class="h-ico"><i class="fa-solid fa-music"></i></span>
+                    <span class="h-ico"><i class="fa-solid fa-music"></i></span>
+                    <button
+                      type="button"
+                      class="project-link spotify-link"
+                      id="openSpotifyModal"
+                      aria-haspopup="dialog"
+                      aria-controls="spotifyModal"
+                    >
                       <span data-i18n="hobby_music">Music</span>
+                    </button>
                   </div>
                   <div class="hobby">
                     
@@ -605,6 +613,47 @@
 
     </section>
   </main>
+
+
+  <!-- SPOTIFY PLAYLIST MODAL -->
+  <div
+    class="spotify-modal"
+    id="spotifyModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="spotifyModalTitle"
+    aria-hidden="true"
+  >
+    <div class="spotify-modal__dialog" role="document">
+      <div class="spotify-modal__header">
+        <h2 class="spotify-modal__title" id="spotifyModalTitle">Rock Argentino</h2>
+        <button
+          type="button"
+          class="spotify-modal__close"
+          id="closeSpotifyModal"
+          aria-label="Close Spotify playlist"
+          title="Close"
+        >
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="spotify-modal__player">
+        <iframe
+          id="spotifyPlaylistFrame"
+          data-testid="embed-iframe"
+          data-src="https://open.spotify.com/embed/playlist/1tzVWZaWCyaR9z7XFpklMw?utm_source=generator&si=f918d3f77a9c4862"
+          title="Rock Argentino - Spotify playlist"
+          width="100%"
+          height="352"
+          frameborder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </div>
   <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/spotify-modal.js" defer></script>
 </body>
 </html>

@@ -728,6 +728,186 @@ body{
   text-decoration: underline;
 }
 
+
+/* Spotify playlist link + modal */
+.spotify-link{
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  line-height: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.spotify-link:focus-visible{
+  outline: 3px solid rgba(31,140,239,.28);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+body.spotify-modal-open{
+  overflow: hidden;
+}
+
+.spotify-modal{
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(6, 12, 20, .76);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .18s ease, visibility .18s ease;
+}
+
+.spotify-modal.is-open{
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.spotify-modal__dialog{
+  width: min(700px, 100%);
+  max-height: calc(100dvh - 48px);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 18px;
+  background: #121212;
+  box-shadow: 0 24px 70px rgba(0,0,0,.46);
+  transform: translateY(10px) scale(.99);
+  transition: transform .18s ease;
+}
+
+.spotify-modal.is-open .spotify-modal__dialog{
+  transform: translateY(0) scale(1);
+}
+
+.spotify-modal__header{
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 12px 10px 18px;
+  border-bottom: 1px solid rgba(255,255,255,.10);
+  background: #121212;
+}
+
+.spotify-modal__title{
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+
+.spotify-modal__close{
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: rgba(255,255,255,.82);
+  font-size: 22px;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, transform .15s ease;
+}
+
+.spotify-modal__close:hover{
+  background: rgba(255,255,255,.10);
+  color: #fff;
+}
+
+.spotify-modal__close:active{
+  transform: scale(.96);
+}
+
+.spotify-modal__close:focus-visible{
+  outline: 3px solid rgba(255,255,255,.34);
+  outline-offset: 2px;
+}
+
+.spotify-modal__player{
+  background: #121212;
+  line-height: 0;
+}
+
+.spotify-modal__player iframe{
+  display: block;
+  width: 100%;
+  height: 352px;
+  border: 0;
+  border-radius: 0 0 18px 18px;
+  background: #121212;
+}
+
+@media (max-width: 600px){
+  .spotify-modal{
+    align-items: center;
+    padding: 12px;
+  }
+
+  .spotify-modal__dialog{
+    width: 100%;
+    max-height: calc(100dvh - 24px);
+    border-radius: 16px;
+  }
+
+  .spotify-modal__header{
+    min-height: 50px;
+    padding: 8px 8px 8px 14px;
+  }
+
+  .spotify-modal__title{
+    font-size: 15px;
+  }
+
+  .spotify-modal__close{
+    width: 40px;
+    height: 40px;
+    font-size: 21px;
+  }
+
+  .spotify-modal__player iframe{
+    height: min(430px, calc(100dvh - 98px));
+    border-radius: 0 0 16px 16px;
+  }
+}
+
+@media (max-width: 380px){
+  .spotify-modal{
+    padding: 8px;
+  }
+
+  .spotify-modal__dialog{
+    max-height: calc(100dvh - 16px);
+  }
+
+  .spotify-modal__player iframe{
+    height: min(410px, calc(100dvh - 90px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .spotify-modal,
+  .spotify-modal__dialog{
+    transition: none;
+  }
+}
+
 .linkedin-link{
   display:inline-flex;
   align-items:center;

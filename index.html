@@ -592,7 +592,15 @@
                     </div>
                   <div class="hobby">
                     <span class="h-ico"><i class="fa-solid fa-guitar"></i></span>
-                    <span data-i18n="hobby_guitar">Guitar</span>
+                    <a
+                      class="project-link"
+                      href="assets/img/hobbies/Hobbie-Guitarra.mp4"
+                      id="openGuitarVideo"
+                      aria-haspopup="dialog"
+                      aria-controls="guitarVideoModal"
+                    >
+                      <span data-i18n="hobby_guitar">Guitar</span>
+                    </a>
                   </div>
                   <div class="hobby">
                     <span class="h-ico"><i class="fa-solid fa-basketball"></i></span>
@@ -660,7 +668,49 @@
       </div>
     </div>
   </div>
+
+  <!-- GUITAR VIDEO MODAL -->
+  <div
+    class="video-modal"
+    id="guitarVideoModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="guitarVideoModalTitle"
+    hidden
+  >
+    <div class="video-modal__dialog" role="document">
+      <div class="video-modal__header">
+        <h2 class="video-modal__title" id="guitarVideoModalTitle">Guitar</h2>
+        <button
+          type="button"
+          class="video-modal__close"
+          id="closeGuitarVideo"
+          aria-label="Close guitar video"
+          title="Close"
+        >
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="video-modal__player">
+        <video
+          id="guitarVideo"
+          class="video-modal__video"
+          width="640"
+          height="480"
+          controls
+          preload="metadata"
+          playsinline
+          data-src="assets/img/hobbies/Hobbie-Guitarra.mp4"
+        >
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+    </div>
+  </div>
+
   <script src="assets/js/i18n.js" defer></script>
   <script src="assets/js/spotify-modal.js" defer></script>
+  <script src="assets/js/guitar-modal.js" defer></script>
 </body>
 </html>

@@ -714,7 +714,8 @@ body{
   box-shadow: 0 10px 18px rgba(21,83,172,.16);
 }
 
-.hobby span:last-child{
+.content-link-text{
+  font-size: 16px;
   font-weight: 600;
   color: rgba(12,25,40,.70);
 }
@@ -1312,17 +1313,6 @@ RESPONSIVE 921px - 1050px
 }
 
 /* =========================================
-   RESPONSIVE 520px
-========================================= */
-@media (max-width: 520px){
-  .cv{ grid-template-columns: 1fr; } /* Aplia en 1 columna*/
-  .name{ font-size: 34px; }
-  .role{ letter-spacing: 4px; }
-  .role::before, .role::after{ display: none; }
-  .hobby-grid{ grid-template-columns: 1fr; }
-}
-
-/* =========================================
    RESPONSIVE EXTRA SMALL - hasta 520px
 ========================================= */
 @media (max-width: 520px){
@@ -1407,6 +1397,11 @@ RESPONSIVE 921px - 1050px
     font-size: 11px;
     letter-spacing: 2.4px;
     line-height: 1.35;
+  }
+
+  .role::before,
+  .role::after{
+    display: none;
   }
 
   .lead{

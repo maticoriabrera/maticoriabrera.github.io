@@ -1,0 +1,630 @@
+[
+  {
+    "number": 1,
+    "repo": "chat_helper",
+    "description": {
+      "en": "A helper tool for WhatsApp Web that simplifies sending personalized messages to multiple contacts.",
+      "es": "Una herramienta de asistencia para WhatsApp Web que simplifica el envío de mensajes personalizados a múltiples contactos.",
+      "it": "Uno strumento di supporto per WhatsApp Web che semplifica l'invio di messaggi personalizzati a più contatti."
+    },
+    "created": {
+      "en": "Nov 15, 2021",
+      "es": "15 nov 2021",
+      "it": "15 nov 2021"
+    },
+    "updated": {
+      "en": "Nov 15, 2021",
+      "es": "15 nov 2021",
+      "it": "15 nov 2021"
+    },
+    "institution": "Personal Project",
+    "languages": [
+      "Python"
+    ],
+    "technologies": [],
+    "status": {
+      "en": "Completed",
+      "es": "Finalizado",
+      "it": "Completato"
+    },
+    "repository": "https://github.com/coria79/chat_helper",
+    "readme": "https://github.com/coria79/chat_helper/blob/main/README.md",
+    "demo": null,
+    "name": "Chat Helper",
+    "institution_i18n": {
+      "en": "Personal Project",
+      "es": "Proyecto Personal",
+      "it": "Progetto personale"
+    },
+    "languagePercentages": {
+      "Python": 100.0
+    }
+  },
+  {
+    "number": 2,
+    "repo": "crypto_trading_bot",
+    "description": {
+      "en": "Bot developed to retrieve and present relevant cryptocurrency price information, using BitMart as the reference platform.",
+      "es": "Robot desarrollado para consultar y presentar información relevante sobre cotizaciones de criptomonedas, utilizando BitMart como plataforma de referencia.",
+      "it": "Bot sviluppato per consultare e presentare informazioni rilevanti sulle quotazioni delle criptovalute, utilizzando BitMart come piattaforma di riferimento."
+    },
+    "created": {
+      "en": "Nov 17, 2021",
+      "es": "17 nov 2021",
+      "it": "17 nov 2021"
+    },
+    "updated": {
+      "en": "Nov 17, 2021",
+      "es": "17 nov 2021",
+      "it": "17 nov 2021"
+    },
+    "institution": "Personal Project",
+    "languages": [
+      "Python"
+    ],
+    "technologies": [],
+    "status": {
+      "en": "Not completed",
+      "es": "No finalizado",
+      "it": "Non completato"
+    },
+    "repository": "https://github.com/coria79/crypto_trading_bot",
+    "readme": "https://github.com/coria79/crypto_trading_bot/blob/main/README.md",
+    "demo": null,
+    "name": "Crypto Trading Bot",
+    "institution_i18n": {
+      "en": "Personal Project",
+      "es": "Proyecto Personal",
+      "it": "Progetto personale"
+    },
+    "languagePercentages": {
+      "Python": 100.0
+    }
+  },
+  {
+    "number": 3,
+    "repo": "google-clone",
+    "image": "assets/img/portfolio/google-clone.jpg",
+    "description": {
+      "en": "Google homepage clone developed as a practical HTML and CSS exercise during a Platzi course taught by Diego De Granda.",
+      "es": "Clon de la página principal de Google desarrollado como ejercicio práctico de HTML y CSS durante un curso de Platzi dictado por Diego De Granda.",
+      "it": "Clone della pagina principale di Google sviluppato come esercizio pratico di HTML e CSS durante un corso di Platzi tenuto da Diego De Granda."
+    },
+    "created": {
+      "en": "Jul 17, 2022",
+      "es": "17 jul 2022",
+      "it": "17 lug 2022"
+    },
+    "updated": {
+      "en": "Jul 17, 2022",
+      "es": "17 jul 2022",
+      "it": "17 lug 2022"
+    },
+    "institution": "Platzi",
+    "languages": [
+      "CSS",
+      "HTML"
+    ],
+    "technologies": [
+      "HTML5"
+    ],
+    "status": {
+      "en": "Completed",
+      "es": "Finalizado",
+      "it": "Completato"
+    },
+    "repository": "https://github.com/coria79/google-clone",
+    "readme": "https://github.com/coria79/google-clone/blob/main/README.md",
+    "demo": "https://coria79.github.io/google-clon/index.html",
+    "name": "Google Clone",
+    "institution_i18n": {
+      "en": "Platzi",
+      "es": "Platzi",
+      "it": "Platzi"
+    },
+    "languagePercentages": {
+      "CSS": 60.6,
+      "HTML": 39.4
+    }
+  },
+  {
+    "number": 4,
+    "repo": "crud-codo-a-codo-4.0",
+    "description": {
+      "en": "Final project developed during a 20-week bootcamp provided by the Government of the Autonomous City of Buenos Aires (C.A.B.A.).",
+      "es": "Proyecto final desarrollado durante un bootcamp de 20 semanas brindado por el Gobierno de la Ciudad Autónoma de Buenos Aires (C.A.B.A.).",
+      "it": "Progetto finale sviluppato durante un bootcamp di 20 settimane offerto dal Governo della Città Autonoma di Buenos Aires (C.A.B.A.)."
+    },
+    "created": {
+      "en": "Aug 15, 2022",
+      "es": "15 ago 2022",
+      "it": "15 ago 2022"
+    },
+    "updated": {
+      "en": "Aug 15, 2022",
+      "es": "15 ago 2022",
+      "it": "15 ago 2022"
+    },
+    "institution": "Codo A Codo 4.0",
+    "languages": [
+      "HTML",
+      "Python"
+    ],
+    "technologies": [
+      "HTML5",
+      "Flask"
+    ],
+    "status": {
+      "en": "Completed",
+      "es": "Finalizado",
+      "it": "Completato"
+    },
+    "repository": "https://github.com/coria79/crud-codo-a-codo-4.0",
+    "readme": null,
+    "demo": null,
+    "name": "CRUD",
+    "institution_i18n": {
+      "en": "Codo A Codo 4.0",
+      "es": "Codo A Codo 4.0",
+      "it": "Codo A Codo 4.0"
+    },
+    "languagePercentages": {
+      "HTML": 59.6,
+      "Python": 40.4
+    }
+  },
+  {
+    "number": 5,
+    "repo": "Entrega-N1-CV-Juan-Matias-Coria",
+    "image": "assets/img/portfolio/primeros-pasos-frontend.jpg",
+    "description": {
+      "en": "Final project developed for Academias Ticmas, provided by the National Government of Argentina.",
+      "es": "Proyecto final desarrollado para Academias Ticmas, proporcionado por el Gobierno Nacional de Argentina.",
+      "it": "Progetto finale sviluppato per Academias Ticmas, fornito dal Governo Nazionale dell'Argentina."
+    },
+    "created": {
+      "en": "Jan 29, 2023",
+      "es": "29 ene 2023",
+      "it": "29 gen 2023"
+    },
+    "updated": {
+      "en": "Jan 29, 2023",
+      "es": "29 ene 2023",
+      "it": "29 gen 2023"
+    },
+    "institution": "Argentina Programa 4.0",
+    "languages": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "technologies": [
+      "HTML5"
+    ],
+    "status": {
+      "en": "Completed",
+      "es": "Finalizado",
+      "it": "Completato"
+    },
+    "repository": "https://github.com/coria79/Entrega-N1-CV-Juan-Matias-Coria",
+    "readme": null,
+    "demo": "https://coria79.github.io/Entrega-N1-CV-JuanMatiasCoria/index.html",
+    "name": "Primeros pasos del desarrollo frontend",
+    "institution_i18n": {
+      "en": "Argentina Programa 4.0",
+      "es": "Argentina Programa 4.0",
+      "it": "Argentina Programa 4.0"
+    },
+    "languagePercentages": {
+      "HTML": 61.5,
+      "CSS": 29.9,
+      "JavaScript": 8.6
+    }
+  },
+  {
+    "number": 6,
+    "repo": "recetas-de-cocina",
+    "image": "assets/img/portfolio/recetas-de-cocina.jpg",
+    "description": {
+      "en": "A cooking recipe website designed with programmers in mind.",
+      "es": "Un sitio web de recetas de cocina diseñado pensando en programadores.",
+      "it": "Un sito web di ricette di cucina pensato per i programmatori."
+    },
+    "created": {
+      "en": "Jan 4, 2024",
+      "es": "4 ene 2024",
+      "it": "4 gen 2024"
+    },
+    "updated": {
+      "en": "Jan 4, 2024",
+      "es": "4 ene 2024",
+      "it": "4 gen 2024"
+    },
+    "institution": "Personal Project",
+    "languages": [
+      "JavaScript",
+      "CSS",
+      "SCSS",
+      "HTML"
+    ],
+    "technologies": [
+      "HTML5"
+    ],
+    "status": {
+      "en": "Completed",
+      "es": "Finalizado",
+      "it": "Completato"
+    },
+    "repository": "https://github.com/coria79/recetas-de-cocina",
+    "readme": "https://github.com/coria79/recetas-de-cocina/blob/main/README.md",
+    "demo": "https://coria79.github.io/recetas-de-cocina/index.html",
+    "name": "Recetas de Cocina",
+    "institution_i18n": {
+      "en": "Personal Project",
+      "es": "Proyecto Personal",
+      "it": "Progetto personale"
+    },
+    "languagePercentages": {
+      "JavaScript": 39.8,
+      "CSS": 36.4,
+      "SCSS": 16.2,
+      "HTML": 7.6
+    }
+  },
+  {
+    "number": 7,
+    "repo": "alura-encryptor",
+    "image": "assets/img/portfolio/alura-encryptor.jpg",
+    "description": {
+      "en": "First challenge: create a web page that can encrypt and decrypt text, developed for Alura as part of Oracle Next Education (ONE) G6.",
+      "es": "Primer desafío: crear una página web capaz de encriptar y desencriptar texto, desarrollado para Alura como parte de Oracle Next Education (ONE) G6.",
+      "it": "Prima challenge: creare una pagina web in grado di crittografare e decrittografare un testo, sviluppata per Alura nell’ambito di Oracle Next Education (ONE) G6."
+    },
+    "created": {
+      "en": "Feb 7, 2024",
+      "es": "7 feb 2024",
+      "it": "7 feb 2024"
+    },
+    "updated": {
+      "en": "Feb 22, 2024",
+      "es": "22 feb 2024",
+      "it": "22 feb 2024"
+    },
+    "institution": "Oracle Next Education",
+    "languages": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "technologies": [
+      "HTML5"
+    ],
+    "status": {
+      "en": "Completed",
+      "es": "Finalizado",
+      "it": "Completato"
+    },
+    "repository": "https://github.com/coria79/alura-encryptor",
+    "readme": "https://github.com/coria79/alura-encryptor/blob/main/README.md",
+    "demo": "https://coria79.github.io/alura-encrypter/index.html",
+    "name": "Alura Encryptor",
+    "languagePercentages": {
+      "JavaScript": 39.5,
+      "HTML": 34.6,
+      "CSS": 25.9
+    }
+  },
+  {
+    "number": 8,
+    "repo": "the-simplest-crud",
+    "description": {
+      "en": "This project was created to demonstrate, in the simplest and quickest way, how to build a CRUD application in Django using Forms.",
+      "es": "Este proyecto fue creado para demostrar, de la manera más simple y rápida, cómo construir una aplicación CRUD en Django utilizando Forms.",
+      "it": "Questo progetto è stato creato per mostrare, nel modo più semplice e rapido possibile, come realizzare un’applicazione CRUD in Django utilizzando Forms."
+    },
+    "created": {
+      "en": "Feb 29, 2024",
+      "es": "29 feb 2024",
+      "it": "29 feb 2024"
+    },
+    "updated": {
+      "en": "Feb 29, 2024",
+      "es": "29 feb 2024",
+      "it": "29 feb 2024"
+    },
+    "institution": "Personal Project",
+    "languages": [
+      "Python",
+      "HTML"
+    ],
+    "technologies": [
+      "HTML5",
+      "Django"
+    ],
+    "status": {
+      "en": "Completed",
+      "es": "Finalizado",
+      "it": "Completato"
+    },
+    "repository": "https://github.com/coria79/the-simplest-crud",
+    "readme": "https://github.com/coria79/the-simplest-crud/blob/main/README.md",
+    "demo": null,
+    "name": "The Simplest CRUD",
+    "institution_i18n": {
+      "en": "Personal Project",
+      "es": "Proyecto Personal",
+      "it": "Progetto personale"
+    },
+    "languagePercentages": {
+      "Python": 67.9,
+      "HTML": 32.1
+    }
+  },
+  {
+    "number": 9,
+    "repo": "alura-cv",
+    "description": {
+      "en": "Second challenge: create your own CV web page, developed for Alura as part of Oracle Next Education (ONE) G6.",
+      "es": "Segundo desafío: crear tu propia página web de CV, desarrollado para Alura como parte de Oracle Next Education (ONE) G6.",
+      "it": "Seconda challenge: creare la propria pagina web CV, sviluppata per Alura nell’ambito di Oracle Next Education (ONE) G6."
+    },
+    "created": {
+      "en": "May 5, 2024",
+      "es": "5 may 2024",
+      "it": "5 mag 2024"
+    },
+    "updated": {
+      "en": "May 5, 2024",
+      "es": "5 may 2024",
+      "it": "5 mag 2024"
+    },
+    "institution": "Oracle Next Education",
+    "languages": [
+      "CSS",
+      "HTML",
+      "JavaScript"
+    ],
+    "technologies": [
+      "HTML5",
+      "React"
+    ],
+    "status": {
+      "en": "Completed",
+      "es": "Finalizado",
+      "it": "Completato"
+    },
+    "repository": "https://github.com/coria79/alura-cv",
+    "readme": "https://github.com/coria79/alura-cv/blob/main/README.md",
+    "demo": null,
+    "name": "Alura CV",
+    "languagePercentages": {
+      "CSS": 49.9,
+      "HTML": 41.9,
+      "JavaScript": 8.2
+    }
+  },
+  {
+    "number": 10,
+    "repo": "alura-geek",
+    "description": {
+      "en": "Third challenge: create a geek web page, developed for Alura as part of Oracle Next Education (ONE) G6.",
+      "es": "Tercer desafío: crear una página web geek, desarrollado para Alura como parte de Oracle Next Education (ONE) G6.",
+      "it": "Terza challenge: creare una pagina web geek, sviluppata per Alura nell’ambito di Oracle Next Education (ONE) G6."
+    },
+    "created": {
+      "en": "May 16, 2024",
+      "es": "16 may 2024",
+      "it": "16 mag 2024"
+    },
+    "updated": {
+      "en": "May 21, 2024",
+      "es": "21 may 2024",
+      "it": "21 mag 2024"
+    },
+    "institution": "Oracle Next Education",
+    "languages": [
+      "CSS",
+      "JavaScript",
+      "HTML"
+    ],
+    "technologies": [
+      "HTML5",
+      "React"
+    ],
+    "status": {
+      "en": "Completed",
+      "es": "Finalizado",
+      "it": "Completato"
+    },
+    "repository": "https://github.com/coria79/alura-geek",
+    "readme": "https://github.com/coria79/alura-geek/blob/main/README.md",
+    "demo": null,
+    "name": "Alura Geek",
+    "languagePercentages": {
+      "CSS": 48.4,
+      "JavaScript": 34.4,
+      "HTML": 17.2
+    }
+  },
+  {
+    "number": 11,
+    "repo": "cac-nodejs",
+    "description": {
+      "en": "Final project developed during a 20-week bootcamp provided by the Government of the Autonomous City of Buenos Aires (C.A.B.A.).",
+      "es": "Proyecto final desarrollado durante un bootcamp de 20 semanas brindado por el Gobierno de la Ciudad Autónoma de Buenos Aires (C.A.B.A.).",
+      "it": "Progetto finale sviluppato durante un bootcamp di 20 settimane offerto dal Governo della Città Autonoma di Buenos Aires (C.A.B.A.)."
+    },
+    "created": {
+      "en": "Jul 7, 2024",
+      "es": "7 jul 2024",
+      "it": "7 lug 2024"
+    },
+    "updated": {
+      "en": "Jul 14, 2024",
+      "es": "14 jul 2024",
+      "it": "14 lug 2024"
+    },
+    "institution": "Codo A Codo 4.0",
+    "languages": [
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "technologies": [
+      "HTML5",
+      "Node.js"
+    ],
+    "status": {
+      "en": "Completed",
+      "es": "Finalizado",
+      "it": "Completato"
+    },
+    "repository": "https://github.com/coria79/cac-nodejs",
+    "readme": "https://github.com/coria79/cac-nodejs/blob/main/README.md",
+    "demo": null,
+    "name": "Fan Page",
+    "languagePercentages": {
+      "JavaScript": 55.6,
+      "CSS": 22.4,
+      "HTML": 22.0
+    }
+  },
+  {
+    "number": 12,
+    "repo": "alura-flix",
+    "description": {
+      "en": "Fourth challenge: create a streaming-style web page, developed for Alura as part of Oracle Next Education (ONE) G6.",
+      "es": "Cuarto desafío: crear una página web con estilo de plataforma de streaming, desarrollado para Alura como parte de Oracle Next Education (ONE) G6.",
+      "it": "Quarta challenge: creare una pagina web in stile piattaforma di streaming, sviluppata per Alura nell’ambito di Oracle Next Education (ONE) G6."
+    },
+    "created": {
+      "en": "Jun 29, 2024",
+      "es": "29 jun 2024",
+      "it": "29 giu 2024"
+    },
+    "updated": {
+      "en": "Jul 16, 2024",
+      "es": "16 jul 2024",
+      "it": "16 lug 2024"
+    },
+    "institution": "Oracle Next Education",
+    "languages": [
+      "JavaScript",
+      "CSS",
+      "HTML"
+    ],
+    "technologies": [
+      "HTML5",
+      "React"
+    ],
+    "status": {
+      "en": "Completed",
+      "es": "Finalizado",
+      "it": "Completato"
+    },
+    "repository": "https://github.com/coria79/alura-flix",
+    "readme": "https://github.com/coria79/alura-flix/blob/main/README.md",
+    "demo": null,
+    "name": "Alura Flix",
+    "languagePercentages": {
+      "JavaScript": 71.8,
+      "CSS": 25.8,
+      "HTML": 2.4
+    }
+  },
+  {
+    "number": 13,
+    "repo": "django-image-processing",
+    "description": {
+      "en": "Users can upload images from their devices, and the application generates a heatmap from the uploaded image.",
+      "es": "Los usuarios pueden cargar imágenes desde sus dispositivos y la aplicación genera un mapa de calor a partir de la imagen cargada.",
+      "it": "Gli utenti possono caricare immagini dai propri dispositivi e l’applicazione genera una mappa di calore a partire dall’immagine caricata."
+    },
+    "created": {
+      "en": "Nov 26, 2024",
+      "es": "26 nov 2024",
+      "it": "26 nov 2024"
+    },
+    "updated": {
+      "en": "Dec 11, 2024",
+      "es": "11 dic 2024",
+      "it": "11 dic 2024"
+    },
+    "institution": "Personal Project",
+    "languages": [
+      "Python",
+      "HTML"
+    ],
+    "technologies": [
+      "HTML5",
+      "Django"
+    ],
+    "status": {
+      "en": "Completed",
+      "es": "Finalizado",
+      "it": "Completato"
+    },
+    "repository": "https://github.com/coria79/django-image-processing",
+    "readme": "https://github.com/coria79/django-image-processing/blob/main/README.md",
+    "demo": null,
+    "name": "Django Image Processing",
+    "institution_i18n": {
+      "en": "Personal Project",
+      "es": "Proyecto Personal",
+      "it": "Progetto personale"
+    },
+    "languagePercentages": {
+      "Python": 69.3,
+      "HTML": 30.2
+    }
+  },
+  {
+    "number": 14,
+    "repo": "project_image_upload",
+    "description": {
+      "en": "This project demonstrates a robust and secure way to upload images in a Django web application using Amazon S3 for storage.",
+      "es": "Este proyecto demuestra una forma robusta y segura de cargar imágenes en una aplicación web Django utilizando Amazon S3 para el almacenamiento.",
+      "it": "Questo progetto mostra un modo robusto e sicuro per caricare immagini in un’applicazione web Django utilizzando Amazon S3 per l’archiviazione."
+    },
+    "created": {
+      "en": "Jan 13, 2025",
+      "es": "13 ene 2025",
+      "it": "13 gen 2025"
+    },
+    "updated": {
+      "en": "Mar 25, 2025",
+      "es": "25 mar 2025",
+      "it": "25 mar 2025"
+    },
+    "institution": "Personal Project",
+    "languages": [
+      "Python",
+      "CSS",
+      "HTML"
+    ],
+    "technologies": [
+      "HTML5",
+      "Django",
+      "Amazon S3"
+    ],
+    "status": {
+      "en": "Completed",
+      "es": "Finalizado",
+      "it": "Completato"
+    },
+    "repository": "https://github.com/coria79/project_image_upload",
+    "readme": "https://github.com/coria79/project_image_upload/blob/main/README.md",
+    "demo": null,
+    "name": "Image Upload with Amazon S3",
+    "institution_i18n": {
+      "en": "Personal Project",
+      "es": "Proyecto Personal",
+      "it": "Progetto personale"
+    },
+    "languagePercentages": {
+      "Python": 63.8,
+      "CSS": 18.2,
+      "HTML": 18.0
+    }
+  }
+]

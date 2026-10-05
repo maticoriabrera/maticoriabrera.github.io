@@ -1,5 +1,77 @@
 [
   {
+    "number": 144,
+    "title": "Introduction to AI Development",
+    "organization": "BIG SCHOOL",
+    "date": "2026.10.04",
+    "instructor": "Moure, Brais",
+    "duration": "6 hs",
+    "skill": "Artificial Intelligence",
+    "thumbnail": "./assets/img/certificates/2026.10.04 Big School - Iniciación Al Desarrollo Con IA -  Thumbail.jpg",
+    "title_es": "Iniciación Al Desarrollo Con IA",
+    "title_it": "Introduzione allo sviluppo con l'IA"
+  },
+  {
+    "number": 143,
+    "title": "Digital Marketing with AI",
+    "organization": "BIG SCHOOL",
+    "date": "2026.10.04",
+    "instructor": "Gonzáles, Paula",
+    "duration": "6 hs",
+    "skill": "Digital Marketing",
+    "thumbnail": "./assets/img/certificates/2026.10.04 Big School - Marketing Digital con IA -  Thumbail.jpg",
+    "title_es": "Marketing Digital Con IA",
+    "title_it": "Marketing Digitale con l'IA"
+  },
+  {
+    "number": 142,
+    "title": "Introduction To ITIL v4",
+    "organization": "SIMPLILEARN",
+    "date": "2026.08.04",
+    "instructor": "",
+    "duration": "1 hs",
+    "skill": "ITIL",
+    "thumbnail": "./assets/img/certificates/2026.08.04 Simplilearn - Introduction To ITIL v4 - Thumbail.jpg",
+    "title_es": "Introducción a ITIL v4",
+    "title_it": "Introduzione a ITIL v4"
+  },
+  {
+    "number": 141,
+    "title": "Introduction to Artificial Intelligence",
+    "organization": "LEARNING HEROES",
+    "date": "2026.07.07",
+    "instructor": "Sáez, Javier",
+    "duration": "8 hs",
+    "skill": "Artificial Intelligence",
+    "thumbnail": "./assets/img/certificates/2026.07.07 IA Heroes - Iniciación En Inteligencia Artificial - Thumbail.jpg",
+    "title_es": "Iniciación En Inteligencia Artificial",
+    "title_it": "Introduzione all'Intelligenza Artificiale"
+  },
+  {
+    "number": 140,
+    "title": "AI for Everyone",
+    "organization": "CODO A CODO 4.0 BUENOS AIRES CIUDAD",
+    "date": "2026.06.26",
+    "instructor": "",
+    "duration": "12 hs",
+    "skill": "Artificial Intelligence",
+    "thumbnail": "./assets/img/certificates/2026.06.26 Buenos Aires Aprende - IA Para Todos - Thumbail.jpg",
+    "title_es": "IA Para Todos",
+    "title_it": "IA per tutti"
+  },
+  {
+    "number": 139,
+    "title": "Introduction to AI Development",
+    "organization": "BIG SCHOOL",
+    "date": "2026.06.26",
+    "instructor": "Moure, Brais",
+    "duration": "6 hs",
+    "skill": "Artificial Intelligence",
+    "thumbnail": "./assets/img/certificates/2026.06.26 Big School - Iniciación Al Desarrollo Con IA - Thumbail.jpg",
+    "title_es": "Iniciación Al Desarrollo Con IA",
+    "title_it": "Introduzione allo sviluppo con l'IA"
+  },
+  {
     "number": 138,
     "title": "IA HEROES",
     "organization": "LEARNING HEROES",

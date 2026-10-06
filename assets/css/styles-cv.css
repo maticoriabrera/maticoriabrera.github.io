@@ -1,3 +1,13 @@
+/* =========================================================
+   CV / PORTFOLIO — ESTILOS PRINCIPALES
+   Refactor estructural: 2026-10-05
+   Mantiene el diseño y comportamiento existentes.
+   ========================================================= */
+
+/* =========================================================
+   1. BASE Y VARIABLES
+   ========================================================= */
+
 :root{
   --bg: #eef4fa;
   --paper: #ffffff;
@@ -54,6 +64,10 @@ body{
 .lang-btn{
   font-size: var(--fs-xs);
 }
+
+/* =========================================================
+   2. LAYOUT GENERAL Y SIDEBAR
+   ========================================================= */
 
 /* Fondo suave + spotlight */
 .stage{
@@ -293,6 +307,43 @@ body{
 
 .flag-dots .dot:nth-child(2){ background: rgba(21,83,172,.45); }
 
+/* Social */
+.social-section{
+  width: 100%;
+}
+
+.social-list{
+  margin: 0;
+  padding: 0;
+}
+
+.social-link{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 28px;
+  padding: 0;
+  color: rgba(255,255,255,.92);
+  text-decoration: none;
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  opacity: .92;
+}
+
+.social-link:hover{
+  color: #fff;
+}
+
+.social-link i{
+  width: 18px;
+  flex: 0 0 18px;
+  text-align: center;
+}
+
+/* =========================================================
+   3. CONTENIDO PRINCIPAL Y COMPONENTES
+   ========================================================= */
 
 /* MAIN */
 .main{
@@ -729,186 +780,6 @@ body{
   text-decoration: underline;
 }
 
-
-/* Spotify playlist link + modal */
-.spotify-link{
-  appearance: none;
-  -webkit-appearance: none;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  font: inherit;
-  line-height: inherit;
-  text-align: left;
-  cursor: pointer;
-}
-
-.spotify-link:focus-visible{
-  outline: 3px solid rgba(31,140,239,.28);
-  outline-offset: 4px;
-  border-radius: 4px;
-}
-
-body.spotify-modal-open{
-  overflow: hidden;
-}
-
-.spotify-modal{
-  position: fixed;
-  inset: 0;
-  z-index: 10000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  background: rgba(6, 12, 20, .76);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity .18s ease, visibility .18s ease;
-}
-
-.spotify-modal.is-open{
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
-.spotify-modal__dialog{
-  width: min(700px, 100%);
-  max-height: calc(100dvh - 48px);
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,.14);
-  border-radius: 18px;
-  background: #121212;
-  box-shadow: 0 24px 70px rgba(0,0,0,.46);
-  transform: translateY(10px) scale(.99);
-  transition: transform .18s ease;
-}
-
-.spotify-modal.is-open .spotify-modal__dialog{
-  transform: translateY(0) scale(1);
-}
-
-.spotify-modal__header{
-  min-height: 54px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 10px 12px 10px 18px;
-  border-bottom: 1px solid rgba(255,255,255,.10);
-  background: #121212;
-}
-
-.spotify-modal__title{
-  margin: 0;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: .2px;
-}
-
-.spotify-modal__close{
-  flex: 0 0 auto;
-  width: 38px;
-  height: 38px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-  background: transparent;
-  color: rgba(255,255,255,.82);
-  font-size: 22px;
-  cursor: pointer;
-  transition: background .15s ease, color .15s ease, transform .15s ease;
-}
-
-.spotify-modal__close:hover{
-  background: rgba(255,255,255,.10);
-  color: #fff;
-}
-
-.spotify-modal__close:active{
-  transform: scale(.96);
-}
-
-.spotify-modal__close:focus-visible{
-  outline: 3px solid rgba(255,255,255,.34);
-  outline-offset: 2px;
-}
-
-.spotify-modal__player{
-  background: #121212;
-  line-height: 0;
-}
-
-.spotify-modal__player iframe{
-  display: block;
-  width: 100%;
-  height: 352px;
-  border: 0;
-  border-radius: 0 0 18px 18px;
-  background: #121212;
-}
-
-@media (max-width: 600px){
-  .spotify-modal{
-    align-items: center;
-    padding: 12px;
-  }
-
-  .spotify-modal__dialog{
-    width: 100%;
-    max-height: calc(100dvh - 24px);
-    border-radius: 16px;
-  }
-
-  .spotify-modal__header{
-    min-height: 50px;
-    padding: 8px 8px 8px 14px;
-  }
-
-  .spotify-modal__title{
-    font-size: 15px;
-  }
-
-  .spotify-modal__close{
-    width: 40px;
-    height: 40px;
-    font-size: 21px;
-  }
-
-  .spotify-modal__player iframe{
-    height: min(430px, calc(100dvh - 98px));
-    border-radius: 0 0 16px 16px;
-  }
-}
-
-@media (max-width: 380px){
-  .spotify-modal{
-    padding: 8px;
-  }
-
-  .spotify-modal__dialog{
-    max-height: calc(100dvh - 16px);
-  }
-
-  .spotify-modal__player iframe{
-    height: min(410px, calc(100dvh - 90px));
-  }
-}
-
-@media (prefers-reduced-motion: reduce){
-  .spotify-modal,
-  .spotify-modal__dialog{
-    transition: none;
-  }
-}
-
 .linkedin-link{
   display:inline-flex;
   align-items:center;
@@ -1011,512 +882,9 @@ body.spotify-modal-open{
   border-color: #1f8cef;
 }
 
-@media (max-width: 720px) {
-  .courses-filters {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-
-
-
-
-
-
-
-/* =========================================
-RESPONSIVE 921px - 1050px
-========================================= */
-@media (min-width: 921px) and (max-width: 1050px){
-  .cv{ grid-template-columns: 340px 1fr; }
-  .name{ font-size: 46px; }
-
-  .role::before,
-  .role::after{
-    min-width: 1px;
-  }
-}
-
-/* =========================================
-   RESPONSIVE 721px - 920px
-========================================= */
-@media (min-width: 721px) and (max-width: 920px){
-  .cv{ grid-template-columns: 1fr; } /* Aplia en 1 columna*/
-  .clip{ display:none; }
-  .content{ padding: 16px 18px 28px; }
-  .hero{ padding: 26px 18px 22px; }
-  .grid-2{ grid-template-columns: 1fr; }
-  .avatar-wrap{ width: 240px; height: 240px; }
-
-.role::before,
-.role::after{
-  min-width: 35px;
-}
-
-  /* Sidebar más compacta */
-  .side-top{ padding: 16px 16px 12px; }
-  .side-body{ padding: 8px 16px 16px; }
-
-  /* Foto más chica y menos aire */
-  .avatar-wrap{
-    width: 180px;
-    height: 180px;
-    margin: 0 auto 8px;
-  }
-
-  .avatar-img{
-    width: 132px;
-    height: 132px;
-    margin: 18px auto 0;
-  }
-
-  .glow-ring{
-    width: 180px;
-    height: 180px;
-  }
-
-  /* Contacto más compacto */
-  .contact-card{
-    width: 100%;
-    max-width: 360px;
-  }
-
-  .contact-row{
-    grid-template-columns: 44px 1fr;
-  }
-
-  .c-ico{ height: 44px; }
-
-  .c-ico i{ font-size: 14px; }
-
-  .c-text{
-    font-size: 14px;      /* sube a 14 para legibilidad móvil */
-    padding: 0 12px;
-  }
-
-  /* Separadores (los dots) con menos espacio */
-  .flag-dots{
-    padding-top: 8px;
-    gap: 8px;
-  }
-
-  .flag-dots .dot{
-    width: 10px;
-    height: 10px;
-  }
-
-  /* Títulos sidebar y “meters” con menos margen */
-  .side-section{ margin-top: 14px; }
-
-  .side-h{
-    margin: 10px 0 10px;
-    padding-bottom: 8px;
-  }
-
-  .meter{ margin: 10px 0 12px; }
-
-  .m-label{ margin-bottom: 6px; }
-
-  .m-bar{ height: 7px; }
-
-  /* Botón descargar: ancho completo y cómodo en móvil */
-  .btn{
-    width: 100%;
-    justify-content: space-between;
-    padding: 12px 14px;
-  }
-
-}
-
-/* =========================================
-   RESPONSIVE 521px - 720px
-========================================= */
-@media (min-width: 521px) and (max-width: 720px){
-
-  /* Reducimos padding general del stage */
-  .stage{
-    padding: 16px 10px;
-  }
-
-  /* La hoja ocupa todo el ancho disponible */
-  .cv{
-    grid-template-columns: 1fr; /* Aplia en 1 columna*/
-    border-radius: 10px;
-  }
-
-  /* HERO */
-  .hero{
-    padding: 24px 16px 20px;
-  }
-
-  .hero-inner{
-    padding-top: 20px;
-  }
-
-  .name{
-    font-size: 32px;
-    letter-spacing: 1px;
-  }
-
-  .role{
-    font-size: 12px;
-    letter-spacing: 3px;
-  }
-
-.role::before,
-.role::after{
-  min-width: 0px;
-}
-
-  .lead{
-    font-size: 15px;
-    line-height: 1.55;
-    padding: 0 6px;
-  }
-
-  /* Selector idioma más compacto */
-  .lang-switch{
-    top: 10px;
-    right: 10px;
-    padding: 6px 10px;
-    gap: 6px;
-  }
-
-  .lang-btn{
-    font-size: 12px;
-  }
-
-  /* CONTENIDO */
-  .content{
-    padding: 14px 16px 24px;
-  }
-
-  /* TAGS más adaptables */
-  .tag{
-    min-width: auto;
-    font-size: 12px;
-    padding: 8px 12px;
-  }
-
-  .tag-arrow{
-    min-width: auto;
-  }
-
-  .tag-arrow::after{
-    border-top: 18px solid transparent;
-    border-bottom: 18px solid transparent;
-    border-left: 18px solid var(--accent2);
-    right: -18px;
-  }
-
-  /* CARDS */
-  .card,
-  .card-top,
-  .card-main{
-    padding: 14px;
-  }
-
-  .card p,
-  .item-p{
-    font-size: 15px;
-  }
-
-  /* ITEMS */
-  .item-h{
-    font-size: 13px;
-  }
-
-  .item-meta{
-    font-size: 12px;
-  }
-
-  /* LinkedIn bloque más compacto */
-  .linkedin-block{
-    gap: 8px;
-  }
-
-  .linkedin-text{
-    font-size: 13px;
-  }
-
-  /* HOBBIES */
-  .hobby{
-    padding: 8px 10px;
-  }
-
-  .h-ico{
-    width: 30px;
-    height: 30px;
-  }
-
-  /* SIDEBAR (ya está en columna por 920px, pero afinamos) */
-  .side-top{
-    padding: 14px 14px 10px;
-  }
-
-  .side-body{
-    padding: 6px 14px 16px;
-  }
-
-  .avatar-wrap{
-    width: 160px;
-    height: 160px;
-  }
-
-  .avatar-img{
-    width: 120px;
-    height: 120px;
-  }
-
-  .glow-ring{
-    width: 160px;
-    height: 160px;
-  }
-
-  /* Contacto */
-  .contact-row{
-    grid-template-columns: 40px 1fr;
-  }
-
-  .c-ico{
-    height: 40px;
-  }
-
-  .c-text{
-    font-size: 13.5px;
-  }
-
-  /* Botón descargar ancho completo */
-  .btn{
-    width: 100%;
-    font-size: 14px;
-  }
-
-
-
- 
-  .item-course{
-    flex-direction: column;
-  }
-
-  .item-course__thumb{
-    width: 100%;
-    max-width: 220px;
-    flex-basis: auto;
-  }
-
-
-
-
-
-}
-
-/* =========================================
-   RESPONSIVE EXTRA SMALL - hasta 520px
-========================================= */
-@media (max-width: 520px){
-
-  .stage{
-    padding: 10px 6px;
-    align-items: flex-start;
-  }
-
-  .cv{
-    width: 100%;
-    max-width: 100%;
-    grid-template-columns: 1fr;
-    border-radius: 10px;
-  }
-
-  .clip{
-    display: none;
-  }
-
-  .side-top{
-    padding: 14px 12px 10px;
-  }
-
-  .side-body{
-    padding: 6px 12px 16px;
-  }
-
-  .avatar-wrap{
-    width: 160px;
-    height: 160px;
-    margin: 0 auto 8px;
-  }
-
-  .avatar-img{
-    width: 120px;
-    height: 120px;
-    margin: 18px auto 0;
-  }
-
-  .glow-ring{
-    width: 160px;
-    height: 160px;
-  }
-
-  .contact-card{
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .contact-row{
-    grid-template-columns: 40px minmax(0, 1fr);
-  }
-
-  .c-ico{
-    height: 42px;
-  }
-
-  .c-text{
-    min-width: 0;
-    font-size: 12.5px;
-    padding: 0 10px;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-  }
-
-  .hero{
-    padding: 22px 14px 18px;
-  }
-
-  .hero-inner{
-    padding-top: 22px;
-  }
-
-  .name{
-    font-size: 26px;
-    letter-spacing: .8px;
-    line-height: 1.15;
-  }
-
-  .role{
-    font-size: 11px;
-    letter-spacing: 2.4px;
-    line-height: 1.35;
-  }
-
-  .role::before,
-  .role::after{
-    display: none;
-  }
-
-  .lead{
-    font-size: 14px;
-    line-height: 1.55;
-  }
-
-  .lang-switch{
-    top: 8px;
-    right: 8px;
-    padding: 5px 8px;
-    gap: 5px;
-  }
-
-  .lang-btn{
-    font-size: 11px;
-    padding: 3px 4px;
-  }
-
-  .content{
-    padding: 12px 10px 22px;
-  }
-
-  .grid-2{
-    grid-template-columns: 1fr;
-  }
-
-  .tag,
-  .tag-arrow{
-    min-width: 0;
-    width: auto;
-    max-width: calc(100% - 18px);
-    font-size: 11px;
-    padding: 8px 10px;
-    line-height: 1.25;
-  }
-
-  .tag-arrow::after{
-    border-top: 18px solid transparent;
-    border-bottom: 18px solid transparent;
-    border-left: 18px solid var(--accent2);
-    right: -18px;
-  }
-
-  .card,
-  .card-top,
-  .card-main{
-    padding: 12px;
-    border-radius: 12px;
-  }
-
-  .item-course{
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  .item-course__body{
-    width: 100%;
-  }
-
-  .item-course__thumb{
-    width: 100%;
-    max-width: 210px;
-    flex: 0 0 auto;
-    margin: 0 auto;
-  }
-
-  .item-course__thumb img{
-    width: 100%;
-    height: auto;
-  }
-
-  .item-h{
-    font-size: 12px;
-    line-height: 1.35;
-  }
-
-  .item-meta,
-  .item-p{
-    font-size: 12.5px;
-    line-height: 1.45;
-  }
-
-  .btn{
-    width: 100%;
-    justify-content: space-between;
-    font-size: 13px;
-  }
-
-  .diploma-link{
-    width: 100%;
-    min-height: 50px;
-    padding: 11px 16px;
-    gap: 12px;
-  }
-
-  .diploma-link__icon{
-    width: 30px;
-    height: 30px;
-    font-size: 24px;
-  }
-
-  .hobby-grid{
-    grid-template-columns: 1fr;
-  }
-
-  .courses-filters{
-    grid-template-columns: 1fr;
-  }
-
-  #courses-pagination{
-    justify-content: center;
-  }
-}
+/* =========================================================
+   4. PROFESSIONAL SKILLS
+   ========================================================= */
 
 /* Professional skills accordion
    Three-level structure:
@@ -1676,57 +1044,241 @@ RESPONSIVE 921px - 1050px
   outline-offset: 3px;
 }
 
-@media (max-width: 720px){
-  .skills-card{
-    padding: 6px;
-  }
+/* =========================================================
+   5. SPOTIFY MODAL
+   ========================================================= */
 
-  .skill-summary{
-    padding: 12px 10px;
-    gap: 10px;
-  }
-
-  .skill-summary::before,
-  .skill-subaccordion > summary::before{
-    width: 24px;
-    height: 24px;
-    border-radius: 7px;
-  }
-
-  .skill-summary__title{
-    font-size: 13.5px;
-  }
-
-  .skill-summary__description{
-    font-size: 12.5px;
-  }
-
-  .skill-accordion__body{
-    padding: 0 8px 8px 8px;
-  }
-
-  .skill-subaccordion > summary{
-    padding: 10px 9px;
-    gap: 9px;
-    font-size: 12.5px;
-  }
-
-  .skill-summary::after,
-  .skill-subaccordion > summary::after{
-    font-size: 22px;
-  }
-
-  .skill-list{
-    columns: 1;
-    padding: 2px 12px 12px 42px;
-  }
-
-  .skill-list li{
-    font-size: 12.8px;
-    line-height: 1.45;
-  }
+/* Spotify playlist link + modal */
+.spotify-link{
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  line-height: inherit;
+  text-align: left;
+  cursor: pointer;
 }
 
+.spotify-link:focus-visible{
+  outline: 3px solid rgba(31,140,239,.28);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+body.spotify-modal-open{
+  overflow: hidden;
+}
+
+.spotify-modal{
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(6, 12, 20, .76);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .18s ease, visibility .18s ease;
+}
+
+.spotify-modal.is-open{
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.spotify-modal__dialog{
+  width: min(700px, 100%);
+  max-height: calc(100dvh - 48px);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 18px;
+  background: #121212;
+  box-shadow: 0 24px 70px rgba(0,0,0,.46);
+  transform: translateY(10px) scale(.99);
+  transition: transform .18s ease;
+}
+
+.spotify-modal.is-open .spotify-modal__dialog{
+  transform: translateY(0) scale(1);
+}
+
+.spotify-modal__header{
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 12px 10px 18px;
+  border-bottom: 1px solid rgba(255,255,255,.10);
+  background: #121212;
+}
+
+.spotify-modal__title{
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+
+.spotify-modal__close{
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: rgba(255,255,255,.82);
+  font-size: 22px;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, transform .15s ease;
+}
+
+.spotify-modal__close:hover{
+  background: rgba(255,255,255,.10);
+  color: #fff;
+}
+
+.spotify-modal__close:active{
+  transform: scale(.96);
+}
+
+.spotify-modal__close:focus-visible{
+  outline: 3px solid rgba(255,255,255,.34);
+  outline-offset: 2px;
+}
+
+.spotify-modal__player{
+  background: #121212;
+  line-height: 0;
+}
+
+.spotify-modal__player iframe{
+  display: block;
+  width: 100%;
+  height: 352px;
+  border: 0;
+  border-radius: 0 0 18px 18px;
+  background: #121212;
+}
+
+/* =========================================================
+   6. GUITAR VIDEO MODAL
+   ========================================================= */
+
+/* Guitar video link + modal ------------------------------------------------- */
+body.video-modal-open{
+  overflow: hidden;
+}
+
+.video-modal[hidden]{
+  display: none !important;
+}
+
+.video-modal{
+  position: fixed;
+  inset: 0;
+  z-index: 10010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(6, 12, 20, .76);
+}
+
+.video-modal__dialog{
+  width: min(688px, 100%);
+  max-height: calc(100dvh - 48px);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 18px;
+  background: #121212;
+  box-shadow: 0 24px 70px rgba(0,0,0,.46);
+}
+
+.video-modal__header{
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 12px 10px 18px;
+  border-bottom: 1px solid rgba(255,255,255,.10);
+  background: #121212;
+}
+
+.video-modal__title{
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+
+.video-modal__close{
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: rgba(255,255,255,.82);
+  font-size: 22px;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, transform .15s ease;
+}
+
+.video-modal__close:hover{
+  background: rgba(255,255,255,.10);
+  color: #fff;
+}
+
+.video-modal__close:active{
+  transform: scale(.96);
+}
+
+.video-modal__close:focus-visible{
+  outline: 3px solid rgba(255,255,255,.34);
+  outline-offset: 2px;
+}
+
+.video-modal__player{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: #000;
+  line-height: 0;
+}
+
+.video-modal__video{
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: #000;
+}
+
+/* =========================================================
+   7. SIDEBAR DECORATIVE FX
+   ========================================================= */
 
 /* =========================================================
    SIDEBAR FX - efecto decorativo bajo el botón "Download CV"
@@ -1910,124 +1462,494 @@ RESPONSIVE 921px - 1050px
   50%     { opacity: calc(var(--o) * .45); transform: translate(var(--dx), var(--dy)) scale(.8); }
 }
 
-/* Accesibilidad: si el sistema pide menos movimiento, el efecto queda estático */
-@media (prefers-reduced-motion: reduce){
-  .fx-glow,
-  .fx-dot,
-  .side-fx__art::before,
-  .side-fx__art::after{
-    animation: none;
+/* =========================================================
+   8. RESPONSIVE
+   Los breakpoints generales se concentran aquí para que cada
+   comportamiento pueda localizarse y modificarse fácilmente.
+   ========================================================= */
+
+/* Desktop compacto */
+@media (min-width: 921px) and (max-width: 1050px){
+  .cv{ grid-template-columns: 340px 1fr; }
+  .name{ font-size: 46px; }
+
+  .role::before,
+  .role::after{
+    min-width: 1px;
   }
-  .side-fx__art::after{
-    display: none;
+}
+
+/* La sidebar pasa arriba y aprovecha el ancho disponible. */
+@media (max-width: 920px){
+  .side-top,
+  .side-body{
+    width: min(100%, 780px);
+    margin-inline: auto;
+  }
+
+  .side-top{
+    padding-left: clamp(18px, 6vw, 56px);
+    padding-right: clamp(18px, 6vw, 56px);
+  }
+
+  .side-body{
+    padding-left: clamp(18px, 6vw, 56px);
+    padding-right: clamp(18px, 6vw, 56px);
+    padding-bottom: clamp(22px, 5vw, 42px);
+  }
+
+  .contact-card{
+    width: 100%;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-row{
+    grid-template-columns: 48px minmax(0, 1fr);
+  }
+
+  .c-ico{
+    height: 48px;
+  }
+
+  .c-text{
+    min-width: 0;
+    font-size: 14px;
+    padding-inline: 14px;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .languages-section,
+  .values-section,
+  .social-section{
+    width: 100%;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .languages-section .m-bar{
+    width: 100%;
+  }
+
+  .values-section{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(24px, 7vw, 52px);
+    row-gap: 0;
+  }
+
+  .values-section > .side-h{
+    grid-column: 1 / -1;
+  }
+
+  .values-section .meter{
+    margin: 6px 0 8px;
+    min-width: 0;
+  }
+
+  .download-section{
+    width: 100%;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .download-section .btn{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .social-section{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(28px, 8vw, 64px);
+    align-items: start;
+  }
+
+  .social-section > .side-h{
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .social-list{
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(28px, 8vw, 64px);
+    row-gap: 2px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .social-link{
+    min-width: 0;
+    padding: 4px 0;
   }
 }
 
-/* No imprimir el efecto */
-@media print{
-  .side-fx{ display: none !important; }
+/* Tablet */
+@media (min-width: 721px) and (max-width: 920px){
+  .cv{ grid-template-columns: 1fr; }
+  .clip{ display: none; }
+  .content{ padding: 16px 18px 28px; }
+  .hero{ padding: 26px 18px 22px; }
+  .grid-2{ grid-template-columns: 1fr; }
+
+  .role::before,
+  .role::after{
+    min-width: 35px;
+  }
+
+  .side-top{
+    padding-top: 16px;
+    padding-bottom: 12px;
+  }
+
+  .side-body{
+    padding-top: 8px;
+  }
+
+  .avatar-wrap{
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 8px;
+  }
+
+  .avatar-img{
+    width: 132px;
+    height: 132px;
+    margin: 18px auto 0;
+  }
+
+  .glow-ring{
+    width: 180px;
+    height: 180px;
+  }
+
+  .c-ico i{
+    font-size: 14px;
+  }
+
+  .flag-dots{
+    padding-top: 8px;
+    gap: 8px;
+  }
+
+  .flag-dots .dot{
+    width: 10px;
+    height: 10px;
+  }
+
+  .side-section{
+    margin-top: 14px;
+  }
+
+  .side-h{
+    margin: 10px 0 10px;
+    padding-bottom: 8px;
+  }
+
+  .meter{
+    margin: 10px 0 12px;
+  }
+
+  .m-label{
+    margin-bottom: 6px;
+  }
+
+  .m-bar{
+    height: 7px;
+  }
+
+  .download-section .btn{
+    justify-content: space-between;
+    padding: 12px 14px;
+  }
 }
 
-/* Guitar video link + modal ------------------------------------------------- */
-body.video-modal-open{
-  overflow: hidden;
+/* Reglas compartidas por móviles de hasta 720px. */
+@media (max-width: 720px){
+  .side-top,
+  .side-body{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .side-top{
+    padding-left: clamp(14px, 5vw, 30px);
+    padding-right: clamp(14px, 5vw, 30px);
+  }
+
+  .side-body{
+    padding-left: clamp(14px, 5vw, 30px);
+    padding-right: clamp(14px, 5vw, 30px);
+  }
+
+  .contact-card,
+  .languages-section,
+  .values-section,
+  .download-section,
+  .social-section{
+    max-width: 100%;
+    
+  }
+
+  
+  .contact-row{
+    grid-template-columns: 44px minmax(0, 1fr);
+  }
+
+  .c-ico{
+    height: 44px;
+  }
+
+  .c-text{
+    font-size: 13.5px;
+    padding-inline: 12px;
+  }
+
+  .download-section .btn{
+    font-size: 14px;
+  }
+
+  .courses-filters{
+    grid-template-columns: 1fr;
+  }
+
+  .skills-card{
+    padding: 6px;
+  }
+
+  .skill-summary{
+    padding: 12px 10px;
+    gap: 10px;
+  }
+
+  .skill-summary::before,
+  .skill-subaccordion > summary::before{
+    width: 24px;
+    height: 24px;
+    border-radius: 7px;
+  }
+
+  .skill-summary__title{
+    font-size: 13.5px;
+  }
+
+  .skill-summary__description{
+    font-size: 12.5px;
+  }
+
+  .skill-accordion__body{
+    padding: 0 8px 8px 8px;
+  }
+
+  .skill-subaccordion > summary{
+    padding: 10px 9px;
+    gap: 9px;
+    font-size: 12.5px;
+  }
+
+  .skill-summary::after,
+  .skill-subaccordion > summary::after{
+    font-size: 22px;
+  }
+
+  .skill-list{
+    columns: 1;
+    padding: 2px 12px 12px 42px;
+  }
+
+  .skill-list li{
+    font-size: 12.8px;
+    line-height: 1.45;
+  }
+  
+
 }
 
-.video-modal[hidden]{
-  display: none !important;
+/* Móvil medio */
+@media (min-width: 521px) and (max-width: 720px){
+  .stage{
+    padding: 16px 10px;
+  }
+
+  .cv{
+    grid-template-columns: 1fr;
+    border-radius: 10px;
+  }
+
+  .hero{
+    padding: 24px 16px 20px;
+  }
+
+  .hero-inner{
+    padding-top: 20px;
+  }
+
+  .name{
+    font-size: 32px;
+    letter-spacing: 1px;
+  }
+
+  .role{
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  .role::before,
+  .role::after{
+    min-width: 0;
+  }
+
+  .lead{
+    font-size: 15px;
+    line-height: 1.55;
+    padding: 0 6px;
+  }
+
+  .lang-switch{
+    top: 10px;
+    right: 10px;
+    padding: 6px 10px;
+    gap: 6px;
+  }
+
+  .lang-btn{
+    font-size: 12px;
+  }
+
+  .content{
+    padding: 14px 16px 24px;
+  }
+
+  .tag{
+    min-width: auto;
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .tag-arrow{
+    min-width: auto;
+  }
+
+  .tag-arrow::after{
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-left: 18px solid var(--accent2);
+    right: -18px;
+  }
+
+  .card,
+  .card-top,
+  .card-main{
+    padding: 14px;
+  }
+
+  .card p,
+  .item-p{
+    font-size: 15px;
+  }
+
+  .item-h{
+    font-size: 13px;
+  }
+
+  .item-meta{
+    font-size: 12px;
+  }
+
+  .linkedin-block{
+    gap: 8px;
+  }
+
+  .linkedin-text{
+    font-size: 13px;
+  }
+
+  .hobby{
+    padding: 8px 10px;
+  }
+
+  .h-ico{
+    width: 30px;
+    height: 30px;
+  }
+
+  .item-course{
+    flex-direction: column;
+  }
+
+  .item-course__thumb{
+    width: 100%;
+    max-width: 220px;
+    flex-basis: auto;
+  }
+
+  .side-top{
+    padding-top: 14px;
+    padding-bottom: 10px;
+  }
+
+  .side-body{
+    padding-top: 6px;
+  }
+
+  .avatar-wrap{
+    width: 160px;
+    height: 160px;
+  }
+
+  .avatar-img{
+    width: 120px;
+    height: 120px;
+  }
+
+  .glow-ring{
+    width: 160px;
+    height: 160px;
+  }
+
 }
 
-.video-modal{
-  position: fixed;
-  inset: 0;
-  z-index: 10010;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  background: rgba(6, 12, 20, .76);
-}
-
-.video-modal__dialog{
-  width: min(688px, 100%);
-  max-height: calc(100dvh - 48px);
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,.14);
-  border-radius: 18px;
-  background: #121212;
-  box-shadow: 0 24px 70px rgba(0,0,0,.46);
-}
-
-.video-modal__header{
-  min-height: 54px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 10px 12px 10px 18px;
-  border-bottom: 1px solid rgba(255,255,255,.10);
-  background: #121212;
-}
-
-.video-modal__title{
-  margin: 0;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: .2px;
-}
-
-.video-modal__close{
-  flex: 0 0 auto;
-  width: 38px;
-  height: 38px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-  background: transparent;
-  color: rgba(255,255,255,.82);
-  font-size: 22px;
-  cursor: pointer;
-  transition: background .15s ease, color .15s ease, transform .15s ease;
-}
-
-.video-modal__close:hover{
-  background: rgba(255,255,255,.10);
-  color: #fff;
-}
-
-.video-modal__close:active{
-  transform: scale(.96);
-}
-
-.video-modal__close:focus-visible{
-  outline: 3px solid rgba(255,255,255,.34);
-  outline-offset: 2px;
-}
-
-.video-modal__player{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-  background: #000;
-  line-height: 0;
-}
-
-.video-modal__video{
-  display: block;
-  width: 100%;
-  max-width: 640px;
-  height: auto;
-  aspect-ratio: 4 / 3;
-  object-fit: contain;
-  background: #000;
-}
-
+/* Modales en móvil */
 @media (max-width: 600px){
+  .spotify-modal{
+    align-items: center;
+    padding: 12px;
+  }
+
+  .spotify-modal__dialog{
+    width: 100%;
+    max-height: calc(100dvh - 24px);
+    border-radius: 16px;
+  }
+
+  .spotify-modal__header{
+    min-height: 50px;
+    padding: 8px 8px 8px 14px;
+  }
+
+  .spotify-modal__title{
+    font-size: 15px;
+  }
+
+  .spotify-modal__close{
+    width: 40px;
+    height: 40px;
+    font-size: 21px;
+  }
+
+  .spotify-modal__player iframe{
+    height: min(430px, calc(100dvh - 98px));
+    border-radius: 0 0 16px 16px;
+  }
+
   .video-modal{
     padding: 12px;
   }
@@ -2064,13 +1986,270 @@ body.video-modal-open{
   }
 }
 
+/* Móvil pequeño */
+@media (max-width: 520px){
+  .stage{
+    padding: 10px 6px;
+    align-items: flex-start;
+  }
+
+  .cv{
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    border-radius: 10px;
+  }
+
+  .clip{
+    display: none;
+  }
+
+  .hero{
+    padding: 22px 14px 18px;
+  }
+
+  .hero-inner{
+    padding-top: 22px;
+  }
+
+  .name{
+    font-size: 26px;
+    letter-spacing: .8px;
+    line-height: 1.15;
+  }
+
+  .role{
+    font-size: 11px;
+    letter-spacing: 2.4px;
+    line-height: 1.35;
+  }
+
+  .role::before,
+  .role::after{
+    display: none;
+  }
+
+  .lead{
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .lang-switch{
+    top: 8px;
+    right: 8px;
+    padding: 5px 8px;
+    gap: 5px;
+  }
+
+  .lang-btn{
+    font-size: 11px;
+    padding: 3px 4px;
+  }
+
+  .content{
+    padding: 12px 10px 22px;
+  }
+
+  .grid-2{
+    grid-template-columns: 1fr;
+  }
+
+  .tag,
+  .tag-arrow{
+    min-width: 0;
+    width: auto;
+    max-width: calc(100% - 18px);
+    font-size: 11px;
+    padding: 8px 10px;
+    line-height: 1.25;
+  }
+
+  .tag-arrow::after{
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-left: 18px solid var(--accent2);
+    right: -18px;
+  }
+
+  .card,
+  .card-top,
+  .card-main{
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .item-course{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .item-course__body{
+    width: 100%;
+  }
+
+  .item-course__thumb{
+    width: 100%;
+    max-width: 210px;
+    flex: 0 0 auto;
+    margin: 0 auto;
+  }
+
+  .item-course__thumb img{
+    width: 100%;
+    height: auto;
+  }
+
+  .item-h{
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .item-meta,
+  .item-p{
+    font-size: 12.5px;
+    line-height: 1.45;
+  }
+
+  .diploma-link{
+    width: 100%;
+    min-height: 50px;
+    padding: 11px 16px;
+    gap: 12px;
+  }
+
+  .diploma-link__icon{
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+  }
+
+  .hobby-grid{
+    grid-template-columns: 1fr;
+  }
+
+  #courses-pagination{
+    justify-content: center;
+  }
+
+  .side-top{
+    padding-top: 14px;
+    padding-bottom: 10px;
+  }
+
+  .side-body{
+    padding-top: 6px;
+  }
+
+  .avatar-wrap{
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 8px;
+  }
+
+  .avatar-img{
+    width: 120px;
+    height: 120px;
+    margin: 18px auto 0;
+  }
+
+  .glow-ring{
+    width: 160px;
+    height: 160px;
+  }
+
+  .download-section .btn{
+    justify-content: space-between;
+    font-size: 13px;
+  }
+}
+
+/* Móvil angosto: las dos columnas pasan a una sola. */
+@media (max-width: 430px){
+  .side-top,
+  .side-body{
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .values-section,
+  .social-section,
+  .social-list{
+    grid-template-columns: 1fr;
+    
+  }
+
+  .values-section > .side-h,
+  .social-section > .side-h,
+  .social-list{
+    grid-column: 1;
+  }
+
+  .contact-row{
+    grid-template-columns: 40px minmax(0, 1fr);
+  }
+
+  .c-ico{
+    height: 42px;
+  }
+
+  .c-text{
+    font-size: 12.5px;
+    padding-inline: 10px;
+  }
+}
+
 @media (max-width: 380px){
+  .spotify-modal,
   .video-modal{
     padding: 8px;
   }
 
+  .spotify-modal__dialog,
   .video-modal__dialog{
     max-height: calc(100dvh - 16px);
   }
+
+  .spotify-modal__player iframe{
+    height: min(410px, calc(100dvh - 90px));
+  }
 }
 
+@media (max-width: 360px){
+  .side-top,
+  .side-body{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .values-section .meter{
+    margin-top: 4px;
+    margin-bottom: 6px;
+  }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce){
+  .spotify-modal,
+  .spotify-modal__dialog{
+    transition: none;
+  }
+
+  .fx-glow,
+  .fx-dot,
+  .side-fx__art::before,
+  .side-fx__art::after{
+    animation: none;
+  }
+
+  .side-fx__art::after{
+    display: none;
+  }
+}
+
+/* Impresión */
+@media print{
+  .side-fx{
+    display: none !important;
+  }
+}

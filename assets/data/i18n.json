@@ -168,7 +168,9 @@
       "portfolio_empty": "No projects found with the selected filters.",
       "portfolio_error": "The portfolio could not be loaded.",
       "portfolio_stats_projects_short": "projects",
-      "portfolio_stats_appearances_short": "uses"
+      "portfolio_stats_appearances_short": "uses",
+      "social_networks_title": "SOCIAL NETWORKS",
+      "social_networks_aria": "Social networks"
     },
     "attributes": {
       "contact_aria": "Contact",
@@ -182,7 +184,8 @@
       "header_aria": "Header",
       "language_selector_aria": "Language selector",
       "view_diploma_aria": "Open diploma image in a new tab",
-      "view_diploma_title": "View diploma"
+      "view_diploma_title": "View diploma",
+      "social_networks_aria": "Social networks"
     }
   },
   "es": {
@@ -354,7 +357,9 @@
       "portfolio_empty": "No se encontraron proyectos con los filtros seleccionados.",
       "portfolio_error": "No se pudo cargar el portfolio.",
       "portfolio_stats_projects_short": "proyectos",
-      "portfolio_stats_appearances_short": "usos"
+      "portfolio_stats_appearances_short": "usos",
+      "social_networks_title": "REDES SOCIALES",
+      "social_networks_aria": "Redes sociales"
     },
     "attributes": {
       "contact_aria": "Contacto",
@@ -368,7 +373,8 @@
       "header_aria": "Encabezado",
       "language_selector_aria": "Selector de idioma",
       "view_diploma_aria": "Abrir imagen del diploma en una nueva pestaña",
-      "view_diploma_title": "Ver diploma"
+      "view_diploma_title": "Ver diploma",
+      "social_networks_aria": "Redes sociales"
     }
   },
   "it": {
@@ -540,7 +546,9 @@
       "portfolio_empty": "Nessun progetto trovato con i filtri selezionati.",
       "portfolio_error": "Non è stato possibile caricare il portfolio.",
       "portfolio_stats_projects_short": "progetti",
-      "portfolio_stats_appearances_short": "usi"
+      "portfolio_stats_appearances_short": "usi",
+      "social_networks_title": "SOCIAL NETWORK",
+      "social_networks_aria": "Social network"
     },
     "attributes": {
       "contact_aria": "Contatto",
@@ -554,7 +562,8 @@
       "header_aria": "Intestazione",
       "language_selector_aria": "Selettore lingua",
       "view_diploma_aria": "Apri l’immagine del diploma in una nuova scheda",
-      "view_diploma_title": "Vedi diploma"
+      "view_diploma_title": "Vedi diploma",
+      "social_networks_aria": "Social network"
     }
   }
 }

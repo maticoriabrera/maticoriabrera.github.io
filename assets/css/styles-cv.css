@@ -1,114 +1,163 @@
-/* =========================================================
-   CV / PORTFOLIO — ESTILOS PRINCIPALES
-   Refactor estructural: 2026-10-05
-   Mantiene el diseño y comportamiento existentes.
-   ========================================================= */
+/* =============================================================================
+   styles-cv.css — Estilos principales del CV / Portfolio
+   =============================================================================
 
-/* =========================================================
-   1. BASE Y VARIABLES
-   ========================================================= */
+   ÍNDICE
+   ------
+    1. Variables (design tokens)
+    2. Base y tipografía
+    3. Layout general (stage, hoja .cv, clips)
+    4. Sidebar (avatar, contacto, idiomas, valores, social)
+    5. Contenido principal (hero, selector de idioma, .content)
+    6. Componentes (tags, tarjetas, items, botones, filtros, hobbies, cursos)
+    7. Skills (acordeón de 3 niveles)
+    8. Modales (Spotify y video de guitarra)
+    9. Sidebar FX (efecto decorativo, solo escritorio)
+   10. Responsive (por breakpoint)
+   11. Accesibilidad (reduced motion) e impresión
+
+   BREAKPOINTS (los @media no admiten variables, por eso se documentan aquí)
+   -------------------------------------------------------------------------
+    >= 921px        Escritorio: sidebar lateral (360px) + contenido
+    921–1050px      Escritorio compacto (sidebar 340px)
+    <= 920px        Sidebar pasa ARRIBA del contenido (1 columna)
+    721–920px       Tablet
+    <= 720px        Móvil (reglas comunes)
+    521–720px       Móvil medio
+    <= 600px        Modales en móvil
+    <= 520px        Móvil pequeño
+    <= 430px / 380px / 360px   Ajustes finos para pantallas muy angostas
+
+   CONVENCIONES
+   ------------
+   - El archivo conserva nombres de clases históricos y usa BEM simplificado
+     en varios componentes; los estados se expresan principalmente con .is-*.
+   - Colores: usar las variables de la sección 1. Para transparencias usar
+     rgba(var(--ink-rgb), .1), rgba(var(--accent-rgb), .2), etc.
+   - Fuentes: var(--font-body) para texto, var(--font-heading) para títulos.
+   - Los estilos base se agrupan por componente. La mayoría de ajustes por
+     tamaño están en la sección 10; Sidebar FX conserva su media query junto
+     al propio componente porque solo existe en escritorio (>= 921px).
+   - Archivos relacionados: styles-stats.css y styles-portfolio.css se cargan
+     junto con este archivo en páginas específicas. styles-portfolio.css usa
+     --fs-base; revisar dependencias antes de renombrar variables compartidas.
+   ============================================================================= */
+
+
+/* =============================================================================
+   1. VARIABLES (DESIGN TOKENS)
+   ============================================================================= */
 
 :root{
-  --bg: #eef4fa;
-  --paper: #ffffff;
+  /* --- Colores base --- */
+  --bg:    #eef4fa;   /* fondo de página */
+  --paper: #ffffff;   /* hoja del CV */
 
-  --text: #0c1928;
-  --muted: #64748b;
-  --line: rgba(12,25,40,.08);
+  /* --- Texto --- */
+  --text:  #0c1928;
 
+  /* --- Azules oscuros (sidebar, títulos) --- */
   --darkA: #172637;
   --darkB: #0c1928;
 
-  --accent: #1553ac;
-  --accent2: #1f8cef;
-  --accent3: #dbeeff;
+  /* --- Color de marca --- */
+  --accent:  #1553ac;   /* azul principal */
+  --accent2: #1f8cef;   /* azul claro (degradados) */
+  --accent3: #dbeeff;   /* azul muy claro (final de barras) */
 
-  --card: rgba(255,255,255,.72);
-  --card2: rgba(255,255,255,.88);
+  /* Canales RGB: sirven para transparencias → rgba(var(--accent-rgb), .2) */
+  --ink-rgb:     12, 25, 40;     /* = --text   */
+  --accent-rgb:  21, 83, 172;    /* = --accent  */
+  --accent2-rgb: 31, 140, 239;   /* = --accent2 */
 
-  --shadow: 0 14px 40px rgba(12,25,40,.18);
-  --shadow2: 0 10px 24px rgba(12,25,40,.16);
+  /* --- Líneas y superficies --- */
+  --line:      rgba(var(--ink-rgb), .08);   /* separadores generales */
+  --line-soft: rgba(var(--ink-rgb), .06);   /* bordes de tarjetas */
+  --card:      rgba(255,255,255,.72);
+  --card2:     rgba(255,255,255,.88);
+  --overlay:   rgba(6, 12, 20, .76);        /* fondo de los modales */
 
-  --radius: 14px;
-  --radius2: 18px;
+  /* --- Sombras --- */
+  --shadow:      0 14px 40px rgba(var(--ink-rgb), .18);   /* hoja del CV */
+  --shadow-card: 0 10px 22px rgba(var(--ink-rgb), .08);   /* tarjetas */
 
-    /* Tipografía (escala) */
-  --fs-base: 16px;   /* = tamaño HABILIDADES (referencia) */
-  --fs-small: 14px;  /* texto secundario */
-  --fs-xs: 14px;     /* meta: fechas, labels */
+  /* --- Radios --- */
+  --radius:  14px;   /* tarjetas */
+  --radius2: 18px;   /* hoja del CV */
 
+  /* --- Tipografías --- */
+  --font-body:    Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-heading: Montserrat, system-ui, sans-serif;
+
+  /* --- Escala tipográfica --- */
+  --fs-base:  16px;   /* texto base de párrafo; también lo usa styles-portfolio.css */
+  --fs-xs:    14px;   /* meta: fechas, labels, tags */
 }
 
-*{ box-sizing:border-box; }
+
+/* =============================================================================
+   2. BASE Y TIPOGRAFÍA
+   ============================================================================= */
+
+*{ box-sizing: border-box; }
 
 html,
-body{
-  height:100%;
-}
+body{ height: 100%; }
 
 body{
-  margin:0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: 1.55;
   color: var(--text);
   background: var(--bg);
-
-  /* agregado para unificar tamaños (base = tamaño "Habilidades") */
-  font-size: 16px;
-  line-height: 1.55;
 }
 
-.item-meta,
-.tag,
-.side-title,
-.m-label,
-.lang-btn{
-  font-size: var(--fs-xs);
-}
 
-/* =========================================================
-   2. LAYOUT GENERAL Y SIDEBAR
-   ========================================================= */
+/* =============================================================================
+   3. LAYOUT GENERAL
+   ============================================================================= */
 
-/* Fondo suave + spotlight */
+/* Fondo de la página: degradado suave + "spotlight" arriba */
 .stage{
-  min-height:100%;
+  min-height: 100%;
   padding: 28px 16px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background:
     radial-gradient(900px 420px at 50% 10%, rgba(255,255,255,.85), rgba(255,255,255,0) 60%),
     linear-gradient(180deg, #eaf1f8 0%, #f4f8fc 40%, #e7eef6 100%);
 }
 
-/* “Hoja” */
+/* La "hoja" del CV: 2 columnas (sidebar + contenido) */
 .cv{
+  position: relative;
+  display: grid;
+  grid-template-columns: 360px 1fr;
   width: 1120px;
   max-width: 100%;
   background: var(--paper);
   border-radius: var(--radius2);
   box-shadow: var(--shadow);
-  overflow:hidden;
-  position: relative;
-  display:grid;
-  grid-template-columns: 360px 1fr;
+  overflow: hidden;
 }
 
-/* Clips decorativos superiores */
+/* Clips decorativos en el borde superior de la hoja */
 .clip{
-  position:absolute;
+  position: absolute;
   top: 10px;
+  z-index: 5;
   width: 54px;
   height: 24px;
   border-radius: 0 0 9px 9px;
   background: linear-gradient(#52677f, #2d435b);
-  box-shadow: 0 8px 14px rgba(12,25,40,.18);
-  z-index: 5;
+  box-shadow: 0 8px 14px rgba(var(--ink-rgb), .18);
 }
 
 .clip::before{
-  content:"";
-  position:absolute;
+  content: "";
+  position: absolute;
   left: 14px;
   top: -10px;
   width: 26px;
@@ -117,62 +166,70 @@ body{
   background: linear-gradient(#445a72, #21374f);
 }
 
-.clip-left{ left: 210px; }
-
+.clip-left{  left: 210px; }
 .clip-right{ right: 210px; }
 
-/* SIDEBAR */
+
+/* =============================================================================
+   4. SIDEBAR
+   ============================================================================= */
+
 .side{
-  background:
-    radial-gradient(560px 260px at 50% 18%, rgba(21,83,172,.26), rgba(21,83,172,0) 55%),
-    linear-gradient(180deg, var(--darkA), var(--darkB));
-  color: #fff;
   position: relative;
+  color: #fff;
+  background:
+    radial-gradient(560px 260px at 50% 18%, rgba(var(--accent-rgb), .26), rgba(var(--accent-rgb), 0) 55%),
+    linear-gradient(180deg, var(--darkA), var(--darkB));
 }
 
-.side-top{
-  padding: 24px 22px 18px;
-}
+.side-top{  padding: 24px 22px 18px; }
+.side-body{ padding: 6px 22px 22px; }
+
+.side-section{ margin-top: 18px; }
+
+/* --- 4.1 Avatar --------------------------------------------------------- */
 
 .avatar-wrap{
   position: relative;
-  width: 250px;
-  height: 250px;
-  margin: 2px auto 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 250px;
+  height: 250px;
+  margin: 2px auto 10px;
 }
 
 .avatar-img{
-  width: 190px;
-  height: 190px;
-  border-radius: 50%;
-  margin: 30px auto 0;
-  display: block;
-  object-fit: cover;
   position: relative;
   z-index: 2;
-  box-shadow: 0 18px 40px rgba(12,25,40,.35);
+  display: block;
+  width: 190px;
+  height: 190px;
+  margin: 30px auto 0;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 18px 40px rgba(var(--ink-rgb), .35);
 }
 
+/* Anillo de luz detrás de la foto */
 .glow-ring{
-  position:absolute;
+  position: absolute;
   inset: 0;
-  margin:auto;
+  margin: auto;
   width: 250px;
   height: 250px;
   border-radius: 50%;
   background:
-    radial-gradient(closest-side, rgba(255,255,255,.0) 58%, rgba(255,255,255,.08) 59%, rgba(255,255,255,0) 62%),
-    radial-gradient(closest-side, rgba(31,140,239,.0) 56%, rgba(31,140,239,.55) 62%, rgba(21,83,172,0) 72%),
-    radial-gradient(closest-side, rgba(21,83,172,.35) 62%, rgba(21,83,172,0) 78%);
+    radial-gradient(closest-side, rgba(255,255,255,0) 58%, rgba(255,255,255,.08) 59%, rgba(255,255,255,0) 62%),
+    radial-gradient(closest-side, rgba(var(--accent2-rgb), 0) 56%, rgba(var(--accent2-rgb), .55) 62%, rgba(var(--accent-rgb), 0) 72%),
+    radial-gradient(closest-side, rgba(var(--accent-rgb), .35) 62%, rgba(var(--accent-rgb), 0) 78%);
   filter: blur(.2px);
   opacity: .98;
 }
 
+/* Puntitos de luz alrededor de la foto */
 .glow-dots{
-  position:absolute;
+  position: absolute;
   inset: 0;
   border-radius: 50%;
   background:
@@ -183,61 +240,61 @@ body{
   opacity: .9;
 }
 
+/* --- 4.2 Título "CONTACT" ----------------------------------------------- */
+
 .side-id{
-  text-align:center;
   padding: 6px 0 12px;
+  text-align: center;
   border-bottom: 1px solid rgba(255,255,255,.10);
 }
-.side-name{
-  font-family: Montserrat, system-ui, sans-serif;
-  font-weight: 800;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-size: 26px;
-}
+
 .side-title{
-  font-family: Montserrat, system-ui, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-weight: 600;
-  opacity: .9;
   margin-top: 4px;
+  font-family: var(--font-heading);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  opacity: .9;
 }
 
-/* Contact card */
+/* --- 4.3 Tarjeta de contacto -------------------------------------------- */
+
 .contact-card{
-  margin: 14px auto 0;
   width: min(100%, 320px);
+  margin: 14px auto 0;
   border-radius: 12px;
-  overflow:hidden;
-  box-shadow: 0 18px 36px rgba(12,25,40,.28);
   border: 1px solid rgba(255,255,255,.06);
+  box-shadow: 0 18px 36px rgba(var(--ink-rgb), .28);
+  overflow: hidden;
 }
 
 .contact-row{
-  display:grid;
-  grid-template-columns: 52px 1fr;
-  align-items:center;
-  text-decoration:none;
-  color:#fff;
-  background: linear-gradient(90deg, rgba(21,83,172,.98), rgba(31,140,239,.95));
+  display: grid;
+  grid-template-columns: 52px 1fr;   /* icono | texto */
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(90deg, rgba(var(--accent-rgb), .98), rgba(var(--accent2-rgb), .95));
 }
 
 .contact-row + .contact-row{
   border-top: 1px solid rgba(255,255,255,.10);
 }
 
+/* Variante oscura (fila de la web) */
 .contact-row-dark{
   background: linear-gradient(90deg, rgba(255,255,255,.10), rgba(255,255,255,.04));
 }
 
 .c-ico{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 52px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
   background: rgba(255,255,255,.10);
 }
+
 .c-ico i{ font-size: 16px; }
 
 .c-text{
@@ -246,52 +303,51 @@ body{
   letter-spacing: .2px;
 }
 
-.side-body{
-  padding: 6px 22px 22px;
-}
-
-.side-section{ margin-top: 18px; }
+/* --- 4.4 Encabezados de sección y barras de nivel ----------------------- */
 
 .side-h{
-  font-family: Montserrat, system-ui, sans-serif;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: .9px;
-  font-size: 14px;
-  margin: 12px 0 12px;
+  margin: 12px 0;
   padding-bottom: 10px;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .9px;
+  text-transform: uppercase;
   border-bottom: 1px solid rgba(255,255,255,.10);
 }
 
-/* meters */
 .meter{ margin: 12px 0 14px; }
 
 .m-label{
-  text-transform: uppercase;
-  letter-spacing: .8px;
-  opacity: .92;
   margin-bottom: 8px;
+  font-size: var(--fs-xs);
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  opacity: .92;
 }
 
+/* Barra de fondo; el ancho del relleno se define inline: <span style="width:85%"> */
 .m-bar{
+  position: relative;
   height: 8px;
   border-radius: 999px;
   background: rgba(255,255,255,.16);
-  overflow:hidden;
-  position: relative;
+  overflow: hidden;
 }
 
 .m-bar span{
-  display:block;
-  height:100%;
-  width: 60%;
+  display: block;
+  width: 60%;                 /* valor por defecto */
+  height: 100%;
   border-radius: 999px;
   background: linear-gradient(90deg, var(--accent), var(--accent2) 60%, var(--accent3));
-  box-shadow: 0 6px 16px rgba(21,83,172,.20);
+  box-shadow: 0 6px 16px rgba(var(--accent-rgb), .20);
 }
 
+/* --- 4.5 Puntos decorativos separadores --------------------------------- */
+
 .flag-dots{
-  display:flex;
+  display: flex;
   gap: 10px;
   padding-top: 12px;
   opacity: .85;
@@ -305,12 +361,11 @@ body{
   border: 1px solid rgba(255,255,255,.14);
 }
 
-.flag-dots .dot:nth-child(2){ background: rgba(21,83,172,.45); }
+.flag-dots .dot:nth-child(2){ background: rgba(var(--accent-rgb), .45); }
 
-/* Social */
-.social-section{
-  width: 100%;
-}
+/* --- 4.6 Redes sociales ------------------------------------------------- */
+
+.social-section{ width: 100%; }
 
 .social-list{
   margin: 0;
@@ -324,66 +379,131 @@ body{
   min-height: 28px;
   padding: 0;
   color: rgba(255,255,255,.92);
-  text-decoration: none;
   font-size: var(--fs-xs);
-  text-transform: uppercase;
   letter-spacing: .8px;
+  text-transform: uppercase;
+  text-decoration: none;
   opacity: .92;
 }
 
-.social-link:hover{
-  color: #fff;
-}
+.social-link:hover{ color: #fff; }
 
 .social-link i{
-  width: 18px;
   flex: 0 0 18px;
+  width: 18px;
   text-align: center;
 }
 
-/* =========================================================
-   3. CONTENIDO PRINCIPAL Y COMPONENTES
-   ========================================================= */
 
-/* MAIN */
+/* =============================================================================
+   5. CONTENIDO PRINCIPAL
+   ============================================================================= */
+
 .main{
-  background: #fbfdff;
   position: relative;
+  background: #fbfdff;
 }
+
+.content{ padding: 18px 42px 36px; }
+
+.block{ margin-top: 15px; }
+
+/* --- 5.1 Hero (cabecera con nombre) ------------------------------------- */
 
 .hero{
   position: relative;
   padding: 34px 42px 30px;
-  background:
-    radial-gradient(520px 240px at 70% 20%, rgba(31,140,239,.18), rgba(31,140,239,0) 55%),
-    radial-gradient(540px 260px at 15% 25%, rgba(12,25,40,.06), rgba(12,25,40,0) 55%),
-    linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.86));
   border-bottom: 1px solid var(--line);
-  overflow:hidden;
+  overflow: hidden;
+  background:
+    radial-gradient(520px 240px at 70% 20%, rgba(var(--accent2-rgb), .18), rgba(var(--accent2-rgb), 0) 55%),
+    radial-gradient(540px 260px at 15% 25%, rgba(var(--ink-rgb), .06), rgba(var(--ink-rgb), 0) 55%),
+    linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.86));
 }
 
-/* “ciudad” abstracta en el fondo (sin imágenes externas) */
+/* "Ciudad" abstracta de fondo (franjas verticales, sin imágenes externas) */
 .hero::before{
-  content:"";
-  position:absolute;
+  content: "";
+  position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(12,25,40,0) 0%, rgba(12,25,40,.04) 65%, rgba(12,25,40,.08) 100%),
+    linear-gradient(180deg, rgba(var(--ink-rgb), 0) 0%, rgba(var(--ink-rgb), .04) 65%, rgba(var(--ink-rgb), .08) 100%),
     repeating-linear-gradient(
       90deg,
-      rgba(12,25,40,.04) 0 24px,
-      rgba(12,25,40,.02) 24px 48px
+      rgba(var(--ink-rgb), .04) 0 24px,
+      rgba(var(--ink-rgb), .02) 24px 48px
     );
   opacity: .20;
   transform: translateY(30px);
   pointer-events: none;
 }
 
-.block{
-  margin-top: 15px;
+.hero-inner{
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin: 0 auto;
+  padding-top: 40px;
+  text-align: center;
 }
 
-/* Selector de idioma (óvalo translúcido, borde blanco sutil) */
+.name{
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 54px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.role{
+  position: relative;
+  margin-top: 6px;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: rgba(var(--ink-rgb), .68);
+}
+
+/* Rayitas a los lados del cargo */
+.role::before,
+.role::after{
+  content: "";
+  display: inline-block;
+  min-width: 30px;
+  height: 2px;
+  margin: 0 10px;
+  vertical-align: middle;
+  background: rgba(var(--ink-rgb), .15);
+}
+
+.lead{
+  max-width: 640px;
+  margin: 12px auto 0;
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  color: rgba(var(--ink-rgb), .62);
+}
+
+/* Resplandor azul en la esquina inferior derecha del hero */
+.hero-wave{
+  position: absolute;
+  inset: -40px -60px -120px -60px;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(900px 300px at 90% 86%, rgba(var(--accent-rgb), .38), rgba(var(--accent-rgb), 0) 62%),
+    radial-gradient(820px 280px at 86% 88%, rgba(var(--accent2-rgb), .28), rgba(var(--accent2-rgb), 0) 62%),
+    conic-gradient(from 210deg at 86% 84%, rgba(var(--accent-rgb), 0), rgba(var(--accent-rgb), .18), rgba(var(--accent-rgb), 0));
+  filter: blur(.2px);
+  opacity: .95;
+}
+
+/* --- 5.2 Selector de idioma (óvalo translúcido arriba a la derecha) ----- */
+
 .lang-switch{
   position: absolute;
   top: 18px;
@@ -394,158 +514,76 @@ body{
   gap: 10px;
   padding: 8px 12px;
   border-radius: 999px;
-  background: rgba(255,255,255,.22);          /* translúcido */
-  border: 1px solid rgba(255,255,255,.55);    /* línea blanca delicada */
-  box-shadow: 0 10px 22px rgba(12,25,40,.08);
-  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,.22);
+  border: 1px solid rgba(255,255,255,.55);
+  box-shadow: 0 10px 22px rgba(var(--ink-rgb), .08);
   -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
 .lang-btn{
-  border: 0;
-  background: transparent;
   padding: 4px 6px;
+  border: 0;
   border-radius: 999px;
-  font-family: Montserrat, system-ui, sans-serif;
+  background: transparent;
+  font-family: var(--font-heading);
+  font-size: var(--fs-xs);
   font-weight: 700;
   letter-spacing: .8px;
   text-transform: uppercase;
-  color: rgba(12,25,40,.55);
+  color: rgba(var(--ink-rgb), .55);
   cursor: pointer;
   transition: .18s ease;
 }
 
-.lang-sep{
-  color: rgba(12,25,40,.30);
-  font-weight: 700;
-  user-select: none;
-}
+.lang-btn:hover,
+.lang-btn.is-active{ color: var(--accent); }
 
-.lang-btn:hover{
-  color: #1553ac;
-}
-
-.lang-btn.is-active{
-  color: #1553ac;
-}
-
-/* Opcional: feedback al click */
-.lang-btn:active{
-  transform: translateY(1px);
-}
+.lang-btn:active{ transform: translateY(1px); }   /* feedback al hacer click */
 
 .lang-btn:focus-visible{
-  outline: 2px solid rgba(21,83,172,.65);
+  outline: 2px solid rgba(var(--accent-rgb), .65);
   outline-offset: 3px;
 }
 
-.contact-row:focus-visible,
-.project-link:focus-visible,
-.btn:focus-visible,
-.linkedin-link:focus-visible,
-.diploma-link:focus-visible{
-  outline: 2px solid rgba(21,83,172,.65);
-  outline-offset: 3px;
-  border-radius: 12px;
-}
 
-.hero-inner{
-  position: relative;
-  z-index: 2;
-  text-align:center;
-  max-width: 760px;
-  margin: 0 auto;
-  padding-top: 40px;
-}
+/* =============================================================================
+   6. COMPONENTES
+   ============================================================================= */
 
-.name{
-  margin: 0;
-  font-family: Montserrat, system-ui, sans-serif;
-  font-size: 54px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: #0c1928;
-}
-
-.role{
-  margin-top: 6px;
-  font-family: Montserrat, system-ui, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 6px;
-  font-weight: 600;
-  font-size: 13px;
-  color: rgba(12,25,40,.68);
-  position: relative;
-}
-
-.role::before,
-.role::after{
-  content:"";
-  display:inline-block;
-  min-width: 30px;
-  
-  height: 2px;
-  background: rgba(12,25,40,.15);
-  vertical-align: middle;
-  margin: 0 10px;
-}
-
-.lead{
-  margin: 12px auto 0;
-  max-width: 640px;
-  color: rgba(12,25,40,.62);
-  line-height: 1.6;
-  font-size: var(--fs-base);
-}
-
-/* ondas naranjas */
-.hero-wave{
-  position:absolute;
-  inset: -40px -60px -120px -60px;
-  background:
-    radial-gradient(900px 300px at 90% 86%, rgba(21,83,172,.38), rgba(21,83,172,0) 62%),
-    radial-gradient(820px 280px at 86% 88%, rgba(31,140,239,.28), rgba(31,140,239,0) 62%),
-    conic-gradient(from 210deg at 86% 84%, rgba(21,83,172,.0), rgba(21,83,172,.18), rgba(21,83,172,0));
-  filter: blur(.2px);
-  opacity: .95;
-  z-index: 1;
-  pointer-events:none;
-}
-
-.content{
-  padding: 18px 42px 36px;
-}
+/* --- 6.1 Tag (título de sección con forma de flecha) -------------------- */
 
 .tag{
-  display:inline-flex;
-  align-items:center;
+  display: inline-flex;
+  align-items: center;
   gap: 10px;
-  background: linear-gradient(90deg, var(--accent), var(--accent2));
-  color:#fff;
-  font-family: Montserrat, system-ui, sans-serif;
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: .9px;
+  min-width: 261px;
   padding: 10px 16px;
   border-radius: 10px;
-  box-shadow: 0 10px 22px rgba(21,83,172,.18);
-  min-width: 261px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  box-shadow: 0 10px 22px rgba(var(--accent-rgb), .18);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: var(--fs-xs);
+  font-weight: 800;
+  letter-spacing: .9px;
+  text-transform: uppercase;
 }
 
 .tag i{ opacity: .95; }
 
+/* Variante con punta de flecha a la derecha */
 .tag-arrow{
   position: relative;
-  border-radius: 10px 0 0 10px;
   min-width: 300px;
+  border-radius: 10px 0 0 10px;
 }
 
 .tag-arrow::after{
-  content:"";
-  position:absolute;
-  right: -20px;
+  content: "";
+  position: absolute;
   top: 0;
+  right: -20px;
   width: 0;
   height: 0;
   border-top: 21px solid transparent;
@@ -553,132 +591,94 @@ body{
   border-left: 20px solid var(--accent2);
 }
 
-.tag-icon{
-  gap: 10px;
-}
+/* --- 6.2 Tarjetas -------------------------------------------------------- */
+/* Todas comparten el mismo "look"; solo cambian margen y padding. */
 
-.tag-ico{
-  width: 28px;
-  height: 28px;
-  border-radius: 9px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  background: rgba(255,255,255,.20);
-  border: 1px solid rgba(255,255,255,.18);
+.card,
+.card-top,
+.card-main,
+.skills-card{
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--card2), var(--card));
+  border: 1px solid var(--line-soft);
+  box-shadow: var(--shadow-card);
 }
 
 .card{
   margin-top: 8px;
-  padding: 16px 16px;
-  border-radius: 14px;
-  background: linear-gradient(180deg, var(--card2), var(--card));
-  border: 1px solid rgba(12,25,40,.06);
-  box-shadow: 0 10px 22px rgba(12,25,40,.08);
+  padding: 16px;
 }
 
-.card-top{
-  padding: 16px 16px;
-  border-radius: 14px;
-  background: linear-gradient(180deg, var(--card2), var(--card));
-  border: 1px solid rgba(12,25,40,.06);
-  box-shadow: 0 10px 22px rgba(12,25,40,.08);
-}
-
-.card-main{
-  padding: 8px;
-  border-radius: 14px;
-  background: linear-gradient(180deg, var(--card2), var(--card));
-  border: 1px solid rgba(12,25,40,.06);
-  box-shadow: 0 10px 22px rgba(12,25,40,.08);
-}
-
+.card-top{ padding: 16px; }
+.card-main{ padding: 8px; }
 
 .card p{
   margin: 0;
-  color: rgba(12,25,40,.62);
-  line-height: 1.6;
   font-size: var(--fs-base);
+  line-height: 1.6;
+  color: rgba(var(--ink-rgb), .62);
 }
 
-.linkedin-block{
-  display: flex;
-  align-items: center;
-  gap: 10px;
+/* --- 6.3 Items (título + meta + párrafo) -------------------------------- */
+
+.item + .item{
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line-soft);
 }
-
-
-/* two column in main content */
-.grid-2{
-  margin-top: 6px;
-  display:grid;
-  grid-template-columns: 1.15fr .85fr;
-  gap: 18px;
-}
-
-.stack{
-  display:flex;
-  flex-direction:column;
-  gap: 14px;
-}
-
-/* items */
-.item + .item{ margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(12,25,40,.06); }
 
 .item-h{
   margin: 0;
-  font-family: Montserrat, system-ui, sans-serif;
+  font-family: var(--font-heading);
+  font-size: 14px;
   font-weight: 800;
   letter-spacing: .8px;
   text-transform: uppercase;
-  font-size: 14px;
-  color: #172637;
+  color: var(--darkA);
 }
 
 .item-meta{
   margin-top: 4px;
-  color: rgba(12,25,40,.45);
+  font-size: var(--fs-xs);
+  color: rgba(var(--ink-rgb), .45);
 }
 
 .item-p{
   margin-top: 1px;
   margin-bottom: 1px;
-  color: rgba(12,25,40,.60);
+  font-size: var(--fs-base);
   line-height: 1.65;
-  font-size: var(--fs-base);;
+  color: rgba(var(--ink-rgb), .60);
 }
 
-/* button */
+/* --- 6.4 Botón principal (ej. "Download CV") ---------------------------- */
+
 .btn{
-  margin-top: 16px;
-  display:flex;
-  align-items:center;
+  display: flex;
+  align-items: center;
   gap: 12px;
   width: fit-content;
+  margin-top: 16px;
   padding: 12px 14px;
   border-radius: 12px;
-
+  border: 1px solid rgba(var(--accent-rgb), .95);
   background: linear-gradient(180deg, rgba(23,38,55,.98), rgba(12,25,40,.98));
+  box-shadow: 0 12px 24px rgba(var(--ink-rgb), .20);
   color: #fff;
-
-  border: 1px solid rgba(21,83,172,.95);  /* <-- aquí lo defines */
-
-  text-decoration:none;
-  box-shadow: 0 12px 24px rgba(12,25,40,.20);
   font-weight: 600;
-
+  text-decoration: none;
   transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
 }
 
 .btn-ico{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 32px;
   height: 32px;
   border-radius: 10px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background: rgba(21,83,172,.20);
-  border: 1px solid rgba(21,83,172,.22);
+  background: rgba(var(--accent-rgb), .20);
+  border: 1px solid rgba(var(--accent-rgb), .22);
 }
 
 .btn-arrow{
@@ -688,43 +688,39 @@ body{
 
 .btn:hover{
   transform: translateY(-1px);
-  box-shadow: 0 16px 28px rgba(12,25,40,.26);
+  box-shadow: 0 16px 28px rgba(var(--ink-rgb), .26);
 }
 
-.btn:active{
-  transform: translateY(0px);
-}
+.btn:active{ transform: translateY(0); }
 
+/* --- 6.5 Link al diploma (sección Educación) ---------------------------- */
 
-/* Diploma link in Education section */
 .diploma-link{
-  margin-top: 3px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 14px;
   width: fit-content;
   min-height: 52px;
+  margin-top: 3px;
   padding: 6px 11px;
   border-radius: 14px;
   border: 2px solid var(--accent);
   background: rgba(255,255,255,.74);
-  color: #0c1928;
-  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(var(--ink-rgb), .06);
+  color: var(--text);
   font-weight: 700;
-  box-shadow: 0 8px 18px rgba(12,25,40,.06);
+  text-decoration: none;
   transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
 }
 
 .diploma-link:hover{
   transform: translateY(-1px);
   background: rgba(255,255,255,.95);
-  box-shadow: 0 12px 24px rgba(12,25,40,.10);
+  box-shadow: 0 12px 24px rgba(var(--ink-rgb), .10);
 }
 
-.diploma-link:active{
-  transform: translateY(0);
-}
+.diploma-link:active{ transform: translateY(0); }
 
 .diploma-link__icon{
   display: inline-flex;
@@ -732,71 +728,64 @@ body{
   justify-content: center;
   width: 34px;
   height: 34px;
-  color: var(--accent);
   font-size: 28px;
+  color: var(--accent);
 }
 
-/* hobbies */
+/* --- 6.6 Hobbies --------------------------------------------------------- */
+
 .hobby-grid{
-  display:grid;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
 
 .hobby{
-  display:flex;
-  align-items:center;
+  display: flex;
+  align-items: center;
   gap: 10px;
   padding: 10px 12px;
   border-radius: 12px;
   background: rgba(255,255,255,.50);
-  border: 1px solid rgba(12,25,40,.06);
+  border: 1px solid var(--line-soft);
 }
 
 .h-ico{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 34px;
   height: 34px;
   border-radius: 12px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background: linear-gradient(90deg, rgba(21,83,172,.95), rgba(31,140,239,.92));
-  color:#fff;
-  box-shadow: 0 10px 18px rgba(21,83,172,.16);
+  background: linear-gradient(90deg, rgba(var(--accent-rgb), .95), rgba(var(--accent2-rgb), .92));
+  box-shadow: 0 10px 18px rgba(var(--accent-rgb), .16);
+  color: #fff;
 }
 
+/* --- 6.7 Links dentro del contenido ------------------------------------- */
+
 .content-link-text{
-  font-size: 16px;
+  font-size: var(--fs-base);
   font-weight: 600;
-  color: rgba(12,25,40,.70);
+  color: rgba(var(--ink-rgb), .70);
 }
 
 .project-link{
-  color: inherit;            /* o el color que quieras */
+  color: inherit;
   text-decoration: none;
 }
 
-.project-link:hover{
-  text-decoration: underline;
+.project-link:hover{ text-decoration: underline; }
+
+.linkedin-block{
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.linkedin-link{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width: 36px;
-  height: 36px;
-  border-radius: 12px;
-  text-decoration:none;
-}
+/* --- 6.8 Item de curso / certificado ------------------------------------ */
+/* Texto a la izquierda + miniatura del certificado a la derecha. */
 
-.linkedin-text{
-  font-size: 13.5px;
-  color: rgba(12,25,40,.62);
-  font-weight: 600;
-}
-
-/* COURSE / CERTIFICATE ITEM */
 .item-course{
   display: flex;
   align-items: center;
@@ -820,56 +809,54 @@ body{
   width: 100%;
   height: auto;
   border-radius: 10px;
-  border: 1px solid rgba(12,25,40,.08);
-  box-shadow: 0 8px 18px rgba(12,25,40,.10);
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 18px rgba(var(--ink-rgb), .10);
   background: #fff;
 }
 
+/* --- 6.9 Filtros y paginación ------------------------------------------- */
+/* Los usa courses.html y portfolio.html (este último reutiliza .courses-filters). */
 
-
-
-
-
-.courses-filters {
+.courses-filters{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
   margin-top: 10px;
 }
 
-.filter-group {
+.filter-group{
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-.filter-group label {
-  font-size: 0.78rem;
+.filter-group label{
+  font-size: .78rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: .08em;
   text-transform: uppercase;
   color: #5b6b7d;
 }
 
-.filter-group select {
+.filter-group select{
   width: 100%;
   padding: 10px 12px;
   border: 1px solid #d8e2ed;
   border-radius: 10px;
-  font-family: inherit;
-  font-size: 0.95rem;
   background: #fff;
+  font-family: inherit;
+  font-size: .95rem;
   color: #2d4056;
 }
 
-#courses-pagination {
+#courses-pagination{
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin: 18px 0 0;
 }
 
-.page-btn {
+.page-btn{
   padding: 6px 10px;
   border: 1px solid #d8e2ed;
   border-radius: 8px;
@@ -877,178 +864,265 @@ body{
   cursor: pointer;
 }
 
-.page-btn.is-active {
+.page-btn.is-active{
   font-weight: 700;
-  border-color: #1f8cef;
+  border-color: var(--accent2);
 }
 
-/* =========================================================
-   4. PROFESSIONAL SKILLS
-   ========================================================= */
+/* --- 6.10 Foco de teclado (accesibilidad) ------------------------------- */
+/* Anillo visible al navegar con Tab sobre links y botones. */
 
-/* Professional skills accordion
-   Three-level structure:
-   1) Main category, 2) Skill group, 3) Final items. */
-.skills-section{
-  margin-top: 8px;
+.contact-row:focus-visible,
+.project-link:focus-visible,
+.btn:focus-visible,
+.diploma-link:focus-visible{
+  outline: 2px solid rgba(var(--accent-rgb), .65);
+  outline-offset: 3px;
+  border-radius: 12px;
 }
 
+
+/* =============================================================================
+   7. SKILLS (ACORDEÓN DE 3 NIVELES)
+   =============================================================================
+   Estructura HTML:
+     .skill-accordion        → 1) categoría principal (<details>)
+       .skill-summary        →    cabecera clickeable
+       .skill-accordion__body
+         .skill-subaccordion → 2) grupo de skills (<details>)
+           summary           →    cabecera del grupo
+           .skill-list       → 3) ítems finales (<ul>)
+   ============================================================================= */
+
+.skills-section{ margin-top: 8px; }
+
+/* La apariencia de .skills-card se comparte con las demás tarjetas (6.2) */
 .skills-card{
   margin-top: 8px;
   padding: 8px;
-  border-radius: 14px;
-  background: linear-gradient(180deg, var(--card2), var(--card));
-  border: 1px solid rgba(12,25,40,.06);
-  box-shadow: 0 10px 22px rgba(12,25,40,.08);
 }
 
 .skill-accordion,
 .skill-subaccordion{
-  border: 1px solid rgba(12,25,40,.07);
+  border: 1px solid rgba(var(--ink-rgb), .07);
   border-radius: 12px;
   background: rgba(255,255,255,.62);
   overflow: hidden;
 }
 
-.skill-accordion + .skill-accordion{
-  margin-top: 10px;
-}
+.skill-accordion + .skill-accordion{ margin-top: 10px; }
 
+/* Cabeceras: sin triángulo nativo; llevan un "+" a cada lado */
 .skill-summary,
 .skill-subaccordion > summary{
   display: flex;
   align-items: center;
   gap: 12px;
-  cursor: pointer;
   list-style: none;
+  cursor: pointer;
   user-select: none;
 }
 
 .skill-summary::-webkit-details-marker,
-.skill-subaccordion > summary::-webkit-details-marker{
-  display: none;
-}
+.skill-subaccordion > summary::-webkit-details-marker{ display: none; }
 
-.skill-summary{
-  padding: 14px 16px;
-}
+.skill-summary{ padding: 14px 16px; }
 
+/* Icono "+" (cuadro azul a la izquierda) */
 .skill-summary::before,
 .skill-subaccordion > summary::before{
   content: "+";
   flex: 0 0 auto;
-  width: 26px;
-  height: 26px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 26px;
+  height: 26px;
   border-radius: 8px;
   background: linear-gradient(180deg, var(--accent), var(--accent2));
+  box-shadow: 0 8px 18px rgba(var(--accent-rgb), .18);
   color: #fff;
-  font-family: Montserrat, system-ui, sans-serif;
+  font-family: var(--font-heading);
   font-weight: 800;
   line-height: 1;
-  box-shadow: 0 8px 18px rgba(21,83,172,.18);
 }
 
-.skill-accordion[open] > .skill-summary::before,
-.skill-subaccordion[open] > summary::before{
-  content: "−";
-}
-
+/* "+" simple a la derecha */
 .skill-summary::after,
 .skill-subaccordion > summary::after{
   content: "+";
   margin-left: auto;
-  color: var(--accent);
   font-size: 26px;
-  line-height: 1;
   font-weight: 400;
+  line-height: 1;
+  color: var(--accent);
 }
 
+/* Estado abierto: "+" pasa a "−" */
+.skill-accordion[open] > .skill-summary::before,
+.skill-subaccordion[open] > summary::before,
 .skill-accordion[open] > .skill-summary::after,
 .skill-subaccordion[open] > summary::after{
   content: "−";
 }
 
-.skill-summary__text{
-  min-width: 0;
-}
+.skill-summary__text{ min-width: 0; }
 
 .skill-summary__title{
   display: block;
-  font-family: Montserrat, system-ui, sans-serif;
+  font-family: var(--font-heading);
   font-size: 15px;
-  line-height: 1.25;
   font-weight: 800;
+  line-height: 1.25;
   letter-spacing: .4px;
-  color: #172637;
+  color: var(--darkA);
 }
 
 .skill-summary__description{
   display: block;
   margin-top: 3px;
-  color: rgba(12,25,40,.58);
   font-size: 13.5px;
   line-height: 1.45;
+  color: rgba(var(--ink-rgb), .58);
 }
 
-.skill-accordion__body{
-  padding: 0 12px 12px 12px;
-}
+.skill-accordion__body{ padding: 0 12px 12px; }
 
-.skill-subaccordion{
-  background: rgba(255,255,255,.70);
-}
+.skill-subaccordion{ background: rgba(255,255,255,.70); }
 
-.skill-subaccordion + .skill-subaccordion{
-  margin-top: 8px;
-}
+.skill-subaccordion + .skill-subaccordion{ margin-top: 8px; }
 
 .skill-subaccordion > summary{
   padding: 11px 12px;
-  font-family: Montserrat, system-ui, sans-serif;
-  font-weight: 800;
+  font-family: var(--font-heading);
   font-size: 13.5px;
-  color: #172637;
+  font-weight: 800;
+  color: var(--darkA);
 }
 
 .skill-list{
   margin: 0;
   padding: 4px 16px 14px 54px;
-  columns: 1;
+  columns: 1;          /* poner 2 para listas en dos columnas */
   column-gap: 26px;
 }
 
 .skill-list li{
   margin: 4px 0;
-  break-inside: avoid;
-  color: rgba(12,25,40,.68);
   font-size: 14px;
   line-height: 1.42;
+  color: rgba(var(--ink-rgb), .68);
+  break-inside: avoid;
 }
 
 .skill-list li::marker{
   content: "*  ";
-  color: var(--accent);
   font-weight: 800;
+  color: var(--accent);
 }
 
-.skill-list--compact{
-  padding-top: 10px;
-}
+.skill-list--compact{ padding-top: 10px; }
 
 .skill-summary:focus-visible,
 .skill-subaccordion > summary:focus-visible{
-  outline: 2px solid rgba(21,83,172,.65);
+  outline: 2px solid rgba(var(--accent-rgb), .65);
   outline-offset: 3px;
 }
 
-/* =========================================================
-   5. SPOTIFY MODAL
-   ========================================================= */
 
-/* Spotify playlist link + modal */
+/* =============================================================================
+   8. MODALES
+   =============================================================================
+   Spotify (.spotify-modal) y video de guitarra (.video-modal) comparten el
+   mismo diseño de diálogo; solo cambian el ancho y la forma de abrirse:
+   - Spotify: se abre con la clase .is-open (con transición de opacidad).
+   - Video:   se abre quitando el atributo [hidden].
+   ============================================================================= */
+
+/* --- 8.1 Parte compartida ----------------------------------------------- */
+
+.spotify-modal,
+.video-modal{
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: var(--overlay);
+}
+
+.spotify-modal__dialog,
+.video-modal__dialog{
+  max-height: calc(100dvh - 48px);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 18px;
+  background: #121212;
+  box-shadow: 0 24px 70px rgba(0,0,0,.46);
+}
+
+.spotify-modal__header,
+.video-modal__header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 54px;
+  padding: 10px 12px 10px 18px;
+  border-bottom: 1px solid rgba(255,255,255,.10);
+  background: #121212;
+}
+
+.spotify-modal__title,
+.video-modal__title{
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: .2px;
+  color: #fff;
+}
+
+.spotify-modal__close,
+.video-modal__close{
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  font-size: 22px;
+  color: rgba(255,255,255,.82);
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease, transform .15s ease;
+}
+
+.spotify-modal__close:hover,
+.video-modal__close:hover{
+  background: rgba(255,255,255,.10);
+  color: #fff;
+}
+
+.spotify-modal__close:active,
+.video-modal__close:active{ transform: scale(.96); }
+
+.spotify-modal__close:focus-visible,
+.video-modal__close:focus-visible{
+  outline: 3px solid rgba(255,255,255,.34);
+  outline-offset: 2px;
+}
+
+/* Bloquea el scroll de la página mientras hay un modal abierto */
+body.spotify-modal-open,
+body.video-modal-open{ overflow: hidden; }
+
+/* --- 8.2 Spotify --------------------------------------------------------- */
+
+/* El disparador es un <button> que debe verse como texto normal */
 .spotify-link{
   appearance: none;
   -webkit-appearance: none;
@@ -1063,24 +1137,13 @@ body{
 }
 
 .spotify-link:focus-visible{
-  outline: 3px solid rgba(31,140,239,.28);
+  outline: 3px solid rgba(var(--accent2-rgb), .28);
   outline-offset: 4px;
   border-radius: 4px;
 }
 
-body.spotify-modal-open{
-  overflow: hidden;
-}
-
 .spotify-modal{
-  position: fixed;
-  inset: 0;
   z-index: 10000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  background: rgba(6, 12, 20, .76);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -1095,68 +1158,12 @@ body.spotify-modal-open{
 
 .spotify-modal__dialog{
   width: min(700px, 100%);
-  max-height: calc(100dvh - 48px);
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,.14);
-  border-radius: 18px;
-  background: #121212;
-  box-shadow: 0 24px 70px rgba(0,0,0,.46);
   transform: translateY(10px) scale(.99);
   transition: transform .18s ease;
 }
 
 .spotify-modal.is-open .spotify-modal__dialog{
   transform: translateY(0) scale(1);
-}
-
-.spotify-modal__header{
-  min-height: 54px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 10px 12px 10px 18px;
-  border-bottom: 1px solid rgba(255,255,255,.10);
-  background: #121212;
-}
-
-.spotify-modal__title{
-  margin: 0;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: .2px;
-}
-
-.spotify-modal__close{
-  flex: 0 0 auto;
-  width: 38px;
-  height: 38px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-  background: transparent;
-  color: rgba(255,255,255,.82);
-  font-size: 22px;
-  cursor: pointer;
-  transition: background .15s ease, color .15s ease, transform .15s ease;
-}
-
-.spotify-modal__close:hover{
-  background: rgba(255,255,255,.10);
-  color: #fff;
-}
-
-.spotify-modal__close:active{
-  transform: scale(.96);
-}
-
-.spotify-modal__close:focus-visible{
-  outline: 3px solid rgba(255,255,255,.34);
-  outline-offset: 2px;
 }
 
 .spotify-modal__player{
@@ -1173,89 +1180,13 @@ body.spotify-modal-open{
   background: #121212;
 }
 
-/* =========================================================
-   6. GUITAR VIDEO MODAL
-   ========================================================= */
+/* --- 8.3 Video de guitarra ---------------------------------------------- */
 
-/* Guitar video link + modal ------------------------------------------------- */
-body.video-modal-open{
-  overflow: hidden;
-}
+.video-modal{ z-index: 10010; }
 
-.video-modal[hidden]{
-  display: none !important;
-}
+.video-modal[hidden]{ display: none !important; }
 
-.video-modal{
-  position: fixed;
-  inset: 0;
-  z-index: 10010;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  background: rgba(6, 12, 20, .76);
-}
-
-.video-modal__dialog{
-  width: min(688px, 100%);
-  max-height: calc(100dvh - 48px);
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,.14);
-  border-radius: 18px;
-  background: #121212;
-  box-shadow: 0 24px 70px rgba(0,0,0,.46);
-}
-
-.video-modal__header{
-  min-height: 54px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 10px 12px 10px 18px;
-  border-bottom: 1px solid rgba(255,255,255,.10);
-  background: #121212;
-}
-
-.video-modal__title{
-  margin: 0;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: .2px;
-}
-
-.video-modal__close{
-  flex: 0 0 auto;
-  width: 38px;
-  height: 38px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-  background: transparent;
-  color: rgba(255,255,255,.82);
-  font-size: 22px;
-  cursor: pointer;
-  transition: background .15s ease, color .15s ease, transform .15s ease;
-}
-
-.video-modal__close:hover{
-  background: rgba(255,255,255,.10);
-  color: #fff;
-}
-
-.video-modal__close:active{
-  transform: scale(.96);
-}
-
-.video-modal__close:focus-visible{
-  outline: 3px solid rgba(255,255,255,.34);
-  outline-offset: 2px;
-}
+.video-modal__dialog{ width: min(688px, 100%); }
 
 .video-modal__player{
   display: flex;
@@ -1276,58 +1207,54 @@ body.video-modal-open{
   background: #000;
 }
 
-/* =========================================================
-   7. SIDEBAR DECORATIVE FX
-   ========================================================= */
 
-/* =========================================================
-   SIDEBAR FX - efecto decorativo bajo el botón "Download CV"
+/* =============================================================================
+   9. SIDEBAR FX — efecto decorativo bajo el botón "Download CV"
+   =============================================================================
    Líneas onduladas + puntos de luz + resplandor azul.
-   Solo se muestra en pantallas grandes (>= 921px), es decir,
-   cuando la sidebar es una columna lateral. En tablet vertical
-   y móvil no existe (se prioriza el contenido del CV).
-   Archivo de las líneas: assets/img/side-fx-waves.svg
-========================================================= */
+   - Solo se muestra en pantallas >= 921px (cuando la sidebar es columna lateral).
+     En tablet vertical y móvil no existe, para priorizar el contenido.
+   - Imagen de las líneas: assets/img/side-fx-waves.svg
+   - Capas (de atrás hacia adelante):
+       .fx-glow            resplandores azules          (z-index 0)
+       .side-fx__art::before  líneas onduladas          (z-index 1)
+       .side-fx__art::after   destello que recorre líneas (z-index 2)
+       .fx-dot             puntos de luz                (z-index 3)
+   ============================================================================= */
 
 /* Por defecto (móvil/tablet) el efecto no se muestra */
-.side-fx{
-  display: none;
-}
+.side-fx{ display: none; }
 
 @media (min-width: 921px){
 
-  /* La sidebar pasa a ser una columna flex para que .side-fx
-     ocupe SOLO el espacio libre que queda debajo del botón
-     (si no hay espacio, mide 0 y nunca tapa el contenido). */
+  /* La sidebar pasa a ser una columna flex para que .side-fx ocupe SOLO el
+     espacio libre bajo el botón (si no hay espacio, mide 0 y no tapa nada). */
   .side{
     display: flex;
     flex-direction: column;
   }
 
   .side-fx{
-    display: block;
     position: relative;
+    display: block;
     flex: 1 1 auto;
     min-height: 0;
     overflow: hidden;
     pointer-events: none;
     user-select: none;
-
-    /* desvanecido superior del contenedor: no hay corte seco bajo el botón */
+    /* desvanecido superior: sin corte seco bajo el botón */
     -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 110px);
             mask-image: linear-gradient(to bottom, transparent 0, #000 110px);
   }
 
-  /* Lienzo del efecto: siempre pegado al borde inferior de la sidebar,
-     con la misma proporción que el dibujo (428 x 1264). */
+  /* Lienzo: pegado al borde inferior, con la proporción del dibujo (428 x 1264) */
   .side-fx__art{
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
     aspect-ratio: 428 / 1264;
-
-    /* desvanecido superior del propio efecto (nace suave desde el fondo oscuro) */
+    /* desvanecido superior propio: nace suave desde el fondo oscuro */
     -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,.55) 9%, #000 22%);
             mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,.55) 9%, #000 22%);
   }
@@ -1347,7 +1274,7 @@ body.video-modal-open{
         rgba(45,120,220,.16) 0%, rgba(45,120,220,.07) 55%, rgba(45,120,220,0) 100%),
       /* mancha azul central-izquierda */
       radial-gradient(ellipse 68% 23% at 24% 66%,
-        rgba(31,140,239,.48) 0%, rgba(31,140,239,.33) 28%, rgba(31,140,239,.16) 58%, rgba(31,140,239,.05) 82%, rgba(31,140,239,0) 100%),
+        rgba(var(--accent2-rgb), .48) 0%, rgba(var(--accent2-rgb), .33) 28%, rgba(var(--accent2-rgb), .16) 58%, rgba(var(--accent2-rgb), .05) 82%, rgba(var(--accent2-rgb), 0) 100%),
       /* luz azul en la esquina inferior izquierda */
       radial-gradient(ellipse 60% 15% at 8% 94%,
         rgba(31,120,220,.13) 0%, rgba(31,120,220,.05) 60%, rgba(31,120,220,0) 100%),
@@ -1358,7 +1285,7 @@ body.video-modal-open{
     animation: fx-breathe 12s ease-in-out infinite;
   }
 
-  /* --- Capa 2: líneas onduladas --- */
+  /* --- Capas 2 y 3: líneas onduladas (comparten la imagen) --- */
   .side-fx__art::before,
   .side-fx__art::after{
     content: "";
@@ -1372,7 +1299,7 @@ body.video-modal-open{
     animation: fx-lines-breathe 11s ease-in-out infinite;
   }
 
-  /* --- Capa 3: destello suave que recorre las líneas de vez en cuando --- */
+  /* Destello suave que recorre las líneas de vez en cuando */
   .side-fx__art::after{
     z-index: 2;
     filter: brightness(2.6) saturate(.9);
@@ -1389,14 +1316,15 @@ body.video-modal-open{
 
   /* --- Capa 4: puntos de luz --- */
   .fx-dot{
-    --x: 50%;
-    --y: 50%;
-    --d: 44px;      /* diámetro total (núcleo + halo) */
-    --o: 1;         /* opacidad máxima */
-    --dx: 4px;      /* deriva horizontal */
-    --dy: -7px;     /* deriva vertical */
-    --t: 8s;        /* duración del ciclo */
-    --w: 0s;        /* desfase (negativo = arranca "a mitad" de ciclo) */
+    /* Parámetros de cada punto (se sobrescriben en los nth-child de abajo) */
+    --x: 50%;     /* posición horizontal en el lienzo */
+    --y: 50%;     /* posición vertical en el lienzo */
+    --d: 44px;    /* diámetro total (núcleo + halo) */
+    --o: 1;       /* opacidad máxima */
+    --dx: 4px;    /* deriva horizontal */
+    --dy: -7px;   /* deriva vertical */
+    --t: 8s;      /* duración del ciclo */
+    --w: 0s;      /* desfase (negativo = arranca "a mitad" de ciclo) */
 
     position: absolute;
     z-index: 3;
@@ -1411,31 +1339,31 @@ body.video-modal-open{
       #fff 0 9%,
       rgba(200,230,255,.95) 14%,
       rgba(70,165,255,.72) 26%,
-      rgba(31,140,239,.34) 46%,
-      rgba(31,140,239,.10) 72%,
-      rgba(31,140,239,0) 100%);
+      rgba(var(--accent2-rgb), .34) 46%,
+      rgba(var(--accent2-rgb), .10) 72%,
+      rgba(var(--accent2-rgb), 0) 100%);
     animation: fx-dot var(--t) ease-in-out var(--w) infinite;
   }
 
-  /* puntos "apagados" (azul, sin núcleo blanco) */
+  /* Puntos "apagados" (5.º en adelante): azules, sin núcleo blanco */
   .fx-dot:nth-child(n+5){
     background: radial-gradient(closest-side,
       rgba(110,185,255,.95) 0 20%,
-      rgba(31,140,239,.45) 42%,
-      rgba(31,140,239,.12) 70%,
-      rgba(31,140,239,0) 100%);
+      rgba(var(--accent2-rgb), .45) 42%,
+      rgba(var(--accent2-rgb), .12) 70%,
+      rgba(var(--accent2-rgb), 0) 100%);
   }
 
-  /* posición y carácter de cada punto (coordenadas relativas al lienzo) */
-  .fx-dot:nth-child(2){ --x: 51.6%; --y: 32.9%; --d: 44px; --o: .95; --t: 7s;  --w: -2s; --dx:  5px; --dy: -7px; }
-  .fx-dot:nth-child(3){ --x: 72.4%; --y: 54.7%; --d: 44px; --o: .95; --t: 9s;  --w: -5s; --dx: -4px; --dy:  6px; }
-  .fx-dot:nth-child(4){ --x: 29.4%; --y: 62.6%; --d: 56px; --o: 1;   --t: 8s;  --w: -1s; --dx:  4px; --dy: -6px; }
+  /* Posición y carácter de cada punto (el 1.er hijo es .fx-glow, por eso se empieza en 2) */
+  .fx-dot:nth-child(2){ --x: 51.6%; --y: 32.9%; --d: 44px; --o: .95; --t:  7s; --w: -2s; --dx:  5px; --dy: -7px; }
+  .fx-dot:nth-child(3){ --x: 72.4%; --y: 54.7%; --d: 44px; --o: .95; --t:  9s; --w: -5s; --dx: -4px; --dy:  6px; }
+  .fx-dot:nth-child(4){ --x: 29.4%; --y: 62.6%; --d: 56px; --o: 1;   --t:  8s; --w: -1s; --dx:  4px; --dy: -6px; }
   .fx-dot:nth-child(5){ --x: 25.5%; --y: 80.6%; --d: 32px; --o: .80; --t: 10s; --w: -6s; --dx: -3px; --dy: -5px; }
   .fx-dot:nth-child(6){ --x: 69.4%; --y: 42.3%; --d: 28px; --o: .55; --t: 11s; --w: -3s; --dx:  4px; --dy:  5px; }
   .fx-dot:nth-child(7){ --x: 44.6%; --y: 87.4%; --d: 26px; --o: .45; --t: 12s; --w: -8s; --dx:  3px; --dy: -4px; }
 }
 
-/* ---- Animaciones (todas muy lentas y sutiles) ---- */
+/* Animaciones (todas muy lentas y sutiles) */
 @keyframes fx-breathe{
   0%, 100%{ opacity: .80; transform: scale(1); }
   50%     { opacity: 1;   transform: scale(1.04); }
@@ -1462,25 +1390,37 @@ body.video-modal-open{
   50%     { opacity: calc(var(--o) * .45); transform: translate(var(--dx), var(--dy)) scale(.8); }
 }
 
-/* =========================================================
-   8. RESPONSIVE
-   Los breakpoints generales se concentran aquí para que cada
-   comportamiento pueda localizarse y modificarse fácilmente.
-   ========================================================= */
 
-/* Desktop compacto */
+/* =============================================================================
+   10. RESPONSIVE
+   =============================================================================
+   Los bloques están ordenados de mayor a menor pantalla. El ORDEN IMPORTA:
+   cuando dos reglas tienen la misma especificidad gana la última, así que un
+   bloque más "pequeño" (más abajo) puede sobrescribir a uno más "grande".
+   Dentro de cada bloque las reglas se agrupan por componente.
+   ============================================================================= */
+
+
+/* -----------------------------------------------------------------------------
+   10.1  Escritorio compacto (921–1050px)
+   ----------------------------------------------------------------------------- */
 @media (min-width: 921px) and (max-width: 1050px){
   .cv{ grid-template-columns: 340px 1fr; }
+
   .name{ font-size: 46px; }
 
   .role::before,
-  .role::after{
-    min-width: 1px;
-  }
+  .role::after{ min-width: 1px; }
 }
 
-/* La sidebar pasa arriba y aprovecha el ancho disponible. */
+
+/* -----------------------------------------------------------------------------
+   10.2  Tablet y móvil (<= 920px)
+   La sidebar pasa arriba del contenido y aprovecha el ancho disponible.
+   ----------------------------------------------------------------------------- */
 @media (max-width: 920px){
+
+  /* Contenedores de la sidebar */
   .side-top,
   .side-body{
     width: min(100%, 780px);
@@ -1488,16 +1428,17 @@ body.video-modal-open{
   }
 
   .side-top{
-    padding-left: clamp(18px, 6vw, 56px);
+    padding-left:  clamp(18px, 6vw, 56px);
     padding-right: clamp(18px, 6vw, 56px);
   }
 
   .side-body{
-    padding-left: clamp(18px, 6vw, 56px);
-    padding-right: clamp(18px, 6vw, 56px);
+    padding-left:   clamp(18px, 6vw, 56px);
+    padding-right:  clamp(18px, 6vw, 56px);
     padding-bottom: clamp(22px, 5vw, 42px);
   }
 
+  /* Tarjeta de contacto */
   .contact-card{
     width: 100%;
     max-width: 640px;
@@ -1505,22 +1446,19 @@ body.video-modal-open{
     margin-right: auto;
   }
 
-  .contact-row{
-    grid-template-columns: 48px minmax(0, 1fr);
-  }
+  .contact-row{ grid-template-columns: 48px minmax(0, 1fr); }
 
-  .c-ico{
-    height: 48px;
-  }
+  .c-ico{ height: 48px; }
 
   .c-text{
     min-width: 0;
-    font-size: 14px;
     padding-inline: 14px;
+    font-size: 14px;
     overflow-wrap: anywhere;
     word-break: normal;
   }
 
+  /* Secciones de la sidebar centradas con ancho máximo */
   .languages-section,
   .values-section,
   .social-section{
@@ -1530,10 +1468,9 @@ body.video-modal-open{
     margin-right: auto;
   }
 
-  .languages-section .m-bar{
-    width: 100%;
-  }
+  .languages-section .m-bar{ width: 100%; }
 
+  /* Valores: 2 columnas */
   .values-section{
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1541,15 +1478,14 @@ body.video-modal-open{
     row-gap: 0;
   }
 
-  .values-section > .side-h{
-    grid-column: 1 / -1;
-  }
+  .values-section > .side-h{ grid-column: 1 / -1; }
 
   .values-section .meter{
-    margin: 6px 0 8px;
     min-width: 0;
+    margin: 6px 0 8px;
   }
 
+  /* Botón de descarga */
   .download-section{
     width: 100%;
     max-width: 640px;
@@ -1563,6 +1499,7 @@ body.video-modal-open{
     margin-right: auto;
   }
 
+  /* Redes sociales: 2 columnas */
   .social-section{
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1592,27 +1529,31 @@ body.video-modal-open{
   }
 }
 
-/* Tablet */
+
+/* -----------------------------------------------------------------------------
+   10.3  Tablet (721–920px)
+   ----------------------------------------------------------------------------- */
 @media (min-width: 721px) and (max-width: 920px){
+
+  /* Layout: una sola columna */
   .cv{ grid-template-columns: 1fr; }
   .clip{ display: none; }
-  .content{ padding: 16px 18px 28px; }
+
+  /* Hero y contenido */
   .hero{ padding: 26px 18px 22px; }
-  .grid-2{ grid-template-columns: 1fr; }
+  .content{ padding: 16px 18px 28px; }
 
   .role::before,
-  .role::after{
-    min-width: 35px;
-  }
+  .role::after{ min-width: 35px; }
 
+
+  /* Sidebar: más compacta */
   .side-top{
     padding-top: 16px;
     padding-bottom: 12px;
   }
 
-  .side-body{
-    padding-top: 8px;
-  }
+  .side-body{ padding-top: 8px; }
 
   .avatar-wrap{
     width: 180px;
@@ -1631,13 +1572,11 @@ body.video-modal-open{
     height: 180px;
   }
 
-  .c-ico i{
-    font-size: 14px;
-  }
+  .c-ico i{ font-size: 14px; }
 
   .flag-dots{
-    padding-top: 8px;
     gap: 8px;
+    padding-top: 8px;
   }
 
   .flag-dots .dot{
@@ -1645,26 +1584,18 @@ body.video-modal-open{
     height: 10px;
   }
 
-  .side-section{
-    margin-top: 14px;
-  }
+  .side-section{ margin-top: 14px; }
 
   .side-h{
-    margin: 10px 0 10px;
+    margin: 10px 0;
     padding-bottom: 8px;
   }
 
-  .meter{
-    margin: 10px 0 12px;
-  }
+  .meter{ margin: 10px 0 12px; }
 
-  .m-label{
-    margin-bottom: 6px;
-  }
+  .m-label{ margin-bottom: 6px; }
 
-  .m-bar{
-    height: 7px;
-  }
+  .m-bar{ height: 7px; }
 
   .download-section .btn{
     justify-content: space-between;
@@ -1672,8 +1603,13 @@ body.video-modal-open{
   }
 }
 
-/* Reglas compartidas por móviles de hasta 720px. */
+
+/* -----------------------------------------------------------------------------
+   10.4  Móvil (<= 720px) — reglas comunes
+   ----------------------------------------------------------------------------- */
 @media (max-width: 720px){
+
+  /* Sidebar a todo el ancho */
   .side-top,
   .side-body{
     width: 100%;
@@ -1681,12 +1617,12 @@ body.video-modal-open{
   }
 
   .side-top{
-    padding-left: clamp(14px, 5vw, 30px);
+    padding-left:  clamp(14px, 5vw, 30px);
     padding-right: clamp(14px, 5vw, 30px);
   }
 
   .side-body{
-    padding-left: clamp(14px, 5vw, 30px);
+    padding-left:  clamp(14px, 5vw, 30px);
     padding-right: clamp(14px, 5vw, 30px);
   }
 
@@ -1694,40 +1630,28 @@ body.video-modal-open{
   .languages-section,
   .values-section,
   .download-section,
-  .social-section{
-    max-width: 100%;
-    
-  }
+  .social-section{ max-width: 100%; }
 
-  
-  .contact-row{
-    grid-template-columns: 44px minmax(0, 1fr);
-  }
+  .contact-row{ grid-template-columns: 44px minmax(0, 1fr); }
 
-  .c-ico{
-    height: 44px;
-  }
+  .c-ico{ height: 44px; }
 
   .c-text{
-    font-size: 13.5px;
     padding-inline: 12px;
+    font-size: 13.5px;
   }
 
-  .download-section .btn{
-    font-size: 14px;
-  }
+  .download-section .btn{ font-size: 14px; }
 
-  .courses-filters{
-    grid-template-columns: 1fr;
-  }
+  /* Filtros en una columna */
+  .courses-filters{ grid-template-columns: 1fr; }
 
-  .skills-card{
-    padding: 6px;
-  }
+  /* Skills (acordeón) más compacto */
+  .skills-card{ padding: 6px; }
 
   .skill-summary{
-    padding: 12px 10px;
     gap: 10px;
+    padding: 12px 10px;
   }
 
   .skill-summary::before,
@@ -1737,60 +1661,47 @@ body.video-modal-open{
     border-radius: 7px;
   }
 
-  .skill-summary__title{
-    font-size: 13.5px;
-  }
+  .skill-summary::after,
+  .skill-subaccordion > summary::after{ font-size: 22px; }
 
-  .skill-summary__description{
-    font-size: 12.5px;
-  }
+  .skill-summary__title{ font-size: 13.5px; }
 
-  .skill-accordion__body{
-    padding: 0 8px 8px 8px;
-  }
+  .skill-summary__description{ font-size: 12.5px; }
+
+  .skill-accordion__body{ padding: 0 8px 8px; }
 
   .skill-subaccordion > summary{
-    padding: 10px 9px;
     gap: 9px;
+    padding: 10px 9px;
     font-size: 12.5px;
   }
 
-  .skill-summary::after,
-  .skill-subaccordion > summary::after{
-    font-size: 22px;
-  }
-
-  .skill-list{
-    columns: 1;
-    padding: 2px 12px 12px 42px;
-  }
+  .skill-list{ padding: 2px 12px 12px 42px; }
 
   .skill-list li{
     font-size: 12.8px;
     line-height: 1.45;
   }
-  
-
 }
 
-/* Móvil medio */
+
+/* -----------------------------------------------------------------------------
+   10.5  Móvil medio (521–720px)
+   ----------------------------------------------------------------------------- */
 @media (min-width: 521px) and (max-width: 720px){
-  .stage{
-    padding: 16px 10px;
-  }
+
+  /* Layout */
+  .stage{ padding: 16px 10px; }
 
   .cv{
     grid-template-columns: 1fr;
     border-radius: 10px;
   }
 
-  .hero{
-    padding: 24px 16px 20px;
-  }
+  /* Hero */
+  .hero{ padding: 24px 16px 20px; }
 
-  .hero-inner{
-    padding-top: 20px;
-  }
+  .hero-inner{ padding-top: 20px; }
 
   .name{
     font-size: 32px;
@@ -1803,102 +1714,77 @@ body.video-modal-open{
   }
 
   .role::before,
-  .role::after{
-    min-width: 0;
-  }
+  .role::after{ min-width: 0; }
 
   .lead{
+    padding: 0 6px;
     font-size: 15px;
     line-height: 1.55;
-    padding: 0 6px;
   }
 
   .lang-switch{
     top: 10px;
     right: 10px;
-    padding: 6px 10px;
     gap: 6px;
+    padding: 6px 10px;
   }
 
-  .lang-btn{
-    font-size: 12px;
-  }
+  .lang-btn{ font-size: 12px; }
 
-  .content{
-    padding: 14px 16px 24px;
-  }
+  /* Contenido */
+  .content{ padding: 14px 16px 24px; }
 
   .tag{
     min-width: auto;
-    font-size: 12px;
     padding: 8px 12px;
+    font-size: 12px;
   }
 
-  .tag-arrow{
-    min-width: auto;
-  }
+  .tag-arrow{ min-width: auto; }
 
   .tag-arrow::after{
+    right: -18px;
     border-top: 18px solid transparent;
     border-bottom: 18px solid transparent;
     border-left: 18px solid var(--accent2);
-    right: -18px;
   }
 
   .card,
   .card-top,
-  .card-main{
-    padding: 14px;
-  }
+  .card-main{ padding: 14px; }
 
   .card p,
-  .item-p{
-    font-size: 15px;
-  }
+  .item-p{ font-size: 15px; }
 
-  .item-h{
-    font-size: 13px;
-  }
+  .item-h{ font-size: 13px; }
 
-  .item-meta{
-    font-size: 12px;
-  }
+  .item-meta{ font-size: 12px; }
 
-  .linkedin-block{
-    gap: 8px;
-  }
+  .linkedin-block{ gap: 8px; }
 
-  .linkedin-text{
-    font-size: 13px;
-  }
-
-  .hobby{
-    padding: 8px 10px;
-  }
+  .hobby{ padding: 8px 10px; }
 
   .h-ico{
     width: 30px;
     height: 30px;
   }
 
-  .item-course{
-    flex-direction: column;
-  }
+  /* Curso: miniatura debajo del texto */
+  .item-course{ flex-direction: column; }
 
   .item-course__thumb{
+    flex-basis: auto;
     width: 100%;
     max-width: 220px;
-    flex-basis: auto;
   }
 
+  /* Sidebar */
   .side-top{
     padding-top: 14px;
     padding-bottom: 10px;
   }
 
-  .side-body{
-    padding-top: 6px;
-  }
+  .side-body{ padding-top: 6px; }
 
   .avatar-wrap{
     width: 160px;
@@ -1914,32 +1800,35 @@ body.video-modal-open{
     width: 160px;
     height: 160px;
   }
-
 }
 
-/* Modales en móvil */
-@media (max-width: 600px){
-  .spotify-modal{
-    align-items: center;
-    padding: 12px;
-  }
 
-  .spotify-modal__dialog{
+/* -----------------------------------------------------------------------------
+   10.6  Modales en móvil (<= 600px)
+   ----------------------------------------------------------------------------- */
+@media (max-width: 600px){
+
+  .spotify-modal,
+  .video-modal{ padding: 12px; }
+
+  .spotify-modal__dialog,
+  .video-modal__dialog{
     width: 100%;
     max-height: calc(100dvh - 24px);
     border-radius: 16px;
   }
 
-  .spotify-modal__header{
+  .spotify-modal__header,
+  .video-modal__header{
     min-height: 50px;
     padding: 8px 8px 8px 14px;
   }
 
-  .spotify-modal__title{
-    font-size: 15px;
-  }
+  .spotify-modal__title,
+  .video-modal__title{ font-size: 15px; }
 
-  .spotify-modal__close{
+  .spotify-modal__close,
+  .video-modal__close{
     width: 40px;
     height: 40px;
     font-size: 21px;
@@ -1950,34 +1839,7 @@ body.video-modal-open{
     border-radius: 0 0 16px 16px;
   }
 
-  .video-modal{
-    padding: 12px;
-  }
-
-  .video-modal__dialog{
-    width: 100%;
-    max-height: calc(100dvh - 24px);
-    border-radius: 16px;
-  }
-
-  .video-modal__header{
-    min-height: 50px;
-    padding: 8px 8px 8px 14px;
-  }
-
-  .video-modal__title{
-    font-size: 15px;
-  }
-
-  .video-modal__close{
-    width: 40px;
-    height: 40px;
-    font-size: 21px;
-  }
-
-  .video-modal__player{
-    padding: 8px;
-  }
+  .video-modal__player{ padding: 8px; }
 
   .video-modal__video{
     width: 100%;
@@ -1986,48 +1848,46 @@ body.video-modal-open{
   }
 }
 
-/* Móvil pequeño */
+
+/* -----------------------------------------------------------------------------
+   10.7  Móvil pequeño (<= 520px)
+   ----------------------------------------------------------------------------- */
 @media (max-width: 520px){
+
+  /* Layout */
   .stage{
-    padding: 10px 6px;
     align-items: flex-start;
+    padding: 10px 6px;
   }
 
   .cv{
+    grid-template-columns: 1fr;
     width: 100%;
     max-width: 100%;
-    grid-template-columns: 1fr;
     border-radius: 10px;
   }
 
-  .clip{
-    display: none;
-  }
+  .clip{ display: none; }
 
-  .hero{
-    padding: 22px 14px 18px;
-  }
+  /* Hero */
+  .hero{ padding: 22px 14px 18px; }
 
-  .hero-inner{
-    padding-top: 22px;
-  }
+  .hero-inner{ padding-top: 22px; }
 
   .name{
     font-size: 26px;
-    letter-spacing: .8px;
     line-height: 1.15;
+    letter-spacing: .8px;
   }
 
   .role{
     font-size: 11px;
-    letter-spacing: 2.4px;
     line-height: 1.35;
+    letter-spacing: 2.4px;
   }
 
   .role::before,
-  .role::after{
-    display: none;
-  }
+  .role::after{ display: none; }
 
   .lead{
     font-size: 14px;
@@ -2037,38 +1897,34 @@ body.video-modal-open{
   .lang-switch{
     top: 8px;
     right: 8px;
-    padding: 5px 8px;
     gap: 5px;
+    padding: 5px 8px;
   }
 
   .lang-btn{
-    font-size: 11px;
     padding: 3px 4px;
+    font-size: 11px;
   }
 
-  .content{
-    padding: 12px 10px 22px;
-  }
+  /* Contenido */
+  .content{ padding: 12px 10px 22px; }
 
-  .grid-2{
-    grid-template-columns: 1fr;
-  }
 
   .tag,
   .tag-arrow{
-    min-width: 0;
     width: auto;
+    min-width: 0;
     max-width: calc(100% - 18px);
-    font-size: 11px;
     padding: 8px 10px;
+    font-size: 11px;
     line-height: 1.25;
   }
 
   .tag-arrow::after{
+    right: -18px;
     border-top: 18px solid transparent;
     border-bottom: 18px solid transparent;
     border-left: 18px solid var(--accent2);
-    right: -18px;
   }
 
   .card,
@@ -2076,28 +1932,6 @@ body.video-modal-open{
   .card-main{
     padding: 12px;
     border-radius: 12px;
-  }
-
-  .item-course{
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  .item-course__body{
-    width: 100%;
-  }
-
-  .item-course__thumb{
-    width: 100%;
-    max-width: 210px;
-    flex: 0 0 auto;
-    margin: 0 auto;
-  }
-
-  .item-course__thumb img{
-    width: 100%;
-    height: auto;
   }
 
   .item-h{
@@ -2112,10 +1946,10 @@ body.video-modal-open{
   }
 
   .diploma-link{
+    gap: 12px;
     width: 100%;
     min-height: 50px;
     padding: 11px 16px;
-    gap: 12px;
   }
 
   .diploma-link__icon{
@@ -2124,22 +1958,38 @@ body.video-modal-open{
     font-size: 24px;
   }
 
-  .hobby-grid{
-    grid-template-columns: 1fr;
+  .hobby-grid{ grid-template-columns: 1fr; }
+
+  /* Curso: miniatura centrada debajo del texto */
+  .item-course{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
   }
 
-  #courses-pagination{
-    justify-content: center;
+  .item-course__body{ width: 100%; }
+
+  .item-course__thumb{
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 210px;
+    margin: 0 auto;
   }
 
+  .item-course__thumb img{
+    width: 100%;
+    height: auto;
+  }
+
+  #courses-pagination{ justify-content: center; }
+
+  /* Sidebar */
   .side-top{
     padding-top: 14px;
     padding-bottom: 10px;
   }
 
-  .side-body{
-    padding-top: 6px;
-  }
+  .side-body{ padding-top: 6px; }
 
   .avatar-wrap{
     width: 160px;
@@ -2164,8 +2014,12 @@ body.video-modal-open{
   }
 }
 
-/* Móvil angosto: las dos columnas pasan a una sola. */
+
+/* -----------------------------------------------------------------------------
+   10.8  Móvil angosto (<= 430px): las dos columnas pasan a una sola
+   ----------------------------------------------------------------------------- */
 @media (max-width: 430px){
+
   .side-top,
   .side-body{
     padding-left: 12px;
@@ -2174,48 +2028,39 @@ body.video-modal-open{
 
   .values-section,
   .social-section,
-  .social-list{
-    grid-template-columns: 1fr;
-    
-  }
+  .social-list{ grid-template-columns: 1fr; }
 
   .values-section > .side-h,
   .social-section > .side-h,
-  .social-list{
-    grid-column: 1;
-  }
+  .social-list{ grid-column: 1; }
 
-  .contact-row{
-    grid-template-columns: 40px minmax(0, 1fr);
-  }
+  .contact-row{ grid-template-columns: 40px minmax(0, 1fr); }
 
-  .c-ico{
-    height: 42px;
-  }
+  .c-ico{ height: 42px; }
 
   .c-text{
-    font-size: 12.5px;
     padding-inline: 10px;
+    font-size: 12.5px;
   }
 }
 
+
+/* -----------------------------------------------------------------------------
+   10.9  Pantallas muy angostas (<= 380px y <= 360px)
+   ----------------------------------------------------------------------------- */
 @media (max-width: 380px){
+
   .spotify-modal,
-  .video-modal{
-    padding: 8px;
-  }
+  .video-modal{ padding: 8px; }
 
   .spotify-modal__dialog,
-  .video-modal__dialog{
-    max-height: calc(100dvh - 16px);
-  }
+  .video-modal__dialog{ max-height: calc(100dvh - 16px); }
 
-  .spotify-modal__player iframe{
-    height: min(410px, calc(100dvh - 90px));
-  }
+  .spotify-modal__player iframe{ height: min(410px, calc(100dvh - 90px)); }
 }
 
 @media (max-width: 360px){
+
   .side-top,
   .side-body{
     padding-left: 10px;
@@ -2228,28 +2073,25 @@ body.video-modal-open{
   }
 }
 
-/* Accesibilidad */
+
+/* =============================================================================
+   11. ACCESIBILIDAD E IMPRESIÓN
+   ============================================================================= */
+
+/* Si el usuario pidió "reducir movimiento", se apagan transiciones y animaciones */
 @media (prefers-reduced-motion: reduce){
   .spotify-modal,
-  .spotify-modal__dialog{
-    transition: none;
-  }
+  .spotify-modal__dialog{ transition: none; }
 
   .fx-glow,
   .fx-dot,
   .side-fx__art::before,
-  .side-fx__art::after{
-    animation: none;
-  }
+  .side-fx__art::after{ animation: none; }
 
-  .side-fx__art::after{
-    display: none;
-  }
+  .side-fx__art::after{ display: none; }
 }
 
-/* Impresión */
+/* Al imprimir se oculta el efecto decorativo de la sidebar */
 @media print{
-  .side-fx{
-    display: none !important;
-  }
+  .side-fx{ display: none !important; }
 }

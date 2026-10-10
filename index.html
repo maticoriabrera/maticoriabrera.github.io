@@ -48,6 +48,8 @@
 </head>
 
 <body>
+  <!-- INTERNATIONALIZATION -->
+  <!-- The data-i18n and data-i18n-attr attributes mark translatable content and attributes. The data-preserve-lang attribute marks internal links for language handling. -->
   <main class="stage">
     <section class="cv" aria-label="Curriculum Vitae">
 
@@ -60,6 +62,7 @@
             <div class="glow-dots" aria-hidden="true"></div>
           </div>
 
+          <!-- CONTACT -->
           <div class="side-id">
             <div class="side-title" data-i18n="contact_title">CONTACT</div>
           </div>
@@ -89,6 +92,7 @@
             </div>
           </section>
 
+          <!-- LANGUAGES -->
           <section class="side-section languages-section" aria-label="Languages" data-i18n-attr="aria-label:languages_aria">
             <h3 class="side-h" data-i18n="languages_title">LANGUAGES</h3>
 
@@ -113,6 +117,7 @@
             </div>
           </section>
 
+          <!-- CORE VALUES -->
           <section class="side-section values-section" aria-label="Core values" data-i18n-attr="aria-label:core_values_aria">
             <h3 class="side-h" data-i18n="core_values_title">CORE VALUES</h3>
 
@@ -137,6 +142,7 @@
             </div>
           </section>
 
+          <!-- DOWNLOAD CV -->
           <section class="side-section download-section">
             <a id="download-cv" class="btn" href="assets/pdf/CV_Juan_Matias_Coria_Brera_ATS_EN.pdf" download="CV_Juan_Matias_Coria_Brera_ATS_EN.pdf" target="_blank" rel="noopener noreferrer">
               <span class="btn-ico"><i class="fa-solid fa-download"></i></span>
@@ -145,6 +151,7 @@
             </a>
           </section>
 
+          <!-- SOCIAL -->
           <section class="side-section social-section" aria-label="Social networks" data-i18n-attr="aria-label:social_networks_aria">
             <h3 class="side-h">SOCIAL</h3>
 
@@ -198,7 +205,8 @@
 
         </div>
 
-        <!-- SIDEBAR FX: efecto decorativo (solo pantallas grandes, lo oculta el CSS en móvil) -->
+        <!-- SIDEBAR EFFECT -->
+        <!-- Decorative effect displayed on large screens and hidden on mobile by CSS. -->
         <div class="side-fx" aria-hidden="true">
           <div class="side-fx__art">
             <span class="fx-glow"></span>
@@ -212,10 +220,13 @@
         </div>
 
       </aside>
+      <!-- END SIDEBAR -->
 
       <!-- MAIN -->
       <section class="main" aria-label="Main content" data-i18n-attr="aria-label:main_content_aria">
+        <!-- HERO -->
         <div class="hero" aria-label="Header" data-i18n-attr="aria-label:header_aria">
+          <!-- LANGUAGE SELECTOR -->
           <div class="lang-switch" role="navigation" aria-label="Language selector" data-i18n-attr="aria-label:language_selector_aria">
             <button class="lang-btn" type="button" data-lang="es">ES</button>
             <button class="lang-btn is-active" type="button" data-lang="en" aria-current="page">EN</button>
@@ -234,6 +245,7 @@
           <div class="hero-wave" aria-hidden="true"></div>
         </div>
 
+        <!-- CONTENT -->
         <div class="content">
 
           <!-- ABOUT ME -->
@@ -319,7 +331,7 @@
           <section class="block skills-section">
             <div class="skills-card">
 
-              <!-- Tools & Technologies -->
+              <!-- TOOLS & TECHNOLOGIES -->
               <details class="skill-accordion">
                 <summary class="skill-summary">
                   <span class="skill-summary__text">
@@ -382,7 +394,7 @@
                 </div>
               </details>
 
-              <!-- Work Style -->
+              <!-- WORK STYLE -->
               <details class="skill-accordion">
                 <summary class="skill-summary">
                   <span class="skill-summary__text">
@@ -405,7 +417,7 @@
                 </div>
               </details>
 
-              <!-- Interpersonal Skills -->
+              <!-- INTERPERSONAL SKILLS -->
               <details class="skill-accordion">
                 <summary class="skill-summary">
                   <span class="skill-summary__text">
@@ -426,7 +438,7 @@
                 </div>
               </details>
 
-              <!-- Level 1 Support -->
+              <!-- LEVEL 1 SUPPORT -->
               <details class="skill-accordion">
                 <summary class="skill-summary">
                   <span class="skill-summary__text">
@@ -502,7 +514,7 @@
                 </div>
               </details>
 
-              <!-- Level 2 Support -->
+              <!-- LEVEL 2 SUPPORT -->
               <details class="skill-accordion">
                 <summary class="skill-summary">
                   <span class="skill-summary__text">
@@ -532,6 +544,7 @@
               </details>
             </div>
           </section>
+          <!-- END SKILLS -->
 
           <!-- EDUCATION -->
           <section class="block">
@@ -671,6 +684,7 @@
 
         </div>
       </section>
+      <!-- END MAIN -->
 
       <!-- TOP CLIP (CLAMP) -->
       <div class="clip clip-left" aria-hidden="true"></div>
@@ -681,6 +695,7 @@
 
 
   <!-- SPOTIFY PLAYLIST MODAL -->
+  <!-- The playlist URL is stored in the iframe data-src attribute. -->
   <div
     class="spotify-modal"
     id="spotifyModal"
@@ -720,6 +735,7 @@
   </div>
 
   <!-- GUITAR VIDEO MODAL -->
+  <!-- The video file path is stored in the player data-src attribute. -->
   <div
     class="video-modal"
     id="guitarVideoModal"
@@ -759,6 +775,8 @@
     </div>
   </div>
 
+  <!-- JAVASCRIPT -->
+  <!-- Deferred scripts for localization and the Spotify and guitar modals. -->
   <script src="assets/js/i18n.js" defer></script>
   <script src="assets/js/spotify-modal.js" defer></script>
   <script src="assets/js/guitar-modal.js" defer></script>

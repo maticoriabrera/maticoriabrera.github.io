@@ -46,6 +46,8 @@
   <link rel="stylesheet" href="assets/css/styles-cv.css" />
   <link rel="stylesheet" href="assets/css/styles-stats.css" />
   <link rel="stylesheet" href="assets/css/styles-portfolio.css" />
+  <!-- INTERNATIONALIZATION -->
+  <!-- The data-i18n, data-i18n-attr, data-i18n-aria-label, and data-i18n-alt attributes mark localized content or attributes. The data-preserve-lang attribute marks internal links for language handling. -->
 </head>
 
 <body>
@@ -61,6 +63,7 @@
             <div class="glow-dots" aria-hidden="true"></div>
           </div>
 
+          <!-- CONTACT -->
           <div class="side-id">
             <div class="side-title" data-i18n="contact_title">CONTACT</div>
           </div>
@@ -90,6 +93,7 @@
             </div>
           </section>
 
+          <!-- LANGUAGES -->
           <section class="side-section languages-section" aria-label="Languages" data-i18n-aria-label="languages_title">
             <h3 class="side-h" data-i18n="languages_title">LANGUAGES</h3>
 
@@ -114,6 +118,7 @@
             </div>
           </section>
 
+          <!-- CORE VALUES -->
           <section class="side-section values-section" aria-label="Core values" data-i18n-aria-label="core_values_title">
             <h3 class="side-h" data-i18n="core_values_title">CORE VALUES</h3>
 
@@ -138,6 +143,7 @@
             </div>
           </section>
 
+          <!-- DOWNLOAD CV -->
           <section class="side-section download-section">
             <a class="btn" data-cv-download href="assets/pdf/CV_Juan_Matias_Coria_Brera_ATS_EN.pdf" download="CV_Juan_Matias_Coria_Brera_ATS_EN.pdf" target="_blank" rel="noopener noreferrer">
               <span class="btn-ico"><i class="fa-solid fa-download"></i></span>
@@ -146,6 +152,7 @@
             </a>
           </section>
 
+          <!-- SOCIAL -->
           <section class="side-section social-section" aria-label="Social networks" data-i18n-attr="aria-label:social_networks_aria">
             <h3 class="side-h">SOCIAL</h3>
 
@@ -199,7 +206,8 @@
 
         </div>
 
-        <!-- SIDEBAR FX: efecto decorativo (solo pantallas grandes, lo oculta el CSS en móvil) -->
+        <!-- SIDEBAR EFFECT -->
+        <!-- Decorative effect displayed on large screens and hidden on mobile by CSS. -->
         <div class="side-fx" aria-hidden="true">
           <div class="side-fx__art">
             <span class="fx-glow"></span>
@@ -214,9 +222,12 @@
 
       </aside>
 
+      <!-- END SIDEBAR -->
       <!-- MAIN -->
       <section class="main" aria-label="Main content" data-i18n-aria-label="main_content_aria">
+        <!-- HERO -->
         <div class="hero" aria-label="Header" data-i18n-aria-label="header_aria">
+          <!-- LANGUAGE SELECTOR -->
           <div class="lang-switch" role="navigation" aria-label="Language selector" data-i18n-aria-label="language_selector_aria">
             <a class="lang-btn" href="#" data-lang="es">ES</a>
             <a class="lang-btn is-active" href="#" data-lang="en" aria-current="page">EN</a>
@@ -235,25 +246,30 @@
           <div class="hero-wave" aria-hidden="true"></div>
         </div>
 
+        <!-- CONTENT -->
         <div class="content portfolio-content">
 
+          <!-- PORTFOLIO STATISTICS -->
           <section class="portfolio-stats" aria-labelledby="portfolio-stats-title">
             <div class="portfolio-stats-header">
               <h2 id="portfolio-stats-title" class="portfolio-stats-title" data-i18n="portfolio_stats_title">Portfolio Statistics</h2>
               <p class="portfolio-stats-subtitle" data-i18n="portfolio_stats_subtitle">Languages and technologies represented in these projects.</p>
             </div>
 
+            <!-- LANGUAGE STATISTICS -->
             <div class="portfolio-stats-section">
               <h3 class="portfolio-stats-section-title" data-i18n="portfolio_languages_title">Languages</h3>
               <div id="portfolio-language-stats" class="portfolio-stats-grid"></div>
             </div>
 
+            <!-- TECHNOLOGY STATISTICS -->
             <div class="portfolio-stats-section">
               <h3 class="portfolio-stats-section-title" data-i18n="portfolio_technologies_title">Technologies</h3>
               <div id="portfolio-technology-stats" class="portfolio-stats-grid"></div>
             </div>
           </section>
 
+          <!-- PROJECT PORTFOLIO -->
           <section class="block">
             <div class="tag tag-arrow">
               <i class="fa-solid fa-code"></i>
@@ -261,6 +277,7 @@
             </div>
           </section>
 
+          <!-- PORTFOLIO FILTERS -->
           <section class="block">
             <div class="courses-filters portfolio-filters">
               <div class="filter-group">
@@ -286,12 +303,15 @@
             </div>
           </section>
 
+          <!-- DYNAMIC PROJECT CONTAINER -->
           <div id="portfolio-container"></div>
+          <!-- PORTFOLIO PAGINATION -->
           <div id="portfolio-pagination" aria-label="Portfolio pagination"></div>
 
         </div>
       </section>
 
+      <!-- END MAIN -->
       <!-- TOP CLIP (CLAMP) -->
       <div class="clip clip-left" aria-hidden="true"></div>
       <div class="clip clip-right" aria-hidden="true"></div>
@@ -299,6 +319,8 @@
     </section>
   </main>
 
+  <!-- JAVASCRIPT -->
+  <!-- Scripts for localization, project listings, and portfolio statistics. -->
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/portfolio.js"></script>
   <script src="assets/js/portfolio-stats.js"></script>

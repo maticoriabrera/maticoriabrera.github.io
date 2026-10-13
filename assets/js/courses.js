@@ -1,8 +1,22 @@
+/**
+ * @file Manages course data loading, localized content, filters, and pagination.
+ *
+ * Data source: assets/data/courses.json.
+ * Required DOM elements: #courses-container, #courses-pagination,
+ * #filter-organization, #filter-skill, and #filter-year.
+ * Optional localization integrations: global getText() and window.currentLanguage.
+ * The module also listens for the document-level "languagechange" event.
+ */
+
+// CONFIGURATION AND STATE
+
 const COURSES_PER_PAGE = 10;
 
 let courses = [];
 let filteredCourses = [];
 let currentPage = 1;
+
+// DOM REFERENCES
 
 const coursesContainer = document.getElementById("courses-container");
 const coursesPagination = document.getElementById("courses-pagination");
@@ -11,6 +25,35 @@ const filterOrganization = document.getElementById("filter-organization");
 const filterSkill = document.getElementById("filter-skill");
 const filterYear = document.getElementById("filter-year");
 
+// COURSE DATA CONTRACT
+
+/**
+ * Describes the course properties consumed by this module.
+ * This file does not validate the incoming JSON against this structure.
+ *
+ * @typedef {Object} Course
+ * @property {number|string} number - Identifier displayed with a minimum width of three digits.
+ * @property {string} title - Default course title.
+ * @property {string} [title_es] - Optional Spanish title.
+ * @property {string} [title_it] - Optional Italian title.
+ * @property {string} organization - Issuing organization and organization filter value.
+ * @property {string} date - Date text; the first four characters are used as the year.
+ * @property {string} [instructor] - Optional instructor displayed when present.
+ * @property {string|number} duration - Duration displayed as supplied by the data source.
+ * @property {string} skill - Comma-separated list of skill names.
+ * @property {string} thumbnail - Certificate thumbnail image URL or path.
+ */
+
+// INTERNATIONALIZATION
+
+/**
+ * Gets a localized UI label through the global translation function when available.
+ * Uses built-in English labels only when getText() is unavailable; unknown
+ * fallback keys are returned unchanged.
+ *
+ * @param {string} key - Translation key to resolve.
+ * @returns {string} The resolved label or the original key.
+ */
 function getCourseText(key) {
   if (typeof getText === "function") {
     return getText(key);
@@ -33,6 +76,13 @@ function getCourseText(key) {
   return fallback[key] || key;
 }
 
+/**
+ * Returns the title for the currently selected language.
+ * Spanish and Italian titles fall back to the default title when absent.
+ *
+ * @param {Course} course - Course whose title is requested.
+ * @returns {string} The title selected for the active language.
+ */
 function getCourseTitle(course) {
   const language = window.currentLanguage || "en";
 
@@ -47,6 +97,14 @@ function getCourseTitle(course) {
   return course.title;
 }
 
+// DATA LOADING
+
+/**
+ * Fetches the course dataset and initializes the filters, results, and pagination.
+ * On failure, displays a localized error message and logs the error.
+ *
+ * @returns {Promise<void>} A promise for the loading and initialization process.
+ */
 async function loadCourses() {
   try {
     const response = await fetch("assets/data/courses.json");
@@ -75,6 +133,15 @@ async function loadCourses() {
   }
 }
 
+// FILTER MANAGEMENT
+
+/**
+ * Updates the label of a select element's empty-value option, if present.
+ *
+ * @param {HTMLSelectElement} selectElement - Filter whose default label is updated.
+ * @param {string} text - Replacement label.
+ * @returns {void}
+ */
 function setDefaultOption(selectElement, text) {
   const option = selectElement.querySelector('option[value=""]');
 
@@ -83,12 +150,20 @@ function setDefaultOption(selectElement, text) {
   }
 }
 
+// Keep the unselected filter labels consistent with the current language.
 function updateFilterDefaultOptions() {
   setDefaultOption(filterOrganization, getCourseText("filter_all_organizations"));
   setDefaultOption(filterSkill, getCourseText("filter_all_skills"));
   setDefaultOption(filterYear, getCourseText("filter_all_years"));
 }
 
+/**
+ * Populates filter options from distinct organizations, skills, and years.
+ * Organization and skill values are sorted alphabetically; years are descending.
+ * Skill values are split on commas and trimmed before deduplication.
+ *
+ * @returns {void}
+ */
 function populateFilters() {
   const organizations = [...new Set(courses.map(course => course.organization).filter(Boolean))].sort();
 
@@ -128,12 +203,19 @@ function populateFilters() {
   });
 }
 
+// Reapply all active filters whenever a filter selection changes.
 function addFilterEvents() {
   filterOrganization.addEventListener("change", applyFilters);
   filterSkill.addEventListener("change", applyFilters);
   filterYear.addEventListener("change", applyFilters);
 }
 
+/**
+ * Applies the selected organization, skill, and year filters together.
+ * Resets pagination to the first page and refreshes the displayed results.
+ *
+ * @returns {void}
+ */
 function applyFilters() {
   const selectedOrganization = filterOrganization.value;
   const selectedSkill = filterSkill.value;
@@ -163,6 +245,14 @@ function applyFilters() {
   renderPagination();
 }
 
+// COURSE RENDERING
+
+/**
+ * Renders the current page of filtered courses into the course container.
+ * Displays a localized empty-state message when no courses are visible.
+ *
+ * @returns {void}
+ */
 function renderCourses() {
   const startIndex = (currentPage - 1) * COURSES_PER_PAGE;
   const endIndex = startIndex + COURSES_PER_PAGE;
@@ -213,6 +303,15 @@ function renderCourses() {
   }).join("");
 }
 
+// PAGINATION
+
+/**
+ * Rebuilds page buttons for the filtered course list.
+ * Omits pagination when fewer than two pages are needed, and attaches
+ * click handlers that update the current page and rerender the view.
+ *
+ * @returns {void}
+ */
 function renderPagination() {
   const totalPages = Math.ceil(filteredCourses.length / COURSES_PER_PAGE);
 
@@ -242,10 +341,15 @@ function renderPagination() {
   }
 }
 
+// EVENT HANDLERS
+
+// Refresh translated filter labels and visible course content after a language change.
 document.addEventListener("languagechange", () => {
   updateFilterDefaultOptions();
   renderCourses();
   renderPagination();
 });
+
+// INITIALIZATION
 
 loadCourses();

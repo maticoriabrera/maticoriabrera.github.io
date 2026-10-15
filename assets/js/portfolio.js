@@ -1,20 +1,81 @@
+/**
+ * @fileoverview Loads, filters, and displays the project portfolio.
+ *
+ * Projects are ordered by descending project number, displayed five per page,
+ * and rendered with localized metadata, filter controls, and action links.
+ *
+ * Dependencies: the portfolio page's DOM elements, assets/data/portfolio.json,
+ * and the optional getText() and window.currentLanguage globals supplied by the
+ * internationalization system. The required DOM must exist when this script runs.
+ *
+ * Project values are inserted into HTML templates; the JSON data is expected to
+ * come from a trusted source.
+ */
+
+// CONFIGURATION AND STATE
 const PROJECTS_PER_PAGE = 5;
 
 let portfolioProjects = [];
 let filteredPortfolioProjects = [];
 let portfolioCurrentPage = 1;
 
+// DOM REFERENCES
 const portfolioContainer = document.getElementById("portfolio-container");
 const portfolioPagination = document.getElementById("portfolio-pagination");
 const filterInstitution = document.getElementById("filter-institution");
 const filterLanguage = document.getElementById("filter-language");
 const filterTechnology = document.getElementById("filter-technology");
 
+// PROJECT DATA CONTRACT
+
+/**
+ * Language-keyed text. The renderer looks up the current language, then English.
+ *
+ * @typedef {Object<string, string>} PortfolioLocalizedValue
+ */
+
+/**
+ * Represents a project entry as consumed by this file.
+ * Some metadata fields support either a plain string or a language-keyed object.
+ *
+ * @typedef {Object} PortfolioProject
+ * @property {number} number - Project number used for ordering and display.
+ * @property {string} [name] - Display name; falls back to the repository name.
+ * @property {string} [repo] - Repository name used as a display fallback.
+ * @property {string} [institution] - Stable institution value used by the filter.
+ * @property {string|PortfolioLocalizedValue} [institution_i18n] - Localized institution label.
+ * @property {string|PortfolioLocalizedValue} [description] - Project description.
+ * @property {string|PortfolioLocalizedValue} [created] - Creation date or label.
+ * @property {string|PortfolioLocalizedValue} [updated] - Last update date or label.
+ * @property {string|PortfolioLocalizedValue} [status] - Project status.
+ * @property {string[]} [languages] - Programming languages used by the project.
+ * @property {string[]} [technologies] - Technologies used by the project.
+ * @property {string} [image] - Project image URL.
+ * @property {string} [repository] - Repository URL.
+ * @property {string} [readme] - README URL, when available.
+ * @property {string} [demo] - Live demo URL, when available.
+ */
+
+// LOCALIZATION HELPERS
+
+/**
+ * Gets a translated interface label, or returns its key if getText is unavailable.
+ *
+ * @param {string} key - Translation key.
+ * @returns {string} The translated label or the original key.
+ */
 function portfolioText(key) {
   if (typeof getText === "function") return getText(key);
   return key;
 }
 
+/**
+ * Resolves a value for the active language, then English, then a dash.
+ * Plain values are returned without a language lookup.
+ *
+ * @param {string|PortfolioLocalizedValue|null|undefined} value - Project metadata value.
+ * @returns {string} The available localized or plain value, or "-".
+ */
 function localValue(value) {
   if (value && typeof value === "object" && !Array.isArray(value)) {
     return value[window.currentLanguage || "en"] || value.en || "-";
@@ -22,21 +83,48 @@ function localValue(value) {
   return value || "-";
 }
 
+// FILTER LABELS AND OPTIONS
+
+/**
+ * Replaces the label of a filter's empty-value option, if present.
+ *
+ * @param {HTMLSelectElement} selectElement - Filter select element.
+ * @param {string} text - Text to display for the default option.
+ * @returns {void}
+ */
 function setPortfolioDefaultOption(selectElement, text) {
   const option = selectElement.querySelector('option[value=""]');
   if (option) option.textContent = text;
 }
 
+/**
+ * Refreshes the default labels of all three portfolio filters.
+ *
+ * @returns {void}
+ */
 function updatePortfolioFilterLabels() {
   setPortfolioDefaultOption(filterInstitution, portfolioText("portfolio_filter_all_institutions"));
   setPortfolioDefaultOption(filterLanguage, portfolioText("portfolio_filter_all_languages"));
   setPortfolioDefaultOption(filterTechnology, portfolioText("portfolio_filter_all_technologies"));
 }
 
+/**
+ * Gets the localized institution label without changing its stable filter value.
+ *
+ * @param {PortfolioProject} project - Project containing institution metadata.
+ * @returns {string} The localized institution label or a fallback value.
+ */
 function portfolioInstitutionLabel(project) {
   return localValue(project.institution_i18n || project.institution);
 }
 
+/**
+ * Rebuilds institution options sorted by their current-language display labels.
+ * Deduplicates by stable institution value and preserves the current selection
+ * when that value still exists after rebuilding.
+ *
+ * @returns {void}
+ */
 function rebuildInstitutionFilter() {
   const selectedValue = filterInstitution.value;
   while (filterInstitution.options.length > 1) filterInstitution.remove(1);
@@ -57,6 +145,12 @@ function rebuildInstitutionFilter() {
   }
 }
 
+/**
+ * Initializes the institution, language, and technology filter options.
+ * Languages and technologies are unique values sorted alphabetically.
+ *
+ * @returns {void}
+ */
 function populatePortfolioFilters() {
   const languages = [...new Set(portfolioProjects.flatMap(p => p.languages || []).filter(Boolean))].sort();
   const technologies = [...new Set(portfolioProjects.flatMap(p => p.technologies || []).filter(Boolean))].sort();
@@ -68,10 +162,23 @@ function populatePortfolioFilters() {
   technologies.forEach(value => filterTechnology.add(new Option(value, value)));
 }
 
+// FILTER EVENTS AND MATCHING
+
+/**
+ * Registers change handlers for the three portfolio filters.
+ *
+ * @returns {void}
+ */
 function addPortfolioFilterEvents() {
   [filterInstitution, filterLanguage, filterTechnology].forEach(el => el.addEventListener("change", applyPortfolioFilters));
 }
 
+/**
+ * Keeps projects matching all selected filters and resets pagination to page one.
+ * Empty filter values impose no restriction on that attribute.
+ *
+ * @returns {void}
+ */
 function applyPortfolioFilters() {
   const institution = filterInstitution.value;
   const language = filterLanguage.value;
@@ -89,11 +196,31 @@ function applyPortfolioFilters() {
   renderPortfolioPagination();
 }
 
+// PORTFOLIO MARKUP HELPERS
+
+/**
+ * Creates badge markup for a project's languages or technologies.
+ * Returns a dash placeholder when the list is empty or missing.
+ *
+ * @param {string[]|null|undefined} items - Values to display as badges.
+ * @param {string} className - Additional CSS class for each badge.
+ * @returns {string} HTML markup for the badges or the empty-state placeholder.
+ */
 function badges(items, className) {
   if (!items || items.length === 0) return '<span class="portfolio-empty-value">-</span>';
   return items.map(item => `<span class="portfolio-badge ${className}">${item}</span>`).join("");
 }
 
+/**
+ * Creates an external-link action or a non-clickable disabled placeholder.
+ * Missing URLs are treated as disabled even if disabled is false.
+ *
+ * @param {string|null|undefined} url - Destination URL.
+ * @param {string} icon - Font Awesome classes for the action icon.
+ * @param {string} labelKey - Translation key for the action label.
+ * @param {boolean} [disabled=false] - Whether to disable the action explicitly.
+ * @returns {string} HTML markup for the action.
+ */
 function projectButton(url, icon, labelKey, disabled = false) {
   const label = portfolioText(labelKey);
   if (disabled || !url) {
@@ -102,6 +229,15 @@ function projectButton(url, icon, labelKey, disabled = false) {
   return `<a class="portfolio-action" href="${url}" target="_blank" rel="noopener noreferrer"><i class="${icon}"></i><span>${label}</span></a>`;
 }
 
+// PROJECT RENDERING
+
+/**
+ * Renders the current page of filtered projects and their detail cards.
+ * Uses the project image placeholder when an image URL is unavailable and
+ * displays a localized message when there are no matching projects.
+ *
+ * @returns {void}
+ */
 function renderPortfolioProjects() {
   const start = (portfolioCurrentPage - 1) * PROJECTS_PER_PAGE;
   const visible = filteredPortfolioProjects.slice(start, start + PROJECTS_PER_PAGE);
@@ -146,6 +282,15 @@ function renderPortfolioProjects() {
   `).join("");
 }
 
+// PAGINATION
+
+/**
+ * Rebuilds page buttons for the filtered project count.
+ * Hides pagination when only one page is needed. Selecting a page re-renders
+ * the content and scrolls to the filter section when it exists.
+ *
+ * @returns {void}
+ */
 function renderPortfolioPagination() {
   const totalPages = Math.ceil(filteredPortfolioProjects.length / PROJECTS_PER_PAGE);
   portfolioPagination.innerHTML = "";
@@ -166,6 +311,15 @@ function renderPortfolioPagination() {
   }
 }
 
+// DATA LOADING AND ERROR HANDLING
+
+/**
+ * Fetches the project dataset, orders it newest first by project number,
+ * initializes the filters, and displays the first page.
+ * A failed request or invalid JSON displays a localized error message.
+ *
+ * @returns {Promise<void>} Resolves after rendering or handling a load error.
+ */
 async function loadPortfolio() {
   try {
     const response = await fetch("assets/data/portfolio.json");
@@ -183,6 +337,9 @@ async function loadPortfolio() {
   }
 }
 
+// LANGUAGE CHANGE HANDLING
+
+// Refresh translated labels and cards while retaining the active filters and page.
 document.addEventListener("languagechange", () => {
   updatePortfolioFilterLabels();
   rebuildInstitutionFilter();
@@ -190,4 +347,7 @@ document.addEventListener("languagechange", () => {
   renderPortfolioPagination();
 });
 
+// INITIALIZATION
+
+// Start loading after the page's required portfolio elements have been parsed.
 loadPortfolio();

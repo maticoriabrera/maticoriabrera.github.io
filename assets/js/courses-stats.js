@@ -1,9 +1,62 @@
+/**
+ * @fileoverview Calculates and displays the training-hour distribution by skill.
+ *
+ * Loads course data from ./assets/data/courses.json after DOMContentLoaded,
+ * allocates each course's hours equally among its listed skills, and renders
+ * the six highest-ranked skills. Cached results are rendered again when the
+ * document emits a "languagechange" event; data is not fetched again.
+ *
+ * DOM targets: #courses-stats-subtitle and #skills-stats-grid.
+ * Localization: uses global getText() when available, otherwise built-in
+ * English messages. Incoming course data is expected to be trusted because
+ * skill names and translated labels are inserted into HTML templates.
+ */
+
+// INITIALIZATION
+
 document.addEventListener("DOMContentLoaded", () => {
   loadCoursesStats();
 });
 
+// CACHED STATISTICS
+
+/**
+ * Course fields used by the statistics calculations.
+ * Input data is not schema-validated by this module.
+ *
+ * @typedef {Object} CourseStatsInput
+ * @property {string} duration - Duration text containing a numeric value.
+ * @property {string} skill - Comma-separated skill names; empty values are allowed.
+ */
+
+/**
+ * Calculated hours and share of all course hours for a single skill.
+ *
+ * @typedef {Object} SkillHoursStat
+ * @property {string} skill - Skill name taken from the course data.
+ * @property {number} hours - Allocated training hours for the skill.
+ * @property {number} percent - Percentage of total course hours attributed to the skill.
+ */
+
+/**
+ * Aggregated information used to render the statistics panel.
+ *
+ * @typedef {Object} CoursesStatsResult
+ * @property {number} totalHours - Hours summed across every course.
+ * @property {SkillHoursStat[]} topSkills - Highest-ranked skills, up to the requested limit.
+ */
+
 let cachedCoursesStats = null;
 
+// LOCALIZATION
+
+/**
+ * Resolves a UI translation using the global getText() function when present.
+ * Otherwise returns a built-in English message or the unchanged key.
+ *
+ * @param {string} key - UI translation key.
+ * @returns {string} Localized text, English fallback, or unresolved key.
+ */
 function getStatsText(key) {
   if (typeof getText === "function") {
     return getText(key);
@@ -17,6 +70,16 @@ function getStatsText(key) {
   return fallback[key] || key;
 }
 
+// DATA LOADING
+
+/**
+ * Fetches course data, calculates the six most represented skills by hours,
+ * caches the result, and updates the statistics panel.
+ * On any loading or processing error, logs it, shows an error label when the
+ * subtitle exists, and clears the grid when the grid exists.
+ *
+ * @returns {Promise<void>} Resolves after loading and rendering or error handling.
+ */
 async function loadCoursesStats() {
   try {
     const response = await fetch("./assets/data/courses.json");
@@ -46,6 +109,18 @@ async function loadCoursesStats() {
   }
 }
 
+// SKILL HOURS AGGREGATION
+
+/**
+ * Sums all course hours and assigns each course's hours equally to its listed
+ * skills. Courses without skills still contribute to totalHours, so the
+ * displayed skill percentages need not add up to 100%. Skills are ranked by
+ * allocated hours and only the first `limit` are returned.
+ *
+ * @param {CourseStatsInput[]} courses - Course records to aggregate.
+ * @param {number} limit - Maximum number of ranked skills to include.
+ * @returns {CoursesStatsResult} Total hours and ranked skill statistics.
+ */
 function calculateTopSkills(courses, limit) {
   let totalHours = 0;
   const skillHours = {};
@@ -88,6 +163,18 @@ function calculateTopSkills(courses, limit) {
   };
 }
 
+// DATA PARSING
+
+/**
+ * Extracts the first sequence of digits, commas, or periods from duration.
+ * Replaces the first comma with a period before numeric conversion. Missing
+ * or non-string values and strings without a numeric match return zero.
+ * Other malformed numeric strings can produce NaN; no further validation
+ * or locale-aware thousands-separator handling is performed.
+ *
+ * @param {string|undefined|null} duration - Duration text to parse.
+ * @returns {number} Extracted hour value, zero, or NaN for malformed numbers.
+ */
 function parseCourseHours(duration) {
   if (!duration || typeof duration !== "string") {
     return 0;
@@ -102,6 +189,13 @@ function parseCourseHours(duration) {
   return Number(match[0].replace(",", "."));
 }
 
+/**
+ * Splits comma-separated skill text, trims surrounding whitespace, and
+ * excludes empty names without deduplicating repeated names.
+ *
+ * @param {string|undefined|null} skillValue - Comma-separated skills.
+ * @returns {string[]} Parsed, non-empty skill names.
+ */
 function parseCourseSkills(skillValue) {
   if (!skillValue || typeof skillValue !== "string") {
     return [];
@@ -113,6 +207,18 @@ function parseCourseSkills(skillValue) {
     .filter((skill) => skill.length > 0);
 }
 
+// STATISTICS RENDERING
+
+/**
+ * Rebuilds the summary and top-skill cards from calculated statistics.
+ * Does nothing when either required DOM element is missing. Total and per-skill
+ * hours are rounded for display, and percentages use one decimal place.
+ * The numeric values applied to the CSS custom property and visible labels
+ * are derived from the unrounded calculation results.
+ *
+ * @param {CoursesStatsResult} stats - Previously calculated statistics.
+ * @returns {void}
+ */
 function renderCoursesStats(stats) {
   const subtitle = document.getElementById("courses-stats-subtitle");
   const grid = document.getElementById("skills-stats-grid");
@@ -147,6 +253,9 @@ function renderCoursesStats(stats) {
     .join("");
 }
 
+// LANGUAGE CHANGE HANDLING
+
+// Re-render labels from cached results without recalculating or refetching data.
 document.addEventListener("languagechange", () => {
   if (cachedCoursesStats) {
     renderCoursesStats(cachedCoursesStats);

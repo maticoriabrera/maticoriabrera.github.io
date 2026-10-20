@@ -1,5 +1,29 @@
 [
   {
+    "number": 146,
+    "title": "Ethics of Artificial Intelligence",
+    "organization": "Politecnico Di Milano",
+    "date": "2026.10.18",
+    "instructor": "Schiaffonati, Viola",
+    "duration": "6 hs",
+    "skill": "Artificial Intelligence",
+    "thumbnail": "./assets/img/certificates/2026.10.18 Politecnico Milano - Ethics of Artificial Intelligence - Thumbail.jpg",
+    "title_es": "Ética de la inteligencia artificial",
+    "title_it": "Etica dell'intelligenza artificiale"
+  },
+  {
+    "number": 145,
+    "title": "Coding: The Hidden Language of Things",
+    "organization": "Politecnico Di Milano",
+    "date": "2026.10.16",
+    "instructor": "Bruschi, Francesco",
+    "duration": "6 hs",
+    "skill": "JavaScript",
+    "thumbnail": "./assets/img/certificates/2026.10.16 Politecnico Milano - Coding Il Linguaggio Nascosto Delle Cose - Thumbail.jpg",
+    "title_es": "Programación: el lenguaje oculto de las cosas",
+    "title_it": "Coding Il Linguaggio Nascosto Delle Cose"
+  },
+  {
     "number": 144,
     "title": "Introduction to AI Development",
     "organization": "BIG SCHOOL",

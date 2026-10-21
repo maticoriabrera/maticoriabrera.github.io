@@ -39,6 +39,15 @@
   color: #64748b;
 }
 
+/* Two centered lines: training hours and completed courses. */
+.courses-stats-summary-row {
+  display: block;
+}
+
+.courses-stats-summary-row + .courses-stats-summary-row {
+  margin-top: 4px;
+}
+
 /* ===============================
    GRID
 ================================ */

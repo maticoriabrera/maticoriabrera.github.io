@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
  *
  * @typedef {Object} CoursesStatsResult
  * @property {number} totalHours - Hours summed across every course.
+ * @property {number} totalCourses - Number of course records in the loaded catalog.
  * @property {SkillHoursStat[]} topSkills - Highest-ranked skills, up to the requested limit.
  */
 
@@ -64,6 +65,7 @@ function getStatsText(key) {
 
   const fallback = {
     courses_stats_total_label: " total hours courses completed",
+    courses_stats_courses_label: " courses completed",
     courses_stats_error: "Training statistics could not be loaded.",
   };
 
@@ -112,14 +114,15 @@ async function loadCoursesStats() {
 // SKILL HOURS AGGREGATION
 
 /**
- * Sums all course hours and assigns each course's hours equally to its listed
- * skills. Courses without skills still contribute to totalHours, so the
- * displayed skill percentages need not add up to 100%. Skills are ranked by
+ * Counts the loaded course records, sums all course hours, and assigns each
+ * course's hours equally to its listed skills. Courses without skills still
+ * contribute to totalHours, so the displayed skill percentages need not
+ * add up to 100%. Skills are ranked by
  * allocated hours and only the first `limit` are returned.
  *
  * @param {CourseStatsInput[]} courses - Course records to aggregate.
  * @param {number} limit - Maximum number of ranked skills to include.
- * @returns {CoursesStatsResult} Total hours and ranked skill statistics.
+ * @returns {CoursesStatsResult} Total course count, hours, and ranked skills.
  */
 function calculateTopSkills(courses, limit) {
   let totalHours = 0;
@@ -159,6 +162,7 @@ function calculateTopSkills(courses, limit) {
 
   return {
     totalHours: totalHours,
+    totalCourses: courses.length,
     topSkills: topSkills,
   };
 }
@@ -210,7 +214,8 @@ function parseCourseSkills(skillValue) {
 // STATISTICS RENDERING
 
 /**
- * Rebuilds the summary and top-skill cards from calculated statistics.
+ * Rebuilds the total-hours summary, completed-course count, and top-skill
+ * cards from calculated statistics.
  * Does nothing when either required DOM element is missing. Total and per-skill
  * hours are rounded for display, and percentages use one decimal place.
  * The numeric values applied to the CSS custom property and visible labels
@@ -228,8 +233,14 @@ function renderCoursesStats(stats) {
   }
 
   subtitle.innerHTML = `
-    <span class="courses-stats-total">${Math.round(stats.totalHours).toLocaleString("en-US")} hs</span>
-    <span class="courses-stats-label">${getStatsText("courses_stats_total_label")}</span>
+    <span class="courses-stats-summary-row">
+      <span class="courses-stats-total">${Math.round(stats.totalHours).toLocaleString("en-US")} hs</span>
+      <span class="courses-stats-label">${getStatsText("courses_stats_total_label")}</span>
+    </span>
+    <span class="courses-stats-summary-row">
+      <span class="courses-stats-total">${stats.totalCourses.toLocaleString("en-US")}</span>
+      <span class="courses-stats-label">${getStatsText("courses_stats_courses_label")}</span>
+    </span>
   `;
 
   grid.innerHTML = stats.topSkills

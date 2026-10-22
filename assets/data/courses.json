@@ -1,5 +1,29 @@
 [
   {
+    "number": 148,
+    "title": "Application Layer",
+    "organization": "Politecnico Di Milano",
+    "date": "2026.10.22",
+    "instructor": "Troia, Sebastian",
+    "duration": "6 hs",
+    "skill": "Networks",
+    "thumbnail": "./assets/img/certificates/2026.10.22 Politecnico Milano - Application Layer - Thumbail.jpg",
+    "title_es": "La Capa De Aplicación",
+    "title_it": "Il Livello Di Applicazione"
+  },
+  {
+    "number": 147,
+    "title": "Introduction To Internet And Networks",
+    "organization": "Politecnico Di Milano",
+    "date": "2026.10.20",
+    "instructor": "Troia, Sebastian",
+    "duration": "6 hs",
+    "skill": "Networks",
+    "thumbnail": "./assets/img/certificates/2026.10.20 Politecnico Milano - Introduction To Internet And Networks - Thumbail.jpg",
+    "title_es": "Introducción al Internet y las redes",
+    "title_it": "Introduzione a Internet e Alle Reti"
+  },
+  {
     "number": 146,
     "title": "Ethics of Artificial Intelligence",
     "organization": "Politecnico Di Milano",

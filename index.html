@@ -695,7 +695,7 @@
 
 
   <!-- SPOTIFY PLAYLIST MODAL -->
-  <!-- The playlist URL is stored in the iframe data-src attribute. -->
+  <!-- The player container remains empty until the visitor opens this dialog. -->
   <div
     class="spotify-modal"
     id="spotifyModal"
@@ -718,19 +718,11 @@
         </button>
       </div>
 
-      <div class="spotify-modal__player">
-        <iframe
-          id="spotifyPlaylistFrame"
-          data-testid="embed-iframe"
-          data-src="https://open.spotify.com/embed/playlist/1tzVWZaWCyaR9z7XFpklMw?utm_source=generator&si=f918d3f77a9c4862"
-          title="Rock Argentino - Spotify playlist"
-          width="100%"
-          height="352"
-          frameborder="0"
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-        ></iframe>
-      </div>
+      <div
+        class="spotify-modal__player"
+        id="spotifyPlaylistContainer"
+        data-src="https://open.spotify.com/embed/playlist/1tzVWZaWCyaR9z7XFpklMw?utm_source=generator&si=f918d3f77a9c4862"
+      ></div>
     </div>
   </div>
 

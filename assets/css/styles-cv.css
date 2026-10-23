@@ -1147,13 +1147,15 @@ body.video-modal-open{ overflow: hidden; }
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity .18s ease, visibility .18s ease;
+  /* Delay hiding until the fade-out finishes; show immediately on opening. */
+  transition: opacity .18s ease, visibility 0s linear .18s;
 }
 
 .spotify-modal.is-open{
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  transition: opacity .18s ease, visibility 0s linear 0s;
 }
 
 .spotify-modal__dialog{
@@ -2081,6 +2083,7 @@ body.video-modal-open{ overflow: hidden; }
 /* Si el usuario pidió "reducir movimiento", se apagan transiciones y animaciones */
 @media (prefers-reduced-motion: reduce){
   .spotify-modal,
+  .spotify-modal.is-open,
   .spotify-modal__dialog{ transition: none; }
 
   .fx-glow,

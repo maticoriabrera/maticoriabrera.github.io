@@ -1,86 +1,101 @@
 /**
  * SPOTIFY PLAYLIST MODAL
  *
- * Manages opening and closing the Spotify playlist modal, including keyboard
- * dismissal, accessible visibility state, and focus restoration.
+ * Manages opening and closing the Spotify playlist dialog, including keyboard
+ * dismissal, accessible visibility state, and focus restoration to the trigger.
  *
- * Requires the trigger, modal, close button, and playlist iframe to exist in
- * the page. The iframe is defined in HTML and must provide its playlist URL
- * through the data-src attribute; its src is assigned only when opened.
+ * The initial HTML contains only an empty player container. Spotify's iframe
+ * is created after the visitor clicks Music, and is removed on close to stop
+ * playback. No iframe or Spotify resource is loaded during initial page load.
  */
 (() => {
   // DOM REFERENCES AND INITIALIZATION
   const openButton = document.getElementById('openSpotifyModal');
   const modal = document.getElementById('spotifyModal');
   const closeButton = document.getElementById('closeSpotifyModal');
-  const frame = document.getElementById('spotifyPlaylistFrame');
+  const playerContainer = document.getElementById('spotifyPlaylistContainer');
 
-  // Do not register handlers when the required modal elements are missing.
-  if (!openButton || !modal || !closeButton || !frame) return;
-
-  // MODAL STATE
-  let lastFocusedElement = null;
+  // Do not register handlers if the modal or playlist URL is unavailable.
+  if (!openButton || !modal || !closeButton || !playerContainer?.dataset.src) return;
 
   // SPOTIFY PLAYER LIFECYCLE
 
   /**
-   * Assigns the iframe source on demand, without reloading an active player.
+   * Builds and attaches a new Spotify iframe only after the dialog is opened.
+   * The official embed permission attributes are kept intact: removing them
+   * solely to silence browser messages may affect playback capabilities.
    *
    * @returns {void}
    */
   const loadPlayer = () => {
-    if (!frame.getAttribute('src')) {
-      frame.setAttribute('src', frame.dataset.src);
-    }
+    // Prevent duplicate players if an open event is received more than once.
+    if (playerContainer.querySelector('iframe')) return;
+
+    const frame = document.createElement('iframe');
+    frame.id = 'spotifyPlaylistFrame';
+    frame.setAttribute('data-testid', 'embed-iframe');
+    frame.title = 'Rock Argentino - Spotify playlist';
+    frame.setAttribute('width', '100%');
+    frame.setAttribute('height', '352');
+    frame.setAttribute('allow', 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture');
+    frame.setAttribute('loading', 'lazy');
+    frame.setAttribute('frameborder', '0');
+    frame.src = playerContainer.dataset.src;
+
+    // The browser encounters the iframe and its permissions only now.
+    playerContainer.appendChild(frame);
   };
 
   /**
-   * Removes the iframe source to stop playback when the modal closes.
-   * The iframe element itself remains in the DOM.
+   * Removes the entire iframe (rather than merely removing its src) to stop
+   * playback and release the embedded document when the dialog closes.
    *
    * @returns {void}
    */
   const unloadPlayer = () => {
-    // Unloading the iframe stops Spotify if audio was playing.
-    frame.removeAttribute('src');
+    playerContainer.replaceChildren();
   };
 
   // MODAL VISIBILITY AND FOCUS
 
   /**
-   * Opens the modal, loads the playlist, and moves focus to the close button.
-   * Saves the previously focused element for restoration when closing.
+   * Opens the modal, creates the player on demand, and focuses the close button.
+   * Focus will return to the Music button when the dialog closes.
    *
    * @returns {void}
    */
   const openModal = () => {
-    lastFocusedElement = document.activeElement;
-    loadPlayer();
+    if (modal.classList.contains('is-open')) return;
+
     modal.classList.add('is-open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('spotify-modal-open');
-    closeButton.focus();
+    loadPlayer();
+
+    // Wait until the CSS visibility transition has made the dialog focusable.
+    // Calling focus() in this same event can fail while visibility is hidden.
+    requestAnimationFrame(() => {
+      if (modal.classList.contains('is-open')) closeButton.focus();
+    });
   };
 
   /**
-   * Closes an open modal, unloads the playlist, and restores keyboard focus.
-   * Uses the open button as a fallback if focus cannot be restored.
+   * Closes the modal, removes the player, and restores keyboard focus before
+   * hiding the dialog from assistive technology.
    *
    * @returns {void}
    */
   const closeModal = () => {
     if (!modal.classList.contains('is-open')) return;
 
+    unloadPlayer();
+    document.body.classList.remove('spotify-modal-open');
+
+    // Restore focus outside the dialog before applying aria-hidden="true".
+    openButton.focus();
+
     modal.classList.remove('is-open');
     modal.setAttribute('aria-hidden', 'true');
-    document.body.classList.remove('spotify-modal-open');
-    unloadPlayer();
-
-    if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
-      lastFocusedElement.focus();
-    } else {
-      openButton.focus();
-    }
   };
 
   // EVENT HANDLERS

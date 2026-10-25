@@ -181,12 +181,21 @@ function populateFilters() {
 
   updateFilterDefaultOptions();
 
-  organizations.forEach(organization => {
-    const option = document.createElement("option");
-    option.value = organization;
-    option.textContent = organization;
-    filterOrganization.appendChild(option);
-  });
+const organizationDisplayNames = {
+  "UNC FFYL (UNIVERSIDAD NACIONAL DE CUYO FACULTAD DE FILOSOFÍA Y LETRAS)": "UNC FFYL",
+  "CODO A CODO 4.0 BUENOS AIRES CIUDAD": "CODO A CODO",
+};
+
+organizations.forEach(organization => {
+  const option = document.createElement("option");
+
+  option.value = organization;
+
+  option.textContent =
+    organizationDisplayNames[organization] ?? organization;
+
+  filterOrganization.appendChild(option);
+});
 
   skills.forEach(skill => {
     const option = document.createElement("option");

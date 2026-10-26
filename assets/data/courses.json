@@ -1,8 +1,20 @@
 [
   {
+    "number": 150,
+    "title": "Learning To Learn",
+    "organization": "POLITECNICO DI MILANO",
+    "date": "2026.10.26",
+    "instructor": "Trentinaglia, Nicoletta",
+    "duration": "25 hs",
+    "skill": "Soft-Skills",
+    "thumbnail": "./assets/img/certificates/2026.10.26 Politecnico Milano - Learning To Learn - Thumbail.jpg",
+    "title_es": "Aprendiendo A Aprender",
+    "title_it": "Imparare a imparare"
+  },
+  {
     "number": 149,
     "title": "Transport Layer",
-    "organization": "Politecnico Di Milano",
+    "organization": "POLITECNICO DI MILANO",
     "date": "2026.10.24",
     "instructor": "Ibrahimi, Memedhe",
     "duration": "6 hs",
@@ -14,7 +26,7 @@
   {
     "number": 148,
     "title": "Application Layer",
-    "organization": "Politecnico Di Milano",
+    "organization": "POLITECNICO DI MILANO",
     "date": "2026.10.22",
     "instructor": "Troia, Sebastian",
     "duration": "6 hs",
@@ -26,7 +38,7 @@
   {
     "number": 147,
     "title": "Introduction To Internet And Networks",
-    "organization": "Politecnico Di Milano",
+    "organization": "POLITECNICO DI MILANO",
     "date": "2026.10.20",
     "instructor": "Troia, Sebastian",
     "duration": "6 hs",
@@ -38,7 +50,7 @@
   {
     "number": 146,
     "title": "Ethics of Artificial Intelligence",
-    "organization": "Politecnico Di Milano",
+    "organization": "POLITECNICO DI MILANO",
     "date": "2026.10.18",
     "instructor": "Schiaffonati, Viola",
     "duration": "6 hs",
@@ -50,7 +62,7 @@
   {
     "number": 145,
     "title": "Coding: The Hidden Language of Things",
-    "organization": "Politecnico Di Milano",
+    "organization": "POLITECNICO DI MILANO",
     "date": "2026.10.16",
     "instructor": "Bruschi, Francesco",
     "duration": "6 hs",

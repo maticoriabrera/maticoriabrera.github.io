@@ -9,6 +9,7 @@
     },
     "texts": {
       "contact_title": "CONTACT",
+      "home_link": "Home",
       "languages_title": "LANGUAGES",
       "language_spanish": "SPANISH - NATIVE",
       "language_english": "ENGLISH - C1",
@@ -199,6 +200,7 @@
     },
     "texts": {
       "contact_title": "CONTACTO",
+      "home_link": "Inicio",
       "languages_title": "IDIOMAS",
       "language_spanish": "ESPAÑOL - LENGUA MATERNA",
       "language_english": "INGLÉS - C1",
@@ -389,6 +391,7 @@
     },
     "texts": {
       "contact_title": "CONTATTO",
+      "home_link": "Pagina iniziale",
       "languages_title": "LINGUE",
       "language_spanish": "SPAGNOLO - MADRELINGUA",
       "language_english": "INGLESE - C1",

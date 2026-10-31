@@ -1687,7 +1687,7 @@
     "instructor": "",
     "duration": "8 hs",
     "skill": "Linux",
-    "thumbnail": "./assets/img/certificates/2022.03.14 Cisco Networking Academy - Linux Unhatched NDG - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2022.03.14 Cisco Networking Academy - Linux Unhatched NDG - Thumbnail.jpg",
     "title_es": "Linux Unhatched NDG",
     "title_it": "Linux Unhatched NDG"
   },
@@ -1699,7 +1699,7 @@
     "instructor": "",
     "duration": "40 hs",
     "skill": "Python",
-    "thumbnail": "./assets/img/certificates/2022.01.24 OpenEDG Python Institute - Programming Essentials In Python PCAP - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2022.01.24 OpenEDG Python Institute - Programming Essentials In Python PCAP - Thumbnail.jpg",
     "title_es": "Programming Essentials in Python PCAP",
     "title_it": "Programming Essentials in Python PCAP"
   },
@@ -1711,7 +1711,7 @@
     "instructor": "Vega, Freddy",
     "duration": "12 hs",
     "skill": "Soft-Skills",
-    "thumbnail": "./assets/img/certificates/2021.11.08 Platzi - Personal Branding - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2021.11.08 Platzi - Personal Branding - Thumbnail.jpg",
     "title_es": "Marca personal",
     "title_it": "Personal branding"
   },
@@ -1723,7 +1723,7 @@
     "instructor": "Aroesti, David",
     "duration": "16 hs",
     "skill": "Python",
-    "thumbnail": "./assets/img/certificates/2021.10.31 Platzi - Object Oriented Programming And Algorithms In Python - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2021.10.31 Platzi - Object Oriented Programming And Algorithms In Python - Thumbnail.jpg",
     "title_es": "Programación orientada a objetos y algoritmos en Python",
     "title_it": "Programmazione orientata agli oggetti e algoritmi in Python"
   },
@@ -1735,7 +1735,7 @@
     "instructor": "Aroesti, David",
     "duration": "13 hs",
     "skill": "Python",
-    "thumbnail": "./assets/img/certificates/2021.10.31 Platzi - Algorithmic Complexity With Python - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2021.10.31 Platzi - Algorithmic Complexity With Python - Thumbnail.jpg",
     "title_es": "Complejidad algorítmica con Python",
     "title_it": "Complessità algoritmica con Python"
   },

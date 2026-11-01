@@ -1627,7 +1627,7 @@
     "instructor": "Devars, Enrique",
     "duration": "12 hs",
     "skill": "Linux",
-    "thumbnail": "./assets/img/certificates/2022.04.11 Platzi - Introduction To The Terminal And Command Line Course - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2022.04.11 Platzi - Linux Enviroment Configuration Course - Thumbnail.jpg",
     "title_es": "Curso de configuración de entorno Linux",
     "title_it": "Corso di configurazione dell'ambiente Linux"
   },
@@ -1639,7 +1639,7 @@
     "instructor": "Romero, Gerardo",
     "duration": "12 hs",
     "skill": "Scrum",
-    "thumbnail": "./assets/img/certificates/2022.04.04 Platzi - Scrum Professional Course - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2022.04.04 Platzi - Scrum Professional Course - Thumbnail.jpg",
     "title_es": "Curso profesional de Scrum",
     "title_it": "Corso professionale di Scrum"
   },
@@ -1651,7 +1651,7 @@
     "instructor": "Vega, Freddy",
     "duration": "22 hs",
     "skill": "GitHub",
-    "thumbnail": "./assets/img/certificates/2022.04.02 Platzi - Git And Github Professional Course - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2022.04.02 Platzi - Git And Github Professional Course - Thumbnail.jpg",
     "title_es": "Curso profesional de Git y GitHub",
     "title_it": "Corso professionale di Git e GitHub"
   },
@@ -1663,7 +1663,7 @@
     "instructor": "García Martoni, Facundo",
     "duration": "15 hs",
     "skill": "Django",
-    "thumbnail": "./assets/img/certificates/2022.03.30 Platzi - Professional Python Programming - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2022.03.30 Platzi - Professional Python Programming - Thumbnail.jpg",
     "title_es": "Programación profesional en Python",
     "title_it": "Programmazione professionale in Python"
   },
@@ -1675,7 +1675,7 @@
     "instructor": "Salgado Díaz de la Vega, Anahí",
     "duration": "15 hs",
     "skill": "Programming",
-    "thumbnail": "./assets/img/certificates/2022.03.20 Platzi - Object Oriented Programming - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2022.03.20 Platzi - Object Oriented Programming - Thumbnail.jpg",
     "title_es": "Curso de programación orientada a objetos",
     "title_it": "Corso di programmazione orientata agli oggetti"
   },

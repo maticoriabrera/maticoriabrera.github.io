@@ -1,0 +1,224 @@
+
+    :root{--bg:#f5f7fb;--paper:#fff;--ink:#1d2b3f;--muted:#617185;--line:#dfe6ef;--accent:#205f9e;--accent-bg:#eaf3fc;--green:#23704e;--green-bg:#eff8f2;--amber:#8b5711;--amber-bg:#fff8e9;--shadow:0 3px 15px rgba(34,50,76,.045)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+    a{color:var(--accent);text-underline-offset:3px}a:hover{text-decoration-thickness:2px}button,summary{font:inherit}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #4d99db;outline-offset:3px}p{margin:0 0 1rem}h1,h2,h3,h4{line-height:1.27;margin:0 0 1rem}h1{font-size:clamp(1.7rem,2.5vw,2.25rem)}h2{font-size:1.36rem}h3{font-size:1.12rem}h4{font-size:1rem}ul,ol{padding-left:1.35rem;margin:.3rem 0 1rem}li{margin:.25rem 0}
+    .shell{display:grid;grid-template-columns:245px minmax(0,1fr);min-height:100vh}.sidebar{position:sticky;top:0;height:100vh;overflow-y:auto;background:#17314e;color:#e6eff9;padding:24px 16px;align-self:start}
+    .brand{font-size:1.45rem;font-weight:790;letter-spacing:-.025em;line-height:1.25}.brand small{display:block;font-size:.78rem;letter-spacing:.08em;color:#b7cbe0;font-weight:550;margin-top:8px}.navlabel{text-transform:uppercase;letter-spacing:.13em;font-size:.7rem;font-weight:800;color:#99bad8;margin:32px 0 10px 10px}.nav-list{display:grid;gap:5px}.nav-link,.nav-inactive{display:flex;align-items:center;gap:12px;width:100%;border:0;border-radius:9px;padding:11px 12px;color:#ecf4ff;background:transparent;text-align:left;text-decoration:none}.nav-link:hover{background:#284869;text-decoration:none}.nav-link.active{background:#e9f2fc;color:#123e6d;font-weight:750}.nav-inactive{color:#a1b2c3;cursor:not-allowed;opacity:.74}.badge-number{font-size:.78rem;font-weight:800;display:inline-grid;place-items:center;min-width:30px;height:30px;border-radius:7px;border:1px solid currentColor;opacity:.85}.nav-link .navtext,.nav-inactive .navtext{min-width:0}.navtext strong{display:block;font-size:.9rem}.navtext small{display:block;font-size:.72rem;opacity:.78;line-height:1.25}.res-nav a{display:block;padding:9px 13px;border-radius:9px;color:#e6eff9;text-decoration:none}.res-nav a.active,.res-nav a:hover{background:#284869}.sidebar-note{font-size:.76rem;line-height:1.5;color:#b8cbe1;border-top:1px solid #36516b;padding-top:16px;margin-top:28px}
+    .workspace{min-width:0;padding:28px clamp(17px,4.6vw,65px) 90px}.page{max-width:1040px;margin:0 auto}.page[hidden]{display:none!important}.eyebrow{font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:800;margin-bottom:8px}.page-header{margin-bottom:26px}.intro{font-size:1.08rem;color:#50647a;max-width:780px;margin:0}.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.pill{display:inline-block;border:1px solid #ccdbeb;color:#36546f;border-radius:20px;padding:2px 11px;background:#fff;font-size:.78rem;font-weight:650}
+    .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:clamp(18px,2.5vw,29px);margin-bottom:20px}.section-num{font-size:.74rem;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);font-weight:800;display:block;margin-bottom:6px}.muted{color:var(--muted)}.small{font-size:.86rem}.source-tag{font-weight:650;color:#4a6179;font-size:.85rem}.document-box{border:1px solid #d8e1ea;border-radius:12px;padding:21px;background:#fcfdff;margin:16px 0 22px}.document-box h3{font-family:Georgia,serif;text-align:center;font-size:1.55rem;margin-bottom:14px}.document-box p{margin-bottom:10px}.document-box p:last-child{margin-bottom:0}.material-subtitle{font-weight:800;font-size:.96rem;margin:26px 0 8px}.question-grid{display:grid;gap:9px}.question{padding:12px 14px;border:1px solid #e1e7ef;border-radius:9px;background:#fcfdff}.question p{margin:0 0 5px}.answer{font-weight:850;font-style:italic;color:#166149;letter-spacing:.025em}.answer-note{border-left:3px solid #bc903f;background:var(--amber-bg);padding:10px 13px;color:#6b4b20;border-radius:3px;font-size:.9rem;margin:10px 0}.answer-key{font-size:.85rem;margin-top:9px;color:#4c6076}.choices{display:grid;gap:4px;list-style:none;padding:0;margin:8px 0}.choices li{margin:0}.choices .is-correct{background:var(--green-bg);border-radius:5px;padding:3px 7px}.material-note{border-left:4px solid #6b9ac4;background:#f0f7ff;padding:12px 15px;border-radius:6px;margin:15px 0}.note-warning{border-left-color:#d2a14d;background:var(--amber-bg)}.scrollbox{overflow:auto}.table{border-collapse:collapse;width:100%;font-size:.93rem;min-width:420px}.table th,.table td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}.table th{background:#f0f4f9;color:#36536c;font-size:.86rem}.table tr:last-child td{border-bottom:0}.card-intro{color:var(--muted);margin-bottom:18px}
+    .depth{border:1px solid #d6e1ed;border-radius:10px;background:#fff;margin:10px 0;overflow:hidden}.depth>summary{display:flex;align-items:center;gap:10px;cursor:pointer;font-weight:740;padding:13px 15px;list-style:none;background:#f7fafe}.depth>summary::-webkit-details-marker{display:none}.depth>summary::before{content:'+';font-weight:850;flex:none;font-size:1.1rem;width:23px;height:23px;border:1px solid #a7c0d8;border-radius:6px;text-align:center;line-height:20px;color:#15598e}.depth[open]>summary::before{content:'−'}.depth[open]>summary{background:#eaf3fc;border-bottom:1px solid #d6e1ed}.depth-body{padding:15px 18px 16px}.depth-body .depth{margin-left:clamp(0px,2vw,17px)}.depth-body>p:last-child{margin-bottom:0}.topic-link{display:inline-block;font-weight:700;margin:8px 0 0;text-decoration:none}.topic-link::after{content:' ↗'}.demo-label{font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;font-weight:800;color:#5e758a;display:block;margin-bottom:4px}.example{background:#f3f6fa;padding:9px 13px;border-radius:7px;margin:10px 0;color:#1d3b57}.context{background:#f4f8ff;padding:11px 14px;border:1px solid #dceafa;border-radius:9px;margin:10px 0}.linkchips{display:flex;flex-wrap:wrap;gap:8px}.linkchip{display:inline-block;background:#edf5fc;border:1px solid #cce0f3;color:#155789;text-decoration:none;border-radius:7px;padding:7px 12px;font-size:.88rem;font-weight:700}.linkchip:hover{background:#dbeefe}.verbchips{display:flex;flex-wrap:wrap;gap:9px}.verbchips a{display:inline-block;text-decoration:none;background:#f1f5f9;color:#225d8f;border:1px solid #d3e3f1;padding:6px 12px;border-radius:100px;font-weight:650}.verbchips a:hover{background:#dcecfb}.back{display:inline-block;margin:0 0 20px;font-weight:700;text-decoration:none}.topic-heading{margin-bottom:23px}.topic-index{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}.topic-card{display:block;background:#fff;border:1px solid var(--line);padding:17px;border-radius:11px;text-decoration:none;color:var(--ink)}.topic-card:hover{border-color:#7eadd3;box-shadow:0 5px 15px #15395a12;text-decoration:none}.topic-card strong{display:block;color:#174f82;margin-bottom:5px}.topic-card small{display:block;color:var(--muted);line-height:1.45}.subtle{font-size:.91rem;color:#53687d}.footer{border-top:1px solid var(--line);font-size:.82rem;margin-top:28px;padding-top:17px;color:var(--muted)}.verb-layout{display:grid;grid-template-columns:minmax(180px,235px) minmax(0,1fr);gap:18px}.verb-picker{max-height:73vh;overflow-y:auto;border:1px solid var(--line);border-radius:12px;background:#fff;padding:8px}.verb-picker a{display:block;padding:6px 12px;border-radius:6px;text-decoration:none;font-weight:600}.verb-picker a.active,.verb-picker a:hover{background:#e8f3fd}.verb-details{min-width:0}.verb-details .card{margin-bottom:0}.verb-person{width:29%;color:#5b6e83}.verb-solo{margin-bottom:16px}.spotlight{font-weight:750;color:#284b6a}.u-caption{font-size:.79rem;color:#677d91}
+    @media(max-width:860px){.shell{display:block}.sidebar{position:static;height:auto;padding:15px}.brand{font-size:1.18rem}.brand small{margin-top:2px}.navlabel{margin:15px 0 6px 5px}.nav-list{display:flex;overflow-x:auto;padding-bottom:7px}.nav-link,.nav-inactive{min-width:125px;max-width:155px;flex-shrink:0;padding:8px}.badge-number{min-width:25px;width:25px;height:25px}.res-nav{display:flex;gap:6px}.res-nav a{padding:5px 8px}.sidebar-note{display:none}.workspace{padding:20px 16px 70px}.verb-layout{grid-template-columns:1fr}.verb-picker{max-height:none;display:flex;flex-wrap:wrap;gap:1px}.verb-picker a{font-size:.86rem;padding:5px 9px}.card{border-radius:12px}.document-box{padding:14px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    @media print{.sidebar{display:none}.shell{display:block}.workspace{padding:0}.page{max-width:none}.card{box-shadow:none;break-inside:avoid}.page[hidden]{display:none!important}a{color:inherit}}
+  
+/* Aggiornamenti v2: lettura, schede, filtri e ordine delle domande */
+.lesson-material{padding-top:23px}.lesson-material>.document-box:first-child{margin-top:0}
+.lesson-material .document-box h2{font-family:Georgia,serif;text-align:center;font-size:1.55rem;margin-bottom:14px}
+.marta-grid{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;column-gap:14px;row-gap:12px}
+.marta-grid .question{min-width:0;min-height:100%;break-inside:avoid}
+.question .choices{font-size:.94rem}.question .choices li{padding:1px 4px}
+.answer{font-weight:800;font-style:italic;color:#166149}
+.lesson-material .answer{letter-spacing:.005em}
+.level-filter{display:flex;flex-wrap:wrap;gap:8px 14px;margin:0 0 18px;padding:12px 14px;background:#f4f7fa;border:1px solid var(--line);border-radius:10px}
+.level-filter legend{font-weight:700;padding:0 4px}.level-check{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;cursor:pointer;font-size:.89rem;font-weight:750}
+.level-check input{width:17px;height:17px;cursor:pointer;accent-color:#2460a0}
+.level-tag{display:inline-block;border-radius:6px;padding:0px 7px;font-size:.78rem;font-weight:800;color:white}
+.level-A1{background:#13895b}.level-A2{background:#2c75b8}.level-B1{background:#d47507}.level-B2{background:#c92f62}.level-C1{background:#7a4fa1}.level-C2{background:#555766}
+.verb-times{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.tense-box{min-width:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
+.tense-head{display:flex;align-items:center;justify-content:space-between;gap:9px;padding:10px 12px;background:#edf3f9;border-bottom:1px solid var(--line)}
+.tense-head strong{font-size:.91rem}.tense-head small{font-size:.72rem;color:#52677e}
+.tense-table{border-collapse:collapse;width:100%;font-size:.84rem}.tense-table td{padding:4px 9px;border-bottom:1px solid #edf0f4;vertical-align:top;overflow-wrap:anywhere}.tense-table tr:last-child td{border-bottom:0}
+.tense-table td:first-child{color:#50647a;white-space:nowrap;width:34%}.tense-group{grid-column:1/-1;margin:10px 0 0;font-size:1.05rem}
+.verb-meaning{margin:0 0 18px;color:#415973}.grammar-ref{margin-top:23px;border-top:1px solid var(--line);padding-top:14px}
+.grammar-ref h3{font-size:1.05rem;margin-bottom:8px}.grammar-ref ul{margin-bottom:0}
+.topic-index{grid-template-columns:repeat(auto-fit,minmax(225px,1fr))}
+.topic-ref-tag{display:inline-block;border-radius:20px;background:#edf5fd;padding:0 9px;font-size:.78rem;margin-left:8px;color:#2c587c}
+@media(max-width:720px){.marta-grid{grid-template-columns:1fr}.verb-times{grid-template-columns:1fr}.level-filter{gap:8px 12px}}
+@media print{.marta-grid,.verb-times{grid-template-columns:repeat(2,1fr)}.level-filter{display:none}}
+
+
+/* ============================================================
+   VERSIONE 3 — Leggibilità, spaziatura e raggruppamento dei modi
+   Il materiale delle lezioni e le coniugazioni restano invariati.
+   ============================================================ */
+
+/* Testi più leggibili senza ingrandire tutta l'interfaccia come con lo zoom. */
+body { font-size: 17.5px; line-height: 1.57; }
+.sidebar .brand { font-size: 1.5rem; }
+.sidebar .brand small { font-size: .72rem; }
+.navtext strong { font-size: .86rem; }
+.navtext small { font-size: .71rem; }
+.res-nav a { font-size: .92rem; }
+.navlabel { font-size: .67rem; }
+.verb-picker a { font-size: 1.01rem; line-height: 1.45; padding: 7px 11px; }
+.verb-meaning { font-size: 1rem; }
+.level-check { font-size: .88rem; }
+.tense-head strong { font-size: 1rem; }
+.tense-table { font-size: .95rem; }
+.tense-table td { padding: 5px 9px; overflow-wrap: normal; word-break: normal; }
+.tense-table td:first-child { width: 32%; }
+
+/* Mantiene la larghezza massima attuale: recupera spazio dentro il layout. */
+.workspace { padding: 26px clamp(18px, 3vw, 42px) 82px; }
+.page { max-width: 1040px; }
+.card { padding: clamp(17px, 2vw, 23px); }
+.verb-layout { grid-template-columns: minmax(185px, 207px) minmax(0, 1fr); gap: 15px; }
+.verb-picker { padding: 7px; }
+.level-filter { margin-bottom: 17px; }
+
+/* Una cornice comune permette di riconoscere subito il modo verbale. */
+.verb-modes { display: grid; gap: 18px; }
+.mode-group { min-width: 0; border: 1px solid #cbd8e6; border-radius: 12px; background: #f7f9fc; overflow: hidden; }
+.mode-head { padding: 10px 14px; border-bottom: 1px solid #d5e0eb; background: #e9f1f9; }
+.mode-head h3 { font-size: 1.08rem; margin: 0; color: #183b5d; }
+.mode-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; padding: 13px; align-items: start; }
+.mode-grid .tense-box { background: #fff; }
+
+/* Esercizi VERO/FALSO in ordine per righe, con spiegazioni solo quando utili. */
+.vf-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 11px 13px; align-items: stretch; }
+.vf-question { display: flex; flex-direction: column; justify-content: flex-start; min-width: 0; padding: 11px 13px; }
+.vf-question .vf-line { margin: 0; }
+.vf-question .answer { white-space: nowrap; }
+.vf-question .vf-explanation { color: #4d6072; font-size: .9rem; line-height: 1.4; margin: 5px 0 0; }
+
+/* Su schermi stretti non si comprimono le forme verbali né gli esercizi. */
+@media (max-width: 1070px) and (min-width: 861px) {
+  .verb-layout { grid-template-columns: 175px minmax(0,1fr); gap: 12px; }
+  .mode-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 860px) {
+  .sidebar .brand { font-size: 1.2rem; }
+  .workspace { padding: 19px 15px 66px; }
+  .verb-layout { grid-template-columns: 1fr; }
+  .verb-picker a { padding: 6px 10px; font-size: .95rem; }
+  .verb-picker { max-height: 250px; overflow-y: auto; }
+  .mode-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 720px) {
+  .vf-grid, .mode-grid { grid-template-columns: 1fr; }
+  .tense-table { font-size: .95rem; }
+  .card { padding: 15px; }
+}
+@media print {
+  .vf-grid, .mode-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .mode-group { break-inside: auto; }
+  .tense-box, .vf-question { break-inside: avoid; }
+}
+
+/* VERSIONE 4: Home, tabelle grammaticali più esplicative e filtri di lezione. */
+.home-nav{margin-top:22px}.home-nav .home-link{gap:12px}.home-icon{display:inline-grid;place-items:center;width:30px;height:30px;font-size:1.55rem;line-height:1;border:1px solid currentColor;border-radius:7px}
+.home-nav + .navlabel{margin-top:26px}.home-card p:last-child{margin:0}
+.grammar-table{min-width:680px}.grammar-table th:nth-child(1){width:46%}.grammar-table th:nth-child(2){width:34%}.grammar-table th:nth-child(3){width:20%}
+.grammar-table .grammar-example{display:block;font-size:.97rem;line-height:1.4;color:#173955}
+.grammar-table .grammar-example strong{color:#0e624a;background:#e8f6ee;border-radius:3px;padding:0 2px}
+.grammar-table .grammar-note{display:block;color:#566c7d;font-size:.83rem;line-height:1.35;margin-top:5px}
+.grammar-table .grammar-topic{font-weight:700;line-height:1.35}
+.grammar-table .grammar-details{white-space:nowrap;display:inline-block;font-weight:750;text-decoration:none}
+.grammar-table .grammar-details:hover{text-decoration:underline}
+.library-tools{display:flex;flex-wrap:wrap;align-items:center;gap:11px 18px;margin:0 0 18px;padding:12px 15px;background:#fff;border:1px solid var(--line);border-radius:11px}
+.showall-check{display:inline-flex;align-items:center;gap:8px;font-size:.94rem;font-weight:750;cursor:pointer;white-space:nowrap}
+.showall-check input{width:18px;height:18px;accent-color:#2460a0;cursor:pointer}
+.library-scope{font-size:.84rem;color:#566c7d}
+.verb-picker .empty{font-size:.88rem;color:#566c7d;padding:10px}
+@media(max-width:860px){.home-nav{margin-top:16px}.home-nav .home-link{max-width:unset;min-width:unset;width:100%;padding:8px 12px}.home-nav + .navlabel{margin-top:18px}}
+@media(max-width:720px){.grammar-table{min-width:620px}.library-tools{padding:10px 12px}}
+/* Sui telefoni la tabella mantiene tutti i contenuti senza scorrimento orizzontale. */
+@media(max-width:720px){
+  .grammar-table{min-width:0;border-collapse:separate;border-spacing:0 10px}
+  .grammar-table thead{display:none}
+  .grammar-table tbody,.grammar-table tr,.grammar-table td{display:block;width:100%}
+  .grammar-table tr{border:1px solid var(--line);border-radius:9px;overflow:hidden;background:#fcfdff}
+  .grammar-table td{padding:10px 12px;border-bottom:1px solid #e7edf5}
+  .grammar-table td:last-child{border-bottom:0}
+  .grammar-table td::before{display:block;font-size:.71rem;text-transform:uppercase;letter-spacing:.06em;font-weight:800;color:#657c91;margin-bottom:4px}
+  .grammar-table td:nth-child(1)::before{content:'Esempi della lezione'}
+  .grammar-table td:nth-child(2)::before{content:'Argomento grammaticale'}
+  .grammar-table td:nth-child(3)::before{content:'Spiegazione'}
+}
+
+
+/* VERSIONE 5 — Documento originale per lezione e grammatica interamente aperta. */
+/* Una singola scheda grammaticale si legge integralmente senza espansioni. */
+.grammar-section { padding: 17px 0 19px; border-bottom: 1px solid var(--line); }
+.grammar-section:first-child { padding-top: 0; }
+.grammar-section:last-child { border-bottom: 0; padding-bottom: 0; }
+.grammar-section-title { color: #173b5d; font-size: 1.12rem; font-weight: 780; margin: 0 0 11px; }
+.grammar-section-content { line-height: 1.65; overflow-wrap: anywhere; }
+.grammar-section-content p:last-child { margin-bottom: 0; }
+.grammar-section-content .table { min-width: 0; }
+
+/* Miniature con cornice A4 (210:297), immagini sempre senza tagli. */
+.lesson-gallery { margin-bottom: 16px; padding: 10px 12px; background: #fff; border: 1px solid var(--line); border-radius: 11px; box-shadow: var(--shadow); }
+.lesson-gallery[hidden] { display: none; }
+.gallery-track { display: flex; gap: 10px; align-items: center; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x proximity; padding: 3px 2px 8px; scrollbar-width: thin; }
+.gallery-thumb { flex: 0 0 78px; width: 78px; height: 111px; aspect-ratio: 210 / 297; overflow: hidden; display: grid; place-items: center; padding: 2px; border: 1px solid #b9c8d8; border-radius: 4px; background: #fff; box-shadow: 0 1px 4px rgba(20,45,65,.1); cursor: zoom-in; scroll-snap-align: start; }
+.gallery-thumb:hover { border-color: var(--accent); box-shadow: 0 1px 7px rgba(30,90,130,.23); }
+.gallery-thumb img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; }
+.gallery-thumb:focus-visible, .viewer-button:focus-visible { outline: 3px solid #5fb2ff; outline-offset: 3px; }
+
+/* Il visore mantiene l'aspetto delle fotografie, anche non A4. */
+.sr-only { position: absolute!important; width: 1px!important; height: 1px!important; padding: 0!important; margin: -1px!important; overflow: hidden!important; clip: rect(0,0,0,0)!important; white-space: nowrap!important; border: 0!important; }
+body.viewer-open { overflow: hidden; }
+.document-viewer { position: fixed; inset: 0; z-index: 1000; background: rgba(13,23,34,.96); color: #fff; display: flex; flex-direction: column; overflow: hidden; }
+.document-viewer[hidden] { display: none!important; }
+.viewer-controls { flex: 0 0 auto; display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 58px; padding: 8px 14px; background: #172a40; border-bottom: 1px solid #3d4c5c; }
+.viewer-button { display: inline-grid; place-items: center; width: 42px; height: 42px; padding: 0; border: 1px solid #6a7d8f; border-radius: 8px; background: #25405c; color: white; font-size: 1.6rem; line-height: 1; cursor: pointer; }
+.viewer-button:hover:not(:disabled) { background: #386087; }
+.viewer-button:disabled { opacity: .3; cursor: not-allowed; }
+.viewer-controls-spacer { flex: 1 1 0; max-width: 120px; }
+.viewer-close { margin-left: 8px; font-size: 1.8rem; }
+.viewer-fit { font-size: 1.45rem; }
+.viewer-stage { flex: 1 1 auto; min-width: 0; min-height: 0; overflow: auto; overscroll-behavior: contain; }
+.viewer-canvas { position: relative; }
+.viewer-image { display: block; position: absolute; width: auto; height: auto; max-width: none; max-height: none; object-fit: contain; background: #fff; box-shadow: 0 8px 45px rgba(0,0,0,.35); }
+@media (max-width: 480px) {
+  .lesson-gallery { padding: 8px 10px; }
+  .gallery-thumb { flex-basis: 72px; width: 72px; height: 102px; }
+  .viewer-controls { gap: 6px; padding: 6px; }
+  .viewer-button { width: 41px; height: 41px; }
+  .viewer-controls-spacer { max-width: 30px; }
+  .viewer-close { margin-left: 2px; }
+}
+@media print { .lesson-gallery, .document-viewer { display: none!important; } }
+
+
+/* VERSIONE 6 — Lezione 02: presentazione originale orizzontale 16:9. */
+/* Le miniature A4 della prima lezione rimangono inalterate. */
+.gallery-thumb--wide { flex: 0 0 150px; width: 150px; height: auto; aspect-ratio: 16 / 9; }
+.gallery-thumb--wide img { width: 100%; height: 100%; object-fit: contain; }
+.lesson-columns { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; margin: 13px 0 22px; }
+.lesson-three-col { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; margin-top: 12px; }
+.slide-transcript .document-box { min-width:0; }
+.slide-transcript .document-box h4 { font-size: .98rem; margin:0 0 8px; }
+.slide-transcript .document-box p { margin: 0 0 7px; }
+.slide-transcript .document-box ul { padding-left:22px; margin:5px 0; }
+.slide-transcript .document-box li { padding:0 0 3px; }
+.slide-transcript .slide-cover { text-align:center; }
+.slide-transcript .slide-cover h2 { font-size: 1.25rem; }
+.slide-transcript .slide-cover p { font-size:1rem; }
+.slide-transcript .source-conjugations { min-width: 0; width: 100%; table-layout: fixed; }
+.slide-transcript .source-conjugations td { overflow-wrap:anywhere; font-size:.90rem; padding:9px 8px; }
+.city-photo { display:flex; justify-content:center; margin:18px auto; }
+.city-photo img { max-width:100%; max-height:440px; height:auto; object-fit:contain; border-radius:7px; }
+.board-photos { display:grid; gap:12px; grid-template-columns:repeat(2,minmax(0,1fr)); }
+.board-photos img { width:100%; height:auto; object-fit:contain; border:1px solid var(--line); border-radius:7px; }
+.stato-civile-list { column-count:2; column-width: 310px; column-gap:30px; list-style:none; margin:0; padding:0; }
+.stato-civile-list li { break-inside:avoid; margin:0; padding:2px 0; }
+@media(max-width:1050px){ .lesson-three-col{grid-template-columns:1fr;} }
+@media(max-width:750px){ .lesson-columns,.board-photos{grid-template-columns:1fr;} }
+@media(max-width:480px){ .gallery-thumb--wide{flex-basis:128px;width:128px;height:auto;} }
+@media print { .lesson-columns,.lesson-three-col{display:block;} .slide-transcript .document-box{break-inside:avoid;} }
+
+/* VERSIONE 7 — Collegamento discreto alla documentazione interna di Home. */
+.home-card .criteria-link {
+  border-top: 1px solid var(--line);
+  margin-top: 17px;
+  padding-top: 12px;
+  font-size: .84rem;
+}
+.criteria-link a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
+.criteria-link a:hover, .criteria-link a:focus-visible { color: var(--accent); }
+.criteria-card > p:first-child { margin-top: 0; }
+.criteria-list { padding-left: 1.25rem; margin: 12px 0 0; }
+.criteria-list li { padding: 0 0 7px; line-height: 1.5; }
+.criteria-list li:last-child { padding-bottom: 0; }

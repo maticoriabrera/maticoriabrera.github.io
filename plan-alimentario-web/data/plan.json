@@ -1,0 +1,2722 @@
+{
+  "version": 1,
+  "sourcePages": 22,
+  "days": [
+    {
+      "id": "mon",
+      "meals": [
+        {
+          "kind": "breakfast",
+          "items": [
+            {
+              "it": "Latte di avena con calcio - The Bridge",
+              "es": "Bebida de avena con calcio - The Bridge",
+              "qty": "200 g",
+              "alternatives": [
+                {
+                  "it": "Latte Accadì Senza Lattosio - Granarolo",
+                  "es": "Leche Accadì sin lactosa - Granarolo",
+                  "qty": "200 g"
+                },
+                {
+                  "it": "Yogurt Bianco Magro - Mila",
+                  "es": "Yogur natural desnatado - Mila",
+                  "qty": "125 g"
+                },
+                {
+                  "it": "Yogurt Greco Total 0% - Fage",
+                  "es": "Yogur griego Total 0 % - Fage",
+                  "qty": "80 g"
+                }
+              ]
+            },
+            {
+              "it": "Fiocchi d'avena",
+              "es": "Copos de avena",
+              "qty": "40 g",
+              "alternatives": [
+                {
+                  "it": "Fette biscottate",
+                  "es": "Tostadas tipo biscote",
+                  "qty": "40 g"
+                },
+                {
+                  "it": "Mandorle dolci - secche",
+                  "es": "Almendras dulces secas",
+                  "qty": "10 g"
+                },
+                {
+                  "it": "Pistacchi secchi",
+                  "es": "Pistachos secos",
+                  "qty": "10 g"
+                },
+                {
+                  "it": "Noci - secche",
+                  "es": "Nueces secas",
+                  "qty": "10 g"
+                }
+              ]
+            },
+            {
+              "it": "Cannella",
+              "es": "Canela",
+              "qty": "5 g",
+              "alternatives": [
+                {
+                  "it": "Cacao magro in polvere",
+                  "es": "Cacao desgrasado en polvo",
+                  "qty": "5 g"
+                }
+              ]
+            },
+            {
+              "it": "Marmellata - Zuegg",
+              "es": "Mermelada - Zuegg",
+              "qty": "15 g",
+              "alternatives": [
+                {
+                  "it": "Crema Novi - Novi",
+                  "es": "Crema Novi - Novi",
+                  "qty": "20 g"
+                },
+                {
+                  "it": "Succo di ananas conservato",
+                  "es": "Jugo de piña en conserva",
+                  "qty": "150 g"
+                },
+                {
+                  "it": "Crema di Arachidi - La Finestra Sul Cielo",
+                  "es": "Crema de maní - La Finestra Sul Cielo",
+                  "qty": "20 g"
+                }
+              ]
+            },
+            {
+              "it": "Caffe' in tazza",
+              "es": "Café en taza",
+              "qty": "40 g",
+              "alternatives": [
+                {
+                  "it": "Te' in tazza",
+                  "es": "Té en taza",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Tisana in tazza",
+                  "es": "Infusión en taza",
+                  "qty": "100 g"
+                }
+              ]
+            }
+          ],
+          "note": {
+            "it": "Puoi frullare tutto se non riesci a terminare il pasto. La frutta la potrai scegliere tu in base alle tue preferenze.",
+            "es": "Puedes licuar todo si no consigues terminar la comida. Puedes elegir la fruta según tus preferencias."
+          }
+        },
+        {
+          "kind": "morning",
+          "items": [
+            {
+              "it": "Mandorle Sgusciate Bio - Noberasco",
+              "es": "Almendras peladas ecológicas - Noberasco",
+              "qty": "10 g",
+              "alternatives": [
+                {
+                  "it": "Frutta fresca (media)",
+                  "es": "Fruta fresca (porción media)",
+                  "qty": "200 g"
+                },
+                {
+                  "it": "Actimel 0,1 - Actimel",
+                  "es": "Actimel 0,1 - Actimel",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Pistacchi secchi",
+                  "es": "Pistachos secos",
+                  "qty": "10 g"
+                },
+                {
+                  "it": "Grana",
+                  "es": "Queso Grana",
+                  "qty": "30 g"
+                },
+                {
+                  "it": "Parmigiano Reggiano 30 Mesi - Parmareggio",
+                  "es": "Parmigiano Reggiano 30 meses - Parmareggio",
+                  "qty": "40 g"
+                }
+              ]
+            },
+            {
+              "it": "Caffe' in tazza",
+              "es": "Café en taza",
+              "qty": "40 g",
+              "alternatives": [
+                {
+                  "it": "Te' in tazza",
+                  "es": "Té en taza",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Tisana in tazza",
+                  "es": "Infusión en taza",
+                  "qty": "100 g"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "lunch",
+          "items": [
+            {
+              "it": "Riso",
+              "es": "Arroz",
+              "qty": "70 g",
+              "alternatives": [
+                {
+                  "it": "Orzo perlato",
+                  "es": "Cebada perlada",
+                  "qty": "30 g"
+                },
+                {
+                  "it": "Pane comune",
+                  "es": "Pan común",
+                  "qty": "70 g"
+                },
+                {
+                  "it": "Pasta di semola integrale",
+                  "es": "Pasta integral de sémola",
+                  "qty": "70 g"
+                },
+                {
+                  "it": "Crostino Integrale - Buitoni",
+                  "es": "Crostino integral - Buitoni",
+                  "qty": "50 g"
+                }
+              ]
+            },
+            {
+              "it": "Piselli freschi",
+              "es": "Arvejas frescas (guisantes)",
+              "qty": "270 g",
+              "alternatives": [
+                {
+                  "it": "Ceci secchi",
+                  "es": "Garbanzos secos",
+                  "qty": "50 g"
+                },
+                {
+                  "it": "Lenticchie decorticate",
+                  "es": "Lentejas peladas",
+                  "qty": "50 g"
+                },
+                {
+                  "it": "Pasta di legume",
+                  "es": "Pasta de legumbres",
+                  "qty": "60 g"
+                },
+                {
+                  "it": "Fagioli - Borlotti secchi",
+                  "es": "Porotos borlotti secos",
+                  "qty": "50 g"
+                },
+                {
+                  "it": "Hamburger di ceci",
+                  "es": "Hamburguesa de garbanzos",
+                  "qty": "140 g"
+                }
+              ]
+            },
+            {
+              "it": "Verdure fresche (media)",
+              "es": "Verduras frescas (porción media)",
+              "qty": "200 g"
+            },
+            {
+              "it": "Olio di oliva extra vergine",
+              "es": "Aceite de oliva virgen extra",
+              "qty": "15 g",
+              "alternatives": [
+                {
+                  "it": "Avocado",
+                  "es": "Palta (aguacate)",
+                  "qty": "50 g"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "afternoon",
+          "items": [
+            {
+              "it": "Frutta fresca (media)",
+              "es": "Fruta fresca (porción media)",
+              "qty": "150 g",
+              "alternatives": [
+                {
+                  "it": "Parmigiano Reggiano 30 Mesi - Parmareggio",
+                  "es": "Parmigiano Reggiano 30 meses - Parmareggio",
+                  "qty": "40 g"
+                },
+                {
+                  "it": "Actimel 0,1 - Actimel",
+                  "es": "Actimel 0,1 - Actimel",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Mandorle Sgusciate Bio - Noberasco",
+                  "es": "Almendras peladas ecológicas - Noberasco",
+                  "qty": "10 g"
+                },
+                {
+                  "it": "Pistacchi secchi",
+                  "es": "Pistachos secos",
+                  "qty": "10 g"
+                }
+              ]
+            },
+            {
+              "it": "Caffe' in tazza",
+              "es": "Café en taza",
+              "qty": "40 g",
+              "alternatives": [
+                {
+                  "it": "Te' in tazza",
+                  "es": "Té en taza",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Tisana in tazza",
+                  "es": "Infusión en taza",
+                  "qty": "100 g"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "dinner",
+          "items": [
+            {
+              "it": "Petto di pollo",
+              "es": "Pechuga de pollo",
+              "qty": "200 g",
+              "alternatives": [
+                {
+                  "it": "Vitello - filetto",
+                  "es": "Filete de ternera",
+                  "qty": "200 g"
+                },
+                {
+                  "it": "Vitellone tagli magri",
+                  "es": "Cortes magros de vacuno",
+                  "qty": "200 g"
+                },
+                {
+                  "it": "Maiale bistecca",
+                  "es": "Bistec de cerdo",
+                  "qty": "200 g"
+                }
+              ]
+            },
+            {
+              "it": "Verdure fresche (media)",
+              "es": "Verduras frescas (porción media)",
+              "qty": "200 g"
+            },
+            {
+              "it": "Purea di patate",
+              "es": "Puré de papas",
+              "qty": "250 g",
+              "alternatives": [
+                {
+                  "it": "Pane di segale biscottato",
+                  "es": "Pan de centeno tostado",
+                  "qty": "40 g"
+                },
+                {
+                  "it": "Pane comune",
+                  "es": "Pan común",
+                  "qty": "60 g"
+                }
+              ]
+            },
+            {
+              "it": "Olio di oliva extra vergine",
+              "es": "Aceite de oliva virgen extra",
+              "qty": "15 g",
+              "alternatives": [
+                {
+                  "it": "Avocado",
+                  "es": "Palta (aguacate)",
+                  "qty": "50 g"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "during_day": [
+        {
+          "it": "Zenzero",
+          "es": "Jengibre",
+          "qty": "3 g",
+          "alternatives": [
+            {
+              "it": "Curcuma",
+              "es": "Cúrcuma",
+              "qty": "1 g"
+            },
+            {
+              "it": "Aglio",
+              "es": "Ajo",
+              "qty": "5 g"
+            },
+            {
+              "it": "Basilico",
+              "es": "Albahaca",
+              "qty": "5 g"
+            },
+            {
+              "it": "Alloro",
+              "es": "Laurel",
+              "qty": "5 g"
+            },
+            {
+              "it": "Salvia",
+              "es": "Salvia",
+              "qty": "5 g"
+            },
+            {
+              "it": "Rosmarino",
+              "es": "Romero",
+              "qty": "5 g"
+            },
+            {
+              "it": "Prezzemolo",
+              "es": "Perejil",
+              "qty": "10 g"
+            },
+            {
+              "it": "Tarassaco o dente di leone",
+              "es": "Diente de león",
+              "qty": "5 g"
+            },
+            {
+              "it": "Cannella",
+              "es": "Canela",
+              "qty": "5 g"
+            },
+            {
+              "it": "Semi di zucca secchi",
+              "es": "Semillas de calabaza secas",
+              "qty": "10 g"
+            }
+          ]
+        },
+        {
+          "it": "Tisana in tazza",
+          "es": "Infusión en taza",
+          "qty": "125 g",
+          "alternatives": [
+            {
+              "it": "Te' in tazza",
+              "es": "Té en taza",
+              "qty": "125 g"
+            }
+          ]
+        },
+        {
+          "it": "Acqua S.Silvestro",
+          "es": "Agua S.Silvestro",
+          "qty": "2200 g",
+          "alternatives": [
+            {
+              "it": "Acqua Lete",
+              "es": "Agua Lete",
+              "qty": "2200 g"
+            },
+            {
+              "it": "Acqua Sangemini",
+              "es": "Agua Sangemini",
+              "qty": "2200 g"
+            },
+            {
+              "it": "Acqua Sveva",
+              "es": "Agua Sveva",
+              "qty": "2200 g"
+            },
+            {
+              "it": "Acqua S.Pellegrino",
+              "es": "Agua S.Pellegrino",
+              "qty": "2200 g"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tue",
+      "meals": [
+        {
+          "kind": "breakfast",
+          "items": [
+            {
+              "it": "Latte di avena con calcio - The Bridge",
+              "es": "Bebida de avena con calcio - The Bridge",
+              "qty": "200 g",
+              "alternatives": [
+                {
+                  "it": "Latte Accadì Senza Lattosio - Granarolo",
+                  "es": "Leche Accadì sin lactosa - Granarolo",
+                  "qty": "200 g"
+                },
+                {
+                  "it": "Yogurt Bianco Magro - Mila",
+                  "es": "Yogur natural desnatado - Mila",
+                  "qty": "125 g"
+                },
+                {
+                  "it": "Yogurt Greco Total 0% - Fage",
+                  "es": "Yogur griego Total 0 % - Fage",
+                  "qty": "80 g"
+                }
+              ]
+            },
+            {
+              "it": "Fiocchi d'avena",
+              "es": "Copos de avena",
+              "qty": "40 g",
+              "alternatives": [
+                {
+                  "it": "Fette biscottate",
+                  "es": "Tostadas tipo biscote",
+                  "qty": "40 g"
+                },
+                {
+                  "it": "Mandorle dolci - secche",
+                  "es": "Almendras dulces secas",
+                  "qty": "10 g"
+                },
+                {
+                  "it": "Pistacchi secchi",
+                  "es": "Pistachos secos",
+                  "qty": "10 g"
+                },
+                {
+                  "it": "Noci - secche",
+                  "es": "Nueces secas",
+                  "qty": "10 g"
+                }
+              ]
+            },
+            {
+              "it": "Cannella",
+              "es": "Canela",
+              "qty": "5 g",
+              "alternatives": [
+                {
+                  "it": "Cacao magro in polvere",
+                  "es": "Cacao desgrasado en polvo",
+                  "qty": "5 g"
+                }
+              ]
+            },
+            {
+              "it": "Marmellata - Zuegg",
+              "es": "Mermelada - Zuegg",
+              "qty": "15 g",
+              "alternatives": [
+                {
+                  "it": "Crema Novi - Novi",
+                  "es": "Crema Novi - Novi",
+                  "qty": "20 g"
+                },
+                {
+                  "it": "Succo di ananas conservato",
+                  "es": "Jugo de piña en conserva",
+                  "qty": "150 g"
+                },
+                {
+                  "it": "Crema di Arachidi - La Finestra Sul Cielo",
+                  "es": "Crema de maní - La Finestra Sul Cielo",
+                  "qty": "20 g"
+                }
+              ]
+            },
+            {
+              "it": "Caffe' in tazza",
+              "es": "Café en taza",
+              "qty": "40 g",
+              "alternatives": [
+                {
+                  "it": "Te' in tazza",
+                  "es": "Té en taza",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Tisana in tazza",
+                  "es": "Infusión en taza",
+                  "qty": "100 g"
+                }
+              ]
+            }
+          ],
+          "note": {
+            "it": "Puoi frullare tutto se non riesci a terminare il pasto. La frutta la potrai scegliere tu in base alle tue preferenze.",
+            "es": "Puedes licuar todo si no consigues terminar la comida. Puedes elegir la fruta según tus preferencias."
+          }
+        },
+        {
+          "kind": "morning",
+          "items": [
+            {
+              "it": "Mandorle Sgusciate Bio - Noberasco",
+              "es": "Almendras peladas ecológicas - Noberasco",
+              "qty": "10 g",
+              "alternatives": [
+                {
+                  "it": "Frutta fresca (media)",
+                  "es": "Fruta fresca (porción media)",
+                  "qty": "200 g"
+                },
+                {
+                  "it": "Actimel 0,1 - Actimel",
+                  "es": "Actimel 0,1 - Actimel",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Pistacchi secchi",
+                  "es": "Pistachos secos",
+                  "qty": "10 g"
+                },
+                {
+                  "it": "Grana",
+                  "es": "Queso Grana",
+                  "qty": "30 g"
+                },
+                {
+                  "it": "Parmigiano Reggiano 30 Mesi - Parmareggio",
+                  "es": "Parmigiano Reggiano 30 meses - Parmareggio",
+                  "qty": "40 g"
+                }
+              ]
+            },
+            {
+              "it": "Caffe' in tazza",
+              "es": "Café en taza",
+              "qty": "40 g",
+              "alternatives": [
+                {
+                  "it": "Te' in tazza",
+                  "es": "Té en taza",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Tisana in tazza",
+                  "es": "Infusión en taza",
+                  "qty": "100 g"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "lunch",
+          "items": [
+            {
+              "it": "Patate novelle",
+              "es": "Papas nuevas",
+              "qty": "300 g",
+              "alternatives": [
+                {
+                  "it": "Pane di segale biscottato",
+                  "es": "Pan de centeno tostado",
+                  "qty": "130 g"
+                }
+              ]
+            },
+            {
+              "it": "Uova strapazzate al pomodoro",
+              "es": "Huevos revueltos con tomate",
+              "qty": "120 g",
+              "alternatives": [
+                {
+                  "it": "Frittata di zucchine",
+                  "es": "Tortilla de zucchini",
+                  "qty": "120 g"
+                },
+                {
+                  "it": "Involtini di manzo",
+                  "es": "Rollitos de carne vacuna",
+                  "qty": "160 g"
+                },
+                {
+                  "it": "Tacchino arrosto al forno",
+                  "es": "Pavo asado al horno",
+                  "qty": "170 g"
+                }
+              ]
+            },
+            {
+              "it": "Verdure fresche (media)",
+              "es": "Verduras frescas (porción media)",
+              "qty": "200 g"
+            },
+            {
+              "it": "Olio di oliva extra vergine",
+              "es": "Aceite de oliva virgen extra",
+              "qty": "15 g",
+              "alternatives": [
+                {
+                  "it": "Avocado",
+                  "es": "Palta (aguacate)",
+                  "qty": "50 g"
+                }
+              ]
+            }
+          ],
+          "note": {
+            "it": "Corrispondono a 2 uova 120 g di frittata. Alle zucchine è solo un esempio. Puoi inserire le verdure che preferisci o mangiarle a parte con la quantità del pane riportato: tagliare a crostini, biscottare ed inserire nell’insalata.",
+            "es": "120 g de tortilla corresponden a 2 huevos. La tortilla de zucchini es solo un ejemplo: puedes usar las verduras que prefieras o comerlas aparte, con la cantidad de pan indicada, cortado en cubitos, tostado e incorporado a la ensalada."
+          },
+          "recipes": [
+            "egg"
+          ]
+        },
+        {
+          "kind": "afternoon",
+          "items": [
+            {
+              "it": "Frutta fresca (media)",
+              "es": "Fruta fresca (porción media)",
+              "qty": "150 g",
+              "alternatives": [
+                {
+                  "it": "Parmigiano Reggiano 30 Mesi - Parmareggio",
+                  "es": "Parmigiano Reggiano 30 meses - Parmareggio",
+                  "qty": "40 g"
+                },
+                {
+                  "it": "Yogurt Bianco Magro - Mila",
+                  "es": "Yogur natural desnatado - Mila",
+                  "qty": "125 g"
+                },
+                {
+                  "it": "Actimel 0,1 - Actimel",
+                  "es": "Actimel 0,1 - Actimel",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Mandorle Sgusciate Bio - Noberasco",
+                  "es": "Almendras peladas ecológicas - Noberasco",
+                  "qty": "10 g"
+                }
+              ]
+            },
+            {
+              "it": "Caffe' in tazza",
+              "es": "Café en taza",
+              "qty": "40 g",
+              "alternatives": [
+                {
+                  "it": "Te' in tazza",
+                  "es": "Té en taza",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Tisana in tazza",
+                  "es": "Infusión en taza",
+                  "qty": "100 g"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "dinner",
+          "items": [
+            {
+              "it": "Piselli freschi",
+              "es": "Arvejas frescas (guisantes)",
+              "qty": "250 g",
+              "alternatives": [
+                {
+                  "it": "Piselli in scatola - scolati",
+                  "es": "Arvejas enlatadas, escurridas",
+                  "qty": "200 g"
+                },
+                {
+                  "it": "Ceci secchi",
+                  "es": "Garbanzos secos",
+                  "qty": "50 g"
+                },
+                {
+                  "it": "Fagioli - Cannellini secchi",
+                  "es": "Porotos cannellini secos",
+                  "qty": "50 g"
+                },
+                {
+                  "it": "Lenticchie decorticate",
+                  "es": "Lentejas peladas",
+                  "qty": "50 g"
+                }
+              ]
+            },
+            {
+              "it": "Salmone alla griglia",
+              "es": "Salmón a la parrilla",
+              "qty": "200 g",
+              "alternatives": [
+                {
+                  "it": "Filetto di Salmone Affumicato - Rio Mare",
+                  "es": "Filete de salmón ahumado - Rio Mare",
+                  "qty": "120 g"
+                },
+                {
+                  "it": "Pesce spada in trance al pomodoro",
+                  "es": "Rodajas de pez espada con tomate",
+                  "qty": "200 g"
+                },
+                {
+                  "it": "Orata ai ferri",
+                  "es": "Dorada a la plancha",
+                  "qty": "200 g"
+                }
+              ]
+            },
+            {
+              "it": "Verdure fresche (media)",
+              "es": "Verduras frescas (porción media)",
+              "qty": "200 g"
+            },
+            {
+              "it": "Olio di oliva extra vergine",
+              "es": "Aceite de oliva virgen extra",
+              "qty": "15 g",
+              "alternatives": [
+                {
+                  "it": "Avocado",
+                  "es": "Palta (aguacate)",
+                  "qty": "50 g"
+                }
+              ]
+            }
+          ],
+          "note": {
+            "it": "È possibile creare delle insalate miste. Se non gradisci la porzione di legume, anche a vellutata fresca, puoi farne a meno. In tal caso, aggiungi un po’ più di proteine (pesce).",
+            "es": "Puedes preparar ensaladas mixtas. Si no deseas la porción de legumbres, incluso como crema o puré, puedes omitirla. En ese caso, añade un poco más de proteína (pescado). No se especifica la cantidad adicional."
+          }
+        }
+      ],
+      "during_day": [
+        {
+          "it": "Zenzero",
+          "es": "Jengibre",
+          "qty": "3 g",
+          "alternatives": [
+            {
+              "it": "Curcuma",
+              "es": "Cúrcuma",
+              "qty": "1 g"
+            },
+            {
+              "it": "Aglio",
+              "es": "Ajo",
+              "qty": "5 g"
+            },
+            {
+              "it": "Basilico",
+              "es": "Albahaca",
+              "qty": "5 g"
+            },
+            {
+              "it": "Alloro",
+              "es": "Laurel",
+              "qty": "5 g"
+            },
+            {
+              "it": "Salvia",
+              "es": "Salvia",
+              "qty": "5 g"
+            },
+            {
+              "it": "Rosmarino",
+              "es": "Romero",
+              "qty": "5 g"
+            },
+            {
+              "it": "Prezzemolo",
+              "es": "Perejil",
+              "qty": "10 g"
+            },
+            {
+              "it": "Tarassaco o dente di leone",
+              "es": "Diente de león",
+              "qty": "5 g"
+            },
+            {
+              "it": "Cannella",
+              "es": "Canela",
+              "qty": "5 g"
+            },
+            {
+              "it": "Semi di zucca secchi",
+              "es": "Semillas de calabaza secas",
+              "qty": "10 g"
+            }
+          ]
+        },
+        {
+          "it": "Tisana in tazza",
+          "es": "Infusión en taza",
+          "qty": "125 g",
+          "alternatives": [
+            {
+              "it": "Te' in tazza",
+              "es": "Té en taza",
+              "qty": "125 g"
+            }
+          ]
+        },
+        {
+          "it": "Acqua S.Silvestro",
+          "es": "Agua S.Silvestro",
+          "qty": "2200 g",
+          "alternatives": [
+            {
+              "it": "Acqua Lete",
+              "es": "Agua Lete",
+              "qty": "2200 g"
+            },
+            {
+              "it": "Acqua Sangemini",
+              "es": "Agua Sangemini",
+              "qty": "2200 g"
+            },
+            {
+              "it": "Acqua Sveva",
+              "es": "Agua Sveva",
+              "qty": "2200 g"
+            },
+            {
+              "it": "Acqua S.Pellegrino",
+              "es": "Agua S.Pellegrino",
+              "qty": "2200 g"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wed",
+      "meals": [
+        {
+          "kind": "breakfast",
+          "items": [
+            {
+              "it": "Latte di avena con calcio - The Bridge",
+              "es": "Bebida de avena con calcio - The Bridge",
+              "qty": "200 g",
+              "alternatives": [
+                {
+                  "it": "Latte Accadì Senza Lattosio - Granarolo",
+                  "es": "Leche Accadì sin lactosa - Granarolo",
+                  "qty": "200 g"
+                },
+                {
+                  "it": "Yogurt Bianco Magro - Mila",
+                  "es": "Yogur natural desnatado - Mila",
+                  "qty": "125 g"
+                },
+                {
+                  "it": "Yogurt Greco Total 0% - Fage",
+                  "es": "Yogur griego Total 0 % - Fage",
+                  "qty": "80 g"
+                }
+              ]
+            },
+            {
+              "it": "Fiocchi d'avena",
+              "es": "Copos de avena",
+              "qty": "40 g",
+              "alternatives": [
+                {
+                  "it": "Fette biscottate",
+                  "es": "Tostadas tipo biscote",
+                  "qty": "40 g"
+                },
+                {
+                  "it": "Mandorle dolci - secche",
+                  "es": "Almendras dulces secas",
+                  "qty": "10 g"
+                },
+                {
+                  "it": "Pistacchi secchi",
+                  "es": "Pistachos secos",
+                  "qty": "10 g"
+                },
+                {
+                  "it": "Noci - secche",
+                  "es": "Nueces secas",
+                  "qty": "10 g"
+                }
+              ]
+            },
+            {
+              "it": "Cannella",
+              "es": "Canela",
+              "qty": "5 g",
+              "alternatives": [
+                {
+                  "it": "Cacao magro in polvere",
+                  "es": "Cacao desgrasado en polvo",
+                  "qty": "5 g"
+                }
+              ]
+            },
+            {
+              "it": "Marmellata - Zuegg",
+              "es": "Mermelada - Zuegg",
+              "qty": "15 g",
+              "alternatives": [
+                {
+                  "it": "Crema Novi - Novi",
+                  "es": "Crema Novi - Novi",
+                  "qty": "20 g"
+                },
+                {
+                  "it": "Succo di ananas conservato",
+                  "es": "Jugo de piña en conserva",
+                  "qty": "150 g"
+                },
+                {
+                  "it": "Crema di Arachidi - La Finestra Sul Cielo",
+                  "es": "Crema de maní - La Finestra Sul Cielo",
+                  "qty": "20 g"
+                }
+              ]
+            },
+            {
+              "it": "Caffe' in tazza",
+              "es": "Café en taza",
+              "qty": "40 g",
+              "alternatives": [
+                {
+                  "it": "Te' in tazza",
+                  "es": "Té en taza",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Tisana in tazza",
+                  "es": "Infusión en taza",
+                  "qty": "100 g"
+                }
+              ]
+            }
+          ],
+          "note": {
+            "it": "Puoi frullare tutto se non riesci a terminare il pasto. La frutta la potrai scegliere tu in base alle tue preferenze.",
+            "es": "Puedes licuar todo si no consigues terminar la comida. Puedes elegir la fruta según tus preferencias."
+          }
+        },
+        {
+          "kind": "morning",
+          "items": [
+            {
+              "it": "Mandorle Sgusciate Bio - Noberasco",
+              "es": "Almendras peladas ecológicas - Noberasco",
+              "qty": "10 g",
+              "alternatives": [
+                {
+                  "it": "Frutta fresca (media)",
+                  "es": "Fruta fresca (porción media)",
+                  "qty": "200 g"
+                },
+                {
+                  "it": "Actimel 0,1 - Actimel",
+                  "es": "Actimel 0,1 - Actimel",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Pistacchi secchi",
+                  "es": "Pistachos secos",
+                  "qty": "10 g"
+                },
+                {
+                  "it": "Grana",
+                  "es": "Queso Grana",
+                  "qty": "30 g"
+                },
+                {
+                  "it": "Parmigiano Reggiano 30 Mesi - Parmareggio",
+                  "es": "Parmigiano Reggiano 30 meses - Parmareggio",
+                  "qty": "40 g"
+                }
+              ]
+            },
+            {
+              "it": "Caffe' in tazza",
+              "es": "Café en taza",
+              "qty": "40 g",
+              "alternatives": [
+                {
+                  "it": "Te' in tazza",
+                  "es": "Té en taza",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Tisana in tazza",
+                  "es": "Infusión en taza",
+                  "qty": "100 g"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "lunch",
+          "items": [
+            {
+              "it": "Petto di pollo",
+              "es": "Pechuga de pollo",
+              "qty": "200 g",
+              "alternatives": [
+                {
+                  "it": "Polpette",
+                  "es": "Albóndigas",
+                  "qty": "200 g"
+                },
+                {
+                  "it": "Tacchino e zucchine in salsa di limone",
+                  "es": "Pavo y zucchini en salsa de limón",
+                  "qty": "200 g"
+                },
+                {
+                  "it": "Vitello - filetto",
+                  "es": "Filete de ternera",
+                  "qty": "200 g"
+                }
+              ]
+            },
+            {
+              "it": "Verdure fresche (media)",
+              "es": "Verduras frescas (porción media)",
+              "qty": "200 g"
+            },
+            {
+              "it": "Olio di oliva extra vergine",
+              "es": "Aceite de oliva virgen extra",
+              "qty": "15 g",
+              "alternatives": [
+                {
+                  "it": "Avocado",
+                  "es": "Palta (aguacate)",
+                  "qty": "50 g"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "afternoon",
+          "items": [
+            {
+              "it": "Frutta fresca (media)",
+              "es": "Fruta fresca (porción media)",
+              "qty": "150 g",
+              "alternatives": [
+                {
+                  "it": "Parmigiano Reggiano 30 Mesi - Parmareggio",
+                  "es": "Parmigiano Reggiano 30 meses - Parmareggio",
+                  "qty": "40 g"
+                },
+                {
+                  "it": "Yogurt Bianco Magro - Mila",
+                  "es": "Yogur natural desnatado - Mila",
+                  "qty": "125 g"
+                },
+                {
+                  "it": "Actimel 0,1 - Actimel",
+                  "es": "Actimel 0,1 - Actimel",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Mandorle Sgusciate Bio - Noberasco",
+                  "es": "Almendras peladas ecológicas - Noberasco",
+                  "qty": "10 g"
+                }
+              ]
+            },
+            {
+              "it": "Caffe' in tazza",
+              "es": "Café en taza",
+              "qty": "40 g",
+              "alternatives": [
+                {
+                  "it": "Te' in tazza",
+                  "es": "Té en taza",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Tisana in tazza",
+                  "es": "Infusión en taza",
+                  "qty": "100 g"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "dinner",
+          "items": [
+            {
+              "it": "Pasta di semola integrale",
+              "es": "Pasta integral de sémola",
+              "qty": "70 g",
+              "alternatives": [
+                {
+                  "it": "Crostino Integrale - Buitoni",
+                  "es": "Crostino integral - Buitoni",
+                  "qty": "50 g"
+                },
+                {
+                  "it": "Patate novelle",
+                  "es": "Papas nuevas",
+                  "qty": "250 g"
+                },
+                {
+                  "it": "Pane di segale biscottato",
+                  "es": "Pan de centeno tostado",
+                  "qty": "70 g"
+                }
+              ]
+            },
+            {
+              "it": "Filetti Salmone Naturale - Asdomar",
+              "es": "Filetes de salmón al natural - Asdomar",
+              "qty": "100 g",
+              "alternatives": [
+                {
+                  "it": "Bracioline di manzo al pomodoro",
+                  "es": "Filetitos de carne vacuna con tomate",
+                  "qty": "200 g"
+                },
+                {
+                  "it": "Salsiccia con Pollo - Fileni",
+                  "es": "Salchicha de pollo - Fileni",
+                  "qty": "150 g"
+                },
+                {
+                  "it": "Polpo",
+                  "es": "Pulpo",
+                  "qty": "250 g"
+                },
+                {
+                  "it": "Maiale - legg. -arista",
+                  "es": "Cerdo magro (lomo)",
+                  "qty": "200 g"
+                },
+                {
+                  "it": "Calamari ripieni",
+                  "es": "Calamares rellenos",
+                  "qty": "230 g"
+                },
+                {
+                  "it": "Seppia",
+                  "es": "Sepia",
+                  "qty": "200 g"
+                },
+                {
+                  "it": "Filetti di Branzino - Findus",
+                  "es": "Filetes de lubina - Findus",
+                  "qty": "150 g"
+                },
+                {
+                  "it": "Pesce spada in trance al pomodoro",
+                  "es": "Rodajas de pez espada con tomate",
+                  "qty": "150 g"
+                }
+              ]
+            },
+            {
+              "it": "Verdure fresche (media)",
+              "es": "Verduras frescas (porción media)",
+              "qty": "200 g"
+            },
+            {
+              "it": "Olio di oliva extra vergine",
+              "es": "Aceite de oliva virgen extra",
+              "qty": "15 g",
+              "alternatives": [
+                {
+                  "it": "Avocado",
+                  "es": "Palta (aguacate)",
+                  "qty": "50 g"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "during_day": [
+        {
+          "it": "Zenzero",
+          "es": "Jengibre",
+          "qty": "3 g",
+          "alternatives": [
+            {
+              "it": "Curcuma",
+              "es": "Cúrcuma",
+              "qty": "1 g"
+            },
+            {
+              "it": "Aglio",
+              "es": "Ajo",
+              "qty": "5 g"
+            },
+            {
+              "it": "Basilico",
+              "es": "Albahaca",
+              "qty": "5 g"
+            },
+            {
+              "it": "Alloro",
+              "es": "Laurel",
+              "qty": "5 g"
+            },
+            {
+              "it": "Salvia",
+              "es": "Salvia",
+              "qty": "5 g"
+            },
+            {
+              "it": "Rosmarino",
+              "es": "Romero",
+              "qty": "5 g"
+            },
+            {
+              "it": "Prezzemolo",
+              "es": "Perejil",
+              "qty": "10 g"
+            },
+            {
+              "it": "Tarassaco o dente di leone",
+              "es": "Diente de león",
+              "qty": "5 g"
+            },
+            {
+              "it": "Cannella",
+              "es": "Canela",
+              "qty": "5 g"
+            },
+            {
+              "it": "Semi di zucca secchi",
+              "es": "Semillas de calabaza secas",
+              "qty": "10 g"
+            }
+          ]
+        },
+        {
+          "it": "Tisana in tazza",
+          "es": "Infusión en taza",
+          "qty": "125 g",
+          "alternatives": [
+            {
+              "it": "Te' in tazza",
+              "es": "Té en taza",
+              "qty": "125 g"
+            }
+          ]
+        },
+        {
+          "it": "Acqua S.Silvestro",
+          "es": "Agua S.Silvestro",
+          "qty": "2200 g",
+          "alternatives": [
+            {
+              "it": "Acqua Lete",
+              "es": "Agua Lete",
+              "qty": "2200 g"
+            },
+            {
+              "it": "Acqua Sangemini",
+              "es": "Agua Sangemini",
+              "qty": "2200 g"
+            },
+            {
+              "it": "Acqua Sveva",
+              "es": "Agua Sveva",
+              "qty": "2200 g"
+            },
+            {
+              "it": "Acqua S.Pellegrino",
+              "es": "Agua S.Pellegrino",
+              "qty": "2200 g"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thu",
+      "meals": [
+        {
+          "kind": "breakfast",
+          "items": [
+            {
+              "it": "Latte di avena con calcio - The Bridge",
+              "es": "Bebida de avena con calcio - The Bridge",
+              "qty": "200 g",
+              "alternatives": [
+                {
+                  "it": "Latte Accadì Senza Lattosio - Granarolo",
+                  "es": "Leche Accadì sin lactosa - Granarolo",
+                  "qty": "200 g"
+                },
+                {
+                  "it": "Yogurt Bianco Magro - Mila",
+                  "es": "Yogur natural desnatado - Mila",
+                  "qty": "125 g"
+                },
+                {
+                  "it": "Yogurt Greco Total 0% - Fage",
+                  "es": "Yogur griego Total 0 % - Fage",
+                  "qty": "80 g"
+                }
+              ]
+            },
+            {
+              "it": "Fiocchi d'avena",
+              "es": "Copos de avena",
+              "qty": "40 g",
+              "alternatives": [
+                {
+                  "it": "Fette biscottate",
+                  "es": "Tostadas tipo biscote",
+                  "qty": "40 g"
+                },
+                {
+                  "it": "Mandorle dolci - secche",
+                  "es": "Almendras dulces secas",
+                  "qty": "10 g"
+                },
+                {
+                  "it": "Pistacchi secchi",
+                  "es": "Pistachos secos",
+                  "qty": "10 g"
+                },
+                {
+                  "it": "Noci - secche",
+                  "es": "Nueces secas",
+                  "qty": "10 g"
+                }
+              ]
+            },
+            {
+              "it": "Cannella",
+              "es": "Canela",
+              "qty": "5 g",
+              "alternatives": [
+                {
+                  "it": "Cacao magro in polvere",
+                  "es": "Cacao desgrasado en polvo",
+                  "qty": "5 g"
+                }
+              ]
+            },
+            {
+              "it": "Marmellata - Zuegg",
+              "es": "Mermelada - Zuegg",
+              "qty": "15 g",
+              "alternatives": [
+                {
+                  "it": "Crema Novi - Novi",
+                  "es": "Crema Novi - Novi",
+                  "qty": "20 g"
+                },
+                {
+                  "it": "Succo di ananas conservato",
+                  "es": "Jugo de piña en conserva",
+                  "qty": "150 g"
+                },
+                {
+                  "it": "Crema di Arachidi - La Finestra Sul Cielo",
+                  "es": "Crema de maní - La Finestra Sul Cielo",
+                  "qty": "20 g"
+                }
+              ]
+            },
+            {
+              "it": "Caffe' in tazza",
+              "es": "Café en taza",
+              "qty": "40 g",
+              "alternatives": [
+                {
+                  "it": "Te' in tazza",
+                  "es": "Té en taza",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Tisana in tazza",
+                  "es": "Infusión en taza",
+                  "qty": "100 g"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "morning",
+          "items": [
+            {
+              "it": "Mandorle Sgusciate Bio - Noberasco",
+              "es": "Almendras peladas ecológicas - Noberasco",
+              "qty": "10 g",
+              "alternatives": [
+                {
+                  "it": "Frutta fresca (media)",
+                  "es": "Fruta fresca (porción media)",
+                  "qty": "200 g"
+                },
+                {
+                  "it": "Actimel 0,1 - Actimel",
+                  "es": "Actimel 0,1 - Actimel",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Pistacchi secchi",
+                  "es": "Pistachos secos",
+                  "qty": "10 g"
+                },
+                {
+                  "it": "Grana",
+                  "es": "Queso Grana",
+                  "qty": "30 g"
+                },
+                {
+                  "it": "Parmigiano Reggiano 30 Mesi - Parmareggio",
+                  "es": "Parmigiano Reggiano 30 meses - Parmareggio",
+                  "qty": "40 g"
+                }
+              ]
+            },
+            {
+              "it": "Caffe' in tazza",
+              "es": "Café en taza",
+              "qty": "40 g",
+              "alternatives": [
+                {
+                  "it": "Te' in tazza",
+                  "es": "Té en taza",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Tisana in tazza",
+                  "es": "Infusión en taza",
+                  "qty": "100 g"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "lunch",
+          "items": [
+            {
+              "it": "Riso",
+              "es": "Arroz",
+              "qty": "70 g",
+              "alternatives": [
+                {
+                  "it": "Pasta di semola integrale",
+                  "es": "Pasta integral de sémola",
+                  "qty": "70 g"
+                },
+                {
+                  "it": "Pane di segale biscottato",
+                  "es": "Pan de centeno tostado",
+                  "qty": "70 g"
+                },
+                {
+                  "it": "Crostino Integrale - Buitoni",
+                  "es": "Crostino integral - Buitoni",
+                  "qty": "50 g"
+                },
+                {
+                  "it": "Orzo perlato",
+                  "es": "Cebada perlada",
+                  "qty": "30 g"
+                }
+              ]
+            },
+            {
+              "it": "Yogurt Greco Total 0% - Fage",
+              "es": "Yogur griego Total 0 % - Fage",
+              "qty": "40 g",
+              "alternatives": [
+                {
+                  "it": "Balance - Philadelphia",
+                  "es": "Balance - Philadelphia",
+                  "qty": "30 g"
+                }
+              ]
+            },
+            {
+              "it": "Pistacchi secchi",
+              "es": "Pistachos secos",
+              "qty": "10 g",
+              "alternatives": [
+                {
+                  "it": "Mandorle Sgusciate Bio - Noberasco",
+                  "es": "Almendras peladas ecológicas - Noberasco",
+                  "qty": "10 g"
+                }
+              ]
+            },
+            {
+              "it": "Uova di gallina - intero",
+              "es": "Huevo de gallina entero",
+              "qty": "60 g"
+            },
+            {
+              "it": "Verdure fresche (media)",
+              "es": "Verduras frescas (porción media)",
+              "qty": "200 g"
+            },
+            {
+              "it": "Olio di oliva extra vergine",
+              "es": "Aceite de oliva virgen extra",
+              "qty": "10 g",
+              "alternatives": [
+                {
+                  "it": "Avocado",
+                  "es": "Palta (aguacate)",
+                  "qty": "50 g"
+                }
+              ]
+            }
+          ],
+          "note": {
+            "it": "Pasta con julienne di zucchine mantecata alla Philadelphia o yogurt greco, più granella di pistacchio (o mandorle). Va bene anche la Philadelphia classica. La voce principale in tabella è riso; la pasta figura come alternativa.",
+            "es": "Pasta con zucchini cortado en juliana, mezclada con Philadelphia o yogur griego y pistacho picado (o almendras). También sirve Philadelphia clásica. En la tabla figura arroz como opción principal; la pasta aparece entre sus alternativas."
+          },
+          "recipes": [
+            "zucchini"
+          ]
+        },
+        {
+          "kind": "afternoon",
+          "items": [
+            {
+              "it": "Frutta fresca (media)",
+              "es": "Fruta fresca (porción media)",
+              "qty": "150 g",
+              "alternatives": [
+                {
+                  "it": "Parmigiano Reggiano 30 Mesi - Parmareggio",
+                  "es": "Parmigiano Reggiano 30 meses - Parmareggio",
+                  "qty": "40 g"
+                },
+                {
+                  "it": "Yogurt Bianco Magro - Mila",
+                  "es": "Yogur natural desnatado - Mila",
+                  "qty": "125 g"
+                },
+                {
+                  "it": "Actimel 0,1 - Actimel",
+                  "es": "Actimel 0,1 - Actimel",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Mandorle Sgusciate Bio - Noberasco",
+                  "es": "Almendras peladas ecológicas - Noberasco",
+                  "qty": "10 g"
+                }
+              ]
+            },
+            {
+              "it": "Caffe' in tazza",
+              "es": "Café en taza",
+              "qty": "40 g",
+              "alternatives": [
+                {
+                  "it": "Te' in tazza",
+                  "es": "Té en taza",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Tisana in tazza",
+                  "es": "Infusión en taza",
+                  "qty": "100 g"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "dinner",
+          "items": [
+            {
+              "it": "Panino per hamburger",
+              "es": "Pan para hamburguesa",
+              "qty": "100 g",
+              "alternatives": [
+                {
+                  "it": "friselle",
+                  "es": "Friselle (pan tostado)",
+                  "qty": "60 g"
+                },
+                {
+                  "it": "Patate novelle",
+                  "es": "Papas nuevas",
+                  "qty": "200 g"
+                }
+              ]
+            },
+            {
+              "it": "Hamburger - Amica Natura",
+              "es": "Hamburguesa - Amica Natura",
+              "qty": "150 g",
+              "alternatives": [
+                {
+                  "it": "Pollo lesso in insalata",
+                  "es": "Pollo hervido en ensalada",
+                  "qty": "200 g"
+                },
+                {
+                  "it": "Involtini di manzo",
+                  "es": "Rollitos de carne vacuna",
+                  "qty": "180 g"
+                },
+                {
+                  "it": "Merluzzo al forno",
+                  "es": "Bacalao al horno",
+                  "qty": "200 g"
+                },
+                {
+                  "it": "Alici al limone",
+                  "es": "Anchoas con limón",
+                  "qty": "150 g"
+                },
+                {
+                  "it": "Tonno fresco al forno",
+                  "es": "Atún fresco al horno",
+                  "qty": "140 g"
+                },
+                {
+                  "it": "Ricotta di vacca",
+                  "es": "Ricota de vaca",
+                  "qty": "100 g"
+                }
+              ]
+            },
+            {
+              "it": "Verdure fresche (media)",
+              "es": "Verduras frescas (porción media)",
+              "qty": "200 g"
+            },
+            {
+              "it": "Olio di oliva extra vergine",
+              "es": "Aceite de oliva virgen extra",
+              "qty": "15 g",
+              "alternatives": [
+                {
+                  "it": "Avocado",
+                  "es": "Palta (aguacate)",
+                  "qty": "50 g"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "during_day": [
+        {
+          "it": "Zenzero",
+          "es": "Jengibre",
+          "qty": "3 g",
+          "alternatives": [
+            {
+              "it": "Curcuma",
+              "es": "Cúrcuma",
+              "qty": "1 g"
+            },
+            {
+              "it": "Aglio",
+              "es": "Ajo",
+              "qty": "5 g"
+            },
+            {
+              "it": "Basilico",
+              "es": "Albahaca",
+              "qty": "5 g"
+            },
+            {
+              "it": "Alloro",
+              "es": "Laurel",
+              "qty": "5 g"
+            },
+            {
+              "it": "Salvia",
+              "es": "Salvia",
+              "qty": "5 g"
+            },
+            {
+              "it": "Rosmarino",
+              "es": "Romero",
+              "qty": "5 g"
+            },
+            {
+              "it": "Prezzemolo",
+              "es": "Perejil",
+              "qty": "10 g"
+            },
+            {
+              "it": "Tarassaco o dente di leone",
+              "es": "Diente de león",
+              "qty": "5 g"
+            },
+            {
+              "it": "Cannella",
+              "es": "Canela",
+              "qty": "5 g"
+            },
+            {
+              "it": "Semi di zucca secchi",
+              "es": "Semillas de calabaza secas",
+              "qty": "10 g"
+            }
+          ]
+        },
+        {
+          "it": "Tisana in tazza",
+          "es": "Infusión en taza",
+          "qty": "125 g",
+          "alternatives": [
+            {
+              "it": "Te' in tazza",
+              "es": "Té en taza",
+              "qty": "125 g"
+            }
+          ]
+        },
+        {
+          "it": "Acqua S.Silvestro",
+          "es": "Agua S.Silvestro",
+          "qty": "2200 g",
+          "alternatives": [
+            {
+              "it": "Acqua Lete",
+              "es": "Agua Lete",
+              "qty": "2200 g"
+            },
+            {
+              "it": "Acqua Sangemini",
+              "es": "Agua Sangemini",
+              "qty": "2200 g"
+            },
+            {
+              "it": "Acqua Sveva",
+              "es": "Agua Sveva",
+              "qty": "2200 g"
+            },
+            {
+              "it": "Acqua S.Pellegrino",
+              "es": "Agua S.Pellegrino",
+              "qty": "2200 g"
+            }
+          ]
+        },
+        {
+          "it": "Mais dolce, crudo",
+          "es": "Maíz dulce crudo",
+          "qty": "30 g"
+        },
+        {
+          "it": "Yogurt Greco Total 0% - Fage",
+          "es": "Yogur griego Total 0 % - Fage",
+          "qty": "60 g"
+        }
+      ]
+    },
+    {
+      "id": "fri",
+      "meals": [
+        {
+          "kind": "breakfast",
+          "items": [
+            {
+              "it": "Yogurt Bianco Magro - Mila",
+              "es": "Yogur natural desnatado - Mila",
+              "qty": "170 g",
+              "alternatives": [
+                {
+                  "it": "Yogurt Greco Total 0% - Fage",
+                  "es": "Yogur griego Total 0 % - Fage",
+                  "qty": "170 g"
+                }
+              ]
+            },
+            {
+              "it": "Fette biscottate",
+              "es": "Tostadas tipo biscote",
+              "qty": "40 g",
+              "alternatives": [
+                {
+                  "it": "Integrale - Wasa",
+                  "es": "Wasa integral",
+                  "qty": "50 g"
+                }
+              ]
+            },
+            {
+              "it": "Cacao magro in polvere",
+              "es": "Cacao desgrasado en polvo",
+              "qty": "10 g"
+            },
+            {
+              "it": "Marmellata - Zuegg",
+              "es": "Mermelada - Zuegg",
+              "qty": "15 g",
+              "alternatives": [
+                {
+                  "it": "Crema Novi - Novi",
+                  "es": "Crema Novi - Novi",
+                  "qty": "20 g"
+                },
+                {
+                  "it": "Succo di ananas conservato",
+                  "es": "Jugo de piña en conserva",
+                  "qty": "150 g"
+                },
+                {
+                  "it": "Crema di Arachidi - La Finestra Sul Cielo",
+                  "es": "Crema de maní - La Finestra Sul Cielo",
+                  "qty": "20 g"
+                }
+              ]
+            },
+            {
+              "it": "Caffe' in tazza",
+              "es": "Café en taza",
+              "qty": "40 g",
+              "alternatives": [
+                {
+                  "it": "Te' in tazza",
+                  "es": "Té en taza",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Tisana in tazza",
+                  "es": "Infusión en taza",
+                  "qty": "100 g"
+                }
+              ]
+            }
+          ],
+          "note": {
+            "it": "Prepara un WASA/fette biscottate Misù: bagnare le fette in caffè diluito e leggermente zuccherato. Stratificare fino a terminare gli ingredienti. Top di cacao.",
+            "es": "Prepara un postre tipo tiramisú con Wasa o biscotes: humedece las tostadas en café diluido y ligeramente endulzado. Forma capas hasta utilizar todos los ingredientes y termina con cacao por encima."
+          },
+          "recipes": [
+            "misu"
+          ]
+        },
+        {
+          "kind": "morning",
+          "items": [
+            {
+              "it": "Mandorle Sgusciate Bio - Noberasco",
+              "es": "Almendras peladas ecológicas - Noberasco",
+              "qty": "10 g",
+              "alternatives": [
+                {
+                  "it": "Frutta fresca (media)",
+                  "es": "Fruta fresca (porción media)",
+                  "qty": "200 g"
+                },
+                {
+                  "it": "Actimel 0,1 - Actimel",
+                  "es": "Actimel 0,1 - Actimel",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Pistacchi secchi",
+                  "es": "Pistachos secos",
+                  "qty": "10 g"
+                },
+                {
+                  "it": "Grana",
+                  "es": "Queso Grana",
+                  "qty": "30 g"
+                },
+                {
+                  "it": "Parmigiano Reggiano 30 Mesi - Parmareggio",
+                  "es": "Parmigiano Reggiano 30 meses - Parmareggio",
+                  "qty": "40 g"
+                }
+              ]
+            },
+            {
+              "it": "Caffe' in tazza",
+              "es": "Café en taza",
+              "qty": "40 g",
+              "alternatives": [
+                {
+                  "it": "Te' in tazza",
+                  "es": "Té en taza",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Tisana in tazza",
+                  "es": "Infusión en taza",
+                  "qty": "100 g"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "lunch",
+          "items": [
+            {
+              "it": "Filetti di Tonno al Naturale - Consorcio",
+              "es": "Filetes de atún al natural - Consorcio",
+              "qty": "100 g",
+              "alternatives": [
+                {
+                  "it": "Filetti Salmone Naturale - Asdomar",
+                  "es": "Filetes de salmón al natural - Asdomar",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Polpo",
+                  "es": "Pulpo",
+                  "qty": "230 g"
+                },
+                {
+                  "it": "Cotolette alla milanese",
+                  "es": "Milanesas",
+                  "qty": "150 g"
+                },
+                {
+                  "it": "Braciole di maiale al pomodoro",
+                  "es": "Chuletas de cerdo con tomate",
+                  "qty": "200 g"
+                },
+                {
+                  "it": "Polpette",
+                  "es": "Albóndigas",
+                  "qty": "150 g"
+                },
+                {
+                  "it": "Vitello - filetto",
+                  "es": "Filete de ternera",
+                  "qty": "200 g"
+                },
+                {
+                  "it": "Maiale - legg. -arista",
+                  "es": "Cerdo magro (lomo)",
+                  "qty": "200 g"
+                },
+                {
+                  "it": "Bracioline di manzo al pomodoro",
+                  "es": "Filetitos de carne vacuna con tomate",
+                  "qty": "150 g"
+                },
+                {
+                  "it": "Merluzzo al forno",
+                  "es": "Bacalao al horno",
+                  "qty": "200 g"
+                },
+                {
+                  "it": "Spigola al forno",
+                  "es": "Lubina al horno",
+                  "qty": "200 g"
+                },
+                {
+                  "it": "Salmone alla griglia",
+                  "es": "Salmón a la parrilla",
+                  "qty": "150 g"
+                },
+                {
+                  "it": "Fettuccine di zucchine al sugo di gamberetti",
+                  "es": "Fettuccine de zucchini con salsa de camarones",
+                  "qty": "200 g"
+                }
+              ]
+            },
+            {
+              "it": "Verdure fresche (media)",
+              "es": "Verduras frescas (porción media)",
+              "qty": "200 g"
+            },
+            {
+              "it": "Olio di oliva extra vergine",
+              "es": "Aceite de oliva virgen extra",
+              "qty": "20 g",
+              "alternatives": [
+                {
+                  "it": "Olio di cocco",
+                  "es": "Aceite de coco",
+                  "qty": "20 g"
+                },
+                {
+                  "it": "Avocado",
+                  "es": "Palta (aguacate)",
+                  "qty": "50 g"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "afternoon",
+          "items": [
+            {
+              "it": "Frutta fresca (media)",
+              "es": "Fruta fresca (porción media)",
+              "qty": "150 g",
+              "alternatives": [
+                {
+                  "it": "Parmigiano Reggiano 30 Mesi - Parmareggio",
+                  "es": "Parmigiano Reggiano 30 meses - Parmareggio",
+                  "qty": "40 g"
+                },
+                {
+                  "it": "Yogurt Bianco Magro - Mila",
+                  "es": "Yogur natural desnatado - Mila",
+                  "qty": "125 g"
+                },
+                {
+                  "it": "Actimel 0,1 - Actimel",
+                  "es": "Actimel 0,1 - Actimel",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Mandorle Sgusciate Bio - Noberasco",
+                  "es": "Almendras peladas ecológicas - Noberasco",
+                  "qty": "10 g"
+                }
+              ]
+            },
+            {
+              "it": "Caffe' in tazza",
+              "es": "Café en taza",
+              "qty": "40 g",
+              "alternatives": [
+                {
+                  "it": "Te' in tazza",
+                  "es": "Té en taza",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Tisana in tazza",
+                  "es": "Infusión en taza",
+                  "qty": "100 g"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "dinner",
+          "items": [
+            {
+              "it": "Crostini Integrali - Buitoni",
+              "es": "Crostini integrales - Buitoni",
+              "qty": "50 g",
+              "alternatives": [
+                {
+                  "it": "Pane comune",
+                  "es": "Pan común",
+                  "qty": "80 g"
+                },
+                {
+                  "it": "Piadina",
+                  "es": "Piadina",
+                  "qty": "100 g"
+                }
+              ]
+            },
+            {
+              "it": "Verdure fresche (media)",
+              "es": "Verduras frescas (porción media)",
+              "qty": "200 g"
+            },
+            {
+              "it": "Bresaola",
+              "es": "Bresaola",
+              "qty": "60 g",
+              "alternatives": [
+                {
+                  "it": "Prosciutto cotto, alta qualità - sgrassato",
+                  "es": "Jamón cocido de alta calidad, sin grasa",
+                  "qty": "60 g"
+                },
+                {
+                  "it": "Prosc.crudo di Parma magro",
+                  "es": "Jamón crudo magro de Parma",
+                  "qty": "60 g"
+                }
+              ]
+            },
+            {
+              "it": "Parmigiano Reggiano 30 Mesi - Parmareggio",
+              "es": "Parmigiano Reggiano 30 meses - Parmareggio",
+              "qty": "30 g",
+              "alternatives": [
+                {
+                  "it": "Mozzarella di vacca",
+                  "es": "Mozzarella de vaca",
+                  "qty": "70 g"
+                }
+              ]
+            },
+            {
+              "it": "Olio di oliva extra vergine",
+              "es": "Aceite de oliva virgen extra",
+              "qty": "25 g",
+              "alternatives": [
+                {
+                  "it": "Avocado",
+                  "es": "Palta (aguacate)",
+                  "qty": "80 g"
+                },
+                {
+                  "it": "Olio di cocco",
+                  "es": "Aceite de coco",
+                  "qty": "20 g"
+                }
+              ]
+            }
+          ],
+          "note": {
+            "it": "Taglia dei crostini di pane e biscottali.",
+            "es": "Corta el pan en pequeños trozos y tuéstalos."
+          },
+          "recipes": [
+            "crostini"
+          ]
+        }
+      ],
+      "during_day": [
+        {
+          "it": "Zenzero",
+          "es": "Jengibre",
+          "qty": "3 g",
+          "alternatives": [
+            {
+              "it": "Curcuma",
+              "es": "Cúrcuma",
+              "qty": "1 g"
+            },
+            {
+              "it": "Aglio",
+              "es": "Ajo",
+              "qty": "5 g"
+            },
+            {
+              "it": "Basilico",
+              "es": "Albahaca",
+              "qty": "5 g"
+            },
+            {
+              "it": "Alloro",
+              "es": "Laurel",
+              "qty": "5 g"
+            },
+            {
+              "it": "Salvia",
+              "es": "Salvia",
+              "qty": "5 g"
+            },
+            {
+              "it": "Rosmarino",
+              "es": "Romero",
+              "qty": "5 g"
+            },
+            {
+              "it": "Prezzemolo",
+              "es": "Perejil",
+              "qty": "10 g"
+            },
+            {
+              "it": "Tarassaco o dente di leone",
+              "es": "Diente de león",
+              "qty": "5 g"
+            },
+            {
+              "it": "Cannella",
+              "es": "Canela",
+              "qty": "5 g"
+            },
+            {
+              "it": "Semi di zucca secchi",
+              "es": "Semillas de calabaza secas",
+              "qty": "10 g"
+            }
+          ]
+        },
+        {
+          "it": "Tisana in tazza",
+          "es": "Infusión en taza",
+          "qty": "125 g",
+          "alternatives": [
+            {
+              "it": "Te' in tazza",
+              "es": "Té en taza",
+              "qty": "125 g"
+            }
+          ]
+        },
+        {
+          "it": "Acqua S.Silvestro",
+          "es": "Agua S.Silvestro",
+          "qty": "2200 g",
+          "alternatives": [
+            {
+              "it": "Acqua Lete",
+              "es": "Agua Lete",
+              "qty": "2200 g"
+            },
+            {
+              "it": "Acqua Sangemini",
+              "es": "Agua Sangemini",
+              "qty": "2200 g"
+            },
+            {
+              "it": "Acqua Sveva",
+              "es": "Agua Sveva",
+              "qty": "2200 g"
+            },
+            {
+              "it": "Acqua S.Pellegrino",
+              "es": "Agua S.Pellegrino",
+              "qty": "2200 g"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sat",
+      "meals": [
+        {
+          "kind": "breakfast",
+          "items": [
+            {
+              "it": "Caffe' in tazza",
+              "es": "Café en taza",
+              "qty": "100 g"
+            },
+            {
+              "it": "Marmellata - Zuegg",
+              "es": "Mermelada - Zuegg",
+              "qty": "15 g",
+              "alternatives": [
+                {
+                  "it": "Crema Novi - Novi",
+                  "es": "Crema Novi - Novi",
+                  "qty": "20 g"
+                },
+                {
+                  "it": "Succo di ananas conservato",
+                  "es": "Jugo de piña en conserva",
+                  "qty": "150 g"
+                },
+                {
+                  "it": "Crema di Arachidi - La Finestra Sul Cielo",
+                  "es": "Crema de maní - La Finestra Sul Cielo",
+                  "qty": "20 g"
+                }
+              ]
+            },
+            {
+              "it": "Caffe' in tazza",
+              "es": "Café en taza",
+              "qty": "40 g",
+              "alternatives": [
+                {
+                  "it": "Te' in tazza",
+                  "es": "Té en taza",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Tisana in tazza",
+                  "es": "Infusión en taza",
+                  "qty": "100 g"
+                }
+              ]
+            }
+          ],
+          "recipes": [
+            "pancakes"
+          ]
+        },
+        {
+          "kind": "morning",
+          "items": [
+            {
+              "it": "Caffe' in tazza",
+              "es": "Café en taza",
+              "qty": "40 g",
+              "alternatives": [
+                {
+                  "it": "Te' in tazza",
+                  "es": "Té en taza",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Tisana in tazza",
+                  "es": "Infusión en taza",
+                  "qty": "100 g"
+                }
+              ]
+            }
+          ],
+          "note": {
+            "it": "Non hai spuntino. Nel documento compare comunque una voce di caffè (40 g) con alternative.",
+            "es": "No hay colación. No obstante, en el documento figura un café (40 g) con alternativas."
+          }
+        },
+        {
+          "kind": "lunch",
+          "items": [
+            {
+              "it": "Hamburger di ceci",
+              "es": "Hamburguesa de garbanzos",
+              "qty": "140 g",
+              "alternatives": [
+                {
+                  "it": "Ceci secchi",
+                  "es": "Garbanzos secos",
+                  "qty": "50 g"
+                },
+                {
+                  "it": "Lenticchie decorticate",
+                  "es": "Lentejas peladas",
+                  "qty": "50 g"
+                },
+                {
+                  "it": "Pasta di legume",
+                  "es": "Pasta de legumbres",
+                  "qty": "60 g"
+                },
+                {
+                  "it": "Piselli freschi",
+                  "es": "Arvejas frescas (guisantes)",
+                  "qty": "270 g"
+                },
+                {
+                  "it": "Fagioli - Borlotti secchi",
+                  "es": "Porotos borlotti secos",
+                  "qty": "50 g"
+                },
+                {
+                  "it": "Uova di gallina - intero",
+                  "es": "Huevo de gallina entero",
+                  "qty": "60 g"
+                }
+              ]
+            },
+            {
+              "it": "Verdure fresche (media)",
+              "es": "Verduras frescas (porción media)",
+              "qty": "200 g"
+            },
+            {
+              "it": "Olio di oliva extra vergine",
+              "es": "Aceite de oliva virgen extra",
+              "qty": "15 g",
+              "alternatives": [
+                {
+                  "it": "Avocado",
+                  "es": "Palta (aguacate)",
+                  "qty": "50 g"
+                }
+              ]
+            }
+          ],
+          "recipes": [
+            "ceci"
+          ]
+        },
+        {
+          "kind": "afternoon",
+          "items": [
+            {
+              "it": "Frutta fresca (media)",
+              "es": "Fruta fresca (porción media)",
+              "qty": "150 g",
+              "alternatives": [
+                {
+                  "it": "Parmigiano Reggiano 30 Mesi - Parmareggio",
+                  "es": "Parmigiano Reggiano 30 meses - Parmareggio",
+                  "qty": "40 g"
+                },
+                {
+                  "it": "Yogurt Bianco Magro - Mila",
+                  "es": "Yogur natural desnatado - Mila",
+                  "qty": "125 g"
+                },
+                {
+                  "it": "Actimel 0,1 - Actimel",
+                  "es": "Actimel 0,1 - Actimel",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Mandorle Sgusciate Bio - Noberasco",
+                  "es": "Almendras peladas ecológicas - Noberasco",
+                  "qty": "10 g"
+                }
+              ]
+            },
+            {
+              "it": "Caffe' in tazza",
+              "es": "Café en taza",
+              "qty": "40 g",
+              "alternatives": [
+                {
+                  "it": "Te' in tazza",
+                  "es": "Té en taza",
+                  "qty": "100 g"
+                },
+                {
+                  "it": "Tisana in tazza",
+                  "es": "Infusión en taza",
+                  "qty": "100 g"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "dinner",
+          "items": [],
+          "note": {
+            "it": "Una pizza semplice. Non è indicata una quantità né la composizione.",
+            "es": "Una pizza sencilla. No se especifica la cantidad ni su composición."
+          }
+        }
+      ],
+      "during_day": []
+    }
+  ],
+  "recipes": [
+    {
+      "id": "egg",
+      "title": {
+        "it": "Frittata, verdure e crostini",
+        "es": "Tortilla, verduras y tostadas"
+      },
+      "day": "tue",
+      "meal": "lunch",
+      "type": "suggestion",
+      "details": {
+        "it": "Corrispondono a 2 uova 120 g di frittata. Alle zucchine è solo un esempio. Puoi inserire le verdure che preferisci o mangiarle a parte con la quantità del pane riportato: tagliare a crostini, biscottare ed inserire nell’insalata.",
+        "es": "120 g de tortilla corresponden a 2 huevos. La tortilla de zucchini es solo un ejemplo: puedes usar las verduras que prefieras o comerlas aparte, con la cantidad de pan indicada, cortado en cubitos, tostado e incorporado a la ensalada."
+      }
+    },
+    {
+      "id": "zucchini",
+      "title": {
+        "it": "Pasta con zucchine, yogurt e pistacchio",
+        "es": "Pasta con zucchini, yogur y pistacho"
+      },
+      "day": "thu",
+      "meal": "lunch",
+      "type": "suggestion",
+      "details": {
+        "it": "Pasta con julienne di zucchine mantecata alla Philadelphia o yogurt greco, più granella di pistacchio (o mandorle). Va bene anche la Philadelphia classica. La voce principale in tabella è riso; la pasta figura come alternativa.",
+        "es": "Pasta con zucchini cortado en juliana, mezclada con Philadelphia o yogur griego y pistacho picado (o almendras). También sirve Philadelphia clásica. En la tabla figura arroz como opción principal; la pasta aparece entre sus alternativas."
+      }
+    },
+    {
+      "id": "misu",
+      "title": {
+        "it": "Wasa / fette biscottate Misù",
+        "es": "Postre tipo tiramisú con Wasa / biscotes"
+      },
+      "day": "fri",
+      "meal": "breakfast",
+      "type": "instructions",
+      "details": {
+        "it": "Prepara un WASA/fette biscottate Misù: bagnare le fette in caffè diluito e leggermente zuccherato. Stratificare fino a terminare gli ingredienti. Top di cacao.",
+        "es": "Prepara un postre tipo tiramisú con Wasa o biscotes: humedece las tostadas en café diluido y ligeramente endulzado. Forma capas hasta utilizar todos los ingredientes y termina con cacao por encima."
+      }
+    },
+    {
+      "id": "crostini",
+      "title": {
+        "it": "Crostini di pane tostato",
+        "es": "Tostaditas de pan"
+      },
+      "day": "fri",
+      "meal": "dinner",
+      "type": "instructions",
+      "details": {
+        "it": "Taglia dei crostini di pane e biscottali.",
+        "es": "Corta el pan en pequeños trozos y tuéstalos."
+      }
+    },
+    {
+      "id": "pancakes",
+      "title": {
+        "it": "Pancakes",
+        "es": "Panqueques (pancakes)"
+      },
+      "day": "sat",
+      "meal": "breakfast",
+      "type": "recipe",
+      "ingredients": [
+        {
+          "it": "150 ml di latte scremato o vegetale",
+          "es": "150 ml de leche descremada o vegetal"
+        },
+        {
+          "it": "Farina di riso o d’avena: tra 80 e 120 g (per rendere omogeneo il composto)",
+          "es": "Harina de arroz o avena: entre 80 y 120 g (para homogeneizar la mezcla)"
+        },
+        {
+          "it": "1 uovo",
+          "es": "1 huevo"
+        },
+        {
+          "it": "1 cucchiaino di bicarbonato",
+          "es": "1 cucharadita de bicarbonato"
+        },
+        {
+          "it": "1 cucchiaino di zucchero integrale di canna o muscovado",
+          "es": "1 cucharadita de azúcar integral de caña o mascabado"
+        },
+        {
+          "it": "1 pizzico di sale",
+          "es": "1 pizca de sal"
+        }
+      ],
+      "steps": [
+        {
+          "it": "In un recipiente, mischiare la farina di riso, lo zucchero, il bicarbonato e il pizzico di sale.",
+          "es": "En un recipiente, mezclar la harina de arroz, el azúcar, el bicarbonato y la pizca de sal."
+        },
+        {
+          "it": "Sbattere i tuorli in un piatto e unirli al composto di farina; aggiungere il latte mescolando con cura.",
+          "es": "Batir las yemas en un plato y unirlas a la mezcla de harina; añadir la leche mientras se mezcla cuidadosamente."
+        },
+        {
+          "it": "Montare l’albume e incorporarlo al composto.",
+          "es": "Batir la clara a punto nieve e incorporarla a la mezcla."
+        },
+        {
+          "it": "Versare l’impasto con un mestolo e cuocere in una padella antiaderente.",
+          "es": "Verter la mezcla con un cucharón y cocinarla en una sartén antiadherente."
+        }
+      ],
+      "note": {
+        "it": "Se desideri puoi inserire il caffè. È possibile conservare i pancakes in frigorifero e prenderli al bisogno. È possibile aggiungere la frutta prevista nel piano. Il documento non specifica il numero di porzioni.",
+        "es": "Si lo deseas, puedes incorporar café. Los panqueques se pueden conservar en la heladera y consumir cuando sea necesario. Se puede añadir la fruta prevista en el plan. El documento no especifica la cantidad de porciones."
+      }
+    },
+    {
+      "id": "ceci",
+      "title": {
+        "it": "Hamburger di ceci",
+        "es": "Hamburguesas de garbanzos"
+      },
+      "day": "sat",
+      "meal": "lunch",
+      "type": "recipe",
+      "ingredients": [
+        {
+          "it": "Ceci bolliti (quantità non specificata nella ricetta)",
+          "es": "Garbanzos hervidos (cantidad no especificada en la receta)"
+        },
+        {
+          "it": "Pancarré a cubetti (quantità non specificata)",
+          "es": "Pan de molde cortado en cubos (cantidad no especificada)"
+        },
+        {
+          "it": "Scalogno (quantità non specificata)",
+          "es": "Chalota (cantidad no especificada)"
+        },
+        {
+          "it": "Patata bollita (quantità non specificata)",
+          "es": "Papa hervida (cantidad no especificada)"
+        },
+        {
+          "it": "Sale, timo e un filo d’olio (quantità non specificate)",
+          "es": "Sal, tomillo y un chorrito de aceite (cantidades no especificadas)"
+        },
+        {
+          "it": "Semi di sesamo o spezie a piacere (quantità non specificate)",
+          "es": "Semillas de sésamo o especias a gusto (cantidades no especificadas)"
+        }
+      ],
+      "steps": [
+        {
+          "it": "Frullare i ceci bolliti con pancarré a cubetti, scalogno, patata bollita, sale, timo e un filo d’olio fino a ottenere un impasto granuloso.",
+          "es": "Procesar los garbanzos hervidos con pan de molde en cubos, chalota, papa hervida, sal, tomillo y un chorrito de aceite hasta obtener una mezcla granulada."
+        },
+        {
+          "it": "Mettere da parte circa metà dell’impasto e frullare l’altra metà fino a ottenere un composto liscio e omogeneo.",
+          "es": "Reservar aproximadamente la mitad de la mezcla y seguir procesando la otra mitad hasta obtener una preparación lisa y homogénea."
+        },
+        {
+          "it": "Unire i due impasti e amalgamare.",
+          "es": "Unir ambas partes y mezclarlas."
+        },
+        {
+          "it": "Bagnarsi le mani e formare gli hamburger. Cospargere la superficie con semi di sesamo o spezie a piacere.",
+          "es": "Humedecerse las manos y formar las hamburguesas. Cubrir la superficie con semillas de sésamo o especias a gusto."
+        },
+        {
+          "it": "Cuocere in una padella antiaderente o su una piastra leggermente unta per circa 4 minuti, girando gli hamburger su entrambi i lati.",
+          "es": "Cocinar en una sartén antiadherente o plancha ligeramente aceitada durante unos 4 minutos, dándoles vuelta para cocinar ambos lados."
+        }
+      ],
+      "note": {
+        "it": "Nel pranzo del sabato la porzione indicata è di 140 g di hamburger di ceci; il documento non dettaglia il peso dei singoli ingredienti della ricetta.",
+        "es": "En el almuerzo del sábado se indican 140 g de hamburguesa de garbanzos; el documento no detalla los pesos de cada ingrediente de la receta."
+      }
+    }
+  ],
+  "general": [
+    {
+      "it": "Tutti gli alimenti devono essere pesati a crudo e al netto degli scarti.",
+      "es": "Todos los alimentos deben pesarse crudos y descontando las partes no comestibles."
+    },
+    {
+      "it": "Metodi di cottura: lesso, vapore, piastra, forno (anche a microonde) e crudo laddove possibile. Sono possibili estratti e centrifugati di frutta e verdura. Non sono previsti né fritti né soffritti.",
+      "es": "Métodos de cocción: hervido, al vapor, a la plancha, al horno (también microondas) y crudo cuando sea posible. Se permiten extractos y jugos centrifugados de frutas y verduras. No se contemplan frituras ni sofritos."
+    },
+    {
+      "it": "Il sale consigliato non deve superare la dose di 6 g al giorno. Sì al sale marino integrale.",
+      "es": "La cantidad recomendada de sal no debe superar los 6 g diarios. Se admite sal marina integral."
+    },
+    {
+      "it": "Prepara le pietanze servendoti delle spezie consigliate nel piano alimentare.",
+      "es": "Prepara las comidas utilizando las especias recomendadas en el plan alimentario."
+    },
+    {
+      "it": "Il documento indica che si possono consumare tisane ai mirtilli, zenzero, curcuma e tè verde, attribuendo loro effetti tireostimolanti.",
+      "es": "El documento indica que pueden consumirse infusiones de arándanos, jengibre, cúrcuma y té verde y les atribuye efectos estimulantes de la tiroides."
+    },
+    {
+      "it": "Le marche sono puramente indicative.",
+      "es": "Las marcas comerciales son únicamente orientativas."
+    }
+  ],
+  "generalDays": [
+    "mon",
+    "tue",
+    "wed",
+    "thu",
+    "fri"
+  ]
+}

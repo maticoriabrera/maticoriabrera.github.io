@@ -1567,7 +1567,7 @@
     "instructor": "Martínez, Luis",
     "duration": "22 hs",
     "skill": "Django",
-    "thumbnail": "./assets/img/certificates/2022.04.22 Platzi - Basic Course Of Programming In Django - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2022.04.22 Platzi - Basic Course Of Programming In Django - Thumbnail.jpg",
     "title_es": "Curso básico de programación en Django",
     "title_it": "Corso base di programmazione in Django"
   },
@@ -1579,7 +1579,7 @@
     "instructor": "Lopez Araujo, Enrique Alexis",
     "duration": "14 hs",
     "skill": "AWS",
-    "thumbnail": "./assets/img/certificates/2022.04.19 Platzi - Introduction To AWS Cloud Computing Fundamentals Course - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2022.04.19 Platzi - Introduction To AWS Cloud Computing Fundamentals Course - Thumbnail.jpg",
     "title_es": "Curso introductorio a fundamentos de AWS Cloud Computing",
     "title_it": "Corso introduttivo ai fondamenti di AWS Cloud Computing"
   },
@@ -1591,7 +1591,7 @@
     "instructor": "De Granda, Diego",
     "duration": "18 hs",
     "skill": "Front-End",
-    "thumbnail": "./assets/img/certificates/2022.04.18 Platzi - FrontEnd Debugging With Chrome DevTools - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2022.04.18 Platzi - FrontEnd Debugging With Chrome DevTools - Thumbnail.jpg",
     "title_es": "Depuración Frontend con Chrome DevTools",
     "title_it": "Debugging Frontend con Chrome DevTools"
   },
@@ -1603,7 +1603,7 @@
     "instructor": "Molina, Nicolas",
     "duration": "9 hs",
     "skill": "Back-End",
-    "thumbnail": "./assets/img/certificates/2022.04.15 Platzi - Introduction To Backend Development Course - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2022.04.15 Platzi - Introduction To Backend Development Course - Thumbnail.jpg",
     "title_es": "Curso introductorio al desarrollo Backend",
     "title_it": "Corso introduttivo allo sviluppo Backend"
   },
@@ -1615,7 +1615,7 @@
     "instructor": "Devars, Enrique",
     "duration": "11 hs",
     "skill": "Back-End",
-    "thumbnail": "./assets/img/certificates/2022.04.14 Platzi - Introduction To The Terminal And Command Line Course - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2022.04.14 Platzi - Introduction To The Terminal And Command Line Course - Thumbnail.jpg",
     "title_es": "Curso introductorio a la terminal y línea de comandos",
     "title_it": "Corso introduttivo al terminale e alla riga di comando"
   },

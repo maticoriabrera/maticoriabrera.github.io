@@ -1293,7 +1293,7 @@ body.video-modal-open{ overflow: hidden; }
     content: "";
     position: absolute;
     inset: 0;
-    background: url("../img/side-fx-waves.svg") center bottom / 100% 100% no-repeat;
+    background: url("../img/sidebar/side-fx-waves.svg") center bottom / 100% 100% no-repeat;
   }
 
   .side-fx__art::before{

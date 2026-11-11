@@ -642,11 +642,6 @@ window.LESSONS = [
     "abilitata": true,
     "documenti": [
       {
-        "src": "assets/documenti/lezione-05/pagina-01.png",
-        "miniatura": "assets/miniature/lezione-05/pagina-01.jpg",
-        "formato": "orizzontale"
-      },
-      {
         "src": "assets/documenti/lezione-05/pagina-02.png",
         "miniatura": "assets/miniature/lezione-05/pagina-02.jpg",
         "formato": "orizzontale"
@@ -699,16 +694,6 @@ window.LESSONS = [
       {
         "src": "assets/documenti/lezione-05/pagina-12.png",
         "miniatura": "assets/miniature/lezione-05/pagina-12.jpg",
-        "formato": "orizzontale"
-      },
-      {
-        "src": "assets/documenti/lezione-05/pagina-13.png",
-        "miniatura": "assets/miniature/lezione-05/pagina-13.jpg",
-        "formato": "orizzontale"
-      },
-      {
-        "src": "assets/documenti/lezione-05/pagina-14.png",
-        "miniatura": "assets/miniature/lezione-05/pagina-14.jpg",
         "formato": "orizzontale"
       },
       {
@@ -803,66 +788,6 @@ window.LESSONS = [
     "descrizione": "Gioco sul passato prossimo ed esercizi di ripasso dal libro.",
     "abilitata": true,
     "documenti": [
-      {
-        "src": "assets/documenti/lezione-06/pagina-01.png",
-        "miniatura": "assets/miniature/lezione-06/pagina-01.jpg",
-        "formato": "orizzontale"
-      },
-      {
-        "src": "assets/documenti/lezione-06/pagina-02.png",
-        "miniatura": "assets/miniature/lezione-06/pagina-02.jpg",
-        "formato": "orizzontale"
-      },
-      {
-        "src": "assets/documenti/lezione-06/pagina-03.png",
-        "miniatura": "assets/miniature/lezione-06/pagina-03.jpg",
-        "formato": "orizzontale"
-      },
-      {
-        "src": "assets/documenti/lezione-06/pagina-04.png",
-        "miniatura": "assets/miniature/lezione-06/pagina-04.jpg",
-        "formato": "orizzontale"
-      },
-      {
-        "src": "assets/documenti/lezione-06/pagina-05.png",
-        "miniatura": "assets/miniature/lezione-06/pagina-05.jpg",
-        "formato": "orizzontale"
-      },
-      {
-        "src": "assets/documenti/lezione-06/pagina-06.png",
-        "miniatura": "assets/miniature/lezione-06/pagina-06.jpg",
-        "formato": "orizzontale"
-      },
-      {
-        "src": "assets/documenti/lezione-06/pagina-07.png",
-        "miniatura": "assets/miniature/lezione-06/pagina-07.jpg",
-        "formato": "orizzontale"
-      },
-      {
-        "src": "assets/documenti/lezione-06/pagina-08.png",
-        "miniatura": "assets/miniature/lezione-06/pagina-08.jpg",
-        "formato": "orizzontale"
-      },
-      {
-        "src": "assets/documenti/lezione-06/pagina-09.png",
-        "miniatura": "assets/miniature/lezione-06/pagina-09.jpg",
-        "formato": "orizzontale"
-      },
-      {
-        "src": "assets/documenti/lezione-06/pagina-10.png",
-        "miniatura": "assets/miniature/lezione-06/pagina-10.jpg",
-        "formato": "orizzontale"
-      },
-      {
-        "src": "assets/documenti/lezione-06/pagina-11.png",
-        "miniatura": "assets/miniature/lezione-06/pagina-11.jpg",
-        "formato": "orizzontale"
-      },
-      {
-        "src": "assets/documenti/lezione-06/pagina-12.png",
-        "miniatura": "assets/miniature/lezione-06/pagina-12.jpg",
-        "formato": "orizzontale"
-      },
       {
         "src": "assets/documenti/lezione-06/pagina-13.png",
         "miniatura": "assets/miniature/lezione-06/pagina-13.jpg",

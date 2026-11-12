@@ -32,6 +32,7 @@
 
   // Ogni lezione possiede un elenco indipendente di fotografie delle fonti.
   let viewerDocuments = [];
+  let viewerKind = "documento";
   let viewerIndex = 0;
   let viewerZoom = 1;
   let viewerTrigger = null;
@@ -358,13 +359,27 @@
   function renderDocumentGallery(lesson) {
     const docs = Array.isArray(lesson.documenti) ? lesson.documenti : [];
     const gallery = byId('lesson-gallery');
-    viewerDocuments = docs;
     gallery.hidden = docs.length === 0;
     byId('gallery-track').innerHTML = docs.map((doc,i)=>
       `<button class="gallery-thumb${doc.formato==='orizzontale'?' gallery-thumb--wide':''}" type="button" data-document-index="${i}" aria-label="Apri il documento originale ${i+1} di ${docs.length}" title="Apri documento ${i+1}"><img src="${escapeHtml(doc.miniatura)}" alt="" loading="lazy" decoding="async" draggable="false"></button>`
     ).join('');
     byId('gallery-track').querySelectorAll('[data-document-index]').forEach(button => {
-      button.addEventListener('click',() => openViewer(Number(button.dataset.documentIndex),button));
+      button.addEventListener('click',() => openViewer(Number(button.dataset.documentIndex),button,docs,"documento"));
+    });
+  }
+
+  // Le infografiche sono indipendenti dalle fotografie originali.
+  // src e miniatura possono coincidere; per sostituire i file, modificare data.js.
+  function renderInfographicGallery(lesson) {
+    const items = Array.isArray(lesson.infografiche) ? lesson.infografiche : [];
+    const track = byId('infographic-track');
+    const section = track.closest('.lesson-infographics');
+    section.hidden = items.length === 0;
+    track.innerHTML = items.map((item, i) =>
+      `<button class="gallery-thumb" type="button" data-infographic-index="${i}" aria-label="Apri infografica ${i+1} di ${items.length}" title="Apri infografica ${i+1}"><img src="${escapeHtml(item.miniatura || item.src)}" alt="" loading="lazy" decoding="async" draggable="false"></button>`
+    ).join('');
+    track.querySelectorAll('[data-infographic-index]').forEach(button => {
+      button.addEventListener('click', () => openViewer(Number(button.dataset.infographicIndex), button, items, 'infografica'));
     });
   }
 
@@ -402,22 +417,24 @@
     viewerIndex = index;
     viewerZoom = 1;
     const doc = viewerDocuments[index];
-    viewerImage.alt = `Documento originale ${index+1} di ${viewerDocuments.length}`;
+    viewerImage.alt = `${viewerKind === "infografica" ? "Infografica" : "Documento originale"} ${index+1} di ${viewerDocuments.length}`;
     viewerNaturalWidth=0;
     viewerNaturalHeight=0;
     viewerImage.onload = () => {
       viewerNaturalWidth = viewerImage.naturalWidth;
       viewerNaturalHeight = viewerImage.naturalHeight;
-      byId('viewer-message').textContent = `Documento ${index+1} di ${viewerDocuments.length}`;
+      byId('viewer-message').textContent = `${viewerKind === "infografica" ? "Infografica" : "Documento"} ${index+1} di ${viewerDocuments.length}`;
       fitViewerImage();
     };
     viewerImage.onerror = () => {
-      byId('viewer-message').textContent = 'Impossibile caricare il documento.';
+      byId('viewer-message').textContent = 'Impossibile caricare l’immagine.';
     };
     viewerImage.src = doc.src;
     refreshViewerControls();
   }
-  function openViewer(index,trigger) {
+  function openViewer(index,trigger,items,kind) {
+    viewerDocuments = items;
+    viewerKind = kind;
     if (index < 0 || index >= viewerDocuments.length) return;
     viewerTrigger = trigger;
     viewer.hidden = false;
@@ -450,6 +467,7 @@
     if (!template) throw new Error('Manca il materiale della lezione ' + lesson.id);
     byId('lesson-content').replaceChildren(template.content.cloneNode(true));
     renderDocumentGallery(lesson);
+    renderInfographicGallery(lesson);
     byId('lesson-grammar').innerHTML=lesson.grammatica.map(row=>{
       const t=topicById[row.id];
       if(!t) return '';

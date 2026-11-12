@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="794" height="1123" viewBox="0 0 794 1123" role="img" aria-label="Segnaposto infografica 01, lezione 08">
+  <rect width="794" height="1123" fill="#f8fbfe"/>
+  <rect x="35" y="35" width="724" height="1053" rx="18" fill="white" stroke="#b8cfe3" stroke-width="3"/>
+  <rect x="35" y="35" width="724" height="145" rx="18" fill="#17466e"/>
+  <rect x="35" y="150" width="724" height="30" fill="#17466e"/>
+  <text x="397" y="102" font-family="Arial,Helvetica,sans-serif" font-size="40" font-weight="bold" text-anchor="middle" fill="#fff">INFOGRAFICA 01</text>
+  <text x="397" y="154" font-family="Arial,Helvetica,sans-serif" font-size="25" text-anchor="middle" fill="#dbeaf8">LEZIONE 08</text>
+  <rect x="104" y="285" width="586" height="540" rx="26" fill="#eaf3fa" stroke="#c8dceb" stroke-width="3" stroke-dasharray="14 12"/>
+  <circle cx="397" cy="480" r="75" fill="#cbdff0"/>
+  <path d="M360 480l26 26 51-58" stroke="#376a92" stroke-width="15" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="397" y="633" font-family="Arial,Helvetica,sans-serif" font-size="33" font-weight="bold" text-anchor="middle" fill="#17466e">SEGNAPOSTO</text>
+  <text x="397" y="684" font-family="Arial,Helvetica,sans-serif" font-size="23" text-anchor="middle" fill="#45627b">Sostituire con l’infografica definitiva</text>
+  <text x="397" y="1005" font-family="Arial,Helvetica,sans-serif" font-size="22" text-anchor="middle" fill="#657e94">Formato verticale A4 · 210 × 297 mm</text>
+</svg>

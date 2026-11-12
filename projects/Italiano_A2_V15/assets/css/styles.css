@@ -271,3 +271,7 @@ body.viewer-open { overflow: hidden; }
 
 /* V14: illustrazioni isolate con testo di studio visibile, senza rinvio obbligatorio alle foto. */
 .body-vocab-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:14px;margin:18px 0}.body-vocab-item{display:flex;align-items:flex-start;gap:14px;border:1px solid #d4dfe6;border-radius:12px;padding:12px;background:#fff;min-width:0}.body-vocab-item img{width:110px;height:140px;object-fit:contain;flex-shrink:0;background:#fafafa;border-radius:8px}.body-vocab-item div{min-width:0;overflow-wrap:anywhere}.body-vocab-item strong{display:block}.body-vocab-item small{display:block;color:#566675;margin-top:5px}.body-vocab-item p{margin:8px 0 0}.vocab-exception{font-size:.88rem;line-height:1.45;color:#405e6b}.document-box blockquote{padding:12px 18px;border-left:4px solid #487cab;background:#f1f6fa;margin:12px 0}@media(max-width:550px){.body-vocab-grid{grid-template-columns:1fr}.body-vocab-item img{width:92px;height:126px}}
+
+/* Infografiche: stesso visore dei documenti, ma galleria indipendente. */
+.lesson-infographics[hidden] { display: none; }
+.infographic-track { margin-top: 8px; }

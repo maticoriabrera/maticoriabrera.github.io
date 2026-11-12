@@ -5,6 +5,20 @@ window.LESSONS = [
     "data": "6 ottobre 2026",
     "descrizione": "Riconoscimento delle forme grammaticali nelle presentazioni di Li e Marta.",
     "abilitata": true,
+    "infografiche": [
+      {
+        "src": "assets/infografiche/lezione-01/infografica-01.svg",
+        "miniatura": "assets/infografiche/lezione-01/infografica-01.svg"
+      },
+      {
+        "src": "assets/infografiche/lezione-01/infografica-02.svg",
+        "miniatura": "assets/infografiche/lezione-01/infografica-02.svg"
+      },
+      {
+        "src": "assets/infografiche/lezione-01/infografica-03.svg",
+        "miniatura": "assets/infografiche/lezione-01/infografica-03.svg"
+      }
+    ],
     "documenti": [
       {
         "src": "assets/documenti/lezione-01/01-mi-presento.jpg",
@@ -152,6 +166,20 @@ window.LESSONS = [
     "data": "8 ottobre 2026",
     "descrizione": "Role play in Questura, coniugazioni al presente e descrizione della città.",
     "abilitata": true,
+    "infografiche": [
+      {
+        "src": "assets/infografiche/lezione-02/infografica-01.svg",
+        "miniatura": "assets/infografiche/lezione-02/infografica-01.svg"
+      },
+      {
+        "src": "assets/infografiche/lezione-02/infografica-02.svg",
+        "miniatura": "assets/infografiche/lezione-02/infografica-02.svg"
+      },
+      {
+        "src": "assets/infografiche/lezione-02/infografica-03.svg",
+        "miniatura": "assets/infografiche/lezione-02/infografica-03.svg"
+      }
+    ],
     "documenti": [
       {
         "src": "assets/documenti/lezione-02/diapositiva-02.png",
@@ -354,6 +382,20 @@ window.LESSONS = [
     "data": "13 ottobre 2026",
     "descrizione": "Domande e risposte, aggettivi e pronomi possessivi, provenienza e preposizioni.",
     "abilitata": true,
+    "infografiche": [
+      {
+        "src": "assets/infografiche/lezione-03/infografica-01.svg",
+        "miniatura": "assets/infografiche/lezione-03/infografica-01.svg"
+      },
+      {
+        "src": "assets/infografiche/lezione-03/infografica-02.svg",
+        "miniatura": "assets/infografiche/lezione-03/infografica-02.svg"
+      },
+      {
+        "src": "assets/infografiche/lezione-03/infografica-03.svg",
+        "miniatura": "assets/infografiche/lezione-03/infografica-03.svg"
+      }
+    ],
     "documenti": [
       {
         "src": "assets/documenti/lezione-03/diapositiva-02.png",
@@ -503,6 +545,20 @@ window.LESSONS = [
     "data": "15 ottobre 2026",
     "descrizione": "Articoli, dimostrativi, possessivi e geografia dell’Europa.",
     "abilitata": true,
+    "infografiche": [
+      {
+        "src": "assets/infografiche/lezione-04/infografica-01.svg",
+        "miniatura": "assets/infografiche/lezione-04/infografica-01.svg"
+      },
+      {
+        "src": "assets/infografiche/lezione-04/infografica-02.svg",
+        "miniatura": "assets/infografiche/lezione-04/infografica-02.svg"
+      },
+      {
+        "src": "assets/infografiche/lezione-04/infografica-03.svg",
+        "miniatura": "assets/infografiche/lezione-04/infografica-03.svg"
+      }
+    ],
     "documenti": [
       {
         "src": "assets/documenti/lezione-04/diapositiva-02.jpg",
@@ -640,6 +696,20 @@ window.LESSONS = [
     "data": "20 ottobre 2026",
     "descrizione": "Il passato prossimo: ausiliari, participi e Armadio dei verbi.",
     "abilitata": true,
+    "infografiche": [
+      {
+        "src": "assets/infografiche/lezione-05/infografica-01.svg",
+        "miniatura": "assets/infografiche/lezione-05/infografica-01.svg"
+      },
+      {
+        "src": "assets/infografiche/lezione-05/infografica-02.svg",
+        "miniatura": "assets/infografiche/lezione-05/infografica-02.svg"
+      },
+      {
+        "src": "assets/infografiche/lezione-05/infografica-03.svg",
+        "miniatura": "assets/infografiche/lezione-05/infografica-03.svg"
+      }
+    ],
     "documenti": [
       {
         "src": "assets/documenti/lezione-05/pagina-02.png",
@@ -787,6 +857,20 @@ window.LESSONS = [
     "data": "22 ottobre 2026",
     "descrizione": "Gioco sul passato prossimo ed esercizi di ripasso dal libro.",
     "abilitata": true,
+    "infografiche": [
+      {
+        "src": "assets/infografiche/lezione-06/infografica-01.svg",
+        "miniatura": "assets/infografiche/lezione-06/infografica-01.svg"
+      },
+      {
+        "src": "assets/infografiche/lezione-06/infografica-02.svg",
+        "miniatura": "assets/infografiche/lezione-06/infografica-02.svg"
+      },
+      {
+        "src": "assets/infografiche/lezione-06/infografica-03.svg",
+        "miniatura": "assets/infografiche/lezione-06/infografica-03.svg"
+      }
+    ],
     "documenti": [
       {
         "src": "assets/documenti/lezione-06/pagina-13.png",
@@ -904,6 +988,20 @@ window.LESSONS = [
     "data": "27 ottobre 2026",
     "descrizione": "Correzione del passato prossimo, routine quotidiana, verbi riflessivi, andarsene, salire e uscire.",
     "abilitata": true,
+    "infografiche": [
+      {
+        "src": "assets/infografiche/lezione-07/infografica-01.svg",
+        "miniatura": "assets/infografiche/lezione-07/infografica-01.svg"
+      },
+      {
+        "src": "assets/infografiche/lezione-07/infografica-02.svg",
+        "miniatura": "assets/infografiche/lezione-07/infografica-02.svg"
+      },
+      {
+        "src": "assets/infografiche/lezione-07/infografica-03.svg",
+        "miniatura": "assets/infografiche/lezione-07/infografica-03.svg"
+      }
+    ],
     "documenti": [
       {
         "src": "assets/documenti/lezione-07/pagina-01.jpg",
@@ -1036,6 +1134,20 @@ window.LESSONS = [
     "data": "29 ottobre 2026",
     "descrizione": "La salute: dal dottore, lessico dei sintomi, dialoghi, correzione di errori e articoli determinativi.",
     "abilitata": true,
+    "infografiche": [
+      {
+        "src": "assets/infografiche/lezione-08/infografica-01.svg",
+        "miniatura": "assets/infografiche/lezione-08/infografica-01.svg"
+      },
+      {
+        "src": "assets/infografiche/lezione-08/infografica-02.svg",
+        "miniatura": "assets/infografiche/lezione-08/infografica-02.svg"
+      },
+      {
+        "src": "assets/infografiche/lezione-08/infografica-03.svg",
+        "miniatura": "assets/infografiche/lezione-08/infografica-03.svg"
+      }
+    ],
     "documenti": [
       {
         "src": "assets/documenti/lezione-08/pagina-09.jpg",
@@ -1130,6 +1242,20 @@ window.LESSONS = [
     "data": "3 novembre 2026",
     "descrizione": "Preposizioni semplici, sistema scolastico italiano e attività di comprensione e scrittura.",
     "abilitata": true,
+    "infografiche": [
+      {
+        "src": "assets/infografiche/lezione-09/infografica-01.svg",
+        "miniatura": "assets/infografiche/lezione-09/infografica-01.svg"
+      },
+      {
+        "src": "assets/infografiche/lezione-09/infografica-02.svg",
+        "miniatura": "assets/infografiche/lezione-09/infografica-02.svg"
+      },
+      {
+        "src": "assets/infografiche/lezione-09/infografica-03.svg",
+        "miniatura": "assets/infografiche/lezione-09/infografica-03.svg"
+      }
+    ],
     "documenti": [
       {
         "src": "assets/documenti/lezione-09/diapositiva-01.jpg",
@@ -1275,6 +1401,20 @@ window.LESSONS = [
     "data": "5 novembre 2026",
     "descrizione": "Ripasso del passato prossimo, sistema scolastico, parti del corpo e sintomi.",
     "abilitata": true,
+    "infografiche": [
+      {
+        "src": "assets/infografiche/lezione-10/infografica-01.svg",
+        "miniatura": "assets/infografiche/lezione-10/infografica-01.svg"
+      },
+      {
+        "src": "assets/infografiche/lezione-10/infografica-02.svg",
+        "miniatura": "assets/infografiche/lezione-10/infografica-02.svg"
+      },
+      {
+        "src": "assets/infografiche/lezione-10/infografica-03.svg",
+        "miniatura": "assets/infografiche/lezione-10/infografica-03.svg"
+      }
+    ],
     "documenti": [
       {
         "src": "assets/documenti/lezione-10/diapositiva-01.jpg",

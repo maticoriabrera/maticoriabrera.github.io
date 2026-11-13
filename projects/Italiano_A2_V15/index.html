@@ -25,7 +25,7 @@
       </div>
       <nav aria-label="Pagina iniziale" class="home-nav">
         <a class="nav-link home-link" data-nav="home" href="#/home"><span aria-hidden="true"
-            class="home-icon">⌂</span><span class="navtext"><strong>Home</strong></span></a>
+            class="home-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="m3.5 10 8.5-7 8.5 7"/><path d="M5.5 9.5V20h13V9.5M10 20v-6h4v6"/></svg></span><span class="navtext"><strong>Home</strong></span></a>
       </nav>
 
       <!-- BARSIDE LEZIONI -->
@@ -65,25 +65,37 @@
 
       <!-- HOME PAGE -->
       <main aria-label="Home" class="page" id="page-home">
-        <header class="page-header home-heading">
-          <h1>Home</h1>
-
-          <div aria-label="Lingua della pagina Home" class="home-languages" id="home-languages" role="group">
-            <button aria-label="Italiano" aria-pressed="true" data-home-lang="it" lang="it" title="Italiano"
-              type="button"><span class="lang-code">ITA</span></button>
-            <button aria-label="English" aria-pressed="false" data-home-lang="en" lang="en" title="English"
-              type="button"><span class="lang-code">ENG</span></button>
-            <button aria-label="Español" aria-pressed="false" data-home-lang="es" lang="es" title="Español"
-              type="button"><span class="lang-code">ESP</span></button>
-            <button aria-label="Русский (bandiera ucraina)" aria-pressed="false" data-home-lang="ru" lang="ru"
-              title="Русский (bandiera ucraina)" type="button"><span class="lang-code">RUS</span></button>
-            <button aria-label="हिन्दी" aria-pressed="false" data-home-lang="hi" lang="hi" title="हिन्दी"
-              type="button"><span class="lang-code">HIN</span></button>
-            <button aria-label="فارسی" aria-pressed="false" data-home-lang="fa" lang="fa" title="فارسی"
-              type="button"><span class="lang-code">FAS</span></button>
+        <header class="page-header"><h1>Home</h1></header>
+        <section class="card home-card home-welcome" lang="it">
+          <h2>Benvenuto</h2>
+          <p class="home-intro">Un luogo per ripassare le lezioni e<br class="home-intro-break" /> continuare a imparare, un giorno alla volta.</p>
+          <div class="home-study-image"><img src="assets/immagini/home-studio.png" alt="Lampada accesa, libri, quaderno aperto, una pianta, caffè e piccoli cuori rossi e neri" /></div>
+          <p class="home-start">Seleziona una lezione per iniziare.</p>
+          <div class="home-info-links">
+            <p class="home-terms-intro">Utilizzando questo sito, accetti i</p>
+            <a href="#/termini">Termini di utilizzo →</a>
+            <a href="#/criteri">Criteri di organizzazione →</a>
+            <a href="#/creatore">Creatore e collaboratori →</a>
           </div>
-        </header>
-        <section class="card home-card" id="home-translated" lang="it"></section>
+        </section>
+      </main>
+      <main aria-label="Informazioni e termini di utilizzo" class="page" hidden="" id="page-termini">
+        <a class="back" href="#/home">← Home</a>
+        <header class="page-header"><h1>Informazioni e termini di utilizzo</h1></header>
+        <section class="card home-card terms-card">
+          <div class="terms-language-bar">
+            <span>Lingua / Language</span>
+            <div aria-label="Lingua dei termini di utilizzo" class="home-languages" id="home-languages" role="group">
+              <button type="button" data-home-lang="it" lang="it" aria-label="Italiano" title="Italiano" aria-pressed="true">ITA</button>
+              <button type="button" data-home-lang="en" lang="en" aria-label="English" title="English" aria-pressed="false">ENG</button>
+              <button type="button" data-home-lang="es" lang="es" aria-label="Español" title="Español" aria-pressed="false">ESP</button>
+              <button type="button" data-home-lang="ru" lang="ru" aria-label="Русский" title="Русский" aria-pressed="false">RUS</button>
+              <button type="button" data-home-lang="hi" lang="hi" aria-label="हिन्दी" title="हिन्दी" aria-pressed="false">HIN</button>
+              <button type="button" data-home-lang="fa" lang="fa" aria-label="فارسی" title="فارسی" aria-pressed="false">FAS</button>
+            </div>
+          </div>
+          <div id="home-translated" lang="it"></div>
+        </section>
       </main>
       <main aria-label="Criteri di organizzazione" class="page" hidden="" id="page-criteri">
         <a class="back" href="#/home">← Home</a>

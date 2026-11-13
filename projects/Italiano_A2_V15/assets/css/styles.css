@@ -275,3 +275,69 @@ body.viewer-open { overflow: hidden; }
 /* Infografiche: stesso visore dei documenti, ma galleria indipendente. */
 .lesson-infographics[hidden] { display: none; }
 .infographic-track { margin-top: 8px; }
+
+/* V17 — Home essenziale e selezione delle lingue esclusiva della pagina dei termini. */
+.home-icon{width:24px;height:24px;border:0;border-radius:0;font-size:inherit}
+.home-icon svg{display:block;width:22px;height:22px}
+.home-welcome{padding-top:30px;padding-bottom:24px}
+.home-welcome h2{margin-top:0;margin-bottom:12px}
+.home-welcome > p:not(.home-secondary-links):not(.home-terms-note){max-width:650px}
+.home-welcome .home-start{font-size:1.16rem;font-weight:750;color:var(--accent);margin-top:27px;margin-bottom:25px}
+.home-welcome .home-secondary-links{margin-top:20px}
+.home-terms-note{border-top:1px solid var(--line);padding-top:16px;margin:22px 0 0;font-size:.85rem;color:var(--muted)}
+.home-terms-note a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.terms-language-bar{display:flex;justify-content:flex-start;align-items:center;gap:10px 16px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:13px;margin-bottom:19px;font-size:.85rem;color:var(--muted)}
+.terms-language-bar .home-languages button{width:36px;height:36px;padding:2px;border:2px solid transparent;background:transparent;border-radius:50%;color:inherit}
+.terms-language-bar .home-languages button[aria-pressed="true"]{border-color:var(--accent);background:#edf4fa}
+.terms-language-bar .flag-circle{width:26px;height:26px;font-size:22px;background:#edf1f5}
+#home-translated[dir="rtl"]{text-align:right}
+#home-translated[dir="rtl"] ul{padding-right:22px;padding-left:0}
+
+/* V17 — Accoglienza Home: sequenza verticale e link informativi su righe distinte. */
+.home-welcome{padding:36px 38px 30px}
+.home-welcome h2{font-size:clamp(1.65rem,3vw,2.65rem);line-height:1.2;margin:0 0 22px;color:#183450}
+.home-welcome h2::after{content:"";display:block;width:114px;height:5px;margin-top:9px;background:#96c781;border-radius:100% 40% 100% 40%;transform:rotate(-2deg)}
+.home-welcome .home-intro{font-style:italic;font-size:clamp(1rem,1.65vw,1.24rem);line-height:1.6;max-width:660px;margin:0 0 12px;color:#253344}
+.home-study-image{width:min(100%,360px);margin:12px auto 24px;text-align:center}
+.home-study-image img{display:block;width:100%;height:auto;object-fit:contain}
+.home-welcome .home-start{display:table;max-width:100%;margin:0 0 28px;padding:12px 20px;border-radius:12px;background:#dceefa;font-size:clamp(1rem,1.65vw,1.24rem);line-height:1.4;font-weight:750;color:#164e83}
+.home-info-links{border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;align-items:flex-start;gap:9px;font-size:1rem;line-height:1.5}
+.home-info-links .home-terms-intro{margin:0 0 3px;font-size:inherit;line-height:inherit;color:var(--muted)}
+.home-info-links a{display:block;width:fit-content;color:var(--accent);font-size:inherit;font-weight:500;line-height:inherit;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:640px){.home-welcome{padding:25px 20px}.home-study-image{width:min(100%,290px);margin:12px auto 20px}.home-welcome .home-start{padding:11px 14px}}
+
+
+/* V18 — Modifiche circoscritte alla Home e al selettore della pagina termini. */
+/* Il tratto sottostante il titolo termina in corrispondenza circa della t di Benvenuto. */
+.home-welcome h2::after {
+  width: 222px;
+  height: 13px;
+  margin-top: 6px;
+  background: url('../immagini/sottolineatura-tricolore.svg') center / 100% 100% no-repeat;
+  border-radius: 0;
+  transform: none;
+}
+.home-welcome .home-intro { max-width: none; }
+.home-study-image { width: min(100%, 425px); margin: 18px auto 22px; }
+/* Mantener el recuadro y los colores: solo reducir tamaño de fuente al de los enlaces. */
+.home-welcome .home-start { font-size: 1rem; }
+/* Identificadores de idioma de tres letras; únicamente en la página de términos. */
+.terms-language-bar .home-languages button {
+  width: 44px;
+  height: 38px;
+  padding: 3px 5px;
+  border-radius: 22px;
+  border: 1px solid #c7d7e8;
+  background: #f2f6fb;
+  color: #1e4e7c;
+  font-size: .83rem;
+  font-weight: 700;
+}
+.terms-language-bar .home-languages button[aria-pressed="true"] {
+  border: 2px solid var(--accent);
+  background: #d8eafa;
+}
+@media (max-width: 640px) {
+  .home-study-image { width: min(100%, 340px); margin: 15px auto 20px; }
+  .home-welcome h2::after { width: 205px; }
+}

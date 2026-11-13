@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 50" width="450" height="50" preserveAspectRatio="none">
+  <defs>
+    <!-- Sombra suave para separar visualmente el arco del fondo de la página -->
+    <filter id="sombra-arco" x="-5%" y="-25%" width="110%" height="170%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.8" flood-color="#000000" flood-opacity="0.25" />
+    </filter>
+
+    <!-- Forma exacta del arco -->
+    <clipPath id="arco-italiano">
+      <path d="M 10,43 
+               C 6,43 3,39.5 4,36 
+               C 5,32.5 8,30.5 13,29.5 
+               C 145,8 295,9 444,27 
+               C 295,18 145,20.5 16,42 
+               C 14,42.6 12,43 10,43 Z" />
+    </clipPath>
+  </defs>
+
+  <!-- Grupo con sombra -->
+  <g filter="url(#sombra-arco)">
+    <!-- Franjas de color -->
+    <g clip-path="url(#arco-italiano)">
+      <!-- Verde (#009246) -->
+      <rect x="0" y="0" width="150" height="50" fill="#009246" />
+      
+      <!-- Blanco con un tono muy sutil (#F5F5F5) para destacar sobre fondo blanco -->
+      <rect x="150" y="0" width="150" height="50" fill="#F5F5F5" />
+      
+      <!-- Rojo (#CE2B37) -->
+      <rect x="300" y="0" width="150" height="50" fill="#CE2B37" />
+    </g>
+
+    <!-- Contorno fino para perfilar los bordes exteriores claramente -->
+    <path d="M 10,43 
+             C 6,43 3,39.5 4,36 
+             C 5,32.5 8,30.5 13,29.5 
+             C 145,8 295,9 444,27 
+             C 295,18 145,20.5 16,42 
+             C 14,42.6 12,43 10,43 Z" fill="none" stroke="#D0D0D0" stroke-width="0.75" />
+  </g>
+</svg>

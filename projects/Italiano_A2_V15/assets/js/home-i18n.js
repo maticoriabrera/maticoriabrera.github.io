@@ -9,7 +9,8 @@ function setLanguage(lang){
  if(!card) return;
  card.setAttribute('lang',lang);
  card.setAttribute('dir',lang==='fa'?'rtl':'auto');
- card.innerHTML=`<h2>${htmlEscape(t[0])}</h2><h3>${htmlEscape(t[1])}</h3>
+ // La pagina dei termini conserva integralmente i testi informativi della versione precedente.
+ card.innerHTML=`<h2>${htmlEscape(t[1])}</h2>
  <p>${htmlEscape(t[2])}</p><p><strong>${htmlEscape(t[3])}</strong></p><p>${htmlEscape(t[4])}</p>
  <h3>${htmlEscape(t[5])}</h3><p>${htmlEscape(t[6])}</p><ul>
  <li><strong>${htmlEscape(t[7])}:</strong> ${htmlEscape(t[8])}</li>
@@ -17,7 +18,7 @@ function setLanguage(lang){
  <li><strong>${htmlEscape(t[11])}:</strong> ${htmlEscape(t[12])}</li>
  <li><strong>${htmlEscape(t[13])}:</strong> ${htmlEscape(t[14])}</li>
  </ul><p>${htmlEscape(t[15])}</p>
- <p class="home-secondary-links"><a href="#/criteri">${htmlEscape((texts[lang]||texts.it)[16])}</a><a href="#/creatore">${htmlEscape((texts[lang]||texts.it)[17])}</a></p>`;
+ `;
  document.querySelectorAll('[data-home-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.homeLang===lang)));
 }
 window.resetHomeLanguage=()=>setLanguage('it');

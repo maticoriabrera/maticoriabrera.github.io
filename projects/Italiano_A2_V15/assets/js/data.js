@@ -168,16 +168,20 @@ window.LESSONS = [
     "abilitata": true,
     "infografiche": [
       {
-        "src": "assets/infografiche/lezione-02/infografica-01.svg",
-        "miniatura": "assets/infografiche/lezione-02/infografica-01.svg"
+        "src": "assets/infografiche/lezione-02/infografica-01.jpg",
+        "miniatura": "assets/infografiche/lezione-02/infografica-01-miniatura.jpg"
       },
       {
-        "src": "assets/infografiche/lezione-02/infografica-02.svg",
-        "miniatura": "assets/infografiche/lezione-02/infografica-02.svg"
+        "src": "assets/infografiche/lezione-02/infografica-02.jpg",
+        "miniatura": "assets/infografiche/lezione-02/infografica-02-miniatura.jpg"
       },
       {
-        "src": "assets/infografiche/lezione-02/infografica-03.svg",
-        "miniatura": "assets/infografiche/lezione-02/infografica-03.svg"
+        "src": "assets/infografiche/lezione-02/infografica-03.jpg",
+        "miniatura": "assets/infografiche/lezione-02/infografica-03-miniatura.jpg"
+      },
+      {
+        "src": "assets/infografiche/lezione-02/infografica-04.jpg",
+        "miniatura": "assets/infografiche/lezione-02/infografica-04-miniatura.jpg"
       }
     ],
     "documenti": [

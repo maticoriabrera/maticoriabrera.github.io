@@ -7,16 +7,8 @@ window.LESSONS = [
     "abilitata": true,
     "infografiche": [
       {
-        "src": "assets/infografiche/lezione-01/infografica-01.svg",
-        "miniatura": "assets/infografiche/lezione-01/infografica-01.svg"
-      },
-      {
-        "src": "assets/infografiche/lezione-01/infografica-02.svg",
-        "miniatura": "assets/infografiche/lezione-01/infografica-02.svg"
-      },
-      {
-        "src": "assets/infografiche/lezione-01/infografica-03.svg",
-        "miniatura": "assets/infografiche/lezione-01/infografica-03.svg"
+        "src": "assets/infografiche/lezione-01/infografica-01.jpg",
+        "miniatura": "assets/infografiche/lezione-01/infografica-01-miniatura.jpg"
       }
     ],
     "documenti": [

@@ -1,0 +1,22 @@
+Italiano A2 — CPIA5 Milano — Versión 1
+=======================================
+
+1) Abrí index.html con tu navegador (Chrome, Firefox o Edge).
+2) La barra lateral presenta seis clases. Solo Clase 01 está habilitada.
+3) Dentro de Clase 01 encontrarás las dos fotocopias transcritas, las soluciones visibles, un desglose desplegable de temas, verbos, aplicaciones y conexiones.
+4) Las explicaciones completas están en «Temas de gramática». Pueden consultarse desde diferentes clases en el futuro, sin duplicarlas.
+5) Cada verbo de «Verbos usados» lleva a su conjugación en «Armario de los verbos». Este armario es independiente de las clases.
+6) Todos los contenidos y las rutas funcionan sin conexión a Internet, sin instalar nada y sin servidor.
+
+FUENTE DOCUMENTAL
+Archivo entregado: Clases.zip; carpeta «01 Clase»; dos fotografías .jpeg.
+Las ilustraciones y adornos de las fotocopias no se incluyen porque el contenido relevante puede representarse como texto.
+
+ALCANCE Y CUIDADOS
+- Esta versión es exclusivamente de repaso. No contiene ejercicios interactivos.
+- Las marcas de respuesta del material están incorporadas con MAYÚSCULAS Y CURSIVA.
+- Se indican explícitamente tres ambigüedades: «nubile» (V/F 4), el empleo de un «computer» (V/F 8), y la pregunta sobre el uso del italiano en el trabajo (opción 6 de Marta). También se conserva la marca manuscrita corregida de «Marta è cuoca» y una opción parcialmente ilegible.
+- Los objetivos y los desgloses son interpretaciones pedagógicas; no deben confundirse con el programa oficial de la profesora.
+- El armario muestra conjugaciones explícitas en presente indicativo y passato prossimo.
+
+Proyecto: archivo HTML autocontenido, sin dependencias externas.

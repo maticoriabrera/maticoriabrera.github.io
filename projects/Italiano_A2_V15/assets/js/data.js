@@ -1249,10 +1249,6 @@ window.LESSONS = [
     ],
     "documenti": [
       {
-        "src": "assets/documenti/lezione-09/diapositiva-01.jpg",
-        "miniatura": "assets/miniature/lezione-09/diapositiva-01.jpg"
-      },
-      {
         "src": "assets/documenti/lezione-09/diapositiva-02.jpg",
         "miniatura": "assets/miniature/lezione-09/diapositiva-02.jpg"
       },
@@ -1408,10 +1404,6 @@ window.LESSONS = [
     ],
     "documenti": [
       {
-        "src": "assets/documenti/lezione-10/diapositiva-01.jpg",
-        "miniatura": "assets/miniature/lezione-10/diapositiva-01.jpg"
-      },
-      {
         "src": "assets/documenti/lezione-10/diapositiva-02.jpg",
         "miniatura": "assets/miniature/lezione-10/diapositiva-02.jpg"
       },
@@ -1422,38 +1414,6 @@ window.LESSONS = [
       {
         "src": "assets/documenti/lezione-10/fotografia-aggiuntiva-02.jpg",
         "miniatura": "assets/miniature/lezione-10/fotografia-aggiuntiva-02.jpg"
-      },
-      {
-        "src": "assets/documenti/lezione-10/quaderno-corpo-01.jpg",
-        "miniatura": "assets/miniature/lezione-10/quaderno-corpo-01.jpg"
-      },
-      {
-        "src": "assets/documenti/lezione-10/quaderno-corpo-02.jpg",
-        "miniatura": "assets/miniature/lezione-10/quaderno-corpo-02.jpg"
-      },
-      {
-        "src": "assets/documenti/lezione-10/quaderno-corpo-03.jpg",
-        "miniatura": "assets/miniature/lezione-10/quaderno-corpo-03.jpg"
-      },
-      {
-        "src": "assets/documenti/lezione-10/quaderno-corpo-04.jpg",
-        "miniatura": "assets/miniature/lezione-10/quaderno-corpo-04.jpg"
-      },
-      {
-        "src": "assets/documenti/lezione-10/quaderno-corpo-05.jpg",
-        "miniatura": "assets/miniature/lezione-10/quaderno-corpo-05.jpg"
-      },
-      {
-        "src": "assets/documenti/lezione-10/quaderno-corpo-06.jpg",
-        "miniatura": "assets/miniature/lezione-10/quaderno-corpo-06.jpg"
-      },
-      {
-        "src": "assets/documenti/lezione-10/quaderno-corpo-07.jpg",
-        "miniatura": "assets/miniature/lezione-10/quaderno-corpo-07.jpg"
-      },
-      {
-        "src": "assets/documenti/lezione-10/quaderno-sintomi.jpg",
-        "miniatura": "assets/miniature/lezione-10/quaderno-sintomi.jpg"
       }
     ],
     "grammatica": [

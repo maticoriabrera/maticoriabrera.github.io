@@ -1000,11 +1000,6 @@ window.LESSONS = [
     ],
     "documenti": [
       {
-        "src": "assets/documenti/lezione-07/pagina-01.jpg",
-        "miniatura": "assets/miniature/lezione-07/pagina-01.jpg",
-        "formato": "orizzontale"
-      },
-      {
         "src": "assets/documenti/lezione-07/pagina-02.jpg",
         "miniatura": "assets/miniature/lezione-07/pagina-02.jpg",
         "formato": "orizzontale"

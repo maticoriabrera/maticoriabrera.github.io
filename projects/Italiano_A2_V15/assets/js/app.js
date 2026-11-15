@@ -22,7 +22,7 @@
   const verbById = Object.fromEntries(VERBS.map(v => [v.id, v]));
   const V = (id) => verbById[id];
   const byId = (id) => document.getElementById(id);
-  const pageIds = {'home':'page-home', 'criteri':'page-criteri', 'creatore':'page-creatore', 'lezione':'page-lesson', 'argomenti':'page-topics', 'argomento':'page-topic', 'armadio':'page-armario'};
+  const pageIds = {'home':'page-home', 'termini':'page-termini', 'criteri':'page-criteri', 'creatore':'page-creatore', 'lezione':'page-lesson', 'argomenti':'page-topics', 'argomento':'page-topic', 'armadio':'page-armario'};
   let livelli = loadLevels();
   let selectedVerb = 'essere';
   // La lezione selezionata determina i filtri predefiniti di entrambe le risorse.
@@ -520,6 +520,7 @@
       renderLesson(lessonById[parts[1]]);
       return 'lezione';
     }
+    if(parts[0]==='termini') return 'termini';
     if(parts[0]==='criteri') return 'criteri';
     if(parts[0]==='creatore') return 'creatore';
     if(parts[0]==='argomenti') {
@@ -546,7 +547,7 @@
   }
   function navigate() {
     const section=currentRoute();
-    if(section!=='home' && window.resetHomeLanguage) window.resetHomeLanguage();
+    if(section!=='termini' && window.resetHomeLanguage) window.resetHomeLanguage();
     updateScope();
     Object.entries(pageIds).forEach(([k,id])=>{byId(id).hidden=(k!==section);});
     document.querySelectorAll('[data-nav]').forEach(el=>{
@@ -557,7 +558,7 @@
       active?el.setAttribute('aria-current','page'):el.removeAttribute('aria-current');
     });
     if(section==='armadio') document.querySelectorAll('[data-verb-link]').forEach(a=>a.classList.toggle('active',a.dataset.verbLink===selectedVerb));
-    document.title=(section==='argomento'?byId('topic-title').textContent:section==='armadio'?'Armadio dei verbi':section==='argomenti'?'Argomenti grammaticali':section==='criteri'?'Criteri di organizzazione':section==='creatore'?'Creatore e collaboratori':section==='lezione'?lessonById[selectedLesson].titolo:'Home')+' · Italiano A2';
+    document.title=(section==='argomento'?byId('topic-title').textContent:section==='armadio'?'Armadio dei verbi':section==='argomenti'?'Argomenti grammaticali':section==='termini'?'Informazioni e termini di utilizzo':section==='criteri'?'Criteri di organizzazione':section==='creatore'?'Creatore e collaboratori':section==='lezione'?lessonById[selectedLesson].titolo:'Home')+' · Italiano A2';
     window.scrollTo(0,0);
     // Sul telefono il menu delle lezioni è orizzontale:
     // mostra per intero la voce attiva, senza spostare la pagina.

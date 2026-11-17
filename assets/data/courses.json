@@ -607,7 +607,7 @@
     "instructor": "Díaz, Alicia",
     "duration": "198 hs",
     "skill": "JavaScript, Node JS",
-    "thumbnail": "./assets/img/certificates/2024.07.12 Codo A Codo 4.0 - Web Development JavaScript & Node JS - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.07.12 Codo A Codo 4.0 - Web Development JavaScript & Node JS - Thumbnail.jpg",
     "title_es": "Desarrollo web: JavaScript y Node JS",
     "title_it": "Sviluppo web: JavaScript e Node JS"
   },
@@ -619,7 +619,7 @@
     "instructor": "",
     "duration": "70 hs",
     "skill": "React, JavaScript",
-    "thumbnail": "./assets/img/certificates/2024.06.10 Alura - Explore React With JavaScript - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.06.10 Alura - Explore React With JavaScript - Thumbnail.jpg",
     "title_es": "Explora React con JavaScript",
     "title_it": "Esplora React con JavaScript"
   },
@@ -631,7 +631,7 @@
     "instructor": "Riverol, Daniel",
     "duration": "10 hs",
     "skill": "React, JavaScript",
-    "thumbnail": "./assets/img/certificates/2024.06.10 Alura - Practicing React With JavaScript - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.06.10 Alura - Practicing React With JavaScript - Thumbnail.jpg",
     "title_es": "Practicando React con JavaScript",
     "title_it": "Pratica con React e JavaScript"
   },
@@ -643,7 +643,7 @@
     "instructor": "Castillo Lacruz, Leonardo Jose",
     "duration": "10 hs",
     "skill": "React, JavaScript",
-    "thumbnail": "./assets/img/certificates/2024.06.09 Alura - Hooks In React JS Understanding Their Potential And Use - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.06.09 Alura - Hooks In React JS Understanding Their Potential And Use - Thumbnail.jpg",
     "title_es": "Hooks en React JS: entender su potencial y uso",
     "title_it": "Hooks in React JS: comprenderne il potenziale e l'uso"
   },
@@ -655,7 +655,7 @@
     "instructor": "Riverol, Daniel",
     "duration": "12 hs",
     "skill": "React",
-    "thumbnail": "./assets/img/certificates/2024.06.07 Alura - React Styled Components And Manipulating Files - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.06.07 Alura - React Styled Components And Manipulating Files - Thumbnail.jpg",
     "title_es": "React: styled components y manipulación de archivos",
     "title_it": "React: styled components e manipolazione di file"
   },
@@ -667,7 +667,7 @@
     "instructor": "Lohora, Harland",
     "duration": "8 hs",
     "skill": "React",
-    "thumbnail": "./assets/img/certificates/2024.06.04 Alura - React Router Navigation In A SPA (Single Page Application) - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.06.04 Alura - React Router Navigation In A SPA (Single Page Application) - Thumbnail.jpg",
     "title_es": "React Router: navegación en una SPA (Single Page Application)",
     "title_it": "React Router: navigazione in una SPA (Single Page Application)"
   },
@@ -679,7 +679,7 @@
     "instructor": "Lohora, Harland",
     "duration": "12 hs",
     "skill": "React",
-    "thumbnail": "./assets/img/certificates/2024.06.02 Alura - React How Functional Components Work - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.06.02 Alura - React How Functional Components Work - Thumbnail.jpg",
     "title_es": "React: cómo funcionan los componentes funcionales",
     "title_it": "React: come funzionano i componenti funzionali"
   },
@@ -691,7 +691,7 @@
     "instructor": "Lohora, Harland",
     "duration": "14 hs",
     "skill": "React",
-    "thumbnail": "./assets/img/certificates/2024.05.29 Alura - React Developing With JavaScript - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.05.29 Alura - React Developing With JavaScript - Thumbnail.jpg",
     "title_es": "React: desarrollo con JavaScript",
     "title_it": "React: sviluppo con JavaScript"
   },
@@ -703,7 +703,7 @@
     "instructor": "",
     "duration": "85 hs",
     "skill": "Front-End",
-    "thumbnail": "./assets/img/certificates/2024.05.21 ONE - Front End G6 - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.05.21 ONE - Front End G6 - Thumbnail.jpg",
     "title_es": "Front-End G6",
     "title_it": "Front-End G6"
   },
@@ -715,7 +715,7 @@
     "instructor": "González, José",
     "duration": "15 hs",
     "skill": "Front-End",
-    "thumbnail": "./assets/img/certificates/2024.05.21 Alura - Front-End Practice  Challenge AluraGeek - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.05.21 Alura - Front-End Practice  Challenge AluraGeek - Thumbnail.jpg",
     "title_es": "Práctica Front-End: desafío AluraGeek",
     "title_it": "Pratica Front-End: challenge AluraGeek"
   },

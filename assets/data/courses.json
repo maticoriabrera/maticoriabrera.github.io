@@ -487,7 +487,7 @@
     "instructor": "",
     "duration": "17 hs",
     "skill": "Cloud",
-    "thumbnail": "./assets/img/certificates/2024.09.28 ONE - Oracle Cloud Infrastructure - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.09.28 ONE - Oracle Cloud Infrastructure - Thumbnail.jpg",
     "title_es": "Oracle Cloud Infrastructure",
     "title_it": "Oracle Cloud Infrastructure"
   },
@@ -499,7 +499,7 @@
     "instructor": "Lohora, Harland",
     "duration": "8 hs",
     "skill": "Cloud",
-    "thumbnail": "./assets/img/certificates/2024.09.28 Alura - Oracle Cloud Infrastructure Database And Infrastructure As Code - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.09.28 Alura - Oracle Cloud Infrastructure Database And Infrastructure As Code - Thumbnail.jpg",
     "title_es": "Oracle Cloud Infrastructure: bases de datos e infraestructura como código",
     "title_it": "Oracle Cloud Infrastructure: database e infrastruttura come codice"
   },
@@ -511,7 +511,7 @@
     "instructor": "Lohora, Harland",
     "duration": "8 hs",
     "skill": "Cloud",
-    "thumbnail": "./assets/img/certificates/2024.09.23 Alura - Oracle Cloud Infrastructure Implementing A Cloud Application - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.09.23 Alura - Oracle Cloud Infrastructure Implementing A Cloud Application - Thumbnail.jpg",
     "title_es": "Oracle Cloud Infrastructure: implementación de una aplicación en la nube",
     "title_it": "Oracle Cloud Infrastructure: implementazione di un'applicazione cloud"
   },
@@ -523,7 +523,7 @@
     "instructor": "",
     "duration": "25 hs",
     "skill": "Artificial Intelligence",
-    "thumbnail": "./assets/img/certificates/2024.09.22 ONE - Generative IA - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.09.22 ONE - Generative IA - Thumbnail.jpg",
     "title_es": "IA generativa",
     "title_it": "IA generativa"
   },
@@ -535,7 +535,7 @@
     "instructor": "Rondón, Génesys",
     "duration": "8 hs",
     "skill": "Artificial Intelligence",
-    "thumbnail": "./assets/img/certificates/2024.09.22 Alura - ChatGPT And Programming Boost Your Productivity - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.09.22 Alura - ChatGPT And Programming Boost Your Productivity - Thumbnail.jpg",
     "title_es": "ChatGPT y programación: aumenta tu productividad",
     "title_it": "ChatGPT e programmazione: aumenta la tua produttività"
   },
@@ -547,7 +547,7 @@
     "instructor": "Velasco, Christian",
     "duration": "8 hs",
     "skill": "Artificial Intelligence",
-    "thumbnail": "./assets/img/certificates/2024.09.21 Alura - ChatGPT And JavaScript Building The Pong Game - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.09.21 Alura - ChatGPT And JavaScript Building The Pong Game - Thumbnail.jpg",
     "title_es": "ChatGPT y JavaScript: construcción del juego Pong",
     "title_it": "ChatGPT e JavaScript: costruzione del gioco Pong"
   },
@@ -559,7 +559,7 @@
     "instructor": "Velasco, Christian",
     "duration": "8 hs",
     "skill": "Artificial Intelligence",
-    "thumbnail": "./assets/img/certificates/2024.09.20 Alura - Chat GPT Optimizing The Quality Of Results - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.09.20 Alura - Chat GPT Optimizing The Quality Of Results - Thumbnail.jpg",
     "title_es": "ChatGPT: optimización de la calidad de los resultados",
     "title_it": "ChatGPT: ottimizzazione della qualità dei risultati"
   },
@@ -571,7 +571,7 @@
     "instructor": "",
     "duration": "313 hs",
     "skill": "Front-End",
-    "thumbnail": "./assets/img/certificates/2024.07.16 ONE (Oracle Next Education) F2 T6 Front-End - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.07.16 ONE (Oracle Next Education) F2 T6 Front-End - Thumbnail.jpg",
     "title_es": "ONE (Oracle Next Education) F2 T6 Front-End",
     "title_it": "ONE (Oracle Next Education) F2 T6 Front-End"
   },
@@ -583,7 +583,7 @@
     "instructor": "",
     "duration": "92 hs",
     "skill": "React",
-    "thumbnail": "./assets/img/certificates/2024.07.16 Alura - React G6 - ONE - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.07.16 Alura - React G6 - ONE - Thumbnail.jpg",
     "title_es": "React G6",
     "title_it": "React G6"
   },
@@ -595,7 +595,7 @@
     "instructor": "González, José",
     "duration": "20 hs",
     "skill": "React",
-    "thumbnail": "./assets/img/certificates/2024.07.16 Alura - Practicing React Aluraflix Challenge - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.07.16 Alura - Practicing React Aluraflix Challenge - Thumbnail.jpg",
     "title_es": "Practicando React: desafío Aluraflix",
     "title_it": "Pratica con React: challenge Aluraflix"
   },

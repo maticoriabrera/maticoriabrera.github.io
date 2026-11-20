@@ -367,7 +367,7 @@
     "instructor": "Camargo, Santiago",
     "duration": "18 hs",
     "skill": "Figma",
-    "thumbnail": "./assets/img/certificates/2024.11.14 Alura - Figma Prototyping And Iinterfaces - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.11.14 Alura - Figma Prototyping And Iinterfaces - Thumbnail.jpg",
     "title_es": "Figma: prototipado e interfaces",
     "title_it": "Figma: prototipazione e interfacce"
   },
@@ -379,7 +379,7 @@
     "instructor": "",
     "duration": "30 hs",
     "skill": "MySQL",
-    "thumbnail": "./assets/img/certificates/2024.10.30 Alura - SQL With MySQL Oracle Server - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.10.30 Alura - SQL With MySQL Oracle Server - Thumbnail.jpg",
     "title_es": "SQL con MySQL Oracle Server",
     "title_it": "SQL con MySQL Oracle Server"
   },
@@ -391,7 +391,7 @@
     "instructor": "Camacho Diaz, Álvaro Hernando",
     "duration": "79 hs",
     "skill": "MySQL",
-    "thumbnail": "./assets/img/certificates/2024.10.30 Alura - SQL With MySQL - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.10.30 Alura - SQL With MySQL - Thumbnail.jpg",
     "title_es": "SQL con MySQL",
     "title_it": "SQL con MySQL"
   },
@@ -403,7 +403,7 @@
     "instructor": "Camacho Diaz, Álvaro Hernando",
     "duration": "8 hs",
     "skill": "MySQL",
-    "thumbnail": "./assets/img/certificates/2024.10.30 Alura - SQL With MySQL - Final Proyect - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.10.30 Alura - SQL With MySQL - Final Proyect - Thumbnail.jpg",
     "title_es": "SQL con MySQL: proyecto final",
     "title_it": "SQL con MySQL: progetto finale"
   },
@@ -415,7 +415,7 @@
     "instructor": "Camacho Diaz, Álvaro Hernando",
     "duration": "8 hs",
     "skill": "MySQL",
-    "thumbnail": "./assets/img/certificates/2024.10.30 Alura - MySQL Administration Database Security and Optimization Part 2 - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.10.30 Alura - MySQL Administration Database Security and Optimization Part 2 - Thumbnail.jpg",
     "title_es": "Administración de MySQL: seguridad y optimización de bases de datos - Parte 2",
     "title_it": "Amministrazione MySQL: sicurezza e ottimizzazione dei database - Parte 2"
   },
@@ -427,7 +427,7 @@
     "instructor": "Camacho Diaz, Álvaro Hernando",
     "duration": "8 hs",
     "skill": "MySQL",
-    "thumbnail": "./assets/img/certificates/2024.10.28 Alura - MySQL Administration Database Security and Optimization Part 1 - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.10.28 Alura - MySQL Administration Database Security and Optimization Part 1 - Thumbnail.jpg",
     "title_es": "Administración de MySQL: seguridad y optimización de bases de datos - Parte 1",
     "title_it": "Amministrazione MySQL: sicurezza e ottimizzazione dei database - Parte 1"
   },
@@ -439,7 +439,7 @@
     "instructor": "Camacho Diaz, Álvaro Hernando",
     "duration": "10 hs",
     "skill": "MySQL",
-    "thumbnail": "./assets/img/certificates/2024.10.25 Alura - SQL Procedures Executing Code in MySQL - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.10.25 Alura - SQL Procedures Executing Code in MySQL - Thumbnail.jpg",
     "title_es": "Procedimientos SQL: ejecutar código en MySQL",
     "title_it": "Procedure SQL: eseguire codice in MySQL"
   },
@@ -451,7 +451,7 @@
     "instructor": "Camacho Diaz, Álvaro Hernando",
     "duration": "14 hs",
     "skill": "MySQL",
-    "thumbnail": "./assets/img/certificates/2024.10.22 Alura - DML Commands Data Manipulation With MySQL - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.10.22 Alura - DML Commands Data Manipulation With MySQL - Thumbnail.jpg",
     "title_es": "Comandos DML: manipulación de datos con MySQL",
     "title_it": "Comandi DML: manipolazione dei dati con MySQL"
   },
@@ -463,7 +463,7 @@
     "instructor": "Camacho Diaz, Álvaro Hernando",
     "duration": "16 hs",
     "skill": "MySQL",
-    "thumbnail": "./assets/img/certificates/2024.10.19 Alura - SQL Procedures Executing Code In MySQL - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.10.19 Alura - SQL Procedures Executing Code In MySQL - Thumbnail.jpg",
     "title_es": "Consultas SQL: avanzar en SQL con MySQL",
     "title_it": "Query SQL: avanzare in SQL con MySQL"
   },
@@ -475,7 +475,7 @@
     "instructor": "Camacho Diaz, Álvaro Hernando",
     "duration": "12 hs",
     "skill": "MySQL",
-    "thumbnail": "./assets/img/certificates/2024.10.09 Alura - Introduction To Sql With Mysql Manipulate And Query Data - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2024.10.09 Alura - Introduction To Sql With Mysql Manipulate And Query Data - Thumbnail.jpg",
     "title_es": "Introducción a SQL con MySQL: manipular y consultar datos",
     "title_it": "Introduzione a SQL con MySQL: manipolare e consultare dati"
   },

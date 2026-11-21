@@ -247,7 +247,7 @@
     "instructor": "",
     "duration": "2 hs",
     "skill": "GO (Golang)",
-    "thumbnail": "./assets/img/certificates/2025.11.21 SimpliLearn - Go-Lang Basics - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2025.11.21 SimpliLearn - Go-Lang Basics - Thumbnail.jpg",
     "title_es": "Conceptos básicos de Golang",
     "title_it": "Concetti di base di Golang"
   },
@@ -259,7 +259,7 @@
     "instructor": "",
     "duration": "1 h",
     "skill": "GO (Golang)",
-    "thumbnail": "./assets/img/certificates/2025.11.12 SimpliLearn - Introduction To Golang - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2025.11.12 SimpliLearn - Introduction To Golang - Thumbnail.jpg",
     "title_es": "Introducción a Golang",
     "title_it": "Introduzione a Golang"
   },
@@ -271,7 +271,7 @@
     "instructor": "",
     "duration": "20 hs",
     "skill": "Docker",
-    "thumbnail": "./assets/img/certificates/2025.05.10 Alura - Docker Leveling - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2025.05.10 Alura - Docker Leveling - Thumbnail.jpg",
     "title_es": "Nivelación en Docker",
     "title_it": "Livellamento in Docker"
   },
@@ -283,7 +283,7 @@
     "instructor": "Camacho Diaz, Álvaro Hernando",
     "duration": "12 hs",
     "skill": "Back-End",
-    "thumbnail": "./assets/img/certificates/2025.05.10 Alura - Networks Introduction Concepts And Practice - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2025.05.10 Alura - Networks Introduction Concepts And Practice - Thumbnail.jpg",
     "title_es": "Introducción a redes: conceptos y práctica",
     "title_it": "Introduzione alle reti: concetti e pratica"
   },
@@ -295,7 +295,7 @@
     "instructor": "Castillo Lacruz, Leonardo Jose",
     "duration": "8 hs",
     "skill": "Linux",
-    "thumbnail": "./assets/img/certificates/2025.05.03 Alura - Linux Getting To Know And Using The Terminal - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2025.05.03 Alura - Linux Getting To Know And Using The Terminal - Thumbnail.jpg",
     "title_es": "Linux: conocer y usar la terminal",
     "title_it": "Linux: conoscere e usare il terminale"
   },
@@ -307,7 +307,7 @@
     "instructor": "Molina, Nicolás",
     "duration": "13 hs",
     "skill": "Python",
-    "thumbnail": "./assets/img/certificates/2025.03.21 Platzi - Python Virtual Enviroments And PIP - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2025.03.21 Platzi - Python Virtual Enviroments And PIP - Thumbnail.jpg",
     "title_es": "Python: entornos virtuales y Pip",
     "title_it": "Python: ambienti virtuali e Pip"
   },
@@ -319,7 +319,7 @@
     "instructor": "Molina, Nicolás",
     "duration": "21 hs",
     "skill": "Python",
-    "thumbnail": "./assets/img/certificates/2025.03.17 Platzi - Python Comprehensions Functions And Handling Errors - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2025.03.17 Platzi - Python Comprehensions Functions And Handling Errors - Thumbnail.jpg",
     "title_es": "Python: comprehensions, funciones y manejo de errores",
     "title_it": "Python: comprehension, funzioni e gestione degli errori"
   },
@@ -331,7 +331,7 @@
     "instructor": "Camacho Diaz, Álvaro Hernando",
     "duration": "6 hs",
     "skill": "Python, Artificial Intelligence",
-    "thumbnail": "./assets/img/certificates/2025.04.18 Alura - Data Analysis With Python Using ChatGPT As An Assistant - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2025.04.18 Alura - Data Analysis With Python Using ChatGPT As An Assistant - Thumbnail.jpg",
     "title_es": "Análisis de datos con Python usando ChatGPT como asistente",
     "title_it": "Analisi dei dati con Python usando ChatGPT come assistente"
   },
@@ -343,7 +343,7 @@
     "instructor": "Velasco, Christian",
     "duration": "10 hs",
     "skill": "JavaScript",
-    "thumbnail": "./assets/img/certificates/2025.02.18 Alura - JavaScript Consolidate Your Knowledge Of The Web Language - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2025.02.17 Alura - JavaScript Consolidate Your Knowledge Of The Web Language - Thumbnail.jpg",
     "title_es": "JavaScript: consolida tus conocimientos del lenguaje web",
     "title_it": "JavaScript: consolida le tue conoscenze del linguaggio web"
   },
@@ -355,7 +355,7 @@
     "instructor": "Camacho Diaz, Álvaro Hernando",
     "duration": "8 hs",
     "skill": "Python",
-    "thumbnail": "./assets/img/certificates/2026.02.14 Alura - Python Getting Started With The Language - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2025.02.14 Alura - Python Getting Started With The Language - Thumbnail.jpg",
     "title_es": "Python: primeros pasos con el lenguaje",
     "title_it": "Python: primi passi con il linguaggio"
   },

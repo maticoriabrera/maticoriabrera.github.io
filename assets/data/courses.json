@@ -127,7 +127,7 @@
     "instructor": "",
     "duration": "12 hs",
     "skill": "Artificial Intelligence",
-    "thumbnail": "./assets/img/certificates/2026.06.26 Buenos Aires Aprende - IA Para Todos - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2026.06.26 Buenos Aires Aprende - IA Para Todos - Thumbnail.jpg",
     "title_es": "IA Para Todos",
     "title_it": "IA per tutti"
   },
@@ -139,7 +139,7 @@
     "instructor": "Moure, Brais",
     "duration": "6 hs",
     "skill": "Artificial Intelligence",
-    "thumbnail": "./assets/img/certificates/2026.06.26 Big School - Iniciación Al Desarrollo Con IA - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2026.06.26 Big School - Iniciación Al Desarrollo Con IA - Thumnail.jpg",
     "title_es": "Iniciación Al Desarrollo Con IA",
     "title_it": "Introduzione allo sviluppo con l'IA"
   },
@@ -151,7 +151,7 @@
     "instructor": "Sáez, Javier",
     "duration": "8 hs",
     "skill": "Artificial Intelligence",
-    "thumbnail": "./assets/img/certificates/2026.04.17 Learning Heroes - IA Heroes - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2026.04.17 Learning Heroes - IA Heroes - Thumbnail.jpg",
     "title_es": "IA HEROES",
     "title_it": "IA HEROES"
   },
@@ -163,7 +163,7 @@
     "instructor": "",
     "duration": "1 h",
     "skill": "Front-End",
-    "thumbnail": "./assets/img/certificates/2026.04.15 HP Life - Effective Business Websites - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2026.04.15 HP Life - Effective Business Websites - Thumbnail.jpg",
     "title_es": "Sitios web empresariales efectivos",
     "title_it": "Siti web aziendali efficaci"
   },
@@ -175,7 +175,7 @@
     "instructor": "",
     "duration": "1 h",
     "skill": "Cybersecurity",
-    "thumbnail": "./assets/img/certificates/2026.04.13 HP Life - Introduction To Cybersecurity - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2026.04.13 HP Life - Introduction To Cybersecurity - Thumbnail.jpg",
     "title_es": "Introducción a la ciberseguridad",
     "title_it": "Introduzione alla cybersecurity"
   },
@@ -187,7 +187,7 @@
     "instructor": "",
     "duration": "1 h",
     "skill": "Artificial Intelligence",
-    "thumbnail": "./assets/img/certificates/2026.04.11HP Life - IA For Beginners - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2026.04.11HP Life - IA For Beginners - Thumbnail.jpg",
     "title_es": "IA para principiantes",
     "title_it": "IA per principianti"
   },
@@ -199,7 +199,7 @@
     "instructor": "Álvarez, Mario",
     "duration": "6 hs",
     "skill": "Cybersecurity",
-    "thumbnail": "./assets/img/certificates/2026.04.10 Big School - Ethical Hacking - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2026.04.10 Big School - Ethical Hacking - Thumbnail.jpg",
     "title_es": "Ethical Hacking",
     "title_it": "Ethical Hacking"
   },
@@ -211,7 +211,7 @@
     "instructor": "González, Paula",
     "duration": "6 hs",
     "skill": "Digital Marketing",
-    "thumbnail": "./assets/img/certificates/2026.04.10 Big School - Digital Marketing With IA - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2026.04.10 Big School - Digital Marketing With IA - Thumbnail.jpg",
     "title_es": "Marketing digital con IA",
     "title_it": "Marketing digitale con IA"
   },
@@ -223,7 +223,7 @@
     "instructor": "Moure, Brais",
     "duration": "6 hs",
     "skill": "Artificial Intelligence",
-    "thumbnail": "./assets/img/certificates/2026.03.19 Big School - Introduction To AI Development - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2026.03.19 Big School - Introduction To AI Development - Thumbnail.jpg",
     "title_es": "Introducción al desarrollo con IA",
     "title_it": "Introduzione allo sviluppo con IA"
   },
@@ -235,7 +235,7 @@
     "instructor": "Castillo Lacruz, Leonardo José",
     "duration": "2 hs",
     "skill": "GO (Golang)",
-    "thumbnail": "./assets/img/certificates/2025.11.22 Videocursos co - Go Course - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2025.11.22 Videocursos co - Go Course - Thumbnail.jpg",
     "title_es": "Curso de Go",
     "title_it": "Corso di Go"
   },

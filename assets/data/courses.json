@@ -43,7 +43,7 @@
     "instructor": "Troia, Sebastian",
     "duration": "6 hs",
     "skill": "Networks",
-    "thumbnail": "./assets/img/certificates/2026.10.20 Politecnico Milano - Introduction To Internet And Networks - Thumnail.jpg",
+    "thumbnail": "./assets/img/certificates/2026.10.20 Politecnico Milano - Introduction To Internet And Networks - Thumbnail.jpg",
     "title_es": "Introducción al Internet y las redes",
     "title_it": "Introduzione a Internet e Alle Reti"
   },
@@ -55,7 +55,7 @@
     "instructor": "Schiaffonati, Viola",
     "duration": "6 hs",
     "skill": "Artificial Intelligence",
-    "thumbnail": "./assets/img/certificates/2026.10.18 Politecnico Milano - Ethics of Artificial Intelligence - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2026.10.18 Politecnico Milano - Ethics of Artificial Intelligence - Thumbnail.jpg",
     "title_es": "Ética de la inteligencia artificial",
     "title_it": "Etica dell'intelligenza artificiale"
   },
@@ -79,7 +79,7 @@
     "instructor": "Moure, Brais",
     "duration": "6 hs",
     "skill": "Artificial Intelligence",
-    "thumbnail": "./assets/img/certificates/2026.10.04 Big School - Iniciación Al Desarrollo Con IA -  Thumnail.jpg",
+    "thumbnail": "./assets/img/certificates/2026.10.04 Big School - Iniciación Al Desarrollo Con IA -  Thumbnail.jpg",
     "title_es": "Iniciación Al Desarrollo Con IA",
     "title_it": "Introduzione allo sviluppo con l'IA"
   },

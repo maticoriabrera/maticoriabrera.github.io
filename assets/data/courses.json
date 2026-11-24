@@ -7,7 +7,7 @@
     "instructor": "Trentinaglia, Nicoletta",
     "duration": "25 hs",
     "skill": "Soft-Skills",
-    "thumbnail": "./assets/img/certificates/2026.10.26 Politecnico Milano - Learning To Learn - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2026.10.26 Politecnico Milano - Learning To Learn - Thumbnail.jpg",
     "title_es": "Aprendiendo A Aprender",
     "title_it": "Imparare a imparare"
   },
@@ -19,7 +19,7 @@
     "instructor": "Ibrahimi, Memedhe",
     "duration": "6 hs",
     "skill": "Networks",
-    "thumbnail": "./assets/img/certificates/2026.10.24 Politecnico Milano - Transport Layer - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2026.10.24 Politecnico Milano - Transport Layer - Thumbnail.jpg",
     "title_es": "La Capa De Transporte",
     "title_it": "Il Livello Di Trasporto"
   },
@@ -31,7 +31,7 @@
     "instructor": "Troia, Sebastian",
     "duration": "6 hs",
     "skill": "Networks",
-    "thumbnail": "./assets/img/certificates/2026.10.22 Politecnico Milano - Application Layer - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2026.10.22 Politecnico Milano - Application Layer - Thumbnail.jpg",
     "title_es": "La Capa De Aplicación",
     "title_it": "Il Livello Di Applicazione"
   },
@@ -43,7 +43,7 @@
     "instructor": "Troia, Sebastian",
     "duration": "6 hs",
     "skill": "Networks",
-    "thumbnail": "./assets/img/certificates/2026.10.20 Politecnico Milano - Introduction To Internet And Networks - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2026.10.20 Politecnico Milano - Introduction To Internet And Networks - Thumnail.jpg",
     "title_es": "Introducción al Internet y las redes",
     "title_it": "Introduzione a Internet e Alle Reti"
   },
@@ -67,7 +67,7 @@
     "instructor": "Bruschi, Francesco",
     "duration": "6 hs",
     "skill": "JavaScript",
-    "thumbnail": "./assets/img/certificates/2026.10.16 Politecnico Milano - Coding Il Linguaggio Nascosto Delle Cose - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2026.10.16 Politecnico Milano - Coding Il Linguaggio Nascosto Delle Cose - Thumbnail.jpg",
     "title_es": "Programación: el lenguaje oculto de las cosas",
     "title_it": "Coding Il Linguaggio Nascosto Delle Cose"
   },
@@ -79,7 +79,7 @@
     "instructor": "Moure, Brais",
     "duration": "6 hs",
     "skill": "Artificial Intelligence",
-    "thumbnail": "./assets/img/certificates/2026.10.04 Big School - Iniciación Al Desarrollo Con IA -  Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2026.10.04 Big School - Iniciación Al Desarrollo Con IA -  Thumnail.jpg",
     "title_es": "Iniciación Al Desarrollo Con IA",
     "title_it": "Introduzione allo sviluppo con l'IA"
   },
@@ -91,7 +91,7 @@
     "instructor": "Gonzáles, Paula",
     "duration": "6 hs",
     "skill": "Digital Marketing",
-    "thumbnail": "./assets/img/certificates/2026.10.04 Big School - Marketing Digital con IA -  Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2026.10.04 Big School - Marketing Digital con IA -  Thumbnail.jpg",
     "title_es": "Marketing Digital Con IA",
     "title_it": "Marketing Digitale con l'IA"
   },
@@ -103,7 +103,7 @@
     "instructor": "",
     "duration": "1 hs",
     "skill": "ITIL",
-    "thumbnail": "./assets/img/certificates/2026.08.04 Simplilearn - Introduction To ITIL v4 - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2026.08.04 Simplilearn - Introduction To ITIL v4 - Thumbnail.jpg",
     "title_es": "Introducción a ITIL v4",
     "title_it": "Introduzione a ITIL v4"
   },
@@ -115,7 +115,7 @@
     "instructor": "Sáez, Javier",
     "duration": "8 hs",
     "skill": "Artificial Intelligence",
-    "thumbnail": "./assets/img/certificates/2026.07.07 IA Heroes - Iniciación En Inteligencia Artificial - Thumbail.jpg",
+    "thumbnail": "./assets/img/certificates/2026.07.07 IA Heroes - Iniciación En Inteligencia Artificial - Thumbnail.jpg",
     "title_es": "Iniciación En Inteligencia Artificial",
     "title_it": "Introduzione all'Intelligenza Artificiale"
   },
@@ -139,7 +139,7 @@
     "instructor": "Moure, Brais",
     "duration": "6 hs",
     "skill": "Artificial Intelligence",
-    "thumbnail": "./assets/img/certificates/2026.06.26 Big School - Iniciación Al Desarrollo Con IA - Thumnail.jpg",
+    "thumbnail": "./assets/img/certificates/2026.06.26 Big School - Iniciación Al Desarrollo Con IA - Thumbnail.jpg",
     "title_es": "Iniciación Al Desarrollo Con IA",
     "title_it": "Introduzione allo sviluppo con l'IA"
   },

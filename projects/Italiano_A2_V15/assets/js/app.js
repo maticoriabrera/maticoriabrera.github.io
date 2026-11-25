@@ -111,6 +111,25 @@
     return reflective(v, f);
   }
   const SUBJ = {
+    // Lezione 14: forme necessarie anche per l'imperativo e il congiuntivo.
+    camminare:['cammini','cammini','cammini','camminiamo','camminiate','camminino'],
+    ringraziare:['ringrazi','ringrazi','ringrazi','ringraziamo','ringraziate','ringrazino'],
+    ritrovare:['ritrovi','ritrovi','ritrovi','ritroviamo','ritroviate','ritrovino'],
+    scordare:['scordi','scordi','scordi','scordiamo','scordiate','scordino'],
+    morire:['muoia','muoia','muoia','moriamo','moriate','muoiano'],
+    cercare:["cerchi", "cerchi", "cerchi", "cerchiamo", "cerchiate", "cerchino"],
+    preferire:["preferisca", "preferisca", "preferisca", "preferiamo", "preferiate", "preferiscano"],
+    riposare:["riposi", "riposi", "riposi", "riposiamo", "riposiate", "riposino"],
+    servire:["serva", "serva", "serva", "serviamo", "serviate", "servano"],
+    permettere:["permetta", "permetta", "permetta", "permettiamo", "permettiate", "permettano"],
+    fumare:["fumi", "fumi", "fumi", "fumiamo", "fumiate", "fumino"],
+    guidare:["guidi", "guidi", "guidi", "guidiamo", "guidiate", "guidino"],
+    stirare:["stiri", "stiri", "stiri", "stiriamo", "stiriate", "stirino"],
+    scoprire:["scopra", "scopra", "scopra", "scopriamo", "scopriate", "scoprano"],
+    cucinare:["cucini", "cucini", "cucini", "cuciniamo", "cuciniate", "cucinino"],
+    lasciare:["lasci", "lasci", "lasci", "lasciamo", "lasciate", "lascino"],
+    trovare:["trovi", "trovi", "trovi", "troviamo", "troviate", "trovino"],
+    cambiare:["cambi", "cambi", "cambi", "cambiamo", "cambiate", "cambino"],
     cantare:['canti','canti','canti','cantiamo','cantiate','cantino'],
     stare:['stia','stia','stia','stiamo','stiate','stiano'],
     restare:['resti','resti','resti','restiamo','restiate','restino'],
@@ -185,7 +204,22 @@
     possedere:['possieda','possieda','possieda','possediamo','possediate','possiedano'],
     proseguire:['prosegua','prosegua','prosegua','proseguiamo','proseguiate','proseguano'],
     rispondere:['risponda','risponda','risponda','rispondiamo','rispondiate','rispondano'],
-    restituire:['restituisca','restituisca','restituisca','restituiamo','restituiate','restituiscano']
+    restituire:['restituisca','restituisca','restituisca','restituiamo','restituiate','restituiscano'],
+    // Verbi inseriti con la Lezione 15: forme verificate per la navigazione nell’Armadio.
+    incamminarsi:["incammini", "incammini", "incammini", "incamminiamo", "incamminiate", "incamminino"],
+    stendersi:["stenda", "stenda", "stenda", "stendiamo", "stendiate", "stendano"],
+    girare:["giri", "giri", "giri", "giriamo", "giriate", "girino"],
+    preoccuparsi:["preoccupi", "preoccupi", "preoccupi", "preoccupiamo", "preoccupiate", "preoccupino"],
+    spaventarsi:["spaventi", "spaventi", "spaventi", "spaventiamo", "spaventiate", "spaventino"],
+    registrare:["registri", "registri", "registri", "registriamo", "registriate", "registrino"],
+    innervosirsi:["innervosisca", "innervosisca", "innervosisca", "innervosiamo", "innervosiate", "innervosiscano"],
+    consigliare:["consigli", "consigli", "consigli", "consigliamo", "consigliate", "consiglino"],
+    iniziare:["inizi", "inizi", "inizi", "iniziamo", "iniziate", "inizino"],
+    assicurare:["assicuri", "assicuri", "assicuri", "assicuriamo", "assicuriate", "assicurino"],
+    visitare:["visiti", "visiti", "visiti", "visitiamo", "visitiate", "visitino"],
+    sentirsi:["senta", "senta", "senta", "sentiamo", "sentiate", "sentano"],
+    chiamare:["chiami", "chiami", "chiami", "chiamiamo", "chiamiate", "chiamino"],
+    raccontare:["racconti", "racconti", "racconti", "raccontiamo", "raccontiate", "raccontino"]
   };
   function congiuntivoPresente(v) { return v.aux === 'refl' ? reflective(v,SUBJ[v.id]) : SUBJ[v.id]; }
   function congiuntivoImperfetto(v) {
@@ -299,7 +333,7 @@
     const rows=f.map((form,i)=>`<tr><td>${t.labels ? t.labels[i] : (isSubj ? 'che ' : '')+PERSONE[i]}</td><td>${form}</td></tr>`).join('');
     return `<section class="tense-box" data-tense="${t.id}"><header class="tense-head"><div><strong>${t.titolo}</strong></div><span class="level-tag level-${t.livello}">${t.livello}</span></header><table class="tense-table"><tbody>${rows}</tbody></table></section>`;
   }
-  const VERBI_AGGIUNTI_V13 = new Set(['addormentare','addormentarsi','andarsene','salire','svegliarsi','alzarsi','pettinarsi','vestirsi','conoscersi','incontrarsi','spostarsi','trovarsi','riposarsi','ferirsi','vomitare','rimettere','perdere','ridere','guardare']);
+  const VERBI_AGGIUNTI_V13 = new Set(['addormentare','addormentarsi','andarsene','salire','svegliarsi','alzarsi','pettinarsi','vestirsi','conoscersi','incontrarsi','spostarsi','trovarsi','riposarsi','ferirsi','vomitare','rimettere','perdere','ridere','guardare','trasferirsi','sposarsi','pagare','organizzare','difendere','lavare','vestire','alzare','sedersi','pettinare','iscriversi','convincersi','truccarsi','informarsi','sbagliarsi','riunirsi','organizzarsi','curare','curarsi','guardarsi','fermare','fermarsi','colpire','colpirsi','tagliare','tagliarsi','perdersi','dimenticare','dimenticarsi','preparare','prepararsi','mettersi','ammalarsi','licenziarsi','aspettare','entrare','piangere','farsi','diplomarsi','arrabbiarsi','accorgersi','licenziare']);
   function renderVerb(v) {
     if (v.id === 'andarsene') {
       byId('verb-details').innerHTML = `<div class="card"><h2>Andarsene</h2><p class="verb-meaning"><strong>Significato:</strong> Andare via; allontanarsi da un luogo. È un verbo pronominale, non un riflessivo in senso stretto.</p><div class="scrollbox"><table class="table"><thead><tr><th>Persona</th><th>Presente</th><th>Passato prossimo</th></tr></thead><tbody>${['me ne vado','te ne vai','se ne va','ce ne andiamo','ve ne andate','se ne vanno'].map((s,i)=>`<tr><td>${PERSONE[i]}</td><td>${s}</td><td>${['me ne sono andato/a','te ne sei andato/a','se ne è andato/a','ce ne siamo andati/e','ve ne siete andati/e','se ne sono andati/e'][i]}</td></tr>`).join('')}</tbody></table></div><p class="small muted">Le forme qui riportate sono limitate ai tempi necessari al ripasso della Lezione 07.</p></div>`;

@@ -1476,7 +1476,420 @@ window.LESSONS = [
       "vomitare",
       "rimettere"
     ]
+  },
+  {
+    "id": "11",
+    "titolo": "Lezione 11",
+    "data": "10 novembre 2026",
+    "descrizione": "La mattina di Rachida: passato prossimo, verbi riflessivi, orari e racconto della routine.",
+    "abilitata": true,
+    "infografiche": [
+      {
+        "src": "assets/infografiche/lezione-11/infografica-01.svg",
+        "miniatura": "assets/infografiche/lezione-11/infografica-01.svg"
+      },
+      {
+        "src": "assets/infografiche/lezione-11/infografica-02.svg",
+        "miniatura": "assets/infografiche/lezione-11/infografica-02.svg"
+      },
+      {
+        "src": "assets/infografiche/lezione-11/infografica-03.svg",
+        "miniatura": "assets/infografiche/lezione-11/infografica-03.svg"
+      }
+    ],
+    "documenti": [
+      {
+        "src": "assets/documenti/lezione-11/pagina-01.jpg",
+        "miniatura": "assets/miniature/lezione-11/pagina-01.jpg"
+      },
+      {
+        "src": "assets/documenti/lezione-11/pagina-02.jpg",
+        "miniatura": "assets/miniature/lezione-11/pagina-02.jpg"
+      }
+    ],
+    "grammatica": [
+      {
+        "id": "passato-prossimo",
+        "esempio": "«<strong>Mi sono svegliata</strong> presto»; «<strong>ho bevuto</strong> una grande tazza di caffè».",
+        "nota": "Passato prossimo: azioni concluse nella mattinata."
+      },
+      {
+        "id": "ausiliari-essere-avere",
+        "esempio": "«<strong>Sono andata</strong> verso il mare»; «<strong>ho preso</strong> l’autobus».",
+        "nota": "Scelta dell’ausiliare e accordo con essere."
+      },
+      {
+        "id": "verbi-riflessivi",
+        "esempio": "«<strong>Mi sono lavata</strong> i denti»; «<strong>mi sono pettinata</strong>».",
+        "nota": "Pronome riflessivo e passato prossimo."
+      },
+      {
+        "id": "verbi-pronominali",
+        "esempio": "«<strong>Mi sono detta</strong>: “Speriamo bene!”».",
+        "nota": "Costruzioni con particella pronominale."
+      },
+      {
+        "id": "participio-passato",
+        "esempio": "«Ho <strong>bevuto</strong>»; «ho <strong>messo</strong>»; «mi sono <strong>svegliata</strong>».",
+        "nota": "Forme dei participi e concordanza quando prevista."
+      }
+    ],
+    "verbi_studiati": [
+      "svegliarsi",
+      "lavarsi",
+      "vestirsi",
+      "pettinarsi",
+      "alzarsi",
+      "avere",
+      "essere",
+      "fare",
+      "bere",
+      "prendere",
+      "mettere",
+      "mangiare",
+      "andare"
+    ],
+    "verbi": [
+      "svegliarsi",
+      "lavarsi",
+      "vestirsi",
+      "pettinarsi",
+      "alzarsi",
+      "avere",
+      "essere",
+      "fare",
+      "bere",
+      "prendere",
+      "mettere",
+      "mangiare",
+      "andare",
+      "arrivare",
+      "uscire",
+      "dire",
+      "guardare",
+      "lavorare",
+      "studiare"
+    ]
+  },
+  {
+    "id": "12",
+    "titolo": "Lezione 12",
+    "data": "12 novembre 2026",
+    "descrizione": "Il colloquio di lavoro, la busta paga, i diritti dei lavoratori e il passato prossimo dei verbi riflessivi.",
+    "abilitata": true,
+    "infografiche": [
+      {
+        "src": "assets/infografiche/lezione-12/infografica-01.svg",
+        "miniatura": "assets/infografiche/lezione-12/infografica-01.svg"
+      },
+      {
+        "src": "assets/infografiche/lezione-12/infografica-02.svg",
+        "miniatura": "assets/infografiche/lezione-12/infografica-02.svg"
+      },
+      {
+        "src": "assets/infografiche/lezione-12/infografica-03.svg",
+        "miniatura": "assets/infografiche/lezione-12/infografica-03.svg"
+      }
+    ],
+    "documenti": [
+      {
+        "src": "assets/documenti/lezione-12/pagina-01.jpg",
+        "miniatura": "assets/miniature/lezione-12/pagina-01.jpg"
+      },
+      {
+        "src": "assets/documenti/lezione-12/pagina-02.jpg",
+        "miniatura": "assets/miniature/lezione-12/pagina-02.jpg"
+      },
+      {
+        "src": "assets/documenti/lezione-12/pagina-03.jpg",
+        "miniatura": "assets/miniature/lezione-12/pagina-03.jpg"
+      },
+      {
+        "src": "assets/documenti/lezione-12/pagina-04.jpg",
+        "miniatura": "assets/miniature/lezione-12/pagina-04.jpg"
+      },
+      {
+        "src": "assets/documenti/lezione-12/pagina-05.jpg",
+        "miniatura": "assets/miniature/lezione-12/pagina-05.jpg"
+      }
+    ],
+    "grammatica": [
+      {
+        "id": "verbi-riflessivi",
+        "esempio": "«Io <strong>mi lavo</strong>»; «<strong>mi sono alzata</strong>».",
+        "nota": "Forma attiva e forma riflessiva; pronomi mi, ti, si, ci, vi, si e costruzione al passato prossimo."
+      },
+      {
+        "id": "passato-prossimo",
+        "esempio": "«<strong>Mi sono iscritta</strong> all’università»; «<strong>ho lavorato</strong> in un bar».",
+        "nota": "Passato prossimo nei racconti e trasformazioni dal presente al passato."
+      },
+      {
+        "id": "ausiliari-essere-avere",
+        "esempio": "«<strong>Mi sono trasferita</strong>»; «<strong>ho fatto</strong> alcuni corsi».",
+        "nota": "Essere con i verbi riflessivi; avere con altri verbi in queste frasi."
+      },
+      {
+        "id": "concordanza-participio",
+        "esempio": "«Rachida <strong>si è sposata</strong>»; «noi <strong>ci siamo incontrati</strong>».",
+        "nota": "Concordanza del participio con il soggetto usando essere."
+      },
+      {
+        "id": "verbi-pronominali",
+        "esempio": "«<strong>Si è iscritta</strong> all’università»; «<strong>si è messo</strong> a piangere».",
+        "nota": "Verbi con particelle pronominali; alcuni usi non esprimono una vera azione su sé stessi."
+      },
+      {
+        "id": "lessico-lavoro",
+        "esempio": "«<strong>Colloquio di lavoro</strong>», «<strong>busta paga</strong>», «<strong>contratto</strong>», «<strong>sciopero</strong>».",
+        "nota": "Lessico civico e del lavoro: contratti, retribuzione, contributi, diritti e doveri."
+      }
+    ],
+    "verbi_studiati": [
+      "lavarsi",
+      "vestirsi",
+      "alzarsi",
+      "svegliarsi",
+      "sedersi",
+      "pettinarsi",
+      "iscriversi",
+      "informarsi",
+      "incontrarsi",
+      "sbagliarsi",
+      "ferirsi",
+      "prepararsi",
+      "fermarsi",
+      "mettersi",
+      "ammalarsi",
+      "spostarsi",
+      "licenziarsi",
+      "farsi"
+    ],
+    "verbi": [
+      "essere",
+      "avere",
+      "lavorare",
+      "fare",
+      "imparare",
+      "sapere",
+      "trasferirsi",
+      "iscriversi",
+      "sposarsi",
+      "sentire",
+      "prendere",
+      "venire",
+      "pagare",
+      "dare",
+      "stare",
+      "conoscere",
+      "organizzare",
+      "difendere",
+      "lavare",
+      "lavarsi",
+      "vestire",
+      "vestirsi",
+      "alzare",
+      "alzarsi",
+      "sedersi",
+      "pettinare",
+      "pettinarsi",
+      "scrivere",
+      "iscriversi",
+      "convincersi",
+      "truccarsi",
+      "informarsi",
+      "incontrarsi",
+      "sbagliarsi",
+      "riunirsi",
+      "organizzarsi",
+      "ferirsi",
+      "curare",
+      "curarsi",
+      "guardare",
+      "guardarsi",
+      "fermare",
+      "fermarsi",
+      "colpire",
+      "colpirsi",
+      "tagliare",
+      "tagliarsi",
+      "perdere",
+      "perdersi",
+      "dimenticare",
+      "dimenticarsi",
+      "svegliarsi",
+      "preparare",
+      "prepararsi",
+      "mettere",
+      "mettersi",
+      "spostarsi",
+      "ammalarsi",
+      "licenziarsi",
+      "arrivare",
+      "aspettare",
+      "entrare",
+      "uscire",
+      "piangere",
+      "parlare",
+      "ammalarsi",
+      "riprendere",
+      "diplomarsi",
+      "farsi",
+      "accorgersi",
+      "arrabbiarsi",
+      "licenziare"
+    ]
   }
+,
+{
+  "id": "13",
+  "titolo": "Lezione 13",
+  "data": "17 novembre 2026",
+  "descrizione": "La preposizione DA, nomi di mestiere in -ista, lettura e ricerca di lavoro.",
+  "abilitata": true,
+  "infografiche": [
+    {
+      "src": "assets/infografiche/lezione-13/infografica-01.svg",
+      "miniatura": "assets/infografiche/lezione-13/infografica-01.svg"
+    },
+    {
+      "src": "assets/infografiche/lezione-13/infografica-02.svg",
+      "miniatura": "assets/infografiche/lezione-13/infografica-02.svg"
+    },
+    {
+      "src": "assets/infografiche/lezione-13/infografica-03.svg",
+      "miniatura": "assets/infografiche/lezione-13/infografica-03.svg"
+    }
+  ],
+  "documenti": [
+    {
+      "src": "assets/documenti/lezione-13/pagina-01.jpg",
+      "miniatura": "assets/miniature/lezione-13/pagina-01.jpg",
+      "formato": "verticale"
+    },
+    {
+      "src": "assets/documenti/lezione-13/pagina-02.jpg",
+      "miniatura": "assets/miniature/lezione-13/pagina-02.jpg",
+      "formato": "verticale"
+    },
+    {
+      "src": "assets/documenti/lezione-13/pagina-03.jpg",
+      "miniatura": "assets/miniature/lezione-13/pagina-03.jpg",
+      "formato": "verticale"
+    },
+    {
+      "src": "assets/documenti/lezione-13/pagina-04.jpg",
+      "miniatura": "assets/miniature/lezione-13/pagina-04.jpg",
+      "formato": "verticale"
+    },
+    {
+      "src": "assets/documenti/lezione-13/pagina-05.jpg",
+      "miniatura": "assets/miniature/lezione-13/pagina-05.jpg",
+      "formato": "orizzontale"
+    }
+  ],
+  "grammatica": [
+    {
+      "id": "preposizioni-semplici",
+      "esempio": "«Vengo <strong>da</strong> Shanghai», «sono in Italia <strong>da</strong> quattro anni», «qualcosa <strong>da</strong> mangiare».",
+      "nota": "Provenienza, durata, funzione e destinazione."
+    },
+    {
+      "id": "preposizioni-articolate",
+      "esempio": "«Vengo <strong>dalla</strong> Cina», «<strong>dal</strong> Marocco», «<strong>dalle</strong> Filippine».",
+      "nota": "Da combinata con gli articoli determinativi."
+    },
+    {
+      "id": "articoli-determinativi",
+      "esempio": "«<strong>Il</strong> barista», «<strong>la</strong> barista», «<strong>il</strong> problema».",
+      "nota": "Articolo e genere dei nomi particolari."
+    },
+    {
+      "id": "singolare-plurale-nomi",
+      "esempio": "«Il barista → <strong>i baristi</strong>»; «la barista → <strong>le bariste</strong>»; «il problema → <strong>i problemi</strong>».",
+      "nota": "Nomi in -ista, maschili in -a e forme invariabili."
+    },
+    {
+      "id": "lessico-lavoro",
+      "esempio": "«<strong>Cerco lavoro</strong>», «<strong>ferie</strong>», «<strong>pensione</strong>», «<strong>annuncio di lavoro</strong>».",
+      "nota": "Comprensione, educazione civica e annuncio di ricerca di lavoro."
+    },
+    {
+      "id": "annunci-lavoro",
+      "esempio": "«<strong>Cerco lavoro</strong>», «<strong>posso iniziare subito</strong>».",
+      "nota": "Struttura di una breve presentazione e di un avviso."
+    }
+  ],
+  "verbi_studiati": [
+    "venire",
+    "essere",
+    "avere",
+    "lavorare",
+    "aspettare",
+    "andare",
+    "mettere",
+    "fare",
+    "cercare",
+    "potere",
+    "volere",
+    "sapere",
+    "scrivere",
+    "parlare",
+    "abitare",
+    "iniziare"
+  ],
+  "verbi": [
+    "venire",
+    "essere",
+    "avere",
+    "lavorare",
+    "aspettare",
+    "andare",
+    "mettere",
+    "fare",
+    "cercare",
+    "potere",
+    "volere",
+    "sapere",
+    "scrivere",
+    "parlare",
+    "abitare",
+    "iniziare",
+    "partire",
+    "chiudere",
+    "preferire",
+    "riposare",
+    "servire",
+    "permettere",
+    "fumare",
+    "guidare",
+    "vivere",
+    "finire",
+    "alzarsi",
+    "sposarsi",
+    "nascere",
+    "piacere",
+    "dare",
+    "stirare",
+    "scoprire",
+    "guardare",
+    "tornare",
+    "mangiare",
+    "bere",
+    "cucinare",
+    "preparare",
+    "portare",
+    "lasciare",
+    "trovare",
+    "cambiare",
+    "piangere",
+    "presentare",
+    "leggere",
+    "rispondere",
+    "chiamarsi",
+    "studiare"
+  ]
+}
 ];
 window.TOPICS = [
   {
@@ -1851,6 +2264,10 @@ window.TOPICS = [
       {
         "titolo": "Collegamento con la lezione",
         "html": "Nelle Lezioni 05 e 06 il tempo è affrontato esplicitamente: prima la formazione con gli ausiliari, poi gli esercizi di scelta, accordo e trasformazione delle frasi. La Lezione 01 contiene già un esempio nella lettura."
+      },
+      {
+        "titolo": "Lezione 12: verbi riflessivi",
+        "html": "Nel dialogo di Rachida: «<strong>mi sono diplomata</strong>», «<strong>mi sono iscritta</strong>», «<strong>mi sono trasferita</strong>», «<strong>mi sono sposata</strong>». Le forme riflessive e pronominali studiate usano <strong>essere</strong> e il participio concorda con il soggetto: «mi sono alzato» (maschile), «mi sono alzata» (femminile), «ci siamo alzati» (gruppo maschile o misto), «ci siamo alzate» (gruppo femminile). «Ho lavorato» usa invece <strong>avere</strong>."
       }
     ]
   },
@@ -2257,6 +2674,10 @@ window.TOPICS = [
       {
         "titolo": "Con il passato prossimo",
         "html": "<em>Mi sono svegliato/a</em>; <em>ci siamo vestiti/e</em>. Molti verbi riflessivi usano <strong>essere</strong> nel passato prossimo; il participio concorda con il soggetto. Questi sono esempi complementari per collegarsi alle Lezioni 05 e 06."
+      },
+      {
+        "titolo": "Lezione 12: attiva e riflessiva; passato prossimo",
+        "html": "<p><strong>Forma attiva:</strong> «Io lavo i piatti», «Ho vestito mia figlia». <strong>Forma riflessiva:</strong> «Io mi lavo», «Mi sono vestito/a». La forma riflessiva usa i pronomi <strong>mi, ti, si, ci, vi, si</strong>.</p><p>Al <strong>passato prossimo</strong>: pronome riflessivo + <strong>essere</strong> al presente + participio passato. Esempi dal libro: «mi sono lavato/a», «ti sei vestito/a», «lei si è alzata», «ci siamo lavati/e».</p><p>Con <em>essere</em> il participio concorda con il soggetto: <strong>-o, -a, -i, -e</strong>. Non tutti i verbi che hanno <em>-si</em> nell’infinito descrivono un’azione compiuta materialmente su sé stessi: per esempio <em>iscriversi</em> o <em>mettersi a piangere</em> hanno un uso pronominale.</p>"
       }
     ]
   },
@@ -2308,8 +2729,56 @@ window.TOPICS = [
         "html": "<p>La scelta dell’articolo dipende dal genere e dal numero: <em>la mano → le mani</em>, <em>l’occhio → gli occhi</em>, <em>il dito → le dita</em>. Quest’ultimo plurale è di genere femminile e riguarda normalmente le dita della mano o del piede; anche <em>i diti</em> è possibile in alcuni usi, ma non è la forma normale da studiare qui.</p><p><em>Il sangue</em> è un nome di massa: nel significato corrente non si usa normalmente al plurale. <em>I baffi</em> si usa normalmente al plurale per indicare i peli sopra il labbro superiore; il singolare <em>il baffo</em> esiste ma non è la denominazione usuale dell’insieme.</p>"
       }
     ]
+  },
+  {
+    "id": "lessico-lavoro",
+    "titolo": "Il lavoro: contratti, busta paga, diritti e doveri",
+    "sottotitolo": "Parole utili per parlare del lavoro e comprendere le informazioni di base.",
+    "sezioni": [
+      {
+        "titolo": "Colloquio di lavoro",
+        "html": "Un <strong>colloquio di lavoro</strong> è un incontro tra chi cerca lavoro e chi cerca un lavoratore. Nel dialogo della Lezione 12, Arturo chiede a Rachida delle esperienze, degli studi e della disponibilità. Rachida risponde che ha lavorato in un bar a Rimini."
+      },
+      {
+        "titolo": "Lavoro subordinato e autonomo",
+        "html": "Nel <strong>lavoro subordinato</strong> (dipendente) si lavora per un datore di lavoro. Nel <strong>lavoro autonomo</strong> si organizza in proprio l’attività. Nella pagina 22 del libro sono presentate varie forme di contratto di lavoro subordinato: a tempo indeterminato, determinato, a chiamata, apprendistato e somministrazione. Sono categorie riportate dal libro, non una guida aggiornata alle norme."
+      },
+      {
+        "titolo": "Busta paga e contributi",
+        "html": "La <strong>busta paga</strong> è il documento che mostra retribuzione, trattenute e altre voci. Nel dialogo della pagina 21, Rachida distingue lo stipendio scritto (1.000 euro) da quello ricevuto (700 euro). Il libro nomina <strong>INPS</strong> (previdenza), <strong>INAIL</strong> (assicurazione contro gli infortuni sul lavoro) e <strong>contributi</strong>. Le cifre sono un esempio didattico, non una regola di calcolo."
+      },
+      {
+        "titolo": "Diritti e doveri",
+        "html": "Nel libro compaiono <strong>ferie pagate</strong>, <strong>sciopero</strong>, <strong>pensione</strong>, <strong>riposo settimanale</strong>, <strong>sicurezza sul lavoro</strong> e <strong>giusta paga</strong>. <strong>Diritti</strong>: ciò che spetta a una persona. <strong>Doveri</strong>: ciò che una persona è tenuta a fare. Sono definizioni utili per comprendere il lessico della lezione; non sostituiscono informazioni ufficiali sul diritto del lavoro."
+      }
+    ]
   }
+,
+{
+  "id": "annunci-lavoro",
+  "titolo": "Annunci di lavoro: leggere e scrivere",
+  "sottotitolo": "Presentarsi, descrivere esperienze e disponibilità negli avvisi.",
+  "sezioni": [
+    {
+      "titolo": "Leggere un annuncio",
+      "html": "<p>Nel test della Lezione 13 compaiono annunci per <strong>baby sitter</strong>, <strong>venditori</strong> e lavori tramite agenzia. Cerca parole che rispondono a <em>chi?</em>, <em>che lavoro?</em>, <em>quando?</em> e <em>quali requisiti?</em>.</p>"
+    },
+    {
+      "titolo": "Scrivere un annuncio",
+      "html": "<p>La lavagna chiede di indicare <strong>nome, età, provenienza, residenza, lingue, esperienza, motivazione, qualità e disponibilità</strong>. Il test del libro richiede almeno <strong>25 parole</strong> e tre informazioni essenziali: chi sei, che lavoro cerchi e che cosa sai fare.</p>"
+    }
+  ]
+}
 ];
+
+// Approfondimenti collegati alla Lezione 13 (in aggiunta alle sezioni esistenti).
+window.TOPICS.find(t => t.id === "preposizioni-semplici").sezioni.push({"titolo": "DA: provenienza e tempo", "html": "<p>La Lezione 13 presenta <strong>da</strong> con funzioni diverse: <em>vengo da Shanghai</em> (città), <em>sono in Italia da quattro anni</em> (durata ancora in corso), <em>lavoro qui da gennaio</em> (momento iniziale). La domanda <em>da dove?</em> riguarda il luogo di provenienza, mentre <em>da quando?</em> riguarda un momento iniziale.</p>"});
+window.TOPICS.find(t => t.id === "preposizioni-semplici").sezioni.push({"titolo": "DA: funzione e persone", "html": "<p><em>La macchina da cucire</em> indica la funzione; <em>qualcosa da bere</em> indica ciò che si può bere. Davanti al nome di una persona o di un professionista: <em>vado da Mario</em>, <em>sono dal dottore</em>. Il libro confronta queste costruzioni con <em>in pizzeria</em> e <em>a scuola</em>.</p>"});
+window.TOPICS.find(t => t.id === "preposizioni-articolate").sezioni.push({"titolo": "La preposizione DA nella Lezione 13", "html": "<p>Le combinazioni sono <strong>dal, dallo, dalla, dall’, dai, dagli, dalle</strong>. Esempi: <em>dal Marocco</em>, <em>dallo Zambia</em>, <em>dalla Francia</em>, <em>dall’India</em>, <em>dai Paesi Bassi</em>, <em>dagli Emirati Arabi</em>, <em>dalle Maldive</em>. La preposizione e l’articolo dipendono dalla costruzione e dal nome che segue.</p>"});
+window.TOPICS.find(t => t.id === "singolare-plurale-nomi").sezioni.push({"titolo": "Nomi di mestiere in -ista", "html": "<p>La Lezione 13 mostra che <em>-ista</em> si usa al singolare per il maschile e il femminile: <strong>il barista / la barista</strong>. Al plurale, invece, <strong>i baristi / le bariste</strong>. Il nome non cambia al singolare, ma cambia l’articolo.</p>"});
+window.TOPICS.find(t => t.id === "singolare-plurale-nomi").sezioni.push({"titolo": "Nomi maschili terminanti in -a", "html": "<p>Non tutti i nomi in <em>-a</em> sono femminili: <strong>il problema → i problemi</strong>, <strong>il programma → i programmi</strong>, <strong>il pediatra → i pediatri</strong>. Altri sono invariabili: <strong>il cinema → i cinema</strong>, <strong>il papà → i papà</strong>. Si deve conoscere il genere del singolo nome.</p>"});
+window.TOPICS.find(t => t.id === "lessico-lavoro").sezioni.push({"titolo": "Leggere gli annunci e scrivere una presentazione", "html": "<p>Nel test della Lezione 13 compaiono annunci per <strong>baby sitter</strong>, <strong>venditori</strong> e un impiego tramite agenzia. La produzione scritta chiede di spiegare chi sei, che lavoro cerchi e che cosa sai fare (almeno 25 parole). La lavagna propone altre domande su lingue, esperienza, qualità e disponibilità.</p>"});
+
 window.VERBS = [
   {
     "id": "abitare",
@@ -3636,9 +4105,738 @@ window.VERBS = [
     ],
     "aux": "a",
     "part": "guardato"
+  },
+  {
+    "id": "trasferirsi",
+    "p": [
+      "trasferisco",
+      "trasferisci",
+      "trasferisce",
+      "trasferiamo",
+      "trasferite",
+      "trasferiscono"
+    ],
+    "aux": "refl",
+    "part": "trasferito"
+  },
+  {
+    "id": "sposarsi",
+    "p": [
+      "sposo",
+      "sposi",
+      "sposa",
+      "sposiamo",
+      "sposate",
+      "sposano"
+    ],
+    "aux": "refl",
+    "part": "sposato"
+  },
+  {
+    "id": "pagare",
+    "p": [
+      "pago",
+      "paghi",
+      "paga",
+      "paghiamo",
+      "pagate",
+      "pagano"
+    ],
+    "aux": "a",
+    "part": "pagato"
+  },
+  {
+    "id": "organizzare",
+    "p": [
+      "organizzo",
+      "organizzi",
+      "organizza",
+      "organizziamo",
+      "organizzate",
+      "organizzano"
+    ],
+    "aux": "a",
+    "part": "organizzato"
+  },
+  {
+    "id": "difendere",
+    "p": [
+      "difendo",
+      "difendi",
+      "difende",
+      "difendiamo",
+      "difendete",
+      "difendono"
+    ],
+    "aux": "a",
+    "part": "difeso"
+  },
+  {
+    "id": "lavare",
+    "p": [
+      "lavo",
+      "lavi",
+      "lava",
+      "laviamo",
+      "lavate",
+      "lavano"
+    ],
+    "aux": "a",
+    "part": "lavato"
+  },
+  {
+    "id": "vestire",
+    "p": [
+      "vesto",
+      "vesti",
+      "veste",
+      "vestiamo",
+      "vestite",
+      "vestono"
+    ],
+    "aux": "a",
+    "part": "vestito"
+  },
+  {
+    "id": "alzare",
+    "p": [
+      "alzo",
+      "alzi",
+      "alza",
+      "alziamo",
+      "alzate",
+      "alzano"
+    ],
+    "aux": "a",
+    "part": "alzato"
+  },
+  {
+    "id": "sedersi",
+    "p": [
+      "siedo",
+      "siedi",
+      "siede",
+      "sediamo",
+      "sedete",
+      "siedono"
+    ],
+    "aux": "refl",
+    "part": "seduto"
+  },
+  {
+    "id": "pettinare",
+    "p": [
+      "pettino",
+      "pettini",
+      "pettina",
+      "pettiniamo",
+      "pettinate",
+      "pettinano"
+    ],
+    "aux": "a",
+    "part": "pettinato"
+  },
+  {
+    "id": "iscriversi",
+    "p": [
+      "iscrivo",
+      "iscrivi",
+      "iscrive",
+      "iscriviamo",
+      "iscrivete",
+      "iscrivono"
+    ],
+    "aux": "refl",
+    "part": "iscritto"
+  },
+  {
+    "id": "convincersi",
+    "p": [
+      "convinco",
+      "convinci",
+      "convince",
+      "convinciamo",
+      "convincete",
+      "convincono"
+    ],
+    "aux": "refl",
+    "part": "convinto"
+  },
+  {
+    "id": "truccarsi",
+    "p": [
+      "trucco",
+      "trucchi",
+      "trucca",
+      "trucchiamo",
+      "truccate",
+      "truccano"
+    ],
+    "aux": "refl",
+    "part": "truccato"
+  },
+  {
+    "id": "informarsi",
+    "p": [
+      "informo",
+      "informi",
+      "informa",
+      "informiamo",
+      "informate",
+      "informano"
+    ],
+    "aux": "refl",
+    "part": "informato"
+  },
+  {
+    "id": "sbagliarsi",
+    "p": [
+      "sbaglio",
+      "sbagli",
+      "sbaglia",
+      "sbagliamo",
+      "sbagliate",
+      "sbagliano"
+    ],
+    "aux": "refl",
+    "part": "sbagliato"
+  },
+  {
+    "id": "riunirsi",
+    "p": [
+      "riunisco",
+      "riunisci",
+      "riunisce",
+      "riuniamo",
+      "riunite",
+      "riuniscono"
+    ],
+    "aux": "refl",
+    "part": "riunito"
+  },
+  {
+    "id": "organizzarsi",
+    "p": [
+      "organizzo",
+      "organizzi",
+      "organizza",
+      "organizziamo",
+      "organizzate",
+      "organizzano"
+    ],
+    "aux": "refl",
+    "part": "organizzato"
+  },
+  {
+    "id": "curare",
+    "p": [
+      "curo",
+      "curi",
+      "cura",
+      "curiamo",
+      "curate",
+      "curano"
+    ],
+    "aux": "a",
+    "part": "curato"
+  },
+  {
+    "id": "curarsi",
+    "p": [
+      "curo",
+      "curi",
+      "cura",
+      "curiamo",
+      "curate",
+      "curano"
+    ],
+    "aux": "refl",
+    "part": "curato"
+  },
+  {
+    "id": "guardarsi",
+    "p": [
+      "guardo",
+      "guardi",
+      "guarda",
+      "guardiamo",
+      "guardate",
+      "guardano"
+    ],
+    "aux": "refl",
+    "part": "guardato"
+  },
+  {
+    "id": "fermare",
+    "p": [
+      "fermo",
+      "fermi",
+      "ferma",
+      "fermiamo",
+      "fermate",
+      "fermano"
+    ],
+    "aux": "a",
+    "part": "fermato"
+  },
+  {
+    "id": "fermarsi",
+    "p": [
+      "fermo",
+      "fermi",
+      "ferma",
+      "fermiamo",
+      "fermate",
+      "fermano"
+    ],
+    "aux": "refl",
+    "part": "fermato"
+  },
+  {
+    "id": "colpire",
+    "p": [
+      "colpisco",
+      "colpisci",
+      "colpisce",
+      "colpiamo",
+      "colpite",
+      "colpiscono"
+    ],
+    "aux": "a",
+    "part": "colpito"
+  },
+  {
+    "id": "colpirsi",
+    "p": [
+      "colpisco",
+      "colpisci",
+      "colpisce",
+      "colpiamo",
+      "colpite",
+      "colpiscono"
+    ],
+    "aux": "refl",
+    "part": "colpito"
+  },
+  {
+    "id": "tagliare",
+    "p": [
+      "taglio",
+      "tagli",
+      "taglia",
+      "tagliamo",
+      "tagliate",
+      "tagliano"
+    ],
+    "aux": "a",
+    "part": "tagliato"
+  },
+  {
+    "id": "tagliarsi",
+    "p": [
+      "taglio",
+      "tagli",
+      "taglia",
+      "tagliamo",
+      "tagliate",
+      "tagliano"
+    ],
+    "aux": "refl",
+    "part": "tagliato"
+  },
+  {
+    "id": "perdersi",
+    "p": [
+      "perdo",
+      "perdi",
+      "perde",
+      "perdiamo",
+      "perdete",
+      "perdono"
+    ],
+    "aux": "refl",
+    "part": "perso"
+  },
+  {
+    "id": "dimenticare",
+    "p": [
+      "dimentico",
+      "dimentichi",
+      "dimentica",
+      "dimentichiamo",
+      "dimenticate",
+      "dimenticano"
+    ],
+    "aux": "a",
+    "part": "dimenticato"
+  },
+  {
+    "id": "dimenticarsi",
+    "p": [
+      "dimentico",
+      "dimentichi",
+      "dimentica",
+      "dimentichiamo",
+      "dimenticate",
+      "dimenticano"
+    ],
+    "aux": "refl",
+    "part": "dimenticato"
+  },
+  {
+    "id": "preparare",
+    "p": [
+      "preparo",
+      "prepari",
+      "prepara",
+      "prepariamo",
+      "preparate",
+      "preparano"
+    ],
+    "aux": "a",
+    "part": "preparato"
+  },
+  {
+    "id": "prepararsi",
+    "p": [
+      "preparo",
+      "prepari",
+      "prepara",
+      "prepariamo",
+      "preparate",
+      "preparano"
+    ],
+    "aux": "refl",
+    "part": "preparato"
+  },
+  {
+    "id": "mettersi",
+    "p": [
+      "metto",
+      "metti",
+      "mette",
+      "mettiamo",
+      "mettete",
+      "mettono"
+    ],
+    "aux": "refl",
+    "part": "messo"
+  },
+  {
+    "id": "ammalarsi",
+    "p": [
+      "ammalo",
+      "ammali",
+      "ammala",
+      "ammaliamo",
+      "ammalate",
+      "ammalano"
+    ],
+    "aux": "refl",
+    "part": "ammalato"
+  },
+  {
+    "id": "licenziarsi",
+    "p": [
+      "licenzio",
+      "licenzi",
+      "licenzia",
+      "licenziamo",
+      "licenziate",
+      "licenziano"
+    ],
+    "aux": "refl",
+    "part": "licenziato"
+  },
+  {
+    "id": "aspettare",
+    "p": [
+      "aspetto",
+      "aspetti",
+      "aspetta",
+      "aspettiamo",
+      "aspettate",
+      "aspettano"
+    ],
+    "aux": "a",
+    "part": "aspettato"
+  },
+  {
+    "id": "entrare",
+    "p": [
+      "entro",
+      "entri",
+      "entra",
+      "entriamo",
+      "entrate",
+      "entrano"
+    ],
+    "aux": "e",
+    "part": "entrato"
+  },
+  {
+    "id": "piangere",
+    "p": [
+      "piango",
+      "piangi",
+      "piange",
+      "piangiamo",
+      "piangete",
+      "piangono"
+    ],
+    "aux": "a",
+    "part": "pianto"
+  },
+  {
+    "id": "farsi",
+    "p": [
+      "faccio",
+      "fai",
+      "fa",
+      "facciamo",
+      "fate",
+      "fanno"
+    ],
+    "aux": "refl",
+    "part": "fatto"
+  },
+  {
+    "id": "diplomarsi",
+    "p": [
+      "diplomo",
+      "diplomi",
+      "diploma",
+      "diplomiamo",
+      "diplomate",
+      "diplomano"
+    ],
+    "aux": "refl",
+    "part": "diplomato"
+  },
+  {
+    "id": "arrabbiarsi",
+    "p": [
+      "arrabbio",
+      "arrabbi",
+      "arrabbia",
+      "arrabbiamo",
+      "arrabbiate",
+      "arrabbiano"
+    ],
+    "aux": "refl",
+    "part": "arrabbiato"
+  },
+  {
+    "id": "accorgersi",
+    "p": [
+      "accorgo",
+      "accorgi",
+      "accorge",
+      "accorgiamo",
+      "accorgete",
+      "accorgono"
+    ],
+    "aux": "refl",
+    "part": "accorto"
+  },
+  {
+    "id": "licenziare",
+    "p": [
+      "licenzio",
+      "licenzi",
+      "licenzia",
+      "licenziamo",
+      "licenziate",
+      "licenziano"
+    ],
+    "aux": "a",
+    "part": "licenziato"
   }
+,
+{
+  "id": "cercare",
+  "p": [
+    "cerco",
+    "cerchi",
+    "cerca",
+    "cerchiamo",
+    "cercate",
+    "cercano"
+  ],
+  "aux": "a",
+  "part": "cercato"
+},
+{
+  "id": "preferire",
+  "p": [
+    "preferisco",
+    "preferisci",
+    "preferisce",
+    "preferiamo",
+    "preferite",
+    "preferiscono"
+  ],
+  "aux": "a",
+  "part": "preferito"
+},
+{
+  "id": "riposare",
+  "p": [
+    "riposo",
+    "riposi",
+    "riposa",
+    "riposiamo",
+    "riposate",
+    "riposano"
+  ],
+  "aux": "a",
+  "part": "riposato"
+},
+{
+  "id": "servire",
+  "p": [
+    "servo",
+    "servi",
+    "serve",
+    "serviamo",
+    "servite",
+    "servono"
+  ],
+  "aux": "a",
+  "part": "servito"
+},
+{
+  "id": "permettere",
+  "p": [
+    "permetto",
+    "permetti",
+    "permette",
+    "permettiamo",
+    "permettete",
+    "permettono"
+  ],
+  "aux": "a",
+  "part": "permesso"
+},
+{
+  "id": "fumare",
+  "p": [
+    "fumo",
+    "fumi",
+    "fuma",
+    "fumiamo",
+    "fumate",
+    "fumano"
+  ],
+  "aux": "a",
+  "part": "fumato"
+},
+{
+  "id": "guidare",
+  "p": [
+    "guido",
+    "guidi",
+    "guida",
+    "guidiamo",
+    "guidate",
+    "guidano"
+  ],
+  "aux": "a",
+  "part": "guidato"
+},
+{
+  "id": "stirare",
+  "p": [
+    "stiro",
+    "stiri",
+    "stira",
+    "stiriamo",
+    "stirate",
+    "stirano"
+  ],
+  "aux": "a",
+  "part": "stirato"
+},
+{
+  "id": "scoprire",
+  "p": [
+    "scopro",
+    "scopri",
+    "scopre",
+    "scopriamo",
+    "scoprite",
+    "scoprono"
+  ],
+  "aux": "a",
+  "part": "scoperto"
+},
+{
+  "id": "cucinare",
+  "p": [
+    "cucino",
+    "cucini",
+    "cucina",
+    "cuciniamo",
+    "cucinate",
+    "cucinano"
+  ],
+  "aux": "a",
+  "part": "cucinato"
+},
+{
+  "id": "lasciare",
+  "p": [
+    "lascio",
+    "lasci",
+    "lascia",
+    "lasciamo",
+    "lasciate",
+    "lasciano"
+  ],
+  "aux": "a",
+  "part": "lasciato"
+},
+{
+  "id": "trovare",
+  "p": [
+    "trovo",
+    "trovi",
+    "trova",
+    "troviamo",
+    "trovate",
+    "trovano"
+  ],
+  "aux": "a",
+  "part": "trovato"
+},
+{
+  "id": "cambiare",
+  "p": [
+    "cambio",
+    "cambi",
+    "cambia",
+    "cambiamo",
+    "cambiate",
+    "cambiano"
+  ],
+  "aux": "a",
+  "part": "cambiato"
+}
 ];
 window.VERB_MEANINGS = {
+  "cercare": "Provare a trovare qualcuno o qualcosa; cercare lavoro.",
+  "preferire": "Scegliere una cosa invece di un’altra.",
+  "riposare": "Fare una pausa per recuperare le forze.",
+  "servire": "Essere utile o necessario; prestare un servizio.",
+  "permettere": "Consentire o rendere possibile qualcosa.",
+  "fumare": "Aspirare e respirare il fumo di tabacco o altro.",
+  "guidare": "Condurre un veicolo.",
+  "stirare": "Togliere le pieghe ai vestiti con il ferro da stiro.",
+  "scoprire": "Venire a conoscere qualcosa di prima sconosciuto.",
+  "cucinare": "Preparare il cibo.",
+  "lasciare": "Non portare con sé o smettere di tenere qualcosa.",
+  "trovare": "Individuare una persona o una cosa che si cerca.",
+  "cambiare": "Modificare o sostituire qualcosa.",
   "abitare": "Vivere stabilmente o abitualmente in un luogo, come una città, una casa o un Paese.",
   "andare": "Muoversi verso una destinazione; recarsi in un luogo o procedere in una certa direzione.",
   "ascoltare": "Prestare attenzione a parole, suoni o musica, cercando di sentirli in modo consapevole.",
@@ -3740,5 +4938,327 @@ window.VERB_MEANINGS = {
   "rimettere": "Nel linguaggio della salute, vomitare; ha anche altri significati.",
   "perdere": "Non avere più qualcosa o essere sconfitto.",
   "ridere": "Manifestare gioia o divertimento con una risata.",
-  "guardare": "Dirigere lo sguardo verso qualcosa."
+  "guardare": "Dirigere lo sguardo verso qualcosa.",
+  "trasferirsi": "Cambiare il luogo in cui si abita; andare a vivere altrove.",
+  "sposarsi": "Contrarre matrimonio.",
+  "pagare": "Dare denaro per un prodotto, un servizio o un obbligo.",
+  "organizzare": "Preparare e coordinare attività, persone o cose.",
+  "difendere": "Proteggere una persona, un diritto o una posizione.",
+  "lavare": "Pulire qualcosa con acqua o detergente.",
+  "vestire": "Mettere i vestiti a una persona.",
+  "alzare": "Sollevare qualcosa.",
+  "sedersi": "Prendere posto su una sedia o su un sedile.",
+  "pettinare": "Mettere in ordine i capelli con un pettine.",
+  "iscriversi": "Registrarsi a un corso, a una scuola o a un servizio.",
+  "convincersi": "Arrivare a credere che qualcosa sia giusto o vero.",
+  "truccarsi": "Applicare il trucco a sé stessi.",
+  "informarsi": "Cercare e ottenere informazioni su qualcosa.",
+  "sbagliarsi": "Commettere un errore; essere in errore.",
+  "riunirsi": "Trovarsi insieme con altre persone.",
+  "organizzarsi": "Preparare e coordinare le proprie attività.",
+  "curare": "Prestare cure a qualcuno o occuparsi di qualcosa.",
+  "curarsi": "Prendersi cura di sé, anche quando si è malati.",
+  "guardarsi": "Osservare sé stessi, per esempio allo specchio.",
+  "fermare": "Interrompere il movimento di qualcosa o qualcuno.",
+  "fermarsi": "Smettere di muoversi o di fare qualcosa.",
+  "colpire": "Toccare o urtare con forza una persona o una cosa.",
+  "colpirsi": "Darsi un colpo; urtare sé stessi.",
+  "tagliare": "Dividere qualcosa con un oggetto tagliente.",
+  "tagliarsi": "Tagliare una parte del proprio corpo o ferirsi con qualcosa che taglia.",
+  "perdersi": "Non sapere più dove ci si trova; perdere l’orientamento.",
+  "dimenticare": "Non ricordare qualcosa.",
+  "dimenticarsi": "Non ricordarsi di qualcosa.",
+  "preparare": "Organizzare o mettere pronto qualcosa.",
+  "prepararsi": "Rendersi pronti; fare ciò che serve prima di un’attività.",
+  "mettersi": "Assumere una posizione oppure iniziare un’azione in alcune costruzioni, come mettersi a piangere.",
+  "ammalarsi": "Diventare malato.",
+  "licenziarsi": "Lasciare volontariamente un lavoro, nel linguaggio comune.",
+  "aspettare": "Rimanere in attesa di qualcosa o qualcuno.",
+  "entrare": "Andare dentro un luogo.",
+  "piangere": "Versare lacrime per tristezza, dolore, felicità o altre emozioni.",
+  "farsi": "Compiere un’azione per sé; in «farsi la doccia», lavarsi sotto la doccia.",
+  "diplomarsi": "Conseguire un diploma scolastico.",
+  "arrabbiarsi": "Provare rabbia; diventare arrabbiato.",
+  "accorgersi": "Notare o rendersi conto di qualcosa.",
+  "licenziare": "Interrompere il rapporto di lavoro di un dipendente, da parte del datore di lavoro."
 };
+
+
+// Lezione 14 — 19 novembre 2026.
+window.LESSONS.push({
+  "id": "14",
+  "titolo": "Lezione 14",
+  "data": "19 novembre 2026",
+  "descrizione": "Colloquio di lavoro, persone verbali, passato prossimo e canzone.",
+  "abilitata": true,
+  "infografiche": [
+    {
+      "src": "assets/infografiche/lezione-14/infografica-01.svg",
+      "miniatura": "assets/infografiche/lezione-14/infografica-01.svg"
+    },
+    {
+      "src": "assets/infografiche/lezione-14/infografica-02.svg",
+      "miniatura": "assets/infografiche/lezione-14/infografica-02.svg"
+    },
+    {
+      "src": "assets/infografiche/lezione-14/infografica-03.svg",
+      "miniatura": "assets/infografiche/lezione-14/infografica-03.svg"
+    }
+  ],
+  "documenti": [
+    {
+      "src": "assets/documenti/lezione-14/lavagna-colloquio.jpg",
+      "miniatura": "assets/miniature/lezione-14/lavagna-colloquio.jpg",
+      "formato": "orizzontale"
+    },
+    {
+      "src": "assets/documenti/lezione-14/lavagna-verbi.jpg",
+      "miniatura": "assets/miniature/lezione-14/lavagna-verbi.jpg",
+      "formato": "orizzontale"
+    },
+    {
+      "src": "assets/documenti/lezione-14/libro-pagina-29.jpg",
+      "miniatura": "assets/miniature/lezione-14/libro-pagina-29.jpg",
+      "formato": "verticale"
+    }
+  ],
+  "grammatica": [
+    {
+      "id": "lessico-lavoro",
+      "esempio": "«<strong>Cercasi cameriere</strong>», «<strong>esperienza non obbligatoria</strong>».",
+      "nota": "Requisiti del colloquio: età, lingua, disponibilità, capacità di collaborare."
+    },
+    {
+      "id": "presente-indicativo",
+      "esempio": "«<strong>Andare, venire, tornare, partire</strong>» con io, tu, lui/lei e noi, voi, loro.",
+      "nota": "Frasi al presente nelle sei persone, secondo la consegna della lavagna."
+    },
+    {
+      "id": "passato-prossimo",
+      "esempio": "«<strong>È stato</strong>», «<strong>sono uscito</strong>», «<strong>ho perso</strong>», «<strong>ho bevuto</strong>».",
+      "nota": "Ausiliari essere e avere; azioni concluse nel passato."
+    },
+    {
+      "id": "concordanza-participio",
+      "esempio": "«<strong>Sono uscito</strong> / <strong>sono uscita</strong>».",
+      "nota": "Con essere il participio concorda con il soggetto."
+    },
+    {
+      "id": "verbi-riflessivi",
+      "esempio": "«Io (alzarsi), al passato»; <strong>mi sono alzato/a</strong> (soluzione complementare).",
+      "nota": "Pronome riflessivo e ausiliare essere."
+    },
+    {
+      "id": "participio-passato",
+      "esempio": "«Participio passato di VESTIRE»: <strong>vestito</strong>.",
+      "nota": "Riconoscere il participio passato nella formazione dei tempi composti."
+    }
+  ],
+  "verbi_studiati": [
+    "andare",
+    "venire",
+    "tornare",
+    "partire",
+    "stare",
+    "uscire",
+    "alzarsi",
+    "perdere",
+    "bere",
+    "vestire"
+  ],
+  "verbi": [
+    "cercare",
+    "essere",
+    "avere",
+    "lavorare",
+    "andare",
+    "venire",
+    "tornare",
+    "partire",
+    "stare",
+    "uscire",
+    "alzarsi",
+    "perdere",
+    "bere",
+    "vestire",
+    "camminare",
+    "sentire",
+    "cantare",
+    "ringraziare",
+    "dare",
+    "ritrovare",
+    "prendere",
+    "ballare",
+    "scordare",
+    "morire",
+    "potere",
+    "piacere"
+  ]
+});
+window.VERBS.push({"id": "camminare", "p": ["cammino", "cammini", "cammina", "camminiamo", "camminate", "camminano"], "aux": "a", "part": "camminato"});
+window.VERB_MEANINGS["camminare"] = "Muoversi a piedi, fare una passeggiata.";
+window.VERBS.push({"id": "ringraziare", "p": ["ringrazio", "ringrazi", "ringrazia", "ringraziamo", "ringraziate", "ringraziano"], "aux": "a", "part": "ringraziato"});
+window.VERB_MEANINGS["ringraziare"] = "Esprimere gratitudine a una persona.";
+window.VERBS.push({"id": "ritrovare", "p": ["ritrovo", "ritrovi", "ritrova", "ritroviamo", "ritrovate", "ritrovano"], "aux": "a", "part": "ritrovato"});
+window.VERB_MEANINGS["ritrovare"] = "Trovare di nuovo qualcuno o qualcosa.";
+window.VERBS.push({"id": "scordare", "p": ["scordo", "scordi", "scorda", "scordiamo", "scordate", "scordano"], "aux": "a", "part": "scordato"});
+window.VERB_MEANINGS["scordare"] = "Dimenticare qualcosa o qualcuno.";
+window.VERBS.push({"id": "morire", "p": ["muoio", "muori", "muore", "moriamo", "morite", "muoiono"], "aux": "e", "part": "morto"});
+window.VERB_MEANINGS["morire"] = "Cessare di vivere; anche in senso figurato, provare un’emozione intensa.";
+window.TOPICS.find(t => t.id === "passato-prossimo").sezioni.push({"titolo": "Le forme al passato nella Lezione 14", "html": "<p>La pagina 29 propone <strong>è stato</strong> (stare), <strong>sono uscito</strong> (uscire), <strong>ho perso</strong> (perdere) e <strong>ho bevuto</strong> (bere). Con <em>essere</em> il participio concorda con il soggetto: <em>sono uscito / sono uscita</em>. Con <em>avere</em> negli esempi del libro: <em>ho perso, ho bevuto</em>.</p>"});
+window.TOPICS.find(t => t.id === "verbi-riflessivi").sezioni.push({"titolo": "Alzarsi al passato prossimo", "html": "<p>La domanda del libro è <em>«Io (alzarsi), al passato»</em>. Una risposta grammaticale completa è <strong>mi sono alzato</strong> (maschile) oppure <strong>mi sono alzata</strong> (femminile). Nella foto è scritto a mano soltanto <em>«mi»</em>: il completamento è una spiegazione aggiunta dal sito.</p>"});
+window.TOPICS.find(t => t.id === "presente-indicativo").sezioni.push({"titolo": "Le sei persone dei verbi di movimento", "html": "<p>La lavagna richiede frasi con <strong>andare, venire, tornare, partire</strong> alle persone <strong>io, tu, lui/lei</strong> e, come compito, <strong>noi, voi, loro</strong>. Per il presente: <em>io vado, tu vai, lui va</em>; <em>noi andiamo, voi andate, loro vanno</em>. Ricordare le forme irregolari di <em>andare</em> e <em>venire</em>.</p>"});
+window.TOPICS.find(t => t.id === "lessico-lavoro").sezioni.push({"titolo": "Requisiti del colloquio alla Lezione 14", "html": "<p>L’annuncio della lavagna cerca un cameriere per il ristorante «Bella Italia». Richiede almeno 18 anni, conoscenza dell’italiano, gentilezza, disponibilità e capacità di lavorare in gruppo; l’esperienza <strong>non è obbligatoria</strong>. È una simulazione didattica, non un annuncio reale verificato.</p>"});
+window.TOPICS.find(t => t.id === "participio-passato").sezioni.push({"titolo": "Vestito e participi irregolari", "html": "<p>La pagina chiede il participio passato di <em>vestire</em>: <strong>vestito</strong>. Altre forme dell’esercizio sono <em>perso</em> (perdere), <em>bevuto</em> (bere), <em>uscito</em> (uscire). I participi non sono sempre ottenuti con la stessa regola; consulta ogni verbo nell’Armadio.</p>"});
+
+
+// Lezione 15 — 24 novembre 2026.
+window.LESSONS.push({
+  "id": "15",
+  "titolo": "Lezione 15",
+  "data": "24 novembre 2026",
+  "descrizione": "Come ti senti? La salute, il passato prossimo e i verbi riflessivi.",
+  "abilitata": true,
+  "infografiche": [
+    {
+      "src": "assets/infografiche/lezione-15/infografica-01.svg",
+      "miniatura": "assets/infografiche/lezione-15/infografica-01.svg"
+    },
+    {
+      "src": "assets/infografiche/lezione-15/infografica-02.svg",
+      "miniatura": "assets/infografiche/lezione-15/infografica-02.svg"
+    },
+    {
+      "src": "assets/infografiche/lezione-15/infografica-03.svg",
+      "miniatura": "assets/infografiche/lezione-15/infografica-03.svg"
+    }
+  ],
+  "documenti": [
+    {
+      "src": "assets/documenti/lezione-15/lavagna-24-novembre.jpg",
+      "miniatura": "assets/miniature/lezione-15/lavagna-24-novembre.jpg",
+      "formato": "orizzontale"
+    },
+    {
+      "src": "assets/documenti/lezione-15/libro-pagina-30.jpg",
+      "miniatura": "assets/miniature/lezione-15/libro-pagina-30.jpg",
+      "formato": "verticale"
+    }
+  ],
+  "grammatica": [
+    {
+      "id": "passato-prossimo",
+      "esempio": "«<strong>Ho sentito</strong>», «<strong>mi sono alzato</strong>», «<strong>è stato</strong>».",
+      "nota": "Ausiliari al presente e participio passato per raccontare un fatto."
+    },
+    {
+      "id": "verbi-riflessivi",
+      "esempio": "«<strong>Mi sono steso</strong>», «<strong>mi sono preoccupato</strong>», «<strong>mi sono innervosito</strong>».",
+      "nota": "Pronome riflessivo, essere e participio concordato."
+    },
+    {
+      "id": "concordanza-participio",
+      "esempio": "«<strong>Mi sono alzato</strong> / <strong>mi sono alzata</strong>».",
+      "nota": "Con essere il participio concorda in genere e numero."
+    },
+    {
+      "id": "frasi-interrogative",
+      "esempio": "«<strong>A che ora</strong> ti sei alzato?», «<strong>Che cosa</strong> hai sentito?».",
+      "nota": "Domande su orario, tempo, causa, luogo e fatti."
+    },
+    {
+      "id": "lessico-salute",
+      "esempio": "«<strong>Guardia medica</strong>», «<strong>pronto soccorso</strong>», «<strong>tessera sanitaria</strong>».",
+      "nota": "Comprendere una storia su un problema di salute e i servizi sanitari."
+    },
+    {
+      "id": "participio-passato",
+      "esempio": "«<strong>Steso</strong>», «<strong>sentito</strong>», «<strong>perso</strong>», «<strong>bevuto</strong>».",
+      "nota": "Participi regolari e irregolari usati nel materiale della lezione."
+    }
+  ],
+  "verbi_studiati": [
+    "alzarsi",
+    "vestirsi",
+    "uscire",
+    "camminare",
+    "sentire",
+    "stare",
+    "perdere",
+    "bere",
+    "stendersi",
+    "preoccuparsi",
+    "spaventarsi",
+    "innervosirsi",
+    "chiamare",
+    "aspettare"
+  ],
+  "verbi": [
+    "essere",
+    "avere",
+    "alzarsi",
+    "vestirsi",
+    "uscire",
+    "camminare",
+    "sentire",
+    "stare",
+    "perdere",
+    "bere",
+    "incamminarsi",
+    "stendersi",
+    "iniziare",
+    "girare",
+    "preoccuparsi",
+    "chiamare",
+    "rispondere",
+    "consigliare",
+    "andare",
+    "spaventarsi",
+    "arrivare",
+    "parlare",
+    "chiedere",
+    "registrare",
+    "dare",
+    "dire",
+    "aspettare",
+    "vedere",
+    "innervosirsi",
+    "potere",
+    "fare",
+    "trovare",
+    "raccontare",
+    "assicurare",
+    "visitare",
+    "sentirsi"
+  ]
+});
+window.VERBS.push({"id": "incamminarsi", "p": ["incammino", "incammini", "incammina", "incamminiamo", "incamminate", "incamminano"], "aux": "refl", "part": "incamminato"});
+window.VERB_MEANINGS["incamminarsi"] = "Mettersi in cammino; cominciare ad andare a piedi.";
+window.VERBS.push({"id": "stendersi", "p": ["stendo", "stendi", "stende", "stendiamo", "stendete", "stendono"], "aux": "refl", "part": "steso"});
+window.VERB_MEANINGS["stendersi"] = "Mettersi in posizione distesa, per esempio sul divano.";
+window.VERBS.push({"id": "girare", "p": ["giro", "giri", "gira", "giriamo", "girate", "girano"], "aux": "a", "part": "girato"});
+window.VERB_MEANINGS["girare"] = "Muoversi ruotando; nel testo, la testa ha iniziato a girare.";
+window.VERBS.push({"id": "preoccuparsi", "p": ["preoccupo", "preoccupi", "preoccupa", "preoccupiamo", "preoccupate", "preoccupano"], "aux": "refl", "part": "preoccupato"});
+window.VERB_MEANINGS["preoccuparsi"] = "Provare preoccupazione per una situazione.";
+window.VERBS.push({"id": "spaventarsi", "p": ["spavento", "spaventi", "spaventa", "spaventiamo", "spaventate", "spaventano"], "aux": "refl", "part": "spaventato"});
+window.VERB_MEANINGS["spaventarsi"] = "Provare paura all’improvviso.";
+window.VERBS.push({"id": "registrare", "p": ["registro", "registri", "registra", "registriamo", "registrate", "registrano"], "aux": "a", "part": "registrato"});
+window.VERB_MEANINGS["registrare"] = "Inserire informazioni in un registro o in un sistema.";
+window.VERBS.push({"id": "innervosirsi", "p": ["innervosisco", "innervosisci", "innervosisce", "innervosiamo", "innervosite", "innervosiscono"], "aux": "refl", "part": "innervosito"});
+window.VERB_MEANINGS["innervosirsi"] = "Diventare nervoso o irritato.";
+window.VERBS.push({"id": "consigliare", "p": ["consiglio", "consigli", "consiglia", "consigliamo", "consigliate", "consigliano"], "aux": "a", "part": "consigliato"});
+window.VERB_MEANINGS["consigliare"] = "Dire a una persona che cosa potrebbe fare.";
+window.VERBS.push({"id": "assicurare", "p": ["assicuro", "assicuri", "assicura", "assicuriamo", "assicurate", "assicurano"], "aux": "a", "part": "assicurato"});
+window.VERB_MEANINGS["assicurare"] = "Garantire qualcosa; nel libro, assicurare le cure.";
+window.VERBS.push({"id": "chiamare", "p": ["chiamo", "chiami", "chiama", "chiamiamo", "chiamate", "chiamano"], "aux": "a", "part": "chiamato"});
+window.VERB_MEANINGS["chiamare"] = "Telefonare a qualcuno oppure rivolgersi a una persona.";
+window.VERBS.push({"id": "raccontare", "p": ["racconto", "racconti", "racconta", "raccontiamo", "raccontate", "raccontano"], "aux": "a", "part": "raccontato"});
+window.VERB_MEANINGS["raccontare"] = "Dire a parole come si è svolto un fatto o un’esperienza.";
+window.VERBS.push({"id": "sentirsi", "p": ["sento", "senti", "sente", "sentiamo", "sentite", "sentono"], "aux": "refl", "part": "sentito"});
+window.VERB_MEANINGS["sentirsi"] = "Percepire il proprio stato fisico o emotivo; come in «Come ti senti?».";
+window.TOPICS.find(t => t.id === "passato-prossimo").sezioni.push({"titolo": "Raccontare un problema di salute — Lezione 15", "html": "<p>Nel racconto di Zakir: <em>ho sentito una fitta</em>, <em>ho chiamato il mio medico</em>, <em>mi sono alzato</em>, <em>mi sono spaventato</em>. Il passato prossimo si costruisce con <strong>essere o avere al presente + participio passato</strong>. Con i verbi riflessivi si usa essere: <em>mi sono alzato/a</em>.</p>"});
+window.TOPICS.find(t => t.id === "verbi-riflessivi").sezioni.push({"titolo": "Verbi riflessivi nel racconto di Zakir — Lezione 15", "html": "<p>La lezione usa <em>mi sono steso</em>, <em>mi sono alzato</em>, <em>mi sono preoccupato</em>, <em>mi sono spaventato</em>, <em>mi sono innervosito</em>. Il pronome riflessivo viene prima dell’ausiliare. In prima persona: <strong>mi sono</strong> + participio; la terminazione cambia per il genere e il numero del soggetto.</p>"});
+window.TOPICS.find(t => t.id === "concordanza-participio").sezioni.push({"titolo": "Concordanza con essere — Lezione 15", "html": "<p>La lavagna propone <em>mi sono alzato</em>, <em>mi sono vestito</em> e <em>sono uscito</em>. Se parla una donna: <em>mi sono alzata</em>, <em>mi sono vestita</em>, <em>sono uscita</em>. Con avere, negli esempi <em>ho sentito</em>, <em>ho perso</em>, <em>abbiamo bevuto</em>, il participio resta invariato.</p>"});
+window.TOPICS.find(t => t.id === "frasi-interrogative").sezioni.push({"titolo": "Domande dalla lavagna — Lezione 15", "html": "<p><em>A che ora ti sei alzato?</em> domanda l’orario; <em>Quando sei uscito?</em> domanda il momento; <em>Che cosa hai sentito?</em> domanda un fatto; <em>Perché ti sei incamminato così presto?</em> domanda il motivo. Per rispondere su Zakir, mantenere la terza persona: <em>«Ha parlato con una dottoressa»</em>.</p>"});
+window.TOPICS.find(t => t.id === "lessico-salute").sezioni.push({"titolo": "Visita medica e pronto soccorso — Lezione 15", "html": "<p>La pagina 30 presenta <strong>fitta al petto</strong>, <strong>braccio sinistro</strong>, <strong>guardia medica</strong>, <strong>pronto soccorso</strong>, <strong>infermiere</strong>, <strong>tessera sanitaria</strong>, <strong>codice bianco</strong> e <strong>sala d’attesa</strong>. Si tratta del lessico presente nel racconto di Zakir, non di indicazioni sanitarie operative.</p>"});
+window.TOPICS.find(t => t.id === "participio-passato").sezioni.push({"titolo": "Participi del racconto di Zakir — Lezione 15", "html": "<p><em>Stendere → steso</em>, <em>sentire → sentito</em>, <em>perdere → perso</em>, <em>bere → bevuto</em>, <em>uscire → uscito</em>. Non tutti i participi seguono lo stesso modello: verifica ogni verbo nell’Armadio.</p>"});
